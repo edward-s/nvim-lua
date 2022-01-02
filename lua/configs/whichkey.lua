@@ -14,8 +14,9 @@ local opts = {
 
 local mappings = {
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-  ["q"] = { "<cmd>q!<CR>", "Quit" },
-  ["w"] = { "<cmd>w!<CR>", "Save" },
+  ["q"] = { "<cmd>q<CR>", "Quit" },
+  ["w"] = { "<cmd>w<CR>", "Save" },
+  ["c"] = { "<cmd>bdelete<CR>", "Close Buffer" },
 }
 
 which_key.register(mappings, opts)

@@ -12,8 +12,11 @@ ts_configs.setup {
     enable = true,
     additional_vim_regex_highlighting = false,
   },
+  autopairs = {
+    enable = true,
+  },
   rainbow = {
     enable = true,
-    extended_mode = true
+    extended_mode = true,
   }
 }
