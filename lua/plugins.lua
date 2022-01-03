@@ -12,6 +12,7 @@ require('packer').startup(function()
   use 'kyazdani42/nvim-tree.lua'
   use 'p00f/nvim-ts-rainbow'
   use "folke/which-key.nvim"
+  use "lukas-reineke/indent-blankline.nvim"
 
   -- Git
   use 'tpope/vim-fugitive'
