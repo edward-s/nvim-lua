@@ -17,6 +17,11 @@ local mappings = {
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["w"] = { "<cmd>w<CR>", "Save" },
   ["c"] = { "<cmd>bdelete<CR>", "Close Buffer" },
+  ["f"] = {
+    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+    "Find files",
+  },
+  ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 }
 
 which_key.register(mappings, opts)
