@@ -15,7 +15,7 @@ require('packer').startup(function()
   use "lukas-reineke/indent-blankline.nvim"
 
   -- Git
-  use 'lewis6991/gitsigns.vim'
+  use 'lewis6991/gitsigns.nvim'
 
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
