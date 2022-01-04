@@ -13,7 +13,8 @@ local options = {
   number = true,
   relativenumber = true,
   wrap = false,
-  hidden = true
+  hidden = true,
+  termguicolors = true
 }
 
 vim.opt.shortmess:append "c"

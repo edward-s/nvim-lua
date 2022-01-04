@@ -13,6 +13,9 @@ require('packer').startup(function()
   use 'p00f/nvim-ts-rainbow'
   use "lukas-reineke/indent-blankline.nvim"
 
+  -- Bufferline
+  use 'akinsho/bufferline.nvim' 
+
   -- Git
   use 'lewis6991/gitsigns.nvim'
 
@@ -26,5 +29,4 @@ require('packer').startup(function()
 
   -- Unsure
   use 'nvim-lualine/lualine.nvim'
-  use 'akinsho/bufferline.nvim' 
 end)
