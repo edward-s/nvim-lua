@@ -1,9 +1,18 @@
+local present, nvimtree = pcall(require, "nvim-tree")
+
+if not present then
+  return
+end
+
 local g = vim.g
 
 g.nvim_tree_quit_on_open = 0
 g.nvim_tree_indent_markers = 1
 
-require('nvim-tree').setup {
+nvimtree.setup {
+  filters = {
+    dotfiles = false,
+  },
   disable_netrw = true,
   hijack_netrw = true,
   open_on_setup = false,
