@@ -15,9 +15,14 @@ keymap('v', '>', '>gv', opts)
 
 -- Nvim tree
 keymap('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', opts)
+-- keymap('n', '<Leader>e', '<cmd>NvimTreeFocus<CR>', opts)
  
 -- Telescope
 keymap('n', '<Leader>ff', '<cmd>Telescope find_files<CR>', opts)
 keymap('n', '<Leader>fb', '<cmd>Telescope buffers<CR>', opts)
 keymap('n', '<Leader>fg', '<cmd>Telescope live_grep<CR>', opts)
 keymap('n', '<Leader>fh', '<cmd>Telescope help_tags<CR>', opts)
+
+-- Bufferline
+keymap('n', '<Tab>', '<cmd>BufferLineCycleNext<CR>', opts)
+keymap('n', '<S-Tab>', '<cmd>BufferLineCyclePrev<CR>', opts)
