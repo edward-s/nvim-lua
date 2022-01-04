@@ -1,15 +1,23 @@
 vim.g.mapleader = ' '
 
-local opts = { noremap = true, silent = true }
-local term_opts = { silent = true }
+local opts = { noremap = true }
 local keymap = vim.api.nvim_set_keymap
 
 -- Split navigations
-keymap('n', '<A-h>', '<C-w>h', opts);
-keymap('n', '<A-j>', '<C-w>j', opts);
-keymap('n', '<A-k>', '<C-w>k', opts);
-keymap('n', '<A-l>', '<C-w>l', opts);
+keymap('n', '<A-h>', '<C-w>h', opts)
+keymap('n', '<A-j>', '<C-w>j', opts)
+keymap('n', '<A-k>', '<C-w>k', opts)
+keymap('n', '<A-l>', '<C-w>l', opts)
 
 -- Indentation
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+keymap('v', '<', '<gv', opts)
+keymap('v', '>', '>gv', opts)
+
+-- Nvim tree
+keymap('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', opts)
+ 
+-- Telescope
+keymap('n', '<Leader>ff', '<cmd>Telescope find_files<CR>', opts)
+keymap('n', '<Leader>fb', '<cmd>Telescope buffers<CR>', opts)
+keymap('n', '<Leader>fg', '<cmd>Telescope live_grep<CR>', opts)
+keymap('n', '<Leader>fh', '<cmd>Telescope help_tags<CR>', opts)
