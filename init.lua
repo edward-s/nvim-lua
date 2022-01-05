@@ -1,10 +1,12 @@
 require('options')
 require('keymaps')
 require('plugins')
-require('colorscheme')
 require('configs.bufferline')
 require('configs.treesitter')
 require('configs.nvimtree')
 require('configs.lualine')
 require('configs.indentline')
 require('configs.telescope')
+
+vim.cmd('colorscheme gruvbox')
+vim.cmd('set background=dark')

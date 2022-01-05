@@ -17,6 +17,7 @@ require('packer').startup(function()
   use 'akinsho/bufferline.nvim' 
 
   -- Git
+  use 'tpope/vim-fugitive'
   use 'lewis6991/gitsigns.nvim'
 
   -- Treesitter
@@ -26,6 +27,7 @@ require('packer').startup(function()
   use "nvim-lua/popup.nvim" 
   use "nvim-lua/plenary.nvim"
   use "nvim-telescope/telescope.nvim"
+  use "nvim-telescope/telescope-fzy-native.nvim"
 
   -- Unsure
   use 'nvim-lualine/lualine.nvim'
