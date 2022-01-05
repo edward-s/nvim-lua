@@ -7,6 +7,7 @@ require('configs.nvimtree')
 require('configs.lualine')
 require('configs.indentline')
 require('configs.telescope')
+require('configs.cmp')
 
 vim.cmd('colorscheme gruvbox')
 vim.cmd('set background=dark')

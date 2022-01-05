@@ -1,5 +1,7 @@
-require("bufferline").setup{}
-vim.cmd[[
-  nnoremap <silent>[b :BufferLineCycleNext<CR>
-  nnoremap <silent>b] :BufferLineCyclePrev<CR>
-]]
+local present, bufferline = pcall(require, "bufferline")
+if not present then
+  return
+end
+
+bufferline.setup {
+}
