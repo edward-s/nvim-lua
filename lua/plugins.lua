@@ -2,7 +2,9 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- Colorscheme
-  use 'gruvbox-community/gruvbox'
+  --use 'gruvbox-community/gruvbox'
+  --use 'sainnhe/everforest'
+  use 'joshdick/onedark.vim'
 
   -- Plugins
   use 'ggandor/lightspeed.nvim'

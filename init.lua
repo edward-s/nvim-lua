@@ -11,5 +11,5 @@ require('configs.telescope')
 require('configs.lsp')
 require('configs.cmp')
 
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme onedark')
 vim.cmd('set background=dark')
