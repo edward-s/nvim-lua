@@ -32,6 +32,7 @@ require('packer').startup(function()
   -- LSP
   use 'neovim/nvim-lspconfig'
   use "williamboman/nvim-lsp-installer"
+  use "jose-elias-alvarez/null-ls.nvim"
 
   -- Cmp
   use 'hrsh7th/cmp-nvim-lsp'

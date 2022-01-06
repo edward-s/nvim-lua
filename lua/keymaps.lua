@@ -1,10 +1,9 @@
 vim.g.mapleader = ' '
 
-local opts = { noremap = true }
+local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 keymap('n', '<Leader>q', '<cmd>q<CR>', opts)
--- keymap('n', '<Leader>w', '<cmd>w<CR>', opts)
 keymap('n', '<Leader>x', '<cmd>bdelete<CR>', opts)
 
 -- Split navigations
@@ -19,7 +18,6 @@ keymap('v', '>', '>gv', opts)
 
 -- Nvim tree
 keymap('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', opts)
--- keymap('n', '<Leader>e', '<cmd>NvimTreeFocus<CR>', opts)
  
 -- Telescope
 keymap('n', '<C-p>', '<cmd>Telescope git_files<CR>', opts)
