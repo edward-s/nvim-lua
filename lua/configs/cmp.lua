@@ -1,31 +1,8 @@
-local present, cmp = pcall(require, "cmp")
-
-if not present then
-  return
-end
+local cmp = require('cmp')
 
 vim.opt.completeopt = "menuone,noselect"
 
 cmp.setup {
-  snippet = {
-    expand = function(args)
-      require("luasnip").lsp_expand(args.body)
-    end,
-  },
-  formatting = {
-    format = function(entry, vim_item)
-      local icons = require "plugins.configs.lspkind_icons"
-      vim_item.kind = string.format("%s %s", icons[vim_item.kind], vim_item.kind)
-
-      vim_item.menu = ({
-        nvim_lsp = "[LSP]",
-        nvim_lua = "[Lua]",
-        buffer = "[BUF]",
-      })[entry.source.name]
-
-      return vim_item
-    end,
-  },
   mapping = {
     ["<C-p>"] = cmp.mapping.select_prev_item(),
     ["<C-n>"] = cmp.mapping.select_next_item(),
@@ -58,15 +35,5 @@ cmp.setup {
   },
   sources = {
     { name = "nvim_lsp" },
-    { name = "luasnip" },
-    -- { name = "buffer" },
-    { name = "nvim_lua" },
-    { name = "path" },
   },
-}
-
--- Setup lspconfig
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-require('lspconfig').html.setup {
-  capabilities = capabilities
 }
