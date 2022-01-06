@@ -6,7 +6,7 @@ end
 
 ts_configs.setup {
   ensure_installed = {
-    "html", "lua", "javascript", "typescript", "css"
+    "html", "css", "lua", "javascript", "typescript", "python"
   },
   highlight = {
     enable = true,
