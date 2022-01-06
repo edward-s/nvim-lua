@@ -1,1 +1,1 @@
-require('nvim_comment').setup({ comment_empty = false })
+require('nvim_comment').setup({ comment_empty = false, line_mapping = "<Leader>cl", operator_mapping = "<Leader>c" })
