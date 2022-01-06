@@ -4,7 +4,6 @@ local options = {
   hlsearch = true,
   ignorecase = true,
   mouse = "a",
-  smartindent = true,
   splitbelow = true,
   splitright = true, 
   expandtab = true,
