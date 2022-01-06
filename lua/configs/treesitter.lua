@@ -6,11 +6,11 @@ end
 
 ts_configs.setup {
   ensure_installed = {
-    "html", "css", "lua", "javascript", "typescript", "python"
+    "html", "css", "lua", "javascript", "typescript", "tsx"
   },
   highlight = {
     enable = true,
-    additional_vim_regex_highlighting = false,
+    additional_vim_regex_highlighting = true,
   },
   autopairs = {
     enable = true,
