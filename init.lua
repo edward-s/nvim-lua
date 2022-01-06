@@ -10,6 +10,7 @@ require('configs.indentline')
 require('configs.telescope')
 require('configs.lsp')
 require('configs.cmp')
+require('configs.comment')
 
 vim.cmd('colorscheme onedark')
 vim.cmd('set background=dark')
