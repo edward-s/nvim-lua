@@ -11,6 +11,7 @@ require('configs.telescope')
 require('configs.lsp')
 require('configs.cmp')
 require('configs.comment')
+require('configs.toggleterm')
 
 vim.cmd('colorscheme onedark')
 vim.cmd('set background=dark')

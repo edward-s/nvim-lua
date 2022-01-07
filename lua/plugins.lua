@@ -13,6 +13,7 @@ require('packer').startup(function()
   use 'p00f/nvim-ts-rainbow'
   use "lukas-reineke/indent-blankline.nvim"
   use "terrortylor/nvim-comment"
+  use "akinsho/toggleterm.nvim"
 
   -- Bufferline
   use 'akinsho/bufferline.nvim' 

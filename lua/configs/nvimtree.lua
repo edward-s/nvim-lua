@@ -38,5 +38,6 @@ nvimtree.setup {
     width = 25,
     hide_root_folder = true,
     side = 'left',
+    auto_resize = true
   }
 }
