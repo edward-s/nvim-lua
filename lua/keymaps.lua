@@ -16,6 +16,9 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
+-- Formatting
+keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting_sync()<CR>", opts)
+
 -- Nvim tree
 keymap("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", opts)
 
