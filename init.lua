@@ -13,5 +13,5 @@ require('configs.cmp')
 require('configs.comment')
 require('configs.toggleterm')
 
-vim.cmd('colorscheme onedark')
+vim.cmd('colorscheme gruvbox-material')
 vim.cmd('set background=dark')
