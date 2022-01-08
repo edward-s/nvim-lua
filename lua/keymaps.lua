@@ -35,3 +35,6 @@ keymap("n", "<Leader>vrc", '<cmd>lua require("configs.telescope").search_vimrc()
 -- Bufferline
 keymap("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", opts)
 keymap("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", opts)
+
+-- Terminal
+keymap("n", "<Leader>t", "<cmd>ToggleTerm<CR>", opts)
