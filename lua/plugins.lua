@@ -3,7 +3,6 @@ require("packer").startup(function()
 
 	-- Colorscheme
 	use("sainnhe/gruvbox-material")
-	-- use 'joshdick/onedark.vim'
 
 	-- Plugins
 	use("ggandor/lightspeed.nvim")
@@ -13,9 +12,9 @@ require("packer").startup(function()
 	use("kyazdani42/nvim-tree.lua")
 	use("p00f/nvim-ts-rainbow")
 	use("lukas-reineke/indent-blankline.nvim")
-	use("terrortylor/nvim-comment")
 	use("akinsho/toggleterm.nvim")
 	use("nvim-lualine/lualine.nvim")
+	use("numToStr/Comment.nvim")
 
 	-- Bufferline
 	use("akinsho/bufferline.nvim")
@@ -26,6 +25,7 @@ require("packer").startup(function()
 
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- Telescope
 	use("nvim-lua/popup.nvim")
