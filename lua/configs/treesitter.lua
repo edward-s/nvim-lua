@@ -1,22 +1,27 @@
 local present, ts_configs = pcall(require, "nvim-treesitter.configs")
 
 if not present then
-  return
+	return
 end
 
-ts_configs.setup {
-  ensure_installed = {
-    "html", "css", "lua", "javascript", "typescript", "tsx"
-  },
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = true,
-  },
-  autopairs = {
-    enable = true,
-  },
-  rainbow = {
-    enable = true,
-    extended_mode = true,
-  }
-}
+ts_configs.setup({
+	ensure_installed = {
+		"html",
+		"css",
+		"lua",
+		"javascript",
+		"typescript",
+		"tsx",
+	},
+	highlight = {
+		enable = true,
+		additional_vim_regex_highlighting = true,
+	},
+	autopairs = {
+		enable = true,
+	},
+	rainbow = {
+		enable = true,
+		extended_mode = true,
+	},
+})
