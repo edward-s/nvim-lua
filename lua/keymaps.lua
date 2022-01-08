@@ -20,8 +20,13 @@ keymap("v", ">", ">gv", opts)
 keymap("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", opts)
 
 -- Telescope
-keymap("n", "<C-p>", "<cmd>Telescope git_files<CR>", opts)
-keymap("n", "<Leader>ff", "<cmd>Telescope find_files<CR>", opts)
+keymap(
+	"n",
+	"<C-p>",
+	"<cmd>lua require('telescope.builtin').git_files(require('telescope.themes').get_dropdown{ previewer = false })<CR>",
+	opts
+)
+keymap("n", "<Leader>ff", "<cmd>Telescope find_files", opts)
 keymap("n", "<Leader>fb", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<Leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<Leader>fh", "<cmd>Telescope help_tags<CR>", opts)
