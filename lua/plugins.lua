@@ -15,6 +15,7 @@ require("packer").startup(function()
 	use("akinsho/toggleterm.nvim")
 	use("nvim-lualine/lualine.nvim")
 	use("numToStr/Comment.nvim")
+	use("windwp/nvim-ts-autotag")
 
 	-- Bufferline
 	use("akinsho/bufferline.nvim")
