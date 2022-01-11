@@ -3,5 +3,6 @@ if not present then
 	return
 end
 
-gitsigns.setup({})
-
+gitsigns.setup({
+	current_line_blame = true,
+})

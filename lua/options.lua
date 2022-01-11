@@ -14,6 +14,8 @@ local options = {
 	wrap = false,
 	hidden = true,
 	termguicolors = true,
+	updatetime = 300,
+	signcolumn = "yes",
 }
 
 vim.opt.shortmess:append("c")

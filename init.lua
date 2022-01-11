@@ -12,6 +12,7 @@ require("configs.lsp")
 require("configs.cmp")
 require("configs.comment")
 require("configs.toggleterm")
+require("configs.gitsigns")
 
 vim.cmd("colorscheme gruvbox-material")
 vim.cmd("set background=dark")
