@@ -9,9 +9,9 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.prettier.with({ extra_args = { "--single-quote" } }),
+		formatting.prettierd,
 		formatting.stylua,
-		diagnostics.eslint,
+		diagnostics.eslint_d,
 	},
 	on_attach = function(client)
 		if client.resolved_capabilities.document_formatting then
