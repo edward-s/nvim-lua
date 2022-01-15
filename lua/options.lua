@@ -16,6 +16,7 @@ local options = {
 	termguicolors = true,
 	updatetime = 300,
 	signcolumn = "yes",
+	swapfile = false,
 }
 
 vim.opt.shortmess:append("c")

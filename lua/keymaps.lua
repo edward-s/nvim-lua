@@ -4,7 +4,8 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 keymap("n", "<Leader>q", "<cmd>q<CR>", opts)
-keymap("n", "<Leader>x", "<cmd>bdelete<CR>", opts)
+keymap("n", "<Leader>x", "<cmd>bd<CR>", opts)
+keymap("n", "<Leader>X", "<cmd>%bd|e#|bd#<CR>", opts)
 
 -- Split navigations
 keymap("n", "<A-h>", "<C-w>h", opts)
@@ -29,7 +30,7 @@ keymap(
 	"<cmd>lua require('telescope.builtin').git_files(require('telescope.themes').get_dropdown{ previewer = false })<CR>",
 	opts
 )
-keymap("n", "<Leader>ff", "<cmd>Telescope find_files", opts)
+keymap("n", "<Leader>ff", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<Leader>fb", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<Leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<Leader>fh", "<cmd>Telescope help_tags<CR>", opts)
@@ -38,6 +39,3 @@ keymap("n", "<Leader>vrc", '<cmd>lua require("configs.telescope").search_vimrc()
 -- Bufferline
 keymap("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", opts)
 keymap("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", opts)
-
--- Terminal
-keymap("n", "<Leader>t", "<cmd>ToggleTerm<CR>", opts)

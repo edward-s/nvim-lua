@@ -37,5 +37,10 @@ nvimtree.setup({
 		hide_root_folder = true,
 		side = "left",
 		auto_resize = true,
+		mappings = {
+			list = {
+				{ key = "X", cb = ":lua require'nvim-tree.lib'.collapse_all()<CR>" },
+			},
+		},
 	},
 })
