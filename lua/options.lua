@@ -9,6 +9,7 @@ local options = {
 	expandtab = true,
 	shiftwidth = 2,
 	tabstop = 2,
+	showtabline = 2,
 	number = true,
 	relativenumber = true,
 	wrap = false,
@@ -18,6 +19,8 @@ local options = {
 	signcolumn = "yes",
 	swapfile = false,
 	cursorline = true,
+	showmode = false,
+	smartcase = true,
 }
 
 vim.opt.shortmess:append("c")
