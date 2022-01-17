@@ -17,6 +17,7 @@ local options = {
 	updatetime = 250,
 	signcolumn = "yes",
 	swapfile = false,
+	cursorline = true,
 }
 
 vim.opt.shortmess:append("c")
