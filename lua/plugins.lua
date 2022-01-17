@@ -2,7 +2,8 @@ require("packer").startup(function()
 	use("wbthomason/packer.nvim")
 
 	-- Colorscheme
-	use("sainnhe/gruvbox-material")
+	-- use("sainnhe/gruvbox-material")
+	use("navarasu/onedark.nvim")
 
 	-- Plugins
 	use("ggandor/lightspeed.nvim")

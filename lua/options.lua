@@ -14,7 +14,7 @@ local options = {
 	wrap = false,
 	hidden = true,
 	termguicolors = true,
-	updatetime = 300,
+	updatetime = 250,
 	signcolumn = "yes",
 	swapfile = false,
 }

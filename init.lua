@@ -14,5 +14,8 @@ require("configs.comment")
 require("configs.toggleterm")
 require("configs.gitsigns")
 
-vim.cmd("colorscheme gruvbox-material")
-vim.cmd("set background=dark")
+-- onedark theme
+require("onedark").setup({
+	style = "dark",
+})
+require("onedark").load()
