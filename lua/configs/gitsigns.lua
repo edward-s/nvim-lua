@@ -6,10 +6,10 @@ end
 gitsigns.setup({
 	current_line_blame = true,
 	signs = {
-		add = { text = "+" },
-		change = { text = "~" },
-		delete = { text = "_" },
-		topdelete = { text = "‾" },
-		changedelete = { text = "~" },
+		add = { hl = "DiffAdd", text = "│", numhl = "GitSignsAddNr" },
+		change = { hl = "DiffChange", text = "│", numhl = "GitSignsChangeNr" },
+		delete = { hl = "DiffDelete", text = "", numhl = "GitSignsDeleteNr" },
+		topdelete = { hl = "DiffDelete", text = "‾", numhl = "GitSignsDeleteNr" },
+		changedelete = { hl = "DiffChangeDelete", text = "~", numhl = "GitSignsChangeNr" },
 	},
 })
