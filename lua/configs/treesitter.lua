@@ -20,13 +20,9 @@ ts_configs.setup({
 	autopairs = {
 		enable = true,
 	},
-	context_commentstring = {
+	autotag = {
 		enable = true,
-		enable_autocmd = false,
 	},
-  autotag = {
-    enable = true
-  },
 	rainbow = {
 		enable = true,
 		extended_mode = true,
