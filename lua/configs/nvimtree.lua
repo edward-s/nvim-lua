@@ -1,9 +1,3 @@
-local present, nvimtree = pcall(require, "nvim-tree")
-
-if not present then
-	return
-end
-
 local g = vim.g
 
 g.nvim_tree_quit_on_open = 0
@@ -34,6 +28,12 @@ g.nvim_tree_icons = {
 		symlink = "",
 	},
 }
+
+local present, nvimtree = pcall(require, "nvim-tree")
+
+if not present then
+	return
+end
 
 nvimtree.setup({
 	disable_netrw = true,
