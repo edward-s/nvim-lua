@@ -8,12 +8,38 @@ local g = vim.g
 
 g.nvim_tree_quit_on_open = 0
 g.nvim_tree_indent_markers = 1
+g.nvim_tree_git_hl = 1
+g.nvim_tree_show_icons = {
+	git = 1,
+	folders = 1,
+	files = 1,
+}
+g.nvim_tree_icons = {
+	default = "",
+	symlink = "",
+	git = {
+		unstaged = "",
+		staged = "S",
+		unmerged = "",
+		renamed = "➜",
+		deleted = "",
+		untracked = "U",
+		ignored = "◌",
+	},
+	folder = {
+		default = "",
+		open = "",
+		empty = "",
+		empty_open = "",
+		symlink = "",
+	},
+}
 
 nvimtree.setup({
 	disable_netrw = true,
 	hijack_netrw = true,
 	open_on_setup = false,
-	auto_close = true,
+	auto_close = false,
 	open_on_tab = false,
 	hijack_cursor = true,
 	update_cwd = false,
@@ -23,17 +49,19 @@ nvimtree.setup({
 	},
 	update_focused_file = {
 		enable = true,
-		update_cwd = false,
+		update_cwd = true,
 	},
 	filters = {
 		dotfiles = false,
 		custom = { ".git" },
 	},
 	git = {
-		ignore = false,
+		enable = true,
+		ignore = true,
+		timeout = 500,
 	},
 	view = {
-		width = 25,
+		width = 30,
 		hide_root_folder = true,
 		side = "left",
 		auto_resize = true,
@@ -42,5 +70,6 @@ nvimtree.setup({
 				{ key = "X", cb = ":lua require'nvim-tree.lib'.collapse_all()<CR>" },
 			},
 		},
+		signcolumn = "yes",
 	},
 })
