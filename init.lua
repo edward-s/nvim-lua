@@ -13,6 +13,7 @@ require("configs.cmp")
 require("configs.comment")
 require("configs.toggleterm")
 require("configs.gitsigns")
+require("configs.zenmode")
 
 -- onedark theme
 require("onedark").setup({

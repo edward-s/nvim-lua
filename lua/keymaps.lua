@@ -23,6 +23,9 @@ keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting_sync()<CR>", opts)
 -- Nvim tree
 keymap("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", opts)
 
+-- ZenMode
+keymap("n", "<Leader>z", "<cmd>ZenMode<CR>", opts)
+
 -- Terminal
 keymap("n", "<Leader>tf", "<cmd>ToggleTerm direction=float<CR>", opts)
 keymap("n", "<Leader>th", "<cmd>ToggleTerm size=10 direction=horizontal<CR>", opts)
