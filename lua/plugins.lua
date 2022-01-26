@@ -2,7 +2,6 @@ require("packer").startup(function()
 	use("wbthomason/packer.nvim")
 
 	-- Colorscheme
-	-- use("sainnhe/gruvbox-material")
 	use("navarasu/onedark.nvim")
 
 	-- Plugins
@@ -17,6 +16,9 @@ require("packer").startup(function()
 	use("nvim-lualine/lualine.nvim")
 	use("numToStr/Comment.nvim")
 	use("windwp/nvim-ts-autotag")
+
+	-- Experimental
+	use("folke/zen-mode.nvim")
 
 	-- Bufferline
 	use("akinsho/bufferline.nvim")
