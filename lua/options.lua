@@ -21,6 +21,8 @@ local options = {
 	cursorline = true,
 	showmode = false,
 	smartcase = true,
+	scrolloff = 8,
+	sidescrolloff = 8,
 }
 
 vim.opt.shortmess:append("c")
