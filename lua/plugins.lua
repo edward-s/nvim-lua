@@ -16,9 +16,8 @@ require("packer").startup(function()
 	use("nvim-lualine/lualine.nvim")
 	use("numToStr/Comment.nvim")
 	use("windwp/nvim-ts-autotag")
-
-	-- Experimental
 	use("folke/zen-mode.nvim")
+	use("norcalli/nvim-colorizer.lua")
 
 	-- Bufferline
 	use("akinsho/bufferline.nvim")

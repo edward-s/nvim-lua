@@ -14,6 +14,7 @@ require("configs.comment")
 require("configs.toggleterm")
 require("configs.gitsigns")
 require("configs.zenmode")
+require("configs.colorizer")
 
 -- onedark theme
 require("onedark").setup({
