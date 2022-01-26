@@ -4,7 +4,6 @@ if not present then
 end
 
 gitsigns.setup({
-	current_line_blame = true,
 	signs = {
 		add = { hl = "DiffAdd", text = "│", numhl = "GitSignsAddNr" },
 		change = { hl = "DiffChange", text = "│", numhl = "GitSignsChangeNr" },
