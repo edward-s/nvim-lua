@@ -6,12 +6,13 @@ local keymap = vim.api.nvim_set_keymap
 keymap("n", "<Leader>q", "<cmd>q<CR>", opts)
 keymap("n", "<Leader>x", "<cmd>bd<CR>", opts)
 keymap("n", "<Leader>X", "<cmd>%bd|e#|bd#<CR>", opts)
+keymap("n", "<Leader>h", "<cmd>nohl<CR>", opts)
 
 -- Split navigations
-keymap("n", "<A-h>", "<C-w>h", opts)
-keymap("n", "<A-j>", "<C-w>j", opts)
-keymap("n", "<A-k>", "<C-w>k", opts)
-keymap("n", "<A-l>", "<C-w>l", opts)
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Indentation
 keymap("v", "<", "<gv", opts)
