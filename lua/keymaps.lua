@@ -6,7 +6,7 @@ local keymap = vim.api.nvim_set_keymap
 keymap("n", "<Leader>q", "<cmd>q<CR>", opts)
 keymap("n", "<Leader>x", "<cmd>bd<CR>", opts)
 keymap("n", "<Leader>X", "<cmd>%bd|e#|bd#<CR>", opts)
-keymap("n", "<Leader>h", "<cmd>nohl<CR>", opts)
+keymap("n", "<C-c>", "<cmd>nohl<CR>", opts)
 
 -- Split navigations
 keymap("n", "<C-h>", "<C-w>h", opts)
