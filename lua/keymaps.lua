@@ -21,6 +21,14 @@ keymap("v", ">", ">gv", opts)
 -- Formatting
 keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting_sync()<CR>", opts)
 
+-- Git signs
+keymap("n", "<leader>gb", "<cmd>lua require 'gitsigns'.blame_line()<CR>", opts)
+keymap("n", "<leader>gj", "<cmd>lua require 'gitsigns'.next_hunk()<CR>", opts)
+keymap("n", "<leader>gk", "<cmd>lua require 'gitsigns'.prev_hunk()<CR>", opts)
+keymap("n", "<leader>gp", "<cmd>lua require 'gitsigns'.preview_hunk()<CR>", opts)
+keymap("n", "<leader>gs", "<cmd>lua require 'gitsigns'.stage_hunk()<CR>", opts)
+keymap("n", "<leader>gu", "<cmd>lua require 'gitsigns'.undo_stage_hunk()<CR>", opts)
+
 -- Nvim tree
 keymap("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", opts)
 
