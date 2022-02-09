@@ -50,6 +50,7 @@ keymap("n", "<Leader>ff", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<Leader>fb", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<Leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<Leader>fh", "<cmd>Telescope help_tags<CR>", opts)
+keymap("n", "<Leader>fr", "<cmd>Telescope resume<CR>", opts)
 keymap("n", "<Leader>vrc", '<cmd>lua require("configs.telescope").search_vimrc()<CR>', opts)
 
 -- Bufferline
