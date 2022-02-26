@@ -18,6 +18,6 @@ require("configs.colorizer")
 
 -- onedark theme
 require("onedark").setup({
-	style = "dark",
+	style = "darker",
 })
 require("onedark").load()
