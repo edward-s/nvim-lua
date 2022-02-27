@@ -14,9 +14,19 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Resize with arrows
+keymap("n", "<A-j>", ":resize -2<CR>", opts)
+keymap("n", "<A-k>", ":resize +2<CR>", opts)
+keymap("n", "<A-h>", ":vertical resize -2<CR>", opts)
+keymap("n", "<A-l>", ":vertical resize +2<CR>", opts)
+
 -- Indentation
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+
+-- Fugitive
+keymap("n", "<leader>df", ":diffget //2<CR>", opts)
+keymap("n", "<leader>dj", ":diffget //3<CR>", opts)
 
 -- Formatting
 keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting_sync()<CR>", opts)

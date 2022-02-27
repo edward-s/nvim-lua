@@ -18,6 +18,7 @@ require("packer").startup(function()
 	use("windwp/nvim-ts-autotag")
 	use("folke/zen-mode.nvim")
 	use("norcalli/nvim-colorizer.lua")
+	use("mattn/emmet-vim")
 
 	-- Bufferline
 	use("akinsho/bufferline.nvim")
