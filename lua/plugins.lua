@@ -7,6 +7,7 @@ require("packer").startup(function()
 	-- Plugins
 	use("ggandor/lightspeed.nvim")
 	use("tpope/vim-surround")
+	use("tpope/vim-unimpaired")
 	use("windwp/nvim-autopairs")
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
