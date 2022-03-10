@@ -20,6 +20,7 @@ require("packer").startup(function()
 	use("folke/zen-mode.nvim")
 	use("norcalli/nvim-colorizer.lua")
 	use("mattn/emmet-vim")
+	use("vim-test/vim-test")
 
 	-- Bufferline
 	use("akinsho/bufferline.nvim")

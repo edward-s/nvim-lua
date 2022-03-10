@@ -21,7 +21,7 @@ local options = {
 	cursorline = true,
 	showmode = false,
 	smartcase = true,
-	scrolloff = 8,
+	-- scrolloff = 8,
 	sidescrolloff = 8,
 }
 

@@ -28,6 +28,11 @@ keymap("v", ">", ">gv", opts)
 keymap("n", "<leader>df", ":diffget //2<CR>", opts)
 keymap("n", "<leader>dj", ":diffget //3<CR>", opts)
 
+-- Vim-test
+keymap("n", "<leader>t", ":TestNearest<CR>", opts)
+keymap("n", "<leader>T", ":TestFile<CR>", opts)
+keymap("n", "<leader>a", ":TestSuite<CR>", opts)
+
 -- Formatting
 keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting_sync()<CR>", opts)
 

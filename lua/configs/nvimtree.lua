@@ -49,7 +49,7 @@ nvimtree.setup({
 	},
 	update_focused_file = {
 		enable = true,
-		update_cwd = true,
+		update_cwd = false,
 	},
 	filters = {
 		dotfiles = false,
@@ -64,7 +64,7 @@ nvimtree.setup({
 		width = 35,
 		hide_root_folder = true,
 		side = "left",
-		auto_resize = true,
+		auto_resize = false,
 		mappings = {
 			list = {
 				{ key = "X", cb = ":lua require'nvim-tree.lib'.collapse_all()<CR>" },
