@@ -48,11 +48,16 @@ nvimtree.setup({
 	},
 	update_focused_file = {
 		enable = true,
-		update_cwd = false,
+		update_cwd = true,
 	},
 	filters = {
 		dotfiles = false,
 		custom = { ".git" },
+	},
+	actions = {
+		open_file = {
+			resize_window = true,
+		},
 	},
 	git = {
 		enable = true,
@@ -61,9 +66,10 @@ nvimtree.setup({
 	},
 	view = {
 		width = 35,
+		height = 35,
 		hide_root_folder = true,
 		side = "left",
-		auto_resize = false,
+		auto_resize = true,
 		mappings = {
 			list = {
 				{ key = "X", cb = ":lua require'nvim-tree.lib'.collapse_all()<CR>" },

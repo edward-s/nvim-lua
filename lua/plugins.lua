@@ -22,6 +22,7 @@ require("packer").startup(function()
 	use("mattn/emmet-vim")
 	use("vim-test/vim-test")
 	use("ThePrimeagen/harpoon")
+	use("mhinz/vim-startify")
 
 	-- Bufferline
 	use("akinsho/bufferline.nvim")
