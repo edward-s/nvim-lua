@@ -21,6 +21,7 @@ require("packer").startup(function()
 	use("norcalli/nvim-colorizer.lua")
 	use("mattn/emmet-vim")
 	use("vim-test/vim-test")
+	use("ThePrimeagen/harpoon")
 
 	-- Bufferline
 	use("akinsho/bufferline.nvim")

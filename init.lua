@@ -16,6 +16,7 @@ require("configs.gitsigns")
 require("configs.zenmode")
 require("configs.colorizer")
 require("configs.vimtest")
+require("configs.harpoon")
 
 -- onedark theme
 require("onedark").setup({
