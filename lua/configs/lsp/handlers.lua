@@ -70,7 +70,7 @@ local function lsp_keymaps(bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(
@@ -96,7 +96,15 @@ end
 M.on_attach = function(client, bufnr)
 	if client.name == "tsserver" then
 		client.resolved_capabilities.document_formatting = false
+		local ts_utils = require("nvim-lsp-ts-utils")
+
+		ts_utils.setup({
+			always_organize_imports = false,
+			update_imports_on_move = true,
+		})
+		ts_utils.setup_client(client)
 	end
+
 	lsp_keymaps(bufnr)
 	lsp_highlight_document(client)
 end

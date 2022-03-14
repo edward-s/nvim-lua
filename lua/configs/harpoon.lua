@@ -3,4 +3,8 @@ if not present then
 	return
 end
 
-harpoon.setup({})
+harpoon.setup({
+	menu = {
+		width = 100,
+	},
+})

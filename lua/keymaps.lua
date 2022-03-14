@@ -14,7 +14,7 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
--- Resize with arrows
+-- Resize windows
 keymap("n", "<A-j>", ":resize -2<CR>", opts)
 keymap("n", "<A-k>", ":resize +2<CR>", opts)
 keymap("n", "<A-h>", ":vertical resize -2<CR>", opts)
@@ -68,13 +68,15 @@ keymap("n", "<Leader>fh", "<cmd>Telescope help_tags<CR>", opts)
 keymap("n", "<Leader>fr", "<cmd>Telescope resume<CR>", opts)
 keymap("n", "<Leader>vrc", '<cmd>lua require("configs.telescope").search_vimrc()<CR>', opts)
 
+-- TsUtils
+keymap("n", "<Leader>gi", "<cmd>TSLspImportAll<CR>", opts)
+
 -- Harpoon
 keymap("n", "<C-m>", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
 keymap("n", "<Leader>m", "<cmd>lua require('harpoon.mark').add_file()<CR>", opts)
-keymap("n", "1", "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", opts)
-keymap("n", "2", "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", opts)
-keymap("n", "3", "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", opts)
-keymap("n", "4", "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", opts)
+keymap("n", "<Leader>1", "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", opts)
+keymap("n", "<Leader>2", "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", opts)
+keymap("n", "<Leader>3", "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", opts)
 
 -- Bufferline
 keymap("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", opts)
