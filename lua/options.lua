@@ -4,6 +4,7 @@ local options = {
 	hlsearch = true,
 	ignorecase = true,
 	mouse = "a",
+	conceallevel = 0,
 	splitbelow = true,
 	splitright = true,
 	expandtab = true,
@@ -21,7 +22,7 @@ local options = {
 	cursorline = true,
 	showmode = false,
 	smartcase = true,
-	-- scrolloff = 8,
+	-- scrolloff = 3,
 	sidescrolloff = 8,
 }
 

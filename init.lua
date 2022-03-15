@@ -5,6 +5,7 @@ require("configs.autopairs")
 require("configs.bufferline")
 require("configs.cmp")
 require("configs.colorizer")
+require("configs.colorscheme")
 require("configs.comment")
 require("configs.gitblame")
 require("configs.gitsigns")
@@ -21,8 +22,5 @@ require("configs.vimtest")
 require("configs.whichkey")
 require("configs.zenmode")
 
--- onedark theme
-require("onedark").setup({
-	style = "darker",
-})
-require("onedark").load()
+--
+-- colorscheme gruvbox-material

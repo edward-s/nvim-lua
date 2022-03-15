@@ -3,6 +3,7 @@ require("packer").startup(function()
 
 	-- Colorscheme
 	use("navarasu/onedark.nvim")
+	-- use("sainnhe/gruvbox-material")
 
 	-- Plugins
 	use("ThePrimeagen/harpoon")
