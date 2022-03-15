@@ -3,11 +3,6 @@ vim.g.mapleader = " "
 local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
-keymap("n", "<Leader>q", "<cmd>q<CR>", opts)
-keymap("n", "<Leader>x", "<cmd>bd<CR>", opts)
-keymap("n", "<Leader>X", "<cmd>%bd|e#|bd#<CR>", opts)
-keymap("n", "<C-c>", "<cmd>nohl<CR>", opts)
-
 -- Split navigations
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -30,10 +25,6 @@ keymap("n", "<leader>dj", ":diffget //3<CR>", opts)
 
 -- Nvim tree
 keymap("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", opts)
-
--- Terminal
-keymap("n", "<Leader>tf", "<cmd>ToggleTerm direction=float<CR>", opts)
-keymap("n", "<Leader>th", "<cmd>ToggleTerm size=10 direction=horizontal<CR>", opts)
 
 -- Telescope
 keymap(

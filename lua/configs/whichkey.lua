@@ -73,6 +73,9 @@ local opts = {
 }
 
 local mappings = {
+	["h"] = { "<cmd>nohlsearch<cr>", "No Highlight" },
+	["x"] = { "<cmd>bd<cr>" },
+	["X"] = { "<cmd>%bd|e#|bd#<cr>" },
 	f = {
 		name = "Files",
 		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
@@ -98,8 +101,8 @@ local mappings = {
 			"Checkout commit(for current file)",
 		},
 	},
-	h = {
-		name = "Harpoon",
+	j = {
+		name = "Jumps",
 		a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add File" },
 		m = {
 			"<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>",
@@ -128,20 +131,12 @@ local mappings = {
 			"<cmd>lua vim.lsp.buf.code_action()<cr>",
 			"Code Action",
 		},
-		A = {
-			"<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>",
-			"Add Workspace Folder",
-		},
 		d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "Go To Definition" },
 		D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "Go To Declaration" },
 		e = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics" },
 		f = {
 			"<cmd>lua vim.lsp.buf.formatting()<cr>",
 			"Format",
-		},
-		i = {
-			"<cmd>lua vim.lsp.buf.implementation()<cr>",
-			"Show implementations",
 		},
 		I = {
 			"<cmd>TSLspImportAll<cr>",
@@ -150,10 +145,6 @@ local mappings = {
 		k = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature Help" },
 		K = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" },
 		l = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Line diagnostics" },
-		L = {
-			"<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>",
-			"List Workspace Folders",
-		},
 		n = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Next Diagnostic" },
 		p = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev Diagnostic" },
 		q = { "<cmd>lua vim.diagnostic.set_loclist()<cr>", "Quickfix" },
@@ -166,15 +157,7 @@ local mappings = {
 			"Rename",
 		},
 		s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-		S = {
-			"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-			"Workspace Symbols",
-		},
 		t = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", "Type Definition" },
-		W = {
-			"<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>",
-			"Remove Workspace Folder",
-		},
 		w = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
 	},
 	m = {
@@ -189,7 +172,7 @@ local mappings = {
 		s = { "<cmd>Telescope grep_string<cr>", "Text under cursor" },
 	},
 	t = {
-		name = "Trouble",
+		name = "Diagnostics",
 		w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 		d = { "<cmd>Trouble document_diagnostics<cr>", "Document Diagnostic" },
 		l = { "<cmd>Trouble loclist<cr>", "Loclist" },

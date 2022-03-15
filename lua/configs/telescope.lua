@@ -13,22 +13,10 @@ telescope.setup({
 	qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
 })
 
--- telescope.load_extension("harpoon")
-
-local extensions = { "fzy_native" }
+local extensions = { "fzy_native", "project" }
 
 pcall(function()
 	for _, ext in ipairs(extensions) do
 		telescope.load_extension(ext)
 	end
 end)
-
-local M = {}
-M.search_vimrc = function()
-	require("telescope.builtin").find_files({
-		prompt_title = "< VimRC >",
-		cwd = "~/.config/nvim/",
-	})
-end
-
-return M
