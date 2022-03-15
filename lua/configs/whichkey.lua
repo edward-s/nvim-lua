@@ -74,8 +74,26 @@ local opts = {
 
 local mappings = {
 	["h"] = { "<cmd>nohlsearch<cr>", "No Highlight" },
-	["x"] = { "<cmd>bd<cr>" },
-	["X"] = { "<cmd>%bd|e#|bd#<cr>" },
+	b = {
+		name = "Buffers",
+		a = {
+			"<cmd>BufferLineCloseLeft<cr><cmd>BufferLineCloseRight<cr>",
+			"Close all but the current buffer",
+		},
+		b = {
+			"<cmd>lua require'telescope.builtin'.buffers({ sort_mru = true, ignore_current_buffer = true })<cr>",
+			"Find buffer",
+		},
+		d = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+		f = { "<cmd>BufferLinePick<cr>", "Pick buffer" },
+		l = { "<cmd>BufferLineCloseLeft<cr>", "Close all buffers to the left" },
+		p = { "<cmd>BufferLineMovePrev<cr>", "Move buffer prev" },
+		n = { "<cmd>BufferLineMoveNext<cr>", "Move buffer next" },
+		r = {
+			"<cmd>BufferLineCloseRight<cr>",
+			"Close all BufferLines to the right",
+		},
+	},
 	f = {
 		name = "Files",
 		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },

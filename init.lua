@@ -21,6 +21,3 @@ require("configs.trouble")
 require("configs.vimtest")
 require("configs.whichkey")
 require("configs.zenmode")
-
---
--- colorscheme gruvbox-material
