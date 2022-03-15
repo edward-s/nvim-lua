@@ -3,7 +3,6 @@ require("packer").startup(function()
 
 	-- Colorscheme
 	use("navarasu/onedark.nvim")
-	-- use("sainnhe/gruvbox-material")
 
 	-- Plugins
 	use("ThePrimeagen/harpoon")
@@ -60,5 +59,5 @@ require("packer").startup(function()
 	use("hrsh7th/cmp-cmdline")
 
 	-- snippets
-	use("L3MON4D3/LuaSnip") --snippet engine
+	use("L3MON4D3/LuaSnip")
 end)
