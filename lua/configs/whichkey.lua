@@ -44,7 +44,7 @@ which_key.setup({
 		scroll_up = "<c-u>", -- binding to scroll up inside the popup
 	},
 	window = {
-		border = "rounded", -- none, single, double, shadow
+		border = "none", -- none, single, double, shadow
 		position = "bottom", -- bottom, top
 		margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
 		padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
@@ -73,6 +73,10 @@ local opts = {
 }
 
 local mappings = {
+	f = {
+		name = "Files",
+		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+	},
 	g = {
 		name = "Git",
 		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
@@ -94,7 +98,7 @@ local mappings = {
 			"Checkout commit(for current file)",
 		},
 	},
-	j = {
+	h = {
 		name = "Harpoon",
 		a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add File" },
 		m = {
@@ -183,6 +187,15 @@ local mappings = {
 		h = { "<cmd>Telescope help_tags<cr>", "Man Pages" },
 		r = { "<cmd>Telescope resume<cr>", "Resume Search" },
 		s = { "<cmd>Telescope grep_string<cr>", "Text under cursor" },
+	},
+	t = {
+		name = "Trouble",
+		w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
+		d = { "<cmd>Trouble document_diagnostics<cr>", "Document Diagnostic" },
+		l = { "<cmd>Trouble loclist<cr>", "Loclist" },
+		q = { "<cmd>Trouble quickfix<cr>", "Quickfix" },
+		t = { "<cmd>TodoTrouble<cr>", "Todos" },
+		r = { "<cmd>Trouble lsp_references<cr>", "LSP References" },
 	},
 	["vt"] = {
 		name = "Vim Test",
