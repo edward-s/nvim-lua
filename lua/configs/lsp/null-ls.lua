@@ -12,8 +12,8 @@ null_ls.setup({
 	sources = {
 		formatting.prettier,
 		formatting.stylua,
-		codeActions.eslint,
-		diagnostics.eslint,
+		codeActions.eslint_d,
+		diagnostics.eslint_d,
 	},
 	on_attach = function(client)
 		if client.resolved_capabilities.document_formatting then

@@ -21,9 +21,11 @@ local options = {
 	swapfile = false,
 	cursorline = true,
 	showmode = false,
-	smartcase = true,
-	-- scrolloff = 3,
 	sidescrolloff = 8,
+	smartcase = true,
+	foldenable = false,
+	foldmethod = "expr",
+	foldexpr = "nvim_treesitter#foldexpr()",
 }
 
 vim.opt.shortmess:append("c")

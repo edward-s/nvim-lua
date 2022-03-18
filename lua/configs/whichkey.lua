@@ -198,11 +198,20 @@ local mappings = {
 		t = { "<cmd>TodoTrouble<cr>", "Todos" },
 		r = { "<cmd>Trouble lsp_references<cr>", "LSP References" },
 	},
-	["vt"] = {
+	v = {
 		name = "Vim Test",
 		t = { "<cmd>TestNearest<cr>" },
 		T = { "<cmd>TestFile<cr>" },
 		a = { "<cmd>TestSuite<cr>" },
+	},
+	w = {
+		name = "Window",
+		q = { "<cmd>:q<cr>", "Close" },
+		t = { "<c-w>t", "Move to new tab" },
+		["="] = { "<c-w>=", "Equally size" },
+		v = { "<cmd>:vsplit<cr>", "Verstical Split" },
+		w = { "<c-w>x", "Swap" },
+		x = { "<cmd>:split<cr>", "Horizontal Split" },
 	},
 }
 

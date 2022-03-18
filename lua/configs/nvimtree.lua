@@ -72,9 +72,7 @@ nvimtree.setup({
 		side = "left",
 		auto_resize = true,
 		mappings = {
-			list = {
-				{ key = "X", cb = ":lua require'nvim-tree.lib'.collapse_all()<CR>" },
-			},
+			list = {},
 		},
 		signcolumn = "yes",
 	},
