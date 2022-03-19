@@ -35,5 +35,5 @@ keymap(
 )
 
 -- Bufferline
-keymap("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", opts)
-keymap("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", opts)
+keymap("n", "<Tab>", "<cmd>bnext<cr>", opts)
+keymap("n", "<S-Tab>", "<cmd>bprevious<cr>", opts)

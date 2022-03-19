@@ -103,10 +103,6 @@ local mappings = {
 		t = { "<cmd>TodoTrouble<cr>", "Todos" },
 		r = { "<cmd>Trouble lsp_references<cr>", "LSP References" },
 	},
-	f = {
-		name = "Files",
-		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-	},
 	g = {
 		name = "Git",
 		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
@@ -197,6 +193,7 @@ local mappings = {
 		h = { "<cmd>Telescope help_tags<cr>", "Man Pages" },
 		r = { "<cmd>Telescope resume<cr>", "Resume Search" },
 		s = { "<cmd>Telescope grep_string<cr>", "Text under cursor" },
+		S = { "<cmd>Telescope symbols<cr>", "Search symbols" },
 	},
 	t = {
 		name = "Tests",
@@ -209,7 +206,7 @@ local mappings = {
 		q = { "<cmd>:q<cr>", "Close" },
 		t = { "<c-w>t", "Move to new tab" },
 		["="] = { "<c-w>=", "Equally size" },
-		v = { "<cmd>:vsplit<cr>", "Verstical Split" },
+		v = { "<cmd>:vsplit<cr>", "Vertical Split" },
 		w = { "<c-w>x", "Swap" },
 		x = { "<cmd>:split<cr>", "Horizontal Split" },
 	},
