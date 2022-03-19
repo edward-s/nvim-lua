@@ -9,7 +9,7 @@ require("packer").startup(function()
 	use("akinsho/toggleterm.nvim")
 	use("f-person/git-blame.nvim")
 	use("famiu/bufdelete.nvim")
-	use("folke/todo.nvim")
+	use("folke/todo-comments.nvim")
 	use("folke/trouble.nvim")
 	use("folke/which-key.nvim")
 	use("folke/zen-mode.nvim")
@@ -51,14 +51,26 @@ require("packer").startup(function()
 	use("williamboman/nvim-lsp-installer")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jose-elias-alvarez/nvim-lsp-ts-utils")
+	use("onsails/lspkind-nvim")
 
 	-- Cmp
-	use("hrsh7th/nvim-cmp")
-	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/cmp-path")
-	use("hrsh7th/cmp-cmdline")
+	use({
+		"hrsh7th/nvim-cmp",
+		requires = {
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-path" },
+			{ "hrsh7th/cmp-cmdline" },
+		},
+	})
 
-	-- snippets
-	use("L3MON4D3/LuaSnip")
+	-- Snippets
+	use({
+		"hrsh7th/cmp-vsnip",
+		requires = {
+			"hrsh7th/vim-vsnip",
+			"hrsh7th/vim-vsnip-integ",
+			"rafamadriz/friendly-snippets",
+		},
+	})
 end)
