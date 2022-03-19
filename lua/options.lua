@@ -11,6 +11,7 @@ local options = {
 	hidden = true,
 	hlsearch = true,
 	ignorecase = true,
+	-- laststatus = 3,
 	mouse = "a",
 	number = true,
 	relativenumber = true,
@@ -25,7 +26,7 @@ local options = {
 	swapfile = false,
 	tabstop = 2,
 	termguicolors = true,
-	updatetime = 300,
+	updatetime = 250,
 }
 
 vim.opt.shortmess:append("c")
