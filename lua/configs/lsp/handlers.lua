@@ -58,7 +58,7 @@ local function lsp_highlight_document(client)
 	end
 end
 
-M.on_attach = function(client, bufnr)
+M.on_attach = function(client)
 	if client.name == "tsserver" then
 		client.resolved_capabilities.document_formatting = false
 		local ts_utils = require("nvim-lsp-ts-utils")
