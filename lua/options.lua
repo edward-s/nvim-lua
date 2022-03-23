@@ -27,6 +27,7 @@ local options = {
 	tabstop = 2,
 	termguicolors = true,
 	updatetime = 250,
+	wrap = false,
 }
 
 vim.opt.shortmess:append("c")

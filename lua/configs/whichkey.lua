@@ -196,18 +196,19 @@ local mappings = {
 		S = { "<cmd>Telescope symbols<cr>", "Search symbols" },
 	},
 	t = {
-		name = "Tests",
+		name = "Test",
 		t = { "<cmd>TestNearest<cr>", "Test Nearest" },
 		T = { "<cmd>TestFile<cr>", "Test File" },
 		a = { "<cmd>TestSuite<cr>", "Test Suite" },
 	},
 	w = {
 		name = "Window",
+		o = { "<c-w>o", "Close others" },
 		q = { "<cmd>:q<cr>", "Close" },
 		t = { "<c-w>t", "Move to new tab" },
 		["="] = { "<c-w>=", "Equally size" },
 		v = { "<cmd>:vsplit<cr>", "Vertical Split" },
-		w = { "<c-w>x", "Swap" },
+		r = { "<c-w>r", "Swap" },
 		x = { "<cmd>:split<cr>", "Horizontal Split" },
 	},
 }
