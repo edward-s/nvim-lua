@@ -21,11 +21,13 @@ local options = {
 	sidescrolloff = 8,
 	signcolumn = "yes",
 	smartcase = true,
+	smartindent = true,
 	splitbelow = true,
 	splitright = true,
 	swapfile = false,
 	tabstop = 2,
 	termguicolors = true,
+	undofile = true,
 	updatetime = 250,
 	wrap = false,
 }
