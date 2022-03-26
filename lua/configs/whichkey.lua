@@ -189,11 +189,14 @@ local mappings = {
 	},
 	s = {
 		name = "Search",
+		b = { "<cmd>Telescope buffers<cr>", "Buffers" },
 		g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
 		h = { "<cmd>Telescope help_tags<cr>", "Man Pages" },
+		o = { "<cmd>Telescope oldfiles<cr>", "Old Files" },
 		r = { "<cmd>Telescope resume<cr>", "Resume Search" },
 		s = { "<cmd>Telescope grep_string<cr>", "Text under cursor" },
 		S = { "<cmd>Telescope symbols<cr>", "Search symbols" },
+		w = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Current Buffer" },
 	},
 	t = {
 		name = "Test",
