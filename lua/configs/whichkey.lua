@@ -74,6 +74,7 @@ local opts = {
 
 local mappings = {
 	["h"] = { "<cmd>nohlsearch<cr>", "No Highlight" },
+	["q"] = { "<cmd>q<cr>", "Quit" },
 	b = {
 		name = "Buffers",
 		a = {
@@ -196,9 +197,12 @@ local mappings = {
 	},
 	t = {
 		name = "Test",
-		t = { "<cmd>TestNearest<cr>", "Test Nearest" },
-		T = { "<cmd>TestFile<cr>", "Test File" },
-		a = { "<cmd>TestSuite<cr>", "Test Suite" },
+		s = { "<cmd>UltestSummary<cr>", "Summary" },
+		a = { "<cmd>Ultest<cr>", "All" },
+		c = { "<cmd>UltestClear<cr>", "Clear" },
+		d = { "<cmd>UltestDebug<cr>", "Debug" },
+		t = { "<cmd>UltestNearest<cr>", "Test Nearest" },
+		o = { "<Plug>(ultest-output-jump)", "Output" },
 	},
 	T = {
 		name = "Typescript",

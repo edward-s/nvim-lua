@@ -26,9 +26,11 @@ require("packer").startup(function()
 	use("RRethy/vim-illuminate")
 	use("tpope/vim-surround")
 	use("tpope/vim-unimpaired")
-	use("vim-test/vim-test")
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
+
+	-- Test
+	use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
 
 	-- Bufferline
 	use("akinsho/bufferline.nvim")

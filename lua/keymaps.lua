@@ -45,6 +45,10 @@ keymap(
 keymap("n", "<Tab>", "<cmd>bnext<cr>", opts)
 keymap("n", "<S-Tab>", "<cmd>bprevious<cr>", opts)
 
+-- Test
+keymap("n", "[t", "<Plug>(ultest-prev-fail)", opts)
+keymap("n", "]t", "<Plug>(ultest-next-fail)", opts)
+
 -- Lightspeed
 vim.cmd([[
   nmap <expr> f reg_recording() . reg_executing() == "" ? "<Plug>Lightspeed_f" : "f"
