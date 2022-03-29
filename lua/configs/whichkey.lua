@@ -161,10 +161,6 @@ local mappings = {
 			"<cmd>lua vim.lsp.buf.formatting()<cr>",
 			"Format",
 		},
-		I = {
-			"<cmd>TSLspImportAll<cr>",
-			"TS: Import All",
-		},
 		k = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature Help" },
 		K = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" },
 		l = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Line diagnostics" },
@@ -203,6 +199,17 @@ local mappings = {
 		t = { "<cmd>TestNearest<cr>", "Test Nearest" },
 		T = { "<cmd>TestFile<cr>", "Test File" },
 		a = { "<cmd>TestSuite<cr>", "Test Suite" },
+	},
+	T = {
+		name = "Typescript",
+		i = {
+			"<cmd>TSLspImportAll<cr>",
+			"Import All",
+		},
+		o = {
+			"<cmd>TSLspOrganize<cr>",
+			"Organize Imports",
+		},
 	},
 	w = {
 		name = "Window",
