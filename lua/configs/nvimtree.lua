@@ -65,13 +65,15 @@ nvimtree.setup({
 		timeout = 500,
 	},
 	view = {
-		width = 35,
-		height = 35,
+		width = 40,
 		hide_root_folder = true,
 		side = "left",
 		auto_resize = true,
 		mappings = {
-			list = {},
+			list = {
+				{ key = "s", cb = "<Plug>Lightspeed_s" },
+				{ key = "S", cb = "<Plug>Lightspeed_S" },
+			},
 		},
 		signcolumn = "yes",
 	},
