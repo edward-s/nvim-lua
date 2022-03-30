@@ -201,8 +201,9 @@ local mappings = {
 		a = { "<cmd>Ultest<cr>", "All" },
 		c = { "<cmd>UltestClear<cr>", "Clear" },
 		d = { "<cmd>UltestDebug<cr>", "Debug" },
-		t = { "<cmd>UltestNearest<cr>", "Test Nearest" },
+		t = { "<cmd>TestNearest<cr>", "Test Nearest" },
 		o = { "<Plug>(ultest-output-jump)", "Output" },
+		x = { "<cmd>UltestStop", "Stop" },
 	},
 	T = {
 		name = "Typescript",
