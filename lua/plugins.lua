@@ -2,7 +2,9 @@ require("packer").startup(function()
 	use("wbthomason/packer.nvim")
 
 	-- Colorscheme
-	use("navarasu/onedark.nvim")
+	-- use("navarasu/onedark.nvim")
+	use("sainnhe/gruvbox-material")
+	-- use("eddyekofo94/gruvbox-flat.nvim")
 
 	-- Plugins
 	use("ThePrimeagen/harpoon")
