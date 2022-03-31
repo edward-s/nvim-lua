@@ -11,7 +11,7 @@ null_ls.setup({
 	debug = false,
   debounce= 150,
 	sources = {
-		formatting.prettier,
+		formatting.prettierd,
 		formatting.stylua,
 		codeActions.eslint_d,
 		diagnostics.eslint_d,
