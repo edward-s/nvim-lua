@@ -180,10 +180,6 @@ local mappings = {
 		t = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", "Type Definition" },
 		w = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
 	},
-	m = {
-		name = "Misc",
-		z = { "<cmd>ZenMode<cr>", "Toggle ZenMode" },
-	},
 	s = {
 		name = "Search",
 		b = { "<cmd>Telescope buffers<cr>", "Buffers" },
@@ -203,10 +199,10 @@ local mappings = {
 		d = { "<cmd>UltestDebug<cr>", "Debug" },
 		t = { "<cmd>TestNearest<cr>", "Test Nearest" },
 		o = { "<Plug>(ultest-output-jump)", "Output" },
-		x = { "<cmd>UltestStop", "Stop" },
+		x = { "<cmd>UltestStop<cr>", "Stop" },
 	},
 	T = {
-		name = "Typescript",
+		name = "TypeScript",
 		i = {
 			"<cmd>TSLspImportAll<cr>",
 			"Import All",
