@@ -47,6 +47,7 @@ M.on_attach = function(client)
 		local ts_utils = require("nvim-lsp-ts-utils")
 
 		ts_utils.setup({
+      enable_import_on_completion = true,
 			always_organize_imports = false,
 			update_imports_on_move = true,
 		})

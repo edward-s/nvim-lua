@@ -9,7 +9,7 @@ local codeActions = null_ls.builtins.code_actions
 
 null_ls.setup({
 	debug = false,
-	-- update_in_insert = true,
+  debounce= 150,
 	sources = {
 		formatting.prettier,
 		formatting.stylua,
