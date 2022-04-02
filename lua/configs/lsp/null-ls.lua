@@ -9,12 +9,12 @@ local codeActions = null_ls.builtins.code_actions
 
 null_ls.setup({
 	debug = false,
-  debounce= 150,
+	debounce = 150,
 	sources = {
 		formatting.prettierd,
 		formatting.stylua,
-		codeActions.eslint_d,
-		diagnostics.eslint_d,
+		codeActions.eslint,
+		diagnostics.eslint,
 	},
 	on_attach = function(client)
 		if client.resolved_capabilities.document_formatting then

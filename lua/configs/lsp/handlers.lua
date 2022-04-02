@@ -12,33 +12,29 @@ M.setup = function()
 		vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
 	end
 
-	local config = {
-		virtual_text = false,
-		signs = {
-			active = signs,
-		},
-		update_in_insert = true,
-		underline = true,
-		severity_sort = true,
+	local lsp = {
 		float = {
-			focusable = false,
+			focusable = true,
 			style = "minimal",
 			border = "rounded",
-			source = "always",
-			header = "",
-			prefix = "",
+		},
+		diagnostic = {
+			virtual_text = false,
+			underline = true,
+			update_in_insert = false,
+			severity_sort = true,
+			float = {
+				focusable = true,
+				style = "minimal",
+				border = "rounded",
+			},
 		},
 	}
 
-	vim.diagnostic.config(config)
+	vim.diagnostic.config(lsp.diagnostic)
 
-	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-		border = "rounded",
-	})
-
-	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-		border = "rounded",
-	})
+	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, lsp.float)
+	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, lsp.float)
 end
 
 M.on_attach = function(client)
@@ -47,7 +43,7 @@ M.on_attach = function(client)
 		local ts_utils = require("nvim-lsp-ts-utils")
 
 		ts_utils.setup({
-      enable_import_on_completion = true,
+			enable_import_on_completion = true,
 			always_organize_imports = false,
 			update_imports_on_move = true,
 		})
