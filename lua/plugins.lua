@@ -22,19 +22,16 @@ require("packer").startup(function()
 	use("numToStr/Comment.nvim")
 	use("nvim-lualine/lualine.nvim")
 	use("p00f/nvim-ts-rainbow")
-	use("tpope/vim-surround")
+	use({ "tpope/vim-surround", event = "BufRead" })
+	use({ "tpope/vim-dispatch", opt = true, cmd = { "Dispatch", "Make", "Focus", "Start" } })
 	use("tpope/vim-unimpaired")
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 	use({ "kazhala/close-buffers.nvim", cmd = { "BDelete", "BWipeout" } })
 
-	-- Tweaks
 	use({
 		"antoinemadec/FixCursorHold.nvim",
-		event = "BufReadPre",
-		config = function()
-			vim.g.cursorhold_updatetime = 100
-		end,
+		event = "BufReadPost",
 	})
 
 	-- Test
