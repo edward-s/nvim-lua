@@ -86,6 +86,13 @@ local mappings = {
 		p = { "<cmd>BufferLineMovePrev<cr>", "Move buffer prev" },
 		n = { "<cmd>BufferLineMoveNext<cr>", "Move buffer next" },
 	},
+	c = {
+		name = "Quickfix",
+		o = { "<Cmd>copen<Cr>", "Open quickfix" },
+		x = { "<Cmd>cclose<Cr>", "Close quickfix" },
+		n = { "<Cmd>cnext<Cr>", "Next quickfix" },
+		p = { "<Cmd>cprev<Cr>", "Previous quickfix" },
+	},
 	d = {
 		name = "Diagnostics",
 		w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
@@ -176,6 +183,7 @@ local mappings = {
 		b = { "<cmd>Telescope buffers<cr>", "Buffers" },
 		g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
 		h = { "<cmd>Telescope help_tags<cr>", "Man Pages" },
+		m = { "<cmd>Telescope marks<cr>", "Marks" },
 		o = { "<cmd>Telescope oldfiles<cr>", "Old Files" },
 		r = { "<cmd>Telescope resume<cr>", "Resume Search" },
 		s = { "<cmd>Telescope grep_string<cr>", "Text under cursor" },

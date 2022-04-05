@@ -5,16 +5,10 @@ if not present then
 end
 
 ts_configs.setup({
-	ensure_installed = {
-		"html",
-		"css",
-		"lua",
-		"javascript",
-		"typescript",
-		"tsx",
-	},
+	ensure_installed = "maintained",
 	highlight = {
 		enable = true,
+		disable = {},
 		additional_vim_regex_highlighting = true,
 	},
 	autopairs = {
