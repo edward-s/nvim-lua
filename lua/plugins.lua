@@ -2,15 +2,13 @@ require("packer").startup(function()
 	use("wbthomason/packer.nvim")
 
 	-- Colorscheme
-	-- use("navarasu/onedark.nvim")
 	use("sainnhe/gruvbox-material")
-	-- use("eddyekofo94/gruvbox-flat.nvim")
 
 	-- Plugins
+	use("RRethy/vim-illuminate")
 	use("ThePrimeagen/harpoon")
 	use("akinsho/toggleterm.nvim")
 	use("f-person/git-blame.nvim")
-	use("famiu/bufdelete.nvim")
 	use("folke/todo-comments.nvim")
 	use("folke/trouble.nvim")
 	use("folke/which-key.nvim")
@@ -24,11 +22,20 @@ require("packer").startup(function()
 	use("numToStr/Comment.nvim")
 	use("nvim-lualine/lualine.nvim")
 	use("p00f/nvim-ts-rainbow")
-	use("RRethy/vim-illuminate")
 	use("tpope/vim-surround")
 	use("tpope/vim-unimpaired")
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
+	use({ "kazhala/close-buffers.nvim", cmd = { "BDelete", "BWipeout" } })
+
+	-- Tweaks
+	use({
+		"antoinemadec/FixCursorHold.nvim",
+		event = "BufReadPre",
+		config = function()
+			vim.g.cursorhold_updatetime = 100
+		end,
+	})
 
 	-- Test
 	use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
