@@ -101,22 +101,11 @@ local mappings = {
 	},
 	g = {
 		name = "Git",
-		-- j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
-		-- k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
-		-- p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
-		-- r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
-		-- R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-		-- s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
-		-- u = {
-		-- 	"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
-		-- 	"Undo Stage Hunk",
-		-- },
 		d = { "<Cmd>Gvdiffsplit<Cr>", "Git diff" },
 		f = { "<cmd>Git fetch --all<cr>", "Git fetch" },
 		g = { "<cmd>Git<cr>", "Git status" },
 		b = { "<cmd>Git branch<cr>", "Git branch" },
 		B = { "<cmd>GitBlameToggle<cr>", "Toggle Blame" },
-		n = { "<cmd>Neogit<cr>", "Neogit" },
 		v = { "<cmd>DiffviewOpen<cr>", "Diffview open" },
 		c = { "<cmd>DiffviewClose<cr>", "Diffview close" },
 		x = {
@@ -160,7 +149,7 @@ local mappings = {
 			"References",
 		},
 		R = {
-			"<cmd>Lspsaga rename<cr>",
+			"<cmd>lua vim.lsp.buf.rename()<cr>",
 			"Rename",
 		},
 		s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },

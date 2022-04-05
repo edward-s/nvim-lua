@@ -85,12 +85,6 @@ require("packer").startup(function()
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jose-elias-alvarez/nvim-lsp-ts-utils")
 	use("onsails/lspkind-nvim")
-	use({
-		"tami5/lspsaga.nvim",
-		config = function()
-			require("lspsaga").setup()
-		end,
-	})
 
 	-- Cmp
 	use({
