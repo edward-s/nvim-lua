@@ -79,12 +79,9 @@ local mappings = {
 		name = "Buffers",
 		a = {
 			"<cmd>BWipeout other<cr>",
-			"Close all other buffers",
+			"Close other buffers",
 		},
 		d = { "<cmd>BDelete this<CR>", "Close Buffer" },
-		f = { "<cmd>BufferLinePick<cr>", "Pick buffer" },
-		p = { "<cmd>BufferLineMovePrev<cr>", "Move buffer prev" },
-		n = { "<cmd>BufferLineMoveNext<cr>", "Move buffer next" },
 	},
 	c = {
 		name = "Quickfix",
@@ -104,23 +101,28 @@ local mappings = {
 	},
 	g = {
 		name = "Git",
-		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
-		k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
-		p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
-		r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
-		R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-		s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
-		u = {
-			"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
-			"Undo Stage Hunk",
-		},
-		g = { "<cmd>Telescope git_status<cr>", "Open changed file" },
-		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+		-- j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
+		-- k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
+		-- p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
+		-- r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
+		-- R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
+		-- s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+		-- u = {
+		-- 	"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
+		-- 	"Undo Stage Hunk",
+		-- },
+		d = { "<Cmd>Gvdiffsplit<Cr>", "Git diff" },
+		f = { "<cmd>Git fetch --all<cr>", "Git fetch" },
+		g = { "<cmd>Git<cr>", "Git status" },
+		b = { "<cmd>Git branch<cr>", "Git branch" },
 		B = { "<cmd>GitBlameToggle<cr>", "Toggle Blame" },
-		c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-		C = {
-			"<cmd>Telescope git_bcommits<cr>",
-			"Checkout commit(for current file)",
+		n = { "<cmd>Neogit<cr>", "Neogit" },
+		v = { "<cmd>DiffviewOpen<cr>", "Diffview open" },
+		c = { "<cmd>DiffviewClose<cr>", "Diffview close" },
+		x = {
+			name = "Diff",
+			["2"] = { "<cmd>diffget //2", "Diffget 2" },
+			["3"] = { "<cmd>diffget //3", "Diffget 3" },
 		},
 	},
 	j = {
@@ -130,23 +132,10 @@ local mappings = {
 			"<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>",
 			"Open Menu",
 		},
-		["1"] = {
-			"<cmd>lua require('harpoon.ui').nav_file(1)<cr>",
-			"Open File 1",
-		},
-		["2"] = {
-			"<cmd>lua require('harpoon.ui').nav_file(2)<cr>",
-			"Open File 2",
-		},
-		["3"] = {
-			"<cmd>lua require('harpoon.ui').nav_file(3)<cr>",
-			"Open File 3",
-		},
-		["4"] = {
-			"<cmd>lua require('harpoon.ui').nav_file(4)<cr>",
-			"Open File 4",
-		},
 	},
+	["1"] = { "<Cmd>lua require('harpoon.ui').nav_file(1) <Cr>", "Jump 1" },
+	["2"] = { "<Cmd>lua require('harpoon.ui').nav_file(2) <Cr>", "Jump 2" },
+	["3"] = { "<Cmd>lua require('harpoon.ui').nav_file(3) <Cr>", "Jump 3" },
 	l = {
 		name = "LSP",
 		a = {
@@ -171,7 +160,7 @@ local mappings = {
 			"References",
 		},
 		R = {
-			"<cmd>lua vim.lsp.buf.rename()<cr>",
+			"<cmd>Lspsaga rename<cr>",
 			"Rename",
 		},
 		s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },

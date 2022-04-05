@@ -52,6 +52,22 @@ require("packer").startup(function()
 	-- Git
 	use("tpope/vim-fugitive")
 	use("lewis6991/gitsigns.nvim")
+	use({
+		"sindrets/diffview.nvim",
+		cmd = {
+			"DiffviewOpen",
+			"DiffviewClose",
+			"DiffviewToggleFiles",
+			"DiffviewFocusFiles",
+		},
+	})
+	use({
+		"TimUntersberger/neogit",
+		cmd = "Neogit",
+		config = function()
+			require("neogit").setup({ integrations = { diffview = true } })
+		end,
+	})
 
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
@@ -69,6 +85,12 @@ require("packer").startup(function()
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jose-elias-alvarez/nvim-lsp-ts-utils")
 	use("onsails/lspkind-nvim")
+	use({
+		"tami5/lspsaga.nvim",
+		config = function()
+			require("lspsaga").setup()
+		end,
+	})
 
 	-- Cmp
 	use({
