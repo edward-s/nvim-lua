@@ -34,32 +34,15 @@ require("packer").startup(function()
 		event = "BufReadPost",
 	})
 
-	use({
-		"vuki656/package-info.nvim",
-		event = "VimEnter",
-		requires = "MunifTanjim/nui.nvim",
-		config = function()
-			require("package-info").setup()
-		end,
-	})
-
 	-- Test
 	use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
 
 	-- Debugging
-	use({
-		"mfussenegger/nvim-dap",
-		opt = true,
-		event = "BufReadPre",
-		module = { "dap" },
-		wants = { "nvim-dap-virtual-text", "DAPInstall.nvim", "nvim-dap-ui", "nvim-dap-python", "which-key.nvim" },
-		requires = {
-			"Pocco81/DAPInstall.nvim",
-			"theHamsta/nvim-dap-virtual-text",
-			"rcarriga/nvim-dap-ui",
-			"nvim-telescope/telescope-dap.nvim",
-		},
-	})
+	use("mfussenegger/nvim-dap")
+	use("Pocco81/DAPInstall.nvim")
+	use("theHamsta/nvim-dap-virtual-text")
+	use("rcarriga/nvim-dap-ui")
+	use("nvim-telescope/telescope-dap.nvim")
 
 	-- Bufferline
 	use("akinsho/bufferline.nvim")
