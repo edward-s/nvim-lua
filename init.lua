@@ -24,3 +24,5 @@ require("configs.treesitter")
 require("configs.trouble")
 require("configs.vsnip")
 require("configs.whichkey")
+
+require("configs.dap").setup()

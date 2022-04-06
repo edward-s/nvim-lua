@@ -46,6 +46,21 @@ require("packer").startup(function()
 	-- Test
 	use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
 
+	-- Debugging
+	use({
+		"mfussenegger/nvim-dap",
+		opt = true,
+		event = "BufReadPre",
+		module = { "dap" },
+		wants = { "nvim-dap-virtual-text", "DAPInstall.nvim", "nvim-dap-ui", "nvim-dap-python", "which-key.nvim" },
+		requires = {
+			"Pocco81/DAPInstall.nvim",
+			"theHamsta/nvim-dap-virtual-text",
+			"rcarriga/nvim-dap-ui",
+			"nvim-telescope/telescope-dap.nvim",
+		},
+	})
+
 	-- Bufferline
 	use("akinsho/bufferline.nvim")
 
@@ -78,6 +93,7 @@ require("packer").startup(function()
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-fzy-native.nvim")
+	use("nvim-telescope/telescope-vimspector.nvim")
 
 	-- LSP
 	use("neovim/nvim-lspconfig")
