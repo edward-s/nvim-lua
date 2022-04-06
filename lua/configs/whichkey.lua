@@ -86,7 +86,7 @@ local mappings = {
 		p = { "<Cmd>cprev<Cr>", "Previous quickfix" },
 	},
 	d = {
-		name = "DAP",
+		name = "Debug",
 		b = { "<Cmd>lua require('dap').toggle_breakpoint()<CR>", "Toggle breakpoint" },
 		c = { "<Cmd>lua require('dap').continue()<CR>", "Continue" },
 		s = { "<Cmd>lua require('dap').step_over()<CR>", "Step over" },
@@ -100,15 +100,6 @@ local mappings = {
 		v = { '<Cmd>lua require"telescope".extensions.dap.variables{}<CR>', "Variables" },
 		m = { '<Cmd>lua require"telescope".extensions.dap.frames{}<CR>', "Frames" },
 	},
-	-- d = {
-	-- 	name = "Diagnostics",
-	-- 	w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
-	-- 	d = { "<cmd>Trouble document_diagnostics<cr>", "Document Diagnostic" },
-	-- 	l = { "<cmd>Trouble loclist<cr>", "Loclist" },
-	-- 	q = { "<cmd>Trouble quickfix<cr>", "Quickfix" },
-	-- 	t = { "<cmd>TodoTrouble<cr>", "Todos" },
-	-- 	r = { "<cmd>Trouble lsp_references<cr>", "LSP References" },
-	-- },
 	g = {
 		name = "Git",
 		d = { "<Cmd>Gvdiffsplit<Cr>", "Git diff" },
@@ -165,6 +156,10 @@ local mappings = {
 		s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
 		t = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", "Type Definition" },
 		w = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
+	},
+	m = {
+		name = "Misc",
+		t = { "<cmd>TroubleToggle<cr>", "Trouble" },
 	},
 	s = {
 		name = "Search",
