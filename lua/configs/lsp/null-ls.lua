@@ -4,7 +4,6 @@ if not present then
 end
 
 local formatting = null_ls.builtins.formatting
-local diagnostics = null_ls.builtins.diagnostics
 local codeActions = null_ls.builtins.code_actions
 
 null_ls.setup({
@@ -14,7 +13,6 @@ null_ls.setup({
 		formatting.prettierd,
 		formatting.stylua,
 		codeActions.eslint_d,
-		diagnostics.eslint_d,
 	},
 	on_attach = function(client)
 		if client.resolved_capabilities.document_formatting then

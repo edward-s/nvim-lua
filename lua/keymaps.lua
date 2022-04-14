@@ -26,10 +26,6 @@ keymap("n", "za", "za<cmd>IndentBlanklineRefresh<cr>", opts)
 keymap("n", "zr", "zr<cmd>IndentBlanklineRefresh<cr>", opts)
 keymap("n", "zR", "zR<cmd>IndentBlanklineRefresh<cr>", opts)
 
--- Fugitive
-keymap("n", "<leader>df", ":diffget //2<cr>", opts)
-keymap("n", "<leader>dj", ":diffget //3<cr>", opts)
-
 -- Nvim tree
 keymap("n", "<C-n>", "<cmd>NvimTreeToggle<cr>", opts)
 

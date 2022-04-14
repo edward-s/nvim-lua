@@ -78,7 +78,7 @@ nvimtree.setup({
 				{ key = { "<2-RightMouse>", "<C-]>" }, action = "cd" },
 				{ key = "<C-v>", action = "vsplit" },
 				{ key = "<C-x>", action = "split" },
-				{ key = "<C-t>", action = "tabnew" },
+				{ key = "<C-t>", cb = "<cmd>ToggleTerm<cr>" },
 				{ key = "<", action = "prev_sibling" },
 				{ key = ">", action = "next_sibling" },
 				{ key = "P", action = "parent_node" },

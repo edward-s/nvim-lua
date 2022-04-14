@@ -89,11 +89,13 @@ local mappings = {
 		name = "Debug",
 		b = { "<Cmd>lua require('dap').toggle_breakpoint()<CR>", "Toggle breakpoint" },
 		c = { "<Cmd>lua require('dap').continue()<CR>", "Continue" },
+		d = { "<Cmd>lua require('dap').run_to_cursor()<CR>", "Run to cursor" },
 		s = { "<Cmd>lua require('dap').step_over()<CR>", "Step over" },
 		i = { "<Cmd>lua require('dap').step_into()<CR>", "Step into" },
 		o = { "<Cmd>lua require('dap').step_out()<CR>", "Step out" },
 		u = { "<Cmd>lua require('dapui').toggle()<CR>", "Toggle UI" },
 		p = { "<Cmd>lua require('dap').repl.open()<CR>", "REPL" },
+		X = { "<Cmd>lua require('dap').clear_breakpoints()<CR>", "Clear breakpoints" },
 		e = { '<Cmd>lua require"telescope".extensions.dap.commands{}<CR>', "Commands" },
 		f = { '<Cmd>lua require"telescope".extensions.dap.configurations{}<CR>', "Configurations" },
 		r = { '<Cmd>lua require"telescope".extensions.dap.list_breakpoints{}<CR>', "List breakpoints" },
@@ -159,7 +161,7 @@ local mappings = {
 	},
 	m = {
 		name = "Misc",
-		t = { "<cmd>TroubleToggle<cr>", "Trouble" },
+		t = { "<cmd>Trouble document_diagnostics<cr>", "Trouble: Document Diagnostics" },
 	},
 	s = {
 		name = "Search",
