@@ -161,7 +161,7 @@ local mappings = {
 	},
 	m = {
 		name = "Misc",
-		t = { "<cmd>Trouble document_diagnostics<cr>", "Trouble: Document Diagnostics" },
+		d = { "<cmd>Trouble document_diagnostics<cr>", "Trouble: Document Diagnostics" },
 	},
 	s = {
 		name = "Search",
