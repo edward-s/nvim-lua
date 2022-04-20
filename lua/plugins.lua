@@ -25,7 +25,6 @@ require("packer").startup(function()
 	use("tpope/vim-unimpaired")
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
-	use({ "andymass/vim-matchup", event = "CursorMoved" })
 	use({ "kazhala/close-buffers.nvim", cmd = { "BDelete", "BWipeout" } })
 
 	use({
