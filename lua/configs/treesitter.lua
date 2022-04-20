@@ -5,7 +5,17 @@ if not present then
 end
 
 ts_configs.setup({
-	ensure_installed = "maintained",
+	ensure_installed = {
+		"html",
+		"css",
+		"lua",
+		"graphql",
+		"javascript",
+		"typescript",
+		"tsx",
+		"json",
+		"yaml",
+	},
 	highlight = {
 		enable = true,
 		disable = {},
@@ -24,5 +34,8 @@ ts_configs.setup({
 	context_commentstring = {
 		enable = true,
 		enable_autocmd = false,
+	},
+	matchup = {
+		enable = true,
 	},
 })

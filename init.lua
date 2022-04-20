@@ -25,4 +25,4 @@ require("configs.trouble")
 require("configs.vsnip")
 require("configs.whichkey")
 
-require("configs.dap").setup()
+-- require("configs.dap").setup()
