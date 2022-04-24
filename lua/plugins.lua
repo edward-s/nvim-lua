@@ -23,7 +23,12 @@ require("packer").startup(function()
 	use({ "tpope/vim-surround", event = "BufRead" })
 	use({ "tpope/vim-dispatch", opt = true, cmd = { "Dispatch", "Make", "Focus", "Start" } })
 	use("tpope/vim-unimpaired")
-	use("windwp/nvim-autopairs")
+	use({
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	})
 	use("windwp/nvim-ts-autotag")
 	use({ "kazhala/close-buffers.nvim", cmd = { "BDelete", "BWipeout" } })
 
