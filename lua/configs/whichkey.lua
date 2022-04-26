@@ -163,6 +163,13 @@ local mappings = {
 		name = "Misc",
 		d = { "<cmd>Trouble document_diagnostics<cr>", "Trouble: Document Diagnostics" },
 	},
+	p = {
+		name = "Project",
+		p = {
+			"<Cmd>Telescope project<Cr>",
+			"List projects",
+		},
+	},
 	s = {
 		name = "Search",
 		b = { "<cmd>Telescope buffers<cr>", "Buffers" },

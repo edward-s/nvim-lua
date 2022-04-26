@@ -1,4 +1,5 @@
 local options = {
+	autoindent = true,
 	clipboard = "unnamedplus",
 	completeopt = "menu,menuone,noselect",
 	conceallevel = 0,

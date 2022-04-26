@@ -63,26 +63,20 @@ require("packer").startup(function()
 			"DiffviewFocusFiles",
 		},
 	})
-	use({
-		"TimUntersberger/neogit",
-		cmd = "Neogit",
-		config = function()
-			require("neogit").setup({ integrations = { diffview = true } })
-		end,
-	})
 
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- Telescope
-	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
+	use("nvim-lua/popup.nvim")
 	use({
 		"nvim-telescope/telescope.nvim",
 		requires = {
-			"nvim-telescope/telescope-fzy-native.nvim",
+			"nvim-telescope/telescope-project.nvim",
 			"nvim-telescope/telescope-dap.nvim",
+			{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
 		},
 	})
 
