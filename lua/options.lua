@@ -5,8 +5,8 @@ local options = {
 	cursorline = true,
 	expandtab = true,
 	fileencoding = "utf-8",
-	foldlevel = 99,
 	foldexpr = "nvim_treesitter#foldexpr()",
+	foldlevel = 99,
 	foldmethod = "expr",
 	hidden = true,
 	hlsearch = true,
@@ -27,6 +27,7 @@ local options = {
 	swapfile = false,
 	tabstop = 2,
 	termguicolors = true,
+	title = true,
 	updatetime = 250,
 	wrap = false,
 }

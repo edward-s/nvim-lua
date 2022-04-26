@@ -26,7 +26,9 @@ require("packer").startup(function()
 	use({
 		"windwp/nvim-autopairs",
 		config = function()
-			require("nvim-autopairs").setup({})
+			require("nvim-autopairs").setup({
+				check_ts = true,
+			})
 		end,
 	})
 	use("windwp/nvim-ts-autotag")
@@ -45,7 +47,6 @@ require("packer").startup(function()
 	use("Pocco81/DAPInstall.nvim")
 	use("theHamsta/nvim-dap-virtual-text")
 	use("rcarriga/nvim-dap-ui")
-	use("nvim-telescope/telescope-dap.nvim")
 
 	-- Bufferline
 	use("akinsho/bufferline.nvim")
@@ -77,9 +78,13 @@ require("packer").startup(function()
 	-- Telescope
 	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
-	use("nvim-telescope/telescope.nvim")
-	use("nvim-telescope/telescope-fzy-native.nvim")
-	use("nvim-telescope/telescope-vimspector.nvim")
+	use({
+		"nvim-telescope/telescope.nvim",
+		requires = {
+			"nvim-telescope/telescope-fzy-native.nvim",
+			"nvim-telescope/telescope-dap.nvim",
+		},
+	})
 
 	-- LSP
 	use("neovim/nvim-lspconfig")
