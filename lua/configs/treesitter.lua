@@ -16,6 +16,9 @@ ts_configs.setup({
 		"json",
 		"yaml",
 	},
+	indent = {
+		enable = true,
+	},
 	highlight = {
 		enable = true,
 		disable = {},
