@@ -104,18 +104,9 @@ local mappings = {
 	},
 	g = {
 		name = "Git",
-		d = { "<Cmd>Gvdiffsplit<Cr>", "Git diff" },
-		f = { "<cmd>Git fetch --all<cr>", "Git fetch" },
-		g = { "<cmd>Git<cr>", "Git status" },
-		b = { "<cmd>Git branch<cr>", "Git branch" },
-		B = { "<cmd>GitBlameToggle<cr>", "Toggle Blame" },
-		v = { "<cmd>DiffviewOpen<cr>", "Diffview open" },
+		d = { "<cmd>DiffviewOpen<cr>", "Diffview open" },
+		B = { "<cmd>GitBlameToggle<cr>", "Toggle blame" },
 		c = { "<cmd>DiffviewClose<cr>", "Diffview close" },
-		x = {
-			name = "Diff",
-			["2"] = { "<cmd>diffget //2", "Diffget 2" },
-			["3"] = { "<cmd>diffget //3", "Diffget 3" },
-		},
 	},
 	j = {
 		name = "Jumps",

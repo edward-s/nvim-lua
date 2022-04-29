@@ -30,6 +30,9 @@ local options = {
 	termguicolors = true,
 	title = true,
 	updatetime = 250,
+	fillchars = {
+		diff = " ",
+	},
 	wrap = false,
 }
 

@@ -52,7 +52,6 @@ require("packer").startup(function()
 	use("akinsho/bufferline.nvim")
 
 	-- Git
-	use("tpope/vim-fugitive")
 	use("lewis6991/gitsigns.nvim")
 	use({
 		"sindrets/diffview.nvim",
