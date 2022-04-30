@@ -20,7 +20,7 @@ M.setup = function()
 			},
 			virtual_text = false,
 			underline = true,
-			update_in_insert = false,
+			update_in_insert = true,
 			severity_sort = true,
 			float = {
 				focusable = true,
@@ -54,12 +54,6 @@ end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if not status_ok then
-	return
-end
-
-M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+M.capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
 return M
