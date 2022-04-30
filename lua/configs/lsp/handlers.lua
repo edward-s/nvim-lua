@@ -13,12 +13,11 @@ M.setup = function()
 	end
 
 	local lsp = {
-		float = {
-			focusable = true,
-			style = "minimal",
-			border = "rounded",
-		},
 		diagnostic = {
+			signs = {
+				active = true,
+				values = signs,
+			},
 			virtual_text = false,
 			underline = true,
 			update_in_insert = false,
@@ -38,8 +37,10 @@ M.setup = function()
 end
 
 M.on_attach = function(client)
+	client.resolved_capabilities.document_formatting = false
+	client.resolved_capabilities.document_range_formatting = false
+
 	if client.name == "tsserver" then
-		client.resolved_capabilities.document_formatting = false
 		local ts_utils = require("nvim-lsp-ts-utils")
 
 		ts_utils.setup({
@@ -52,6 +53,7 @@ M.on_attach = function(client)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not status_ok then

@@ -33,6 +33,7 @@ require("packer").startup(function()
 	})
 	use("windwp/nvim-ts-autotag")
 	use({ "kazhala/close-buffers.nvim", cmd = { "BDelete", "BWipeout" } })
+	use("b0o/schemastore.nvim")
 
 	use({
 		"antoinemadec/FixCursorHold.nvim",
