@@ -1,10 +1,10 @@
 local present, harpoon = pcall(require, "harpoon")
 if not present then
-	return
+  return
 end
 
 harpoon.setup({
-	menu = {
-		width = 100,
-	},
+  menu = {
+    width = 100,
+  },
 })

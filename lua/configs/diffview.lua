@@ -1,8 +1,8 @@
 local present, diffview = pcall(require, "diffview")
 if not present then
-	return
+  return
 end
 
 diffview.setup({
-	diff_binaries = false,
+  diff_binaries = false,
 })

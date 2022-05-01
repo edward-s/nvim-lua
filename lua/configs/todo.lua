@@ -1,7 +1,7 @@
 local present, todoComments = pcall(require, "todo-comments")
 
 if not present then
-	return
+  return
 end
 
 todoComments.setup({})

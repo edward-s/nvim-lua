@@ -32,10 +32,10 @@ keymap("n", "<C-n>", "<cmd>NvimTreeToggle<cr>", opts)
 
 -- Telescope
 keymap(
-	"n",
-	"<C-p>",
-	"<cmd>lua require('telescope.builtin').git_files(require('telescope.themes').get_dropdown{ previewer = false })<cr>",
-	opts
+  "n",
+  "<C-p>",
+  "<cmd>lua require('telescope.builtin').git_files(require('telescope.themes').get_dropdown{ previewer = false })<cr>",
+  opts
 )
 
 -- Bufferline
