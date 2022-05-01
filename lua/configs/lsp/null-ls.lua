@@ -1,22 +1,23 @@
-local present, null_ls = pcall(require, "null-ls")
-if not present then
-	return
+local M = {}
+
+local lsputils = require("configs.lsp.utils")
+local null_ls = require("null-ls")
+
+function M.setup()
+  local formatting = null_ls.builtins.formatting
+  local codeActions = null_ls.builtins.code_actions
+  local sources = {
+    formatting.prettierd.with({
+      filetypes = { "html", "javascript", "json", "typescript", "yaml", "markdown" },
+    }),
+    codeActions.eslint_d,
+  }
+  null_ls.setup({
+    sources = sources,
+    on_attach = lsputils.lsp_attach,
+    capabilities = lsputils.get_capabilities(),
+    flags = { debounce_text_changes = 150 },
+  })
 end
 
-local formatting = null_ls.builtins.formatting
-local codeActions = null_ls.builtins.code_actions
-
-null_ls.setup({
-	debug = false,
-	debounce = 150,
-	sources = {
-		formatting.prettierd,
-		formatting.stylua,
-		codeActions.eslint_d,
-	},
-	on_attach = function(client)
-		if client.resolved_capabilities.document_formatting then
-			vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
-		end
-	end,
-})
+return M
