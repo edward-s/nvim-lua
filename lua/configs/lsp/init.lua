@@ -1,8 +1,8 @@
 local M = {}
 
-local lsp_installer = require "nvim-lsp-installer"
+local lsp_installer = require("nvim-lsp-installer")
 local lspconfig = require("lspconfig")
-local lsputils = require "configs.lsp.utils"
+local lsputils = require("configs.lsp.utils")
 
 local servers = { "tsserver", "jsonls", "sumneko_lua" }
 

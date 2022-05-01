@@ -9,7 +9,12 @@ require("packer").startup(function()
   use("ThePrimeagen/harpoon")
   use("akinsho/toggleterm.nvim")
   use("f-person/git-blame.nvim")
-  use("folke/todo-comments.nvim")
+  use({
+    "folke/todo-comments.nvim",
+    config = function()
+      require("todo-comments").setup({})
+    end,
+  })
   use("folke/trouble.nvim")
   use("folke/which-key.nvim")
   use("ggandor/lightspeed.nvim")
