@@ -43,6 +43,12 @@ require("packer").startup(function()
     event = "BufReadPost",
   })
   use { "ray-x/lsp_signature.nvim" }
+  use {
+    "luukvbaal/stabilize.nvim",
+    config = function()
+      require("stabilize").setup()
+    end
+  }
 
   -- Test
   use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
