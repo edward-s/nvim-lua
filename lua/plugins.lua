@@ -49,6 +49,12 @@ require("packer").startup(function()
       require("stabilize").setup()
     end
   }
+  use {
+    "tami5/lspsaga.nvim",
+    config = function()
+      require("lspsaga").setup()
+    end,
+  }
 
   -- Test
   use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })

@@ -121,10 +121,7 @@ local mappings = {
   ["3"] = { "<Cmd>lua require('harpoon.ui').nav_file(3) <Cr>", "Jump 3" },
   l = {
     name = "LSP",
-    a = {
-      "<cmd>lua vim.lsp.buf.code_action()<cr>",
-      "Code Action",
-    },
+    a = { "<cmd>Lspsaga code_action<cr>", "Code Action", },
     d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "Go To Definition" },
     D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "Go To Declaration" },
     e = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics" },
@@ -132,7 +129,7 @@ local mappings = {
       "<cmd>lua vim.lsp.buf.formatting()<cr>",
       "Format",
     },
-    k = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature Help" },
+    k = { "<cmd>Lspsaga signature_helo<cr>", "Signature Help" },
     K = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" },
     l = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Line diagnostics" },
     n = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Next Diagnostic" },
@@ -143,7 +140,7 @@ local mappings = {
       "References",
     },
     R = {
-      "<cmd>lua vim.lsp.buf.rename()<cr>",
+      "<cmd>Lspsaga rename<cr>",
       "Rename",
     },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
