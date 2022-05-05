@@ -135,14 +135,8 @@ local mappings = {
     n = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Next Diagnostic" },
     p = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev Diagnostic" },
     q = { "<cmd>lua vim.diagnostic.set_loclist()<cr>", "Quickfix" },
-    r = {
-      "<cmd>lua vim.lsp.buf.references()<cr>",
-      "References",
-    },
-    R = {
-      "<cmd>Lspsaga rename<cr>",
-      "Rename",
-    },
+    r = { "<cmd>lua vim.lsp.buf.references()<cr>", "References" },
+    R = { "<cmd>Lspsaga rename<cr>", "Rename" },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
     t = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", "Type Definition" },
     w = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
