@@ -7,9 +7,7 @@ function M.setup()
   local formatting = null_ls.builtins.formatting
   local codeActions = null_ls.builtins.code_actions
   local sources = {
-    formatting.prettierd.with({
-      filetypes = { "html", "javascript", "json", "typescript", "yaml", "markdown" },
-    }),
+    formatting.prettierd,
     codeActions.eslint_d,
   }
   null_ls.setup({
