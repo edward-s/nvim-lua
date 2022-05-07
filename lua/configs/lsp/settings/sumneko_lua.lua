@@ -21,7 +21,6 @@ function M.setup()
     },
     on_attach = lsputils.lsp_attach,
     capabilities = lsputils.get_capabilities(),
-    flags = { debounce_text_changes = 150 },
   }
   return opts
 end

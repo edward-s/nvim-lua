@@ -23,7 +23,6 @@ function M.config()
   return {
     on_attach = M.lsp_attach,
     capabilities = lsputils.get_capabilities(),
-    flags = { debounce_text_changes = 150 },
   }
 end
 

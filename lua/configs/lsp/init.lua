@@ -14,7 +14,6 @@ for _, server in pairs(servers) do
   local opts = {
     on_attach = M.lsp_attach,
     capabilities = lsputils.get_capabilities(),
-    flags = { debounce_text_changes = 150 },
   }
 
   local has_custom_opts, server_settings = pcall(require, "configs.lsp.settings." .. server)
