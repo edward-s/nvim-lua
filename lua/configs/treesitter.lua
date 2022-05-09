@@ -5,17 +5,7 @@ if not present then
 end
 
 ts_configs.setup({
-  ensure_installed = {
-    "html",
-    "css",
-    "lua",
-    "graphql",
-    "javascript",
-    "typescript",
-    "tsx",
-    "json",
-    "yaml",
-  },
+  ensure_installed = "all",
   indent = {
     enable = true,
   },
