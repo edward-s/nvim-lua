@@ -42,7 +42,6 @@ require("packer").startup(function()
     "antoinemadec/FixCursorHold.nvim",
     event = "BufReadPost",
   })
-  use { "ray-x/lsp_signature.nvim" }
   use {
     "luukvbaal/stabilize.nvim",
     config = function()
@@ -111,6 +110,7 @@ require("packer").startup(function()
       { "hrsh7th/cmp-buffer" },
       { "hrsh7th/cmp-path" },
       { "hrsh7th/cmp-cmdline" },
+      { "f3fora/cmp-spell" },
     },
   })
 

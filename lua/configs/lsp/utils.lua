@@ -37,11 +37,6 @@ function M.lsp_diagnostics()
 end
 
 function M.lsp_config(client)
-  require("lsp_signature").on_attach({
-    bind = true,
-    handler_opts = { border = "single" },
-  })
-
   if client.resolved_capabilities.document_formatting then
     vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
   end
