@@ -72,10 +72,7 @@ local mappings = {
   ["q"] = { "<cmd>q<cr>", "Quit" },
   b = {
     name = "Buffers",
-    a = {
-      "<cmd>BWipeout other<cr>",
-      "Close other buffers",
-    },
+    a = { "<cmd>BWipeout other<cr>", "Close other buffers" },
     d = { "<cmd>BDelete this<CR>", "Close Buffer" },
   },
   c = {
@@ -111,17 +108,14 @@ local mappings = {
   j = {
     name = "Jumps",
     a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add File" },
-    m = {
-      "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>",
-      "Open Menu",
-    },
+    m = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Open Menu" },
   },
   ["1"] = { "<Cmd>lua require('harpoon.ui').nav_file(1) <Cr>", "Jump 1" },
   ["2"] = { "<Cmd>lua require('harpoon.ui').nav_file(2) <Cr>", "Jump 2" },
   ["3"] = { "<Cmd>lua require('harpoon.ui').nav_file(3) <Cr>", "Jump 3" },
   l = {
     name = "LSP",
-    a = { "<cmd>Lspsaga code_action<cr>", "Code Action", },
+    a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action", },
     d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "Go To Definition" },
     D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "Go To Declaration" },
     e = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics" },
@@ -144,10 +138,7 @@ local mappings = {
   },
   p = {
     name = "Project",
-    p = {
-      "<Cmd>Telescope project<Cr>",
-      "List projects",
-    },
+    p = { "<Cmd>Telescope project<Cr>", "List projects" },
   },
   s = {
     name = "Search",

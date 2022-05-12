@@ -1,7 +1,7 @@
 local options = {
   autoindent = true,
   clipboard = "unnamedplus",
-  completeopt = "menu,menuone,noselect",
+  completeopt = "menu,menuone,noinsert",
   conceallevel = 0,
   cursorline = true,
   expandtab = true,
