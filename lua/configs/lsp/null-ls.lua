@@ -11,7 +11,7 @@ function M.setup()
     formatting.prettierd,
     codeActions.eslint_d,
     diagnostics.eslint_d,
-    diagnostics.tsc
+    -- diagnostics.tsc
   }
   null_ls.setup({
     sources = sources,
