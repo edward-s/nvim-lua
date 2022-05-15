@@ -147,7 +147,6 @@ local mappings = {
     o = { "<cmd>Telescope oldfiles<cr>", "Old Files" },
     r = { "<cmd>Telescope resume<cr>", "Resume Search" },
     s = { "<cmd>Telescope grep_string<cr>", "Text under cursor" },
-    S = { "<cmd>Telescope symbols<cr>", "Search symbols" },
     w = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Current Buffer" },
   },
   t = {
