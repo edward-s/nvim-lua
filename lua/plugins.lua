@@ -5,6 +5,7 @@ require("packer").startup(function()
   use("sainnhe/gruvbox-material")
 
   -- Plugins
+  use("RRethy/vim-illuminate")
   use("ThePrimeagen/harpoon")
   use("akinsho/toggleterm.nvim")
   use("f-person/git-blame.nvim")
