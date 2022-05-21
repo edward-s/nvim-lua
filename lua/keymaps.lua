@@ -43,18 +43,6 @@ keymap(
 keymap("n", "<Tab>", "<cmd>bnext<cr>", opts)
 keymap("n", "<S-Tab>", "<cmd>bprevious<cr>", opts)
 
--- Test
-keymap("n", "[t", "<Plug>(ultest-prev-fail)", opts)
-keymap("n", "]t", "<Plug>(ultest-next-fail)", opts)
-
 -- Lspsaga
 keymap("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
 keymap("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
-
--- Lightspeed
-vim.cmd([[
-  nmap <expr> f reg_recording() . reg_executing() == "" ? "<Plug>Lightspeed_f" : "f"
-  nmap <expr> F reg_recording() . reg_executing() == "" ? "<Plug>Lightspeed_F" : "F"
-  nmap <expr> t reg_recording() . reg_executing() == "" ? "<Plug>Lightspeed_t" : "t"
-  nmap <expr> T reg_recording() . reg_executing() == "" ? "<Plug>Lightspeed_T" : "T"
-]])
