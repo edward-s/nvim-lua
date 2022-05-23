@@ -78,7 +78,7 @@ local mappings = {
   c = {
     name = "Quickfix",
     o = { "<Cmd>copen<Cr>", "Open quickfix" },
-    x = { "<Cmd>cclose<Cr>", "Close quickfix" },
+    c = { "<Cmd>cclose<Cr>", "Close quickfix" },
     n = { "<Cmd>cnext<Cr>", "Next quickfix" },
     p = { "<Cmd>cprev<Cr>", "Previous quickfix" },
   },
