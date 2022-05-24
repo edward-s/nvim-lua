@@ -54,6 +54,12 @@ require("packer").startup(function()
       require("lspsaga").setup()
     end,
   }
+  use {
+    "ray-x/lsp_signature.nvim",
+    config = function()
+      require("lsp_signature").setup()
+    end
+  }
 
   -- Test
   use("vim-test/vim-test")

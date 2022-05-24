@@ -45,6 +45,7 @@ end
 function M.lsp_attach(client)
   M.lsp_config(client)
   M.lsp_diagnostics()
+  require('lsp_signature').on_attach()
 end
 
 function M.get_capabilities()
