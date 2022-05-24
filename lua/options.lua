@@ -2,6 +2,7 @@ local options = {
   autoindent = true,
   clipboard = "unnamedplus",
   completeopt = "menu,menuone,noinsert",
+  cmdheight = 1,
   conceallevel = 0,
   cursorline = true,
   expandtab = true,
