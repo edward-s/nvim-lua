@@ -34,7 +34,6 @@ local options = {
   termguicolors = true,
   title = true,
   updatetime = 250,
-  winbar = "%f",
   wrap = false,
 }
 
