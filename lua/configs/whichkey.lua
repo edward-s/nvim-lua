@@ -152,11 +152,12 @@ local mappings = {
   },
   t = {
     name = "Test",
-    f = { "<cmd>TestFile<cr>", "File" },
-    l = { "<cmd>TestLast<cr>", "Last" },
-    t = { "<cmd>TestNearest<cr>", "Nearest" },
-    s = { "<cmd>TestSuite<cr>", "Suite" },
-    v = { "<cmd>TestVisit<cr>", "Visit" },
+    f = { "<cmd>Ultest<cr>", "File" },
+    l = { "<cmd>UltestLast<cr>", "Last" },
+    o = { "<Plug>(ultest-output-jump)", "Output" },
+    q = { "<cmd>UltestStop<cr>", "Stop" },
+    t = { "<cmd>UltestNearest<cr>", "Nearest" },
+    s = { "<cmd>UltestSummary<cr>", "Summary" },
   },
   w = {
     name = "Window",

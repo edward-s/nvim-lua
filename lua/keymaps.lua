@@ -43,6 +43,10 @@ keymap(
 keymap("n", "<Tab>", "<cmd>bnext<cr>", opts)
 keymap("n", "<S-Tab>", "<cmd>bprevious<cr>", opts)
 
+-- Test
+keymap("n", "[t", "<Plug>(ultest-prev-fail)", opts)
+keymap("n", "]t", "<Plug>(ultest-next-fail)", opts)
+
 -- Lspsaga
 keymap("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
 keymap("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)

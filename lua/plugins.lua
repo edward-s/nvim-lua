@@ -62,7 +62,7 @@ require("packer").startup(function()
   }
 
   -- Test
-  use("vim-test/vim-test")
+  use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
 
   -- Debugging
   use("mfussenegger/nvim-dap")
