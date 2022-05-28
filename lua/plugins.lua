@@ -60,6 +60,13 @@ require("packer").startup(function()
       require("lsp_signature").setup()
     end
   }
+use {
+  "b0o/incline.nvim",
+  event = "BufReadPre",
+  config = function()
+    require("incline").setup()
+  end,
+}
 
   -- Test
   use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
