@@ -17,7 +17,12 @@ require("packer").startup(function()
   })
   use("folke/trouble.nvim")
   use("folke/which-key.nvim")
-  use("ggandor/lightspeed.nvim")
+  use({
+    "ggandor/leap.nvim",
+    config = function()
+      require("leap").set_default_keymaps()
+    end,
+  })
   use("kyazdani42/nvim-tree.lua")
   use("kyazdani42/nvim-web-devicons")
   use("lukas-reineke/indent-blankline.nvim")
@@ -60,13 +65,13 @@ require("packer").startup(function()
       require("lsp_signature").setup()
     end
   }
-use {
-  "b0o/incline.nvim",
-  event = "BufReadPre",
-  config = function()
-    require("incline").setup()
-  end,
-}
+  use {
+    "b0o/incline.nvim",
+    event = "BufReadPre",
+    config = function()
+      require("incline").setup()
+    end,
+  }
 
   -- Test
   use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
