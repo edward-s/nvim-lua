@@ -72,6 +72,7 @@ require("packer").startup(function()
       require("incline").setup()
     end,
   }
+  use { "wellle/targets.vim", event = "BufWinEnter" }
 
   -- Test
   use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
