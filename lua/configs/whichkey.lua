@@ -101,9 +101,7 @@ local mappings = {
   },
   g = {
     name = "Git",
-    d = { "<cmd>DiffviewOpen<cr>", "Diffview open" },
     B = { "<cmd>GitBlameToggle<cr>", "Toggle blame" },
-    c = { "<cmd>DiffviewClose<cr>", "Diffview close" },
   },
   j = {
     name = "Jumps",
