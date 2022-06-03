@@ -42,7 +42,6 @@ require("packer").startup(function()
   })
   use("windwp/nvim-ts-autotag")
   use({ "kazhala/close-buffers.nvim", cmd = { "BDelete", "BWipeout" } })
-  use("b0o/schemastore.nvim")
   use({
     "antoinemadec/FixCursorHold.nvim",
     event = "BufReadPost",
@@ -58,12 +57,6 @@ require("packer").startup(function()
     config = function()
       require("lspsaga").setup()
     end,
-  }
-  use {
-    "ray-x/lsp_signature.nvim",
-    config = function()
-      require("lsp_signature").setup()
-    end
   }
   use {
     "b0o/incline.nvim",
