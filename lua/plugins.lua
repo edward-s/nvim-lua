@@ -68,6 +68,7 @@ require("packer").startup(function()
   -- Git
   use("lewis6991/gitsigns.nvim")
   use("f-person/git-blame.nvim")
+  use("sindrets/diffview.nvim")
 
   -- Treesitter
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
@@ -124,5 +125,4 @@ require("packer").startup(function()
   -- Evaluating
   use("ThePrimeagen/harpoon")
   use("mattn/emmet-vim")
-
 end)
