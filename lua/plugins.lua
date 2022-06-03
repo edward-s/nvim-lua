@@ -4,17 +4,7 @@ require("packer").startup(function()
   -- Colorscheme
   use("sainnhe/gruvbox-material")
 
-  -- Plugins
-  use("RRethy/vim-illuminate")
-  use("ThePrimeagen/harpoon")
-  use("akinsho/toggleterm.nvim")
-  use("f-person/git-blame.nvim")
-  use({
-    "folke/todo-comments.nvim",
-    config = function()
-      require("todo-comments").setup({})
-    end,
-  })
+  -- Essentials
   use("folke/trouble.nvim")
   use("folke/which-key.nvim")
   use({
@@ -28,19 +18,18 @@ require("packer").startup(function()
   use("lukas-reineke/indent-blankline.nvim")
   use("numToStr/Comment.nvim")
   use("nvim-lualine/lualine.nvim")
-  use("p00f/nvim-ts-rainbow")
+  use({
+    "folke/todo-comments.nvim",
+    config = function()
+      require("todo-comments").setup({})
+    end,
+  })
+  use("akinsho/bufferline.nvim")
+  use("RRethy/vim-illuminate")
+  use("akinsho/toggleterm.nvim")
   use({ "tpope/vim-surround", event = "BufRead" })
   use({ "tpope/vim-dispatch", opt = true, cmd = { "Dispatch", "Make", "Focus", "Start" } })
   use("tpope/vim-unimpaired")
-  use({
-    "windwp/nvim-autopairs",
-    config = function()
-      require("nvim-autopairs").setup({
-        check_ts = true,
-      })
-    end,
-  })
-  use("windwp/nvim-ts-autotag")
   use({ "kazhala/close-buffers.nvim", cmd = { "BDelete", "BWipeout" } })
   use({
     "antoinemadec/FixCursorHold.nvim",
@@ -54,7 +43,18 @@ require("packer").startup(function()
     end,
   }
   use { "wellle/targets.vim", event = "BufWinEnter" }
-  use("mattn/emmet-vim")
+
+  -- Formatting
+  use("p00f/nvim-ts-rainbow")
+  use({
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup({
+        check_ts = true,
+      })
+    end,
+  })
+  use("windwp/nvim-ts-autotag")
 
   -- Test
   use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
@@ -65,11 +65,9 @@ require("packer").startup(function()
   use("theHamsta/nvim-dap-virtual-text")
   use("rcarriga/nvim-dap-ui")
 
-  -- Bufferline
-  use("akinsho/bufferline.nvim")
-
   -- Git
   use("lewis6991/gitsigns.nvim")
+  use("f-person/git-blame.nvim")
 
   -- Treesitter
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
@@ -122,4 +120,9 @@ require("packer").startup(function()
       "rafamadriz/friendly-snippets",
     },
   })
+
+  -- Evaluating
+  use("ThePrimeagen/harpoon")
+  use("mattn/emmet-vim")
+
 end)
