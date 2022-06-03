@@ -47,18 +47,6 @@ require("packer").startup(function()
     event = "BufReadPost",
   })
   use {
-    "luukvbaal/stabilize.nvim",
-    config = function()
-      require("stabilize").setup()
-    end
-  }
-  use {
-    "tami5/lspsaga.nvim",
-    config = function()
-      require("lspsaga").setup()
-    end,
-  }
-  use {
     "b0o/incline.nvim",
     event = "BufReadPre",
     config = function()
@@ -66,11 +54,12 @@ require("packer").startup(function()
     end,
   }
   use { "wellle/targets.vim", event = "BufWinEnter" }
+  use("mattn/emmet-vim")
 
   -- Test
   use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
 
-  -- Debugging
+  -- Debug
   use("mfussenegger/nvim-dap")
   use("Pocco81/DAPInstall.nvim")
   use("theHamsta/nvim-dap-virtual-text")
@@ -84,6 +73,7 @@ require("packer").startup(function()
 
   -- Treesitter
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+  use("nvim-treesitter/nvim-treesitter-textobjects")
   use("JoosepAlviste/nvim-ts-context-commentstring")
 
   -- Telescope
@@ -102,8 +92,14 @@ require("packer").startup(function()
   use("neovim/nvim-lspconfig")
   use("williamboman/nvim-lsp-installer")
   use("jose-elias-alvarez/null-ls.nvim")
-  use("jose-elias-alvarez/nvim-lsp-ts-utils")
   use("onsails/lspkind-nvim")
+  use("jose-elias-alvarez/nvim-lsp-ts-utils")
+  use {
+    "tami5/lspsaga.nvim",
+    config = function()
+      require("lspsaga").setup()
+    end,
+  }
 
   -- Cmp
   use({
