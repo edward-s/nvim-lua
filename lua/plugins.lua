@@ -124,5 +124,11 @@ require("packer").startup(function()
 
   -- Evaluating
   use("ThePrimeagen/harpoon")
-  use("mattn/emmet-vim")
+  use {
+    "chentoast/marks.nvim",
+    event = "BufReadPre",
+    config = function()
+      require("marks").setup {}
+    end,
+  }
 end)

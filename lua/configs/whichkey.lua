@@ -102,6 +102,7 @@ local mappings = {
   g = {
     name = "Git",
     b = { "<cmd>GitBlameToggle<cr>", "Toggle blame" },
+    B = { "<cmd>Telescope git_branches<cr>", "Git branches" },
     d = { '<cmd>lua require("configs.diffview").toggle()<CR>', 'Diff file' },
   },
   j = {
