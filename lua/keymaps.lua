@@ -50,3 +50,6 @@ keymap("n", "]t", "<Plug>(ultest-next-fail)", opts)
 -- Lspsaga
 keymap("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
 keymap("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
+
+-- Emmet
+vim.g.user_emmet_leader_key = "<C-e>"

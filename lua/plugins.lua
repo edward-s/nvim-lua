@@ -131,4 +131,5 @@ require("packer").startup(function()
       require("marks").setup {}
     end,
   }
+  use("edward-s/emmet-vim")
 end)
