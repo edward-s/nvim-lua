@@ -90,10 +90,11 @@ cmp.setup({
     end, { "i", "s" }),
   },
   sources = {
-    { name = "nvim_lsp", max_item_count = 10 },
-    { name = "buffer", keyword_length = 5, max_item_count = 5 },
-    { name = "vsnip", max_item_count = 5 },
+    { name = "nvim_lsp" },
+    { name = "buffer" },
+    { name = "vsnip" },
     { name = "path" },
+    { name = "nvim_lsp_signature_help" },
   },
 })
 
