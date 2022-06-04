@@ -23,3 +23,5 @@ require("configs.vsnip")
 require("configs.whichkey")
 
 -- require("configs.dap").setup()
+
+vim.cmd([[ colorscheme gruvbox-material ]])
