@@ -3,15 +3,10 @@ if not present then
   return
 end
 
-vim.g.indent_blankline_buftype_exclude = { "terminal", "nofile" }
-vim.g.indent_blankline_filetype_exclude = {
-  "dashboard",
-  "NvimTree",
-}
-
-vim.g.indentLine_enabled = 1
-vim.g.indent_blankline_char = "▏"
-
 indent_blankline.setup({
-  show_current_context = false,
+  char = "▏",
+  buftype_exclude = { 'terminal' },
+  filetype_exclude = { "dashboard", "NvimTree" },
+  show_current_context = true,
+  use_treesitter = true
 })
