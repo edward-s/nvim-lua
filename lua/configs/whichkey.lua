@@ -72,8 +72,9 @@ local mappings = {
   ["q"] = { "<cmd>q<cr>", "Quit" },
   b = {
     name = "Buffers",
-    a = { "<cmd>BWipeout other<cr>", "Close other buffers" },
-    d = { "<cmd>BDelete this<CR>", "Close Buffer" },
+    a = { "<cmd>BufferCloseAllButCurrent<cr>", "Close other buffers" },
+    d = { "<cmd>BufferClose<CR>", "Close buffer" },
+    p = { "<cmd>BufferPin<CR>", "Pin buffer" },
   },
   c = {
     name = "Quickfix",

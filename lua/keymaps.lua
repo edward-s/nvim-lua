@@ -35,8 +35,8 @@ keymap("n", "<C-n>", "<cmd>NvimTreeToggle<cr>", opts)
 keymap("n", "<C-p>", "<cmd>lua require('configs.telescope').project_files()<cr>", opts)
 
 -- Bufferline
-keymap("n", "<Tab>", "<cmd>bnext<cr>", opts)
-keymap("n", "<S-Tab>", "<cmd>bprevious<cr>", opts)
+keymap("n", "<Tab>", "<cmd>BufferNext<cr>", opts)
+keymap("n", "<S-Tab>", "<cmd>BufferPrevious<cr>", opts)
 
 -- Test
 keymap("n", "[t", "<Plug>(ultest-prev-fail)", opts)

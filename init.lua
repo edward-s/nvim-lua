@@ -1,7 +1,6 @@
 require("options")
 require("keymaps")
 require("plugins")
-require("autocmds")
 require("configs.autopairs")
 require("configs.barbar")
 require("configs.cmp")

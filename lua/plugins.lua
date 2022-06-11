@@ -30,7 +30,6 @@ require("packer").startup(function()
   use({ "tpope/vim-surround", event = "BufRead" })
   use({ "tpope/vim-dispatch", opt = true, cmd = { "Dispatch", "Make", "Focus", "Start" } })
   use("tpope/vim-unimpaired")
-  use({ "kazhala/close-buffers.nvim", cmd = { "BDelete", "BWipeout" } })
   use({
     "antoinemadec/FixCursorHold.nvim",
     event = "BufReadPost",

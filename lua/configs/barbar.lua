@@ -1,4 +1,5 @@
-vim.g.bufferline = {
+local bufferline = require('bufferline')
+bufferline.setup({
   -- Enable/disable animations
   animation = true,
 
@@ -9,7 +10,7 @@ vim.g.bufferline = {
   tabpages = true,
 
   -- Enable/disable close button
-  closable = false,
+  closable = true,
 
   -- Enables/disable clickable tabs
   --  - left-click: go to buffer
@@ -18,7 +19,6 @@ vim.g.bufferline = {
 
   -- Excludes buffers from the tabline
   exclude_ft = { 'qf' },
-  -- exclude_name = ['package.json'],
 
   -- Enable/disable icons
   -- if set to 'numbers', will show buffer index in the tabline
@@ -62,4 +62,15 @@ vim.g.bufferline = {
   -- Sets the name of unnamed buffers. By default format is "[Buffer X]"
   -- where X is the buffer number. But only a static string is accepted here.
   no_name_title = nil,
-}
+})
+
+local nvim_tree_events = require('nvim-tree.events')
+local bufferline_state = require('bufferline.state')
+
+nvim_tree_events.on_tree_open(function()
+  bufferline_state.set_offset(31, "File Tree")
+end)
+
+nvim_tree_events.on_tree_close(function()
+  bufferline_state.set_offset(0)
+end)
