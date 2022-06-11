@@ -32,12 +32,7 @@ keymap("n", "zR", "zR<cmd>IndentBlanklineRefresh<cr>", opts)
 keymap("n", "<C-n>", "<cmd>NvimTreeToggle<cr>", opts)
 
 -- Telescope
-keymap(
-  "n",
-  "<C-p>",
-  "<cmd>lua require('telescope.builtin').git_files(require('telescope.themes').get_dropdown{ previewer = false })<cr>",
-  opts
-)
+keymap("n", "<C-p>", "<cmd>lua require('configs.telescope').project_files()<cr>", opts)
 
 -- Bufferline
 keymap("n", "<Tab>", "<cmd>bnext<cr>", opts)

@@ -24,7 +24,6 @@ require("packer").startup(function()
       require("todo-comments").setup({})
     end,
   })
-  -- use("akinsho/bufferline.nvim")
   use("romgrk/barbar.nvim")
   use("RRethy/vim-illuminate")
   use("akinsho/toggleterm.nvim")
@@ -44,6 +43,14 @@ require("packer").startup(function()
     end,
   }
   use { "wellle/targets.vim", event = "BufWinEnter" }
+  use {
+    "chentoast/marks.nvim",
+    event = "BufReadPre",
+    config = function()
+      require("marks").setup {}
+    end,
+  }
+  use("edward-s/emmet-vim")
 
   -- Formatting
   use("p00f/nvim-ts-rainbow")
@@ -126,12 +133,4 @@ require("packer").startup(function()
 
   -- Evaluating
   use("ThePrimeagen/harpoon")
-  use {
-    "chentoast/marks.nvim",
-    event = "BufReadPre",
-    config = function()
-      require("marks").setup {}
-    end,
-  }
-  use("edward-s/emmet-vim")
 end)
