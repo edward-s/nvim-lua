@@ -141,8 +141,8 @@ local mappings = {
   },
   s = {
     name = "Search",
-    b = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{ previewer = false })<cr>", "Buffers" },
-    f = { "<cmd>Telescope find_files hidden=true no_ignore=true<cr>", "Find" },
+    b = { "<cmd>Telescope buffers<cr>", "Buffers" },
+    f = { "<cmd>Telescope find_files<cr>", "Find" },
     g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
     h = { "<cmd>Telescope help_tags<cr>", "Man Pages" },
     m = { "<cmd>Telescope marks<cr>", "Marks" },

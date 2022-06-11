@@ -43,7 +43,7 @@ bufferline.setup({
   insert_at_end = false,
 
   -- Sets the maximum padding width with which to surround each tab
-  maximum_padding = 2,
+  maximum_padding = 1,
 
   -- Sets the maximum buffer name length.
   maximum_length = 30,
