@@ -131,5 +131,4 @@ require("packer").startup(function()
   })
 
   -- Evaluating
-  use("ThePrimeagen/harpoon")
 end)

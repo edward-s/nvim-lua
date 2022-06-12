@@ -106,14 +106,6 @@ local mappings = {
     B = { "<cmd>Telescope git_branches<cr>", "Git branches" },
     d = { '<cmd>lua require("configs.diffview").toggle()<CR>', 'Diff file' },
   },
-  j = {
-    name = "Jumps",
-    a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add File" },
-    m = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Open Menu" },
-  },
-  ["1"] = { "<Cmd>lua require('harpoon.ui').nav_file(1) <Cr>", "Jump 1" },
-  ["2"] = { "<Cmd>lua require('harpoon.ui').nav_file(2) <Cr>", "Jump 2" },
-  ["3"] = { "<Cmd>lua require('harpoon.ui').nav_file(3) <Cr>", "Jump 3" },
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action", },
