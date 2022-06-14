@@ -146,10 +146,10 @@ local mappings = {
   t = {
     name = "Test",
     c = { "<cmd>UltestClear<cr>", "Clear" },
-    f = { "<cmd>Ultest<cr>", "File" },
+    f = { "<cmd>TestFile<cr>", "File" },
     l = { "<cmd>UltestLast<cr>", "Last" },
     o = { "<Plug>(ultest-output-jump)", "Output" },
-    q = { "<cmd>UltestStop<cr>", "Stop" },
+    d = { "<cmd>UltestStop<cr>", "Stop" },
     t = { "<cmd>UltestNearest<cr>", "Nearest" },
     s = { "<cmd>UltestSummary<cr>", "Summary" },
   },
