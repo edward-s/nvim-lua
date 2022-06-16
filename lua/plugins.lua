@@ -7,12 +7,7 @@ require("packer").startup(function()
   -- Essentials
   use("folke/trouble.nvim")
   use("folke/which-key.nvim")
-  use({
-    "ggandor/leap.nvim",
-    config = function()
-      require("leap").set_default_keymaps()
-    end,
-  })
+  use("ggandor/lightspeed.nvim")
   use("kyazdani42/nvim-tree.lua")
   use("kyazdani42/nvim-web-devicons")
   use("lukas-reineke/indent-blankline.nvim")
