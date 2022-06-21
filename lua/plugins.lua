@@ -37,13 +37,6 @@ require("packer").startup(function()
     end,
   }
   use { "wellle/targets.vim", event = "BufWinEnter" }
-  use {
-    "chentoast/marks.nvim",
-    event = "BufReadPre",
-    config = function()
-      require("marks").setup {}
-    end,
-  }
   use("edward-s/emmet-vim")
 
   -- Formatting
@@ -124,6 +117,4 @@ require("packer").startup(function()
       "rafamadriz/friendly-snippets",
     },
   })
-
-  -- Evaluating
 end)

@@ -108,7 +108,7 @@ local mappings = {
   },
   l = {
     name = "LSP",
-    a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action", },
+    a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
     d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "Go To Definition" },
     D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "Go To Declaration" },
     e = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics" },
@@ -120,12 +120,8 @@ local mappings = {
     r = { "<cmd>lua vim.lsp.buf.references()<cr>", "References" },
     R = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-    t = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", "Type Definition" },
+    t = { "<cmd>TroubleToggle<cr>", "Trouble" },
     w = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
-  },
-  m = {
-    name = "Misc",
-    d = { "<cmd>Trouble document_diagnostics<cr>", "Trouble: Document Diagnostics" },
   },
   p = {
     name = "Project",
