@@ -25,10 +25,7 @@ require("packer").startup(function()
   use({ "tpope/vim-surround", event = "BufRead" })
   use({ "tpope/vim-dispatch", opt = true, cmd = { "Dispatch", "Make", "Focus", "Start" } })
   use("tpope/vim-unimpaired")
-  use({
-    "antoinemadec/FixCursorHold.nvim",
-    event = "BufReadPost",
-  })
+  use("antoinemadec/FixCursorHold.nvim")
   use {
     "b0o/incline.nvim",
     event = "BufReadPre",
@@ -120,6 +117,14 @@ require("packer").startup(function()
       "hrsh7th/vim-vsnip",
       "hrsh7th/vim-vsnip-integ",
       "rafamadriz/friendly-snippets",
+    },
+  })
+
+  -- Experimental
+  use({
+    "nvim-neotest/neotest",
+    requires = {
+      "haydenmeade/neotest-jest",
     },
   })
 end)
