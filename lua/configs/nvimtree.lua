@@ -62,7 +62,7 @@ nvimtree.setup({
     },
   },
   view = {
-    width = 30,
+    width = 40,
     hide_root_folder = true,
     side = "left",
     signcolumn = "yes",
