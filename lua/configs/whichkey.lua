@@ -161,7 +161,7 @@ local mappings = {
     ["="] = { "<c-w>=", "Equally size" },
     v = { "<cmd>:vsplit<cr>", "Vertical Split" },
     r = { "<c-w>r", "Swap" },
-    x = { "<cmd>:split<cr>", "Horizontal Split" },
+    s = { "<cmd>:split<cr>", "Horizontal Split" },
   },
 }
 

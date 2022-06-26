@@ -73,7 +73,7 @@ nvimtree.setup({
         { key = { "O" }, action = "edit_no_picker" },
         { key = { "<2-RightMouse>", "<C-]>" }, action = "cd" },
         { key = "<C-v>", action = "vsplit" },
-        { key = "<C-x>", action = "split" },
+        { key = "<C-s>", action = "split" },
         { key = "<C-t>", cb = "<cmd>ToggleTerm<cr>" },
         { key = "<", action = "prev_sibling" },
         { key = ">", action = "next_sibling" },
