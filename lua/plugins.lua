@@ -38,9 +38,12 @@ require("packer").startup(function()
   }
   use { "wellle/targets.vim", event = "BufWinEnter" }
   use("edward-s/emmet-vim")
+  use {
+    "mrjones2014/legendary.nvim",
+    requires = { "stevearc/dressing.nvim" },
+  }
 
   -- Formatting
-  use("p00f/nvim-ts-rainbow")
   use({
     "windwp/nvim-autopairs",
     config = function()
@@ -49,7 +52,6 @@ require("packer").startup(function()
       })
     end,
   })
-  use("windwp/nvim-ts-autotag")
 
   -- Test
   use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
@@ -68,6 +70,8 @@ require("packer").startup(function()
   -- Treesitter
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
   use("nvim-treesitter/nvim-treesitter-textobjects")
+  use("p00f/nvim-ts-rainbow")
+  use("windwp/nvim-ts-autotag")
   use("JoosepAlviste/nvim-ts-context-commentstring")
 
   -- Telescope

@@ -123,6 +123,10 @@ local mappings = {
     t = { "<cmd>TroubleToggle<cr>", "Trouble" },
     w = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
   },
+  m = {
+    name = "Misc",
+    l = { "<cmd>Legendary<cr>", "Legendary" },
+  },
   p = {
     name = "Project",
     p = { "<cmd>Telescope project<cr>", "List projects" },
