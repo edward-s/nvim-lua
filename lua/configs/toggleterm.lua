@@ -12,10 +12,10 @@ toggleterm.setup({
   shading_factor = 2,
   start_in_insert = true,
   insert_mappings = true,
-  persist_mode = true,
   persist_size = true,
+  persist_mode = true,
   direction = "float",
-  close_on_exit = false,
+  close_on_exit = true,
   shell = vim.o.shell,
   float_opts = {
     border = "curved",
