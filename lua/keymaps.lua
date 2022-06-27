@@ -31,6 +31,9 @@ keymap("n", "zR", "zR<cmd>IndentBlanklineRefresh<cr>", opts)
 -- Nvim tree
 keymap("n", "<C-n>", "<cmd>NvimTreeToggle<cr>", opts)
 
+-- Lazygit
+keymap("n", "<C-g>", "<cmd>FloatermNew --height=0.8 --width=0.8 lazygit<cr>", opts)
+
 -- Telescope
 keymap("n", "<C-p>", "<cmd>lua require('configs.telescope').project_files()<cr>", opts)
 

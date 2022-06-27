@@ -42,6 +42,7 @@ require("packer").startup(function()
     "mrjones2014/legendary.nvim",
     requires = { "stevearc/dressing.nvim" },
   }
+  use("voldikss/vim-floaterm")
 
   -- Formatting
   use({
