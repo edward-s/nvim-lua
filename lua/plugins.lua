@@ -40,6 +40,7 @@ require("packer").startup(function()
     requires = { "stevearc/dressing.nvim" },
   }
   use("voldikss/vim-floaterm")
+  use("matbme/JABS.nvim")
 
   -- Formatting
   use({
@@ -52,7 +53,12 @@ require("packer").startup(function()
   })
 
   -- Test
-  use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
+  use({
+    "nvim-neotest/neotest",
+    requires = {
+      "haydenmeade/neotest-jest",
+    },
+  })
 
   -- Debug
   use("mfussenegger/nvim-dap")
@@ -121,10 +127,4 @@ require("packer").startup(function()
   })
 
   -- Experimental
-  use({
-    "nvim-neotest/neotest",
-    requires = {
-      "haydenmeade/neotest-jest",
-    },
-  })
 end)
