@@ -49,5 +49,9 @@ keymap("n", "]t", "<Plug>(ultest-next-fail)", opts)
 keymap("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
 keymap("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
 
+-- Browser search
+keymap("n", "gx", "<Plug>(openbrowser-smart-search)", opts)
+keymap("x", "gx", "<Plug>(openbrowser-smart-search)", opts)
+
 -- Emmet
 vim.g.user_emmet_leader_key = "<C-e>"

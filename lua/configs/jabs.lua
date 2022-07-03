@@ -2,7 +2,7 @@ local jabs = require("jabs")
 
 jabs.setup {
   position = "center",
-  width = 50,
+  width = 80,
   height = 10,
   border = "rounded",
   preview_position = "top",
