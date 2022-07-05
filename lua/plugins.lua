@@ -60,6 +60,7 @@ require("packer").startup(function()
       "haydenmeade/neotest-jest",
     },
   })
+  use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
 
   -- Debug
   use("mfussenegger/nvim-dap")
