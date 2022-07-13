@@ -42,6 +42,7 @@ require("packer").startup(function()
   use("voldikss/vim-floaterm")
   use("matbme/JABS.nvim")
   use { "tyru/open-browser.vim", event = "BufReadPre" }
+  use("lalitmee/browse.nvim")
 
   -- Formatting
   use({

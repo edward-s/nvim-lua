@@ -139,6 +139,7 @@ local mappings = {
     h = { "<cmd>Telescope help_tags<cr>", "Man Pages" },
     m = { "<cmd>Telescope marks<cr>", "Marks" },
     o = { "<cmd>Telescope oldfiles<cr>", "Old Files" },
+    p = { "<cmd>lua require('browse').input_search()<cr>", "Google" },
     r = { "<cmd>Telescope resume<cr>", "Resume Search" },
     s = { "<cmd>Telescope grep_string<cr>", "Text under cursor" },
     w = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Current Buffer" },
