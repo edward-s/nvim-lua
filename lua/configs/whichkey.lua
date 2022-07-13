@@ -155,6 +155,7 @@ local mappings = {
   -- },
   t = {
     name = "Test",
+    a = { "<cmd>UltestAttach<cr>", "Attach" },
     c = { "<cmd>UltestClear<cr>", "Clear" },
     f = { "<cmd>TestFile<cr>", "File" },
     l = { "<cmd>UltestLast<cr>", "Last" },
