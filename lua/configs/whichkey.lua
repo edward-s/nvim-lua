@@ -114,7 +114,7 @@ local mappings = {
     e = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics" },
     f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
     k = { "<cmd>Lspsaga signature_help<cr>", "Signature Help" },
-    K = { "<cmd>Lspsaga hover_doc<cr>", "Hover Doc" },
+    K = { "<cmd>Lspsaga hover_doc<cr>", "Hover doc" },
     l = { "<cmd>Lspsaga show_line_diagnostics<cr>", "Line diagnostics" },
     q = { "<cmd>lua vim.diagnostic.set_loclist()<cr>", "Quickfix" },
     r = { "<cmd>lua vim.lsp.buf.references()<cr>", "References" },
