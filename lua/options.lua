@@ -10,6 +10,7 @@ local options = {
   fileencoding = "utf-8",
   foldexpr = "nvim_treesitter#foldexpr()",
   foldlevel = 99,
+  foldlevelstart = -1,
   foldmethod = "expr",
   hidden = true,
   hlsearch = true,

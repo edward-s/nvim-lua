@@ -43,6 +43,13 @@ require("packer").startup(function()
   use("matbme/JABS.nvim")
   use { "tyru/open-browser.vim", event = "BufReadPre" }
   use("lalitmee/browse.nvim")
+  use {
+    "kevinhwang91/nvim-ufo",
+    requires = 'kevinhwang91/promise-async',
+    config = function()
+      require("ufo").setup()
+    end,
+  }
 
   -- Formatting
   use({

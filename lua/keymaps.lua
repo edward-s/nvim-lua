@@ -23,10 +23,14 @@ keymap("v", ">", ">gv", opts)
 -- Code folding
 keymap("n", ",", "za", opts)
 keymap("n", "zc", "zc<cmd>IndentBlanklineRefresh<cr>", opts)
+keymap("n", "zC", "zc<cmd>IndentBlanklineRefresh<cr>", opts)
 keymap("n", "zo", "zo<cmd>IndentBlanklineRefresh<cr>", opts)
+keymap("n", "zO", "zO<cmd>IndentBlanklineRefresh<cr>", opts)
 keymap("n", "za", "za<cmd>IndentBlanklineRefresh<cr>", opts)
+keymap("n", "zA", "zA<cmd>IndentBlanklineRefresh<cr>", opts)
 keymap("n", "zr", "zr<cmd>IndentBlanklineRefresh<cr>", opts)
-keymap("n", "zR", "zR<cmd>IndentBlanklineRefresh<cr>", opts)
+keymap("n", "zR", "<cmd>lua require('ufo').openAllFolds()<cr><cmd>IndentBlanklineRefresh<cr>", opts)
+keymap("n", "zM", "<cmd>lua require('ufo').closeAllFolds()<cr><cmd>IndentBlanklineRefresh<cr>", opts)
 
 -- Nvim tree
 keymap("n", "<C-n>", "<cmd>NvimTreeToggle<cr>", opts)
