@@ -22,7 +22,6 @@ require("packer").startup(function()
   use("romgrk/barbar.nvim")
   use("RRethy/vim-illuminate")
   use("akinsho/toggleterm.nvim")
-  use({ "tpope/vim-surround", event = "BufRead" })
   use({ "tpope/vim-dispatch", opt = true, cmd = { "Dispatch", "Make", "Focus", "Start" } })
   use("tpope/vim-unimpaired")
   use("antoinemadec/FixCursorHold.nvim")
@@ -50,6 +49,12 @@ require("packer").startup(function()
       require("ufo").setup()
     end,
   }
+  use({
+    "kylechui/nvim-surround",
+    config = function()
+      require("nvim-surround").setup()
+    end
+  })
 
   -- Formatting
   use({
