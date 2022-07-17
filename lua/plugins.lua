@@ -38,7 +38,6 @@ require("packer").startup(function()
     "mrjones2014/legendary.nvim",
     requires = { "stevearc/dressing.nvim" },
   }
-  use("voldikss/vim-floaterm")
   use("matbme/JABS.nvim")
   use { "tyru/open-browser.vim", event = "BufReadPre" }
   use("lalitmee/browse.nvim")
@@ -55,6 +54,7 @@ require("packer").startup(function()
       require("nvim-surround").setup()
     end
   })
+  use("kdheepak/lazygit.nvim")
 
   -- Formatting
   use({
