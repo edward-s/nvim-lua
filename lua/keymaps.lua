@@ -35,9 +35,6 @@ keymap("n", "zM", "<cmd>lua require('ufo').closeAllFolds()<cr><cmd>IndentBlankli
 -- Nvim tree
 keymap("n", "<C-n>", "<cmd>NvimTreeToggle<cr>", opts)
 
--- Lazygit
-keymap("n", "<C-g>", "<cmd>LazyGit<cr>", opts)
-
 -- Telescope
 keymap("n", "<C-p>", "<cmd>lua require('configs.telescope').project_files()<cr>", opts)
 

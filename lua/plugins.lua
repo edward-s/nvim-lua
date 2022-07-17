@@ -54,7 +54,6 @@ require("packer").startup(function()
       require("nvim-surround").setup()
     end
   })
-  use("kdheepak/lazygit.nvim")
 
   -- Formatting
   use({
