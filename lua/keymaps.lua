@@ -23,7 +23,7 @@ keymap("v", ">", ">gv", opts)
 -- Code folding
 keymap("n", ",", "za", opts)
 keymap("n", "zc", "zc<cmd>IndentBlanklineRefresh<cr>", opts)
-keymap("n", "zC", "zc<cmd>IndentBlanklineRefresh<cr>", opts)
+keymap("n", "zC", "zC<cmd>IndentBlanklineRefresh<cr>", opts)
 keymap("n", "zo", "zo<cmd>IndentBlanklineRefresh<cr>", opts)
 keymap("n", "zO", "zO<cmd>IndentBlanklineRefresh<cr>", opts)
 keymap("n", "za", "za<cmd>IndentBlanklineRefresh<cr>", opts)
