@@ -29,7 +29,16 @@ toggleterm.setup({
 })
 
 local Terminal = require('toggleterm.terminal').Terminal
-local lazygit  = Terminal:new({ cmd = "lazygit", hidden = true, count = 10 })
+local lazygit  = Terminal:new({ cmd = "lazygit",
+  hidden = true,
+  count = 10,
+  on_open = function(term)
+    vim.cmd("startinsert!")
+    if vim.fn.mapcheck("<esc>", "t") ~= "" then
+      vim.api.nvim_buf_del_keymap(term.bufnr, "t", "<esc>")
+    end
+  end
+})
 
 function _lazygit_toggle()
   lazygit:toggle()
