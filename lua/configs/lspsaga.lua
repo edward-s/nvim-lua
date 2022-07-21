@@ -6,4 +6,5 @@ saga.init_lsp_saga({
     quit = "<Esc>",
   },
   rename_action_quit = "<Esc>",
+  saga_winblend = 0
 })
