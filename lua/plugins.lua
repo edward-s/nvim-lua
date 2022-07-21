@@ -22,7 +22,6 @@ require("packer").startup(function()
   use("romgrk/barbar.nvim")
   use("RRethy/vim-illuminate")
   use("akinsho/toggleterm.nvim")
-  use({ "tpope/vim-dispatch", opt = true, cmd = { "Dispatch", "Make", "Focus", "Start" } })
   use("tpope/vim-unimpaired")
   use("antoinemadec/FixCursorHold.nvim")
   use {
@@ -32,14 +31,14 @@ require("packer").startup(function()
       require("incline").setup()
     end,
   }
-  use { "wellle/targets.vim", event = "BufWinEnter" }
+  use("wellle/targets.vim")
   use("edward-s/emmet-vim")
   use {
     "mrjones2014/legendary.nvim",
     requires = { "stevearc/dressing.nvim" },
   }
   use("matbme/JABS.nvim")
-  use { "tyru/open-browser.vim", event = "BufReadPre" }
+  use("tyru/open-browser.vim")
   use("lalitmee/browse.nvim")
   use {
     "kevinhwang91/nvim-ufo",
