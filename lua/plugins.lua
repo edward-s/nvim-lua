@@ -42,7 +42,6 @@ require("packer").startup(function()
     "mrjones2014/legendary.nvim",
     requires = { "stevearc/dressing.nvim" },
   }
-  use("matbme/JABS.nvim")
   use("tyru/open-browser.vim")
   use("lalitmee/browse.nvim")
   use {
