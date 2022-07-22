@@ -20,7 +20,6 @@ require("configs.nvimtree")
 require("configs.telescope")
 require("configs.toggleterm")
 require("configs.treesitter")
-require("configs.trouble")
 require("configs.vsnip")
 require("configs.whichkey")
 

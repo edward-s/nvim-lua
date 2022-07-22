@@ -5,7 +5,12 @@ require("packer").startup(function()
   use("sainnhe/gruvbox-material")
 
   -- Essentials
-  use("folke/trouble.nvim")
+  use({
+    "folke/trouble.nvim",
+    config = function()
+      require("trouble").setup()
+    end
+  })
   use("folke/which-key.nvim")
   use("ggandor/lightspeed.nvim")
   use("kyazdani42/nvim-tree.lua")
@@ -132,6 +137,4 @@ require("packer").startup(function()
       "rafamadriz/friendly-snippets",
     },
   })
-
-  -- Experimental
 end)
