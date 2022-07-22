@@ -4,6 +4,7 @@ if not present then
 end
 
 comment.setup({
+  ignore = "^$",
   pre_hook = function(ctx)
     -- Only calculate commentstring for jsx/tsx
     if vim.bo.filetype == "typescriptreact" or vim.bo.filetype == "javascriptreact" then
