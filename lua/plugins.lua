@@ -57,6 +57,7 @@ require("packer").startup(function()
       require("nvim-surround").setup()
     end
   })
+  use("ThePrimeagen/harpoon")
 
   -- Formatting
   use({

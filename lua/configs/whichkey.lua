@@ -107,6 +107,14 @@ local mappings = {
     d = { '<cmd>lua require("configs.diffview").toggle()<cr>', 'Diff file' },
     g = { '<cmd>lua _lazygit_toggle()<cr>', 'LazyGit' },
   },
+  j = {
+    name = "Jump",
+    a = { "<Cmd>lua require('harpoon.mark').add_file()<Cr>", "Add File" },
+    m = { "<Cmd>lua require('harpoon.ui').toggle_quick_menu()<Cr>", "UI Menu" },
+    c = { "<Cmd>lua require('harpoon.cmd-ui').toggle_quick_menu()<Cr>", "Command Menu" },
+  },
+  ["1"] = { "<Cmd>lua require('harpoon.ui').nav_file(1) <Cr>", "File 1" },
+  ["2"] = { "<Cmd>lua require('harpoon.ui').nav_file(2) <Cr>", "File 2" },
   l = {
     name = "LSP",
     a = { "<cmd>Lspsaga code_action<cr>", "Code Action" },
