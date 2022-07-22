@@ -58,6 +58,12 @@ require("packer").startup(function()
     end
   })
   use("ThePrimeagen/harpoon")
+  use {
+    "chentoast/marks.nvim",
+    config = function()
+      require("marks").setup()
+    end,
+  }
 
   -- Formatting
   use({
