@@ -64,12 +64,6 @@ require("packer").startup(function()
       require("marks").setup()
     end,
   }
-  use({
-    "karb94/neoscroll.nvim",
-    config = function()
-      require("neoscroll").setup()
-    end,
-  })
 
   -- Formatting
   use({
