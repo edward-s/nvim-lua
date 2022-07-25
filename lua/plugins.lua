@@ -48,7 +48,11 @@ require("packer").startup(function()
     "kevinhwang91/nvim-ufo",
     requires = 'kevinhwang91/promise-async',
     config = function()
-      require("ufo").setup()
+      require("ufo").setup {
+        provider_selector = function()
+          return { "lsp", "treesitter", "indent" }
+        end,
+      }
     end,
   }
   use({
