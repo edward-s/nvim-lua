@@ -24,6 +24,13 @@ require("packer").startup(function()
       require("todo-comments").setup({})
     end,
   })
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = function()
+      require 'alpha'.setup(require 'alpha.themes.startify'.config)
+    end
+  }
   use("romgrk/barbar.nvim")
   use("RRethy/vim-illuminate")
   use("akinsho/toggleterm.nvim")
