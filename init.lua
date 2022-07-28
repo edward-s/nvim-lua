@@ -4,6 +4,7 @@ require("plugins")
 require("configs.autopairs")
 require("configs.barbar")
 require("configs.browse")
+require("configs.colorscheme")
 require("configs.cmp")
 require("configs.comment")
 require("configs.gitblame")
@@ -23,5 +24,3 @@ require("configs.vsnip")
 require("configs.whichkey")
 
 -- require("configs.dap").setup()
-
-vim.cmd([[ colorscheme gruvbox-material ]])
