@@ -68,7 +68,6 @@ require("packer").startup(function()
       require("nvim-surround").setup()
     end
   })
-  use("ThePrimeagen/harpoon")
   use {
     "chentoast/marks.nvim",
     config = function()
