@@ -1,5 +1,4 @@
 require("options")
-require("keymaps")
 require("plugins")
 require("configs.autopairs")
 require("configs.barbar")

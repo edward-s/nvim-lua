@@ -47,8 +47,8 @@ keymap("n", "[t", "<Plug>(ultest-prev-fail)", opts)
 keymap("n", "]t", "<Plug>(ultest-next-fail)", opts)
 
 -- Lspsaga
-keymap("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
-keymap("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
+keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
+keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
 
 -- Browser search
 keymap("n", "gx", "<Plug>(openbrowser-smart-search)", opts)
