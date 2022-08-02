@@ -1,3 +1,3 @@
-require('browse').setup({
-  provider = "google",
+require("browse").setup({
+	provider = "google",
 })

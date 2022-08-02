@@ -1,10 +1,10 @@
 local present, autopairs = pcall(require, "nvim-autopairs")
 
 if not present then
-  return
+	return
 end
 
 autopairs.setup({
-  check_ts = true,
-  disable_filetype = { "TelescopePrompt" },
+	check_ts = true,
+	disable_filetype = { "TelescopePrompt" },
 })

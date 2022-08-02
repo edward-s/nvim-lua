@@ -24,13 +24,13 @@ function M.lsp_diagnostics()
         values = signs,
       },
       virtual_text = false,
-      underline = true,
+      underline = false,
       update_in_insert = true,
       severity_sort = true,
     },
   }
-
-  vim.diagnostic.config(lsp.diagnostic)
+  
+    vim.diagnostic.config(lsp.diagnostic)
 
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, lsp.float)
   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, lsp.float)

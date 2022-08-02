@@ -9,6 +9,7 @@ function M.setup()
   local diagnostics = null_ls.builtins.diagnostics
   local sources = {
     formatting.prettierd,
+    formatting.stylua,
     codeActions.eslint_d,
     diagnostics.eslint_d,
   }
