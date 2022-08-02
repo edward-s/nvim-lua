@@ -5,6 +5,6 @@ neotest.setup({
 		running = "↻",
 	},
 	adapters = {
-		require("neotest-jest")(),
+		require("neotest-jest"),
 	},
 })
