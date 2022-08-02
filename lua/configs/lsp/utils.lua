@@ -36,14 +36,33 @@ function M.lsp_diagnostics()
   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, lsp.float)
 end
 
-function M.lsp_config(client)
-  if client.resolved_capabilities.document_formatting then
-    vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+local lsp_formatting = function(bufnr)
+  vim.lsp.buf.format({
+    filter = function(client)
+      -- apply whatever logic you want (in this example, we'll only use null-ls)
+      return client.name == "null-ls"
+    end,
+    bufnr = bufnr,
+  })
+end
+
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+function M.lsp_config(client, bufnr)
+  if client.supports_method("textDocument/formatting") then
+    vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = augroup,
+      buffer = bufnr,
+      callback = function()
+        -- vim.lsp.buf.format({ bufnr = bufnr })
+        lsp_formatting(bufnr)
+      end,
+    })
   end
 end
 
-function M.lsp_attach(client)
-  M.lsp_config(client)
+function M.lsp_attach(client, bufnr)
+  M.lsp_config(client, bufnr)
   M.lsp_diagnostics()
 end
 
