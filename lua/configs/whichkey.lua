@@ -121,7 +121,7 @@ local mappings = {
     r = { "<cmd>lua vim.lsp.buf.references()<cr>", "References" },
     R = { "<cmd>Lspsaga rename<cr>", "Rename" },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-    t = { "<cmd>TroubleToggle<cr>", "Trouble" },
+    t = { "<cmd>Trouble document_diagnostics<cr>", "Trouble" },
     w = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
   },
   m = {
