@@ -21,5 +21,3 @@ require("configs.toggleterm")
 require("configs.treesitter")
 require("configs.vsnip")
 require("configs.whichkey")
-
--- require("configs.dap").setup()
