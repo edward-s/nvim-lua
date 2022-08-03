@@ -42,10 +42,6 @@ keymap("n", "<C-p>", "<cmd>lua require('configs.telescope').project_files()<cr>"
 keymap("n", "<Tab>", "<cmd>BufferNext<cr>", opts)
 keymap("n", "<S-Tab>", "<cmd>BufferPrevious<cr>", opts)
 
--- Test
-keymap("n", "[t", "<Plug>(ultest-prev-fail)", opts)
-keymap("n", "]t", "<Plug>(ultest-next-fail)", opts)
-
 -- Lspsaga
 keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
 keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
