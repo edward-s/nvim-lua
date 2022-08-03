@@ -73,6 +73,7 @@ local mappings = {
 	b = {
 		name = "Buffers",
 		a = { "<cmd>BufferCloseAllButCurrent<cr>", "Close other buffers" },
+		b = { "<cmd>Telescope buffers<cr>", "Buffers" },
 		d = { "<cmd>BufferClose<cr>", "Close buffer" },
 		p = { "<cmd>BufferPin<cr>", "Pin buffer" },
 	},
@@ -134,13 +135,12 @@ local mappings = {
 	},
 	s = {
 		name = "Search",
-		b = { "<cmd>Telescope buffers<cr>", "Buffers" },
+		b = { "<cmd>lua require('browse').input_search()<cr>", "Browser" },
 		f = { "<cmd>Telescope find_files<cr>", "Find" },
 		g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
 		h = { "<cmd>Telescope help_tags<cr>", "Man Pages" },
 		m = { "<cmd>Telescope marks<cr>", "Marks" },
 		o = { "<cmd>Telescope oldfiles<cr>", "Old Files" },
-		p = { "<cmd>lua require('browse').input_search()<cr>", "Google" },
 		r = { "<cmd>Telescope resume<cr>", "Resume Search" },
 		s = { "<cmd>Telescope grep_string<cr>", "Text under cursor" },
 		w = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Current Buffer" },
