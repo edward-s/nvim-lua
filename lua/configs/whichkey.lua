@@ -156,6 +156,21 @@ local mappings = {
 		S = { "<cmd>lua require('neotest').run.stop()<cr>", "Stop" },
 		t = { "<cmd>lua require('neotest').run.run()<cr>", "Nearest" },
 	},
+	["T"] = {
+		name = "Typescript",
+		f = {
+			"<cmd>TypescriptFixAll<cr>",
+			"Fix all",
+		},
+		i = {
+			"<cmd>TypescriptAddMissingImports<cr>",
+			"Add Missing Imports",
+		},
+		o = {
+			"<cmd>TypescriptOrganizeImports<cr>",
+			"Organize Imports",
+		},
+	},
 	w = {
 		name = "Window",
 		o = { "<c-w>o", "Close others" },
