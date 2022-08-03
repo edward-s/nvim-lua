@@ -4,8 +4,11 @@ local mason = require("mason")
 local mason_lspconfig = require("mason-lspconfig")
 local lspconfig = require("lspconfig")
 local lsputils = require("configs.lsp.utils")
+local tsserver = require("configs.lsp.settings.tsserver")
 
-local servers = { "tsserver", "jsonls", "sumneko_lua" }
+tsserver.setup()
+
+local servers = { "jsonls", "sumneko_lua" }
 
 mason.setup({
 	ui = {

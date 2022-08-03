@@ -2,30 +2,18 @@ local M = {}
 
 local lsputils = require("configs.lsp.utils")
 
-function M.lsp_attach(client)
-	lsputils.lsp_attach(client)
-
-	local ts_utils = require("nvim-lsp-ts-utils")
-
-	ts_utils.setup({
-		enable_import_on_completion = true,
-		always_organize_imports = false,
-		update_imports_on_move = true,
-	})
-
-	ts_utils.setup_client(client)
-end
-
-function M.config()
-	return {
-		on_attach = M.lsp_attach,
-		capabilities = lsputils.get_capabilities(),
-	}
-end
-
 function M.setup()
 	M.keymappings()
-	return M.config()
+
+	local typescript = require("typescript")
+	typescript.setup({
+		disable_commands = false,
+		debug = false,
+		server = {
+			on_attach = lsputils.lsp_attach,
+			capabilities = lsputils.get_capabilities(),
+		},
+	})
 end
 
 function M.keymappings()
@@ -42,12 +30,16 @@ function M.keymappings()
 	local mappings = {
 		["T"] = {
 			name = "Typescript",
+			f = {
+				"<cmd>TypescriptFixAll<cr>",
+				"Fix all",
+			},
 			i = {
-				"<cmd>TSLspImportAll<cr>",
-				"Import All",
+				"<cmd>TypescriptAddMissingImports<cr>",
+				"Add Missing Imports",
 			},
 			o = {
-				"<cmd>TSLspOrganize<cr>",
+				"<cmd>TypescriptOrganizeImports<cr>",
 				"Organize Imports",
 			},
 		},
