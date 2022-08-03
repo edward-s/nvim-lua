@@ -56,7 +56,7 @@ require("packer").startup(function()
 		config = function()
 			require("ufo").setup({
 				provider_selector = function()
-					return { "lsp", "treesitter", "indent" }
+					return { "treesitter", "indent" }
 				end,
 			})
 		end,
