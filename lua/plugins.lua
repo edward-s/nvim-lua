@@ -79,6 +79,7 @@ require("packer").startup(function()
 			require("neoscroll").setup()
 		end,
 	})
+	use("ThePrimeagen/harpoon")
 
 	-- Formatting
 	use({

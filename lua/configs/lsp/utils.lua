@@ -59,6 +59,7 @@ function M.lsp_config(client, bufnr)
 end
 
 function M.lsp_attach(client, bufnr)
+	require("illuminate").on_attach(client)
 	M.lsp_config(client, bufnr)
 	M.lsp_diagnostics()
 end
