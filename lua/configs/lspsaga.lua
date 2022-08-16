@@ -5,4 +5,7 @@ saga.init_lsp_saga({
 	finder_action_keys = {
 		open = "<Enter>",
 	},
+	show_outline = {
+		jump_key = "<Enter>",
+	},
 })
