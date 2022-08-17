@@ -6,13 +6,9 @@ end
 toggleterm.setup({
 	size = 20,
 	open_mapping = [[<C-t>]],
-	close_on_exit = true,
-	hide_numbers = true,
-	shade_filetypes = {},
-	shade_terminals = true,
-	shading_factor = 2,
+	close_on_exit = false,
 	start_in_insert = true,
-	insert_mappings = true,
+	persist_mode = true,
 	direction = "float",
 	on_open = function()
 		local opts = { noremap = true }
@@ -32,7 +28,8 @@ local Terminal = require("toggleterm.terminal").Terminal
 local lazygit = Terminal:new({
 	cmd = "lazygit",
 	hidden = true,
-	count = 10,
+	close_on_exit = true,
+	count = 2,
 	on_open = function(term)
 		vim.cmd("startinsert!")
 		if vim.fn.mapcheck("<esc>", "t") ~= "" then

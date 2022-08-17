@@ -6,7 +6,7 @@ end
 indent_blankline.setup({
 	char = "▏",
 	buftype_exclude = { "terminal" },
-	filetype_exclude = { "dashboard", "NvimTree" },
+	filetype_exclude = { "dashboard", "NvimTree", "lspsagaoutline" },
 	show_current_context = true,
 	use_treesitter = true,
 })
