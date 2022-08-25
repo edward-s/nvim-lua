@@ -3,6 +3,8 @@ local keymap = vim.api.nvim_set_keymap
 vim.g.mapleader = " "
 
 keymap("i", "<C-c>", "<Esc>", opts)
+keymap("n", "<C-c>", "<Esc>", opts)
+keymap("v", "<C-c>", "<Esc>", opts)
 
 -- Split navigations
 keymap("n", "<C-h>", "<C-w>h", opts)

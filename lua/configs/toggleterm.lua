@@ -6,7 +6,7 @@ end
 toggleterm.setup({
 	size = 20,
 	open_mapping = [[<C-t>]],
-	close_on_exit = false,
+	close_on_exit = true,
 	start_in_insert = true,
 	persist_mode = true,
 	direction = "float",
