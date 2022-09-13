@@ -106,7 +106,7 @@ local mappings = {
 		b = { "<cmd>GitBlameToggle<cr>", "Toggle blame" },
 		B = { "<cmd>Telescope git_branches<cr>", "Git branches" },
 		d = { '<cmd>lua require("configs.diffview").toggle()<cr>', "Diff file" },
-		g = { "<cmd>lua _lazygit_toggle()<cr>", "LazyGit" },
+		g = { "<cmd>lua require('utils.term').lazygit_toggle()<cr>", "LazyGit" },
 	},
 	j = {
 		name = "Jump",
@@ -146,13 +146,14 @@ local mappings = {
 	s = {
 		name = "Search",
 		b = { "<cmd>lua require('browse').input_search()<cr>", "Browser" },
+		c = { "<cmd>Telescope grep_string<cr>", "Text under cursor" },
 		f = { "<cmd>Telescope find_files<cr>", "Find" },
 		g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
 		h = { "<cmd>Telescope help_tags<cr>", "Man Pages" },
 		m = { "<cmd>Telescope marks<cr>", "Marks" },
 		o = { "<cmd>Telescope oldfiles<cr>", "Old Files" },
 		r = { "<cmd>Telescope resume<cr>", "Resume Search" },
-		s = { "<cmd>Telescope grep_string<cr>", "Text under cursor" },
+		s = { "<cmd>lua require('utils.term').so()<cr>", "Stack Overflow" },
 		w = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Current Buffer" },
 	},
 	t = {
