@@ -70,6 +70,7 @@ local opts = {
 local mappings = {
 	["h"] = { "<cmd>nohlsearch<cr>", "No Highlight" },
 	["q"] = { "<cmd>q<cr>", "Quit" },
+	["w"] = { "<cmd>w<cr>", "Save" },
 	b = {
 		name = "Buffers",
 		a = { "<cmd>BufferCloseAllButCurrent<cr>", "Close other buffers" },
@@ -182,11 +183,10 @@ local mappings = {
 			"Organize Imports",
 		},
 	},
-	w = {
+	z = {
 		name = "Window",
 		o = { "<c-w>o", "Close others" },
 		q = { "<cmd>:q<cr>", "Close" },
-		t = { "<c-w>t", "Move to new tab" },
 		["="] = { "<c-w>=", "Equally size" },
 		v = { "<cmd>:vsplit<cr>", "Vertical Split" },
 		r = { "<c-w>r", "Swap" },
