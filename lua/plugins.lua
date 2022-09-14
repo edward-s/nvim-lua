@@ -57,12 +57,7 @@ require("packer").startup(function()
 			require("ufo").setup()
 		end,
 	})
-	use({
-		"kylechui/nvim-surround",
-		config = function()
-			require("nvim-surround").setup()
-		end,
-	})
+	use("tpope/vim-surround")
 	use({
 		"chentoast/marks.nvim",
 		config = function()
