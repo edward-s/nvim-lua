@@ -107,7 +107,9 @@ local mappings = {
 		b = { "<cmd>GitBlameToggle<cr>", "Toggle blame" },
 		B = { "<cmd>Telescope git_branches<cr>", "Git branches" },
 		d = { '<cmd>lua require("configs.diffview").toggle()<cr>', "Diff file" },
+		f = { '<cmd>lua require("configs.diffview").toggle()<cr>', "Diff file" },
 		g = { "<cmd>lua require('utils.term').lazygit_toggle()<cr>", "LazyGit" },
+		h = { "<Cmd>DiffviewFileHistory<Cr>", "File history" },
 	},
 	j = {
 		name = "Jump",
@@ -186,11 +188,11 @@ local mappings = {
 	z = {
 		name = "Window",
 		o = { "<c-w>o", "Close others" },
-		q = { "<cmd>:q<cr>", "Close" },
+		q = { "<cmd>q<cr>", "Close" },
 		["="] = { "<c-w>=", "Equally size" },
-		v = { "<cmd>:vsplit<cr>", "Vertical Split" },
+		v = { "<cmd>vsplit<cr>", "Vertical Split" },
 		r = { "<c-w>r", "Swap" },
-		x = { "<cmd>:split<cr>", "Horizontal Split" },
+		x = { "<cmd>split<cr>", "Horizontal Split" },
 	},
 }
 
