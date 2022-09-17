@@ -73,10 +73,9 @@ local mappings = {
 	["w"] = { "<cmd>w<cr>", "Save" },
 	b = {
 		name = "Buffers",
-		a = { "<cmd>BufferCloseAllButCurrent<cr>", "Close other buffers" },
+		a = { "<cmd>BufferLineCloseLeft<cr><cmd>BufferLineCloseRight<cr>", "Close other buffers" },
 		b = { "<cmd>Telescope buffers<cr>", "Buffers" },
-		d = { "<cmd>BufferClose<cr>", "Close buffer" },
-		p = { "<cmd>BufferPin<cr>", "Pin buffer" },
+		d = { "<cmd>BufferLinePickClose<cr>", "Close buffer" },
 	},
 	c = {
 		name = "Quickfix",

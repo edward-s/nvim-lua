@@ -1,7 +1,7 @@
 require("options")
 require("plugins")
 require("configs.autopairs")
-require("configs.barbar")
+require("configs.bufferline")
 require("configs.browse")
 require("configs.colorscheme")
 require("configs.cmp")

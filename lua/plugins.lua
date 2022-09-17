@@ -30,7 +30,7 @@ require("packer").startup(function()
 			require("alpha").setup(require("alpha.themes.startify").config)
 		end,
 	})
-	use("romgrk/barbar.nvim")
+	use("akinsho/bufferline.nvim")
 	use("RRethy/vim-illuminate")
 	use("akinsho/toggleterm.nvim")
 	use("tpope/vim-unimpaired")
