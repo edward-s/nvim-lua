@@ -7,4 +7,9 @@ neotest.setup({
 	adapters = {
 		require("neotest-jest"),
 	},
+	floating = {
+		options = {
+			wrap = true,
+		},
+	},
 })
