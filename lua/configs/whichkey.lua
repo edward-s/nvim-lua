@@ -164,6 +164,7 @@ local mappings = {
 		d = { "<cmd>lua require('neotest').run.run(vim.fn.getcwd())<cr>", "Directory" },
 		f = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", "File" },
 		l = { "<cmd>lua require('neotest').run.run_last()<cr>", "Run Last" },
+		m = { "<cmd>lua require('neotest').summary.run_marked()<cr>", "Run Marked" },
 		o = { "<cmd>lua require('neotest').output.open({ enter = true })<cr>", "Output" },
 		s = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Summary" },
 		S = { "<cmd>lua require('neotest').run.stop()<cr>", "Stop" },
