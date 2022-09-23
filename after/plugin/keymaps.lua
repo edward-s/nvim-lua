@@ -45,6 +45,10 @@ keymap("n", "<Tab>", "<cmd>bnext<cr>", opts)
 keymap("n", "<S-Tab>", "<cmd>bprevious<cr>", opts)
 
 -- Lspsaga
+keymap("n", "[t", "<cmd>lua require('neotest').jump.prev({ status = 'failed' })<cr>", opts)
+keymap("n", "]t", "<cmd>lua require('neotest').jump.next({ status = 'failed' })<cr>", opts)
+
+-- Lspsaga
 keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
 keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
 keymap(
