@@ -88,6 +88,17 @@ require("packer").startup(function()
 		},
 	})
 
+	-- Debugging
+	use({
+		"mfussenegger/nvim-dap",
+		requires = {
+			"theHamsta/nvim-dap-virtual-text",
+			"rcarriga/nvim-dap-ui",
+			"nvim-telescope/telescope-dap.nvim",
+			"mxsdev/nvim-dap-vscode-js",
+		},
+	})
+
 	-- Git
 	use("lewis6991/gitsigns.nvim")
 	use("f-person/git-blame.nvim")

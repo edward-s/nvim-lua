@@ -169,6 +169,7 @@ local mappings = {
 		s = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Summary" },
 		S = { "<cmd>lua require('neotest').run.stop()<cr>", "Stop" },
 		t = { "<cmd>lua require('neotest').run.run()<cr>", "Nearest" },
+		T = { "<cmd>lua require('neotest').run.run({ strategy = 'dap' })<cr>", "Debug Nearest" },
 	},
 	["T"] = {
 		name = "Typescript",
