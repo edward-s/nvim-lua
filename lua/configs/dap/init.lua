@@ -1,7 +1,7 @@
 local dap = require("dap")
 
-local dap_breakpoint = {
-	error = {
+local dap_signs = {
+	breakpoint = {
 		text = "🛑",
 		texthl = "LspDiagnosticsSignError",
 		linehl = "",
@@ -15,8 +15,8 @@ local dap_breakpoint = {
 	},
 }
 
-vim.fn.sign_define("DapBreakpoint", dap_breakpoint.error)
-vim.fn.sign_define("DapBreakpointRejected", dap_breakpoint.rejected)
+vim.fn.sign_define("DapBreakpoint", dap_signs.breakpoint)
+vim.fn.sign_define("DapBreakpointRejected", dap_signs.rejected)
 
 vim.api.nvim_command("au FileType dap-repl lua require('dap.ext.autocompl').attach()")
 
