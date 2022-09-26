@@ -67,6 +67,3 @@ keymap(
 -- Browser search
 keymap("n", "gx", "<Plug>(openbrowser-smart-search)", opts)
 keymap("x", "gx", "<Plug>(openbrowser-smart-search)", opts)
-
--- Emmet
-vim.g.user_emmet_leader_key = "<C-e>"

@@ -43,7 +43,7 @@ require("packer").startup(function()
 		end,
 	})
 	use("wellle/targets.vim")
-	use("edward-s/emmet-vim")
+	-- use("edward-s/emmet-vim")
 	use({
 		"mrjones2014/legendary.nvim",
 		requires = { "stevearc/dressing.nvim" },
