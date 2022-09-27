@@ -12,6 +12,7 @@ augroup GruvboxMaterialCustom
   autocmd ColorScheme gruvbox-material call s:gruvbox_material_custom()
 augroup END
 
-colorscheme gruvbox-material
+let g:gruvbox_material_visual = 'green background'
 
+colorscheme gruvbox-material
 ]])
