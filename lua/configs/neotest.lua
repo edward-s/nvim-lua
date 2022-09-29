@@ -17,6 +17,7 @@ neotest.setup({
 	},
 	summary = {
 		mappings = {
+			expand = "<Space>",
 			jumpto = "<CR>",
 		},
 	},
