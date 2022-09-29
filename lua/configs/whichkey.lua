@@ -116,6 +116,7 @@ local mappings = {
 		m = { "<Cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "UI Menu" },
 		c = { "<Cmd>lua require('harpoon.cmd-ui').toggle_quick_menu()<cr>", "Command Menu" },
 	},
+	["0"] = { "<Cmd>2ToggleTerm<Cr>", "ToggleTerm 2" },
 	["1"] = { "<Cmd>lua require('harpoon.ui').nav_file(1)<cr>", "File 1" },
 	["2"] = { "<Cmd>lua require('harpoon.ui').nav_file(2)<cr>", "File 2" },
 	["3"] = { "<Cmd>lua require('harpoon.ui').nav_file(3)<cr>", "File 3" },
