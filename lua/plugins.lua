@@ -34,7 +34,6 @@ require("packer").startup(function()
 	use("RRethy/vim-illuminate")
 	use("akinsho/toggleterm.nvim")
 	use("tpope/vim-unimpaired")
-	use("antoinemadec/FixCursorHold.nvim")
 	use({
 		"b0o/incline.nvim",
 		event = "BufReadPre",
