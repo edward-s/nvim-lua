@@ -5,6 +5,9 @@ vim.g.mapleader = " "
 keymap("i", "<C-c>", "<Esc>", opts)
 keymap("n", "<C-c>", "<Esc>", opts)
 keymap("v", "<C-c>", "<Esc>", opts)
+keymap("x", "<C-c>", "<Esc>", opts)
+keymap("c", "<C-c>", "<Esc>", opts)
+keymap("o", "<C-c>", "<Esc>", opts)
 
 -- Split navigations
 keymap("n", "<C-h>", "<C-w>h", opts)
