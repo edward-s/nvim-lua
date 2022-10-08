@@ -18,6 +18,9 @@ keymap("n", "<A-l>", ":vertical resize +2<cr>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
+-- Use Esc to quit builtin terminal
+keymap("t", "<Esc>", [[<c-\><c-n>]], opts)
+
 -- Code folding
 keymap("n", ",", "za", opts)
 keymap("n", "zc", "zc<cmd>IndentBlanklineRefresh<cr>", opts)
