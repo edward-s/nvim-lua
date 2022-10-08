@@ -141,6 +141,7 @@ local mappings = {
 	},
 	m = {
 		name = "Misc",
+		c = { "<cmd>Copilot<cr>", "Copilot" },
 	},
 	s = {
 		name = "Search",
