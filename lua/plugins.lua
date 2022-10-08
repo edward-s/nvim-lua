@@ -23,13 +23,13 @@ require("packer").startup(function()
 	use({
 		"simrat39/symbols-outline.nvim",
 		config = function()
-			require("symbols-outline").setup({})
+			require("symbols-outline").setup()
 		end,
 	})
 	use({
 		"folke/todo-comments.nvim",
 		config = function()
-			require("todo-comments").setup({})
+			require("todo-comments").setup()
 		end,
 	})
 	use({
