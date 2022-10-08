@@ -11,6 +11,7 @@ require("packer").startup(function()
 			require("trouble").setup()
 		end,
 	})
+	use("github/copilot.vim")
 	use("kazhala/close-buffers.nvim")
 	use("folke/which-key.nvim")
 	use("ggandor/lightspeed.nvim")

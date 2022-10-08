@@ -73,27 +73,26 @@ cmp.setup({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = true,
 		}),
-		["<Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item()
-			elseif has_words_before() then
-				cmp.complete()
+		["<Tab>"] = vim.schedule_wrap(function(fallback)
+			if cmp.visible() and has_words_before() then
+				cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
 			else
 				fallback()
 			end
-		end, { "i", "s" }),
-		["<S-Tab>"] = cmp.mapping(function()
+		end),
+		["<S-Tab>"] = vim.schedule_wrap(function(fallback)
 			if cmp.visible() then
-				cmp.select_prev_item()
+				cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
+			else
+				fallback()
 			end
-		end, { "i", "s" }),
+		end),
 	},
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "buffer" },
 		{ name = "vsnip" },
 		{ name = "path" },
-		{ name = "nvim_lsp_signature_help" },
 	},
 })
 
