@@ -40,7 +40,6 @@ require("packer").startup(function()
 	use("akinsho/bufferline.nvim")
 	use("RRethy/vim-illuminate")
 	use("akinsho/toggleterm.nvim")
-	use("tpope/vim-unimpaired")
 	use({
 		"b0o/incline.nvim",
 		event = "BufReadPre",
@@ -49,11 +48,7 @@ require("packer").startup(function()
 		end,
 	})
 	use("wellle/targets.vim")
-	-- use("edward-s/emmet-vim")
-	use({
-		"mrjones2014/legendary.nvim",
-		requires = { "stevearc/dressing.nvim" },
-	})
+	use("stevearc/dressing.nvim")
 	use("tyru/open-browser.vim")
 	use("lalitmee/browse.nvim")
 	use({

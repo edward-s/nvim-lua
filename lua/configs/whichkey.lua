@@ -140,7 +140,6 @@ local mappings = {
 	},
 	m = {
 		name = "Misc",
-		l = { "<cmd>Legendary<cr>", "Legendary" },
 	},
 	p = {
 		name = "Project",
