@@ -63,5 +63,5 @@ nvimtree.setup({
 		width = 40,
 		hide_root_folder = true,
 	},
-	remove_keymaps = { "s", "S", "H", "M", "L" },
+	remove_keymaps = { "H", "M", "L" },
 })
