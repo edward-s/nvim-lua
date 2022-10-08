@@ -2,13 +2,6 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 vim.g.mapleader = " "
 
-keymap("i", "<C-c>", "<Esc>", opts)
-keymap("n", "<C-c>", "<Esc>", opts)
-keymap("v", "<C-c>", "<Esc>", opts)
-keymap("x", "<C-c>", "<Esc>", opts)
-keymap("c", "<C-c>", "<Esc>", opts)
-keymap("o", "<C-c>", "<Esc>", opts)
-
 -- Split navigations
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
