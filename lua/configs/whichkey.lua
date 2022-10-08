@@ -142,10 +142,6 @@ local mappings = {
 	m = {
 		name = "Misc",
 	},
-	p = {
-		name = "Project",
-		p = { "<cmd>Telescope project<cr>", "List projects" },
-	},
 	s = {
 		name = "Search",
 		b = { "<cmd>lua require('browse').input_search()<cr>", "Browser" },

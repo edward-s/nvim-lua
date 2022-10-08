@@ -19,6 +19,7 @@ require("packer").startup(function()
 	use("lukas-reineke/indent-blankline.nvim")
 	use("numToStr/Comment.nvim")
 	use("nvim-lualine/lualine.nvim")
+	use("tpope/vim-unimpaired")
 	use({
 		"simrat39/symbols-outline.nvim",
 		config = function()
