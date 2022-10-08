@@ -40,10 +40,6 @@ keymap("n", "<C-n>", "<cmd>NvimTreeToggle<cr>", opts)
 -- Telescope
 keymap("n", "<C-p>", "<cmd>lua require('configs.telescope').project_files()<cr>", opts)
 
--- Bufferline
-keymap("n", "<Tab>", "<cmd>bnext<cr>", opts)
-keymap("n", "<S-Tab>", "<cmd>bprevious<cr>", opts)
-
 -- Lspsaga
 keymap("n", "[t", "<cmd>lua require('neotest').jump.prev({ status = 'failed' })<cr>", opts)
 keymap("n", "]t", "<cmd>lua require('neotest').jump.next({ status = 'failed' })<cr>", opts)
