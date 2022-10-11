@@ -14,7 +14,6 @@ require("packer").startup(function()
 	use("github/copilot.vim")
 	use("kazhala/close-buffers.nvim")
 	use("folke/which-key.nvim")
-	use("ggandor/lightspeed.nvim")
 	use("kyazdani42/nvim-tree.lua")
 	use("kyazdani42/nvim-web-devicons")
 	use("lukas-reineke/indent-blankline.nvim")
@@ -52,6 +51,12 @@ require("packer").startup(function()
 	use("wellle/targets.vim")
 	use("stevearc/dressing.nvim")
 	use("tyru/open-browser.vim")
+	use({
+		"phaazon/hop.nvim",
+		config = function()
+			require("hop").setup()
+		end,
+	})
 	use("lalitmee/browse.nvim")
 	use({
 		"kevinhwang91/nvim-ufo",

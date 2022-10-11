@@ -65,8 +65,8 @@ nvimtree.setup({
 		mappings = {
 			list = {
 				{ key = "<C-t>", cb = "<cmd>ToggleTerm<cr>" },
-				{ key = "s", cb = "<Plug>Lightspeed_s" },
-				{ key = "S", cb = "<Plug>Lightspeed_S" },
+				{ key = "s", cb = "<cmd>HopChar2AC<cr>" },
+				{ key = "S", cb = "<cmd>HopChar2BC<cr>" },
 			},
 		},
 	},
