@@ -12,6 +12,7 @@ function M.setup()
 		formatting.stylua,
 		formatting.gofmt,
 		codeActions.eslint_d,
+		diagnostics.golangci_lint,
 		diagnostics.eslint_d,
 	}
 	null_ls.setup({
