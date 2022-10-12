@@ -68,10 +68,9 @@ cmp.setup({
 		["<C-d>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(),
-		["<C-e>"] = cmp.mapping.close(),
 		["<CR>"] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.Replace,
-			select = true,
+			select = false,
 		}),
 		["<Tab>"] = vim.schedule_wrap(function(fallback)
 			if cmp.visible() and has_words_before() then
@@ -87,11 +86,20 @@ cmp.setup({
 				fallback()
 			end
 		end),
+		["<C-e>"] = cmp.mapping(function(fallback)
+			cmp.mapping.abort()
+			local copilot_keys = vim.fn["copilot#Accept"]()
+			if copilot_keys ~= "" then
+				vim.api.nvim_feedkeys(copilot_keys, "i", true)
+			else
+				fallback()
+			end
+		end),
 	},
 	sources = {
 		{ name = "nvim_lsp" },
-		{ name = "vsnip" },
 		{ name = "path" },
+		{ name = "vsnip" },
 	},
 })
 
