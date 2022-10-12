@@ -12,6 +12,7 @@ require("packer").startup(function()
 		end,
 	})
 	use("github/copilot.vim")
+	use("itchyny/vim-highlighturl")
 	use("kazhala/close-buffers.nvim")
 	use("folke/which-key.nvim")
 	use("kyazdani42/nvim-tree.lua")
