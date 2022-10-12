@@ -51,12 +51,7 @@ require("packer").startup(function()
 	use("wellle/targets.vim")
 	use("stevearc/dressing.nvim")
 	use("tyru/open-browser.vim")
-	use({
-		"phaazon/hop.nvim",
-		config = function()
-			require("hop").setup()
-		end,
-	})
+	use("ggandor/lightspeed.nvim")
 	use("lalitmee/browse.nvim")
 	use({
 		"kevinhwang91/nvim-ufo",

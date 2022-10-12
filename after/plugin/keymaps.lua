@@ -21,10 +21,6 @@ keymap("v", ">", ">gv", opts)
 -- Use Esc to quit builtin terminal
 keymap("t", "<Esc>", [[<c-\><c-n>]], opts)
 
--- Hop
-keymap("n", "s", "<cmd>HopChar2AC<cr>", opts)
-keymap("n", "S", "<cmd>HopChar2BC<cr>", opts)
-
 -- Code folding
 keymap("n", ",", "za", opts)
 keymap("n", "zc", "zc<cmd>IndentBlanklineRefresh<cr>", opts)

@@ -18,15 +18,19 @@ mason_lspconfig.setup({
 })
 
 for _, server in pairs(servers) do
-	local opts = {
-		on_attach = lsputils.lsp_attach,
-		capabilities = lsputils.get_capabilities(),
-	}
-	local has_custom_opts, server_opts = pcall(require, "configs.lsp.settings." .. server)
-	if has_custom_opts then
-		opts = vim.tbl_deep_extend("force", opts, server_opts)
+	local has_settings, server_settings = pcall(require, "configs.lsp.settings." .. server)
+	if has_settings then
+		local server_opts = server_settings.setup()
+		if server_opts ~= nil then
+			lspconfig[server].setup(server_opts)
+		end
+	else
+		local opts = {
+			on_attach = lsputils.lsp_attach,
+			capabilities = lsputils.get_capabilities(),
+		}
+		lspconfig[server].setup(opts)
 	end
-	lspconfig[server].setup(opts)
 end
 
 require("configs.lsp.null-ls").setup()
