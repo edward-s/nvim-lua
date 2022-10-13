@@ -23,13 +23,23 @@ keymap("t", "<Esc>", [[<c-\><c-n>]], opts)
 
 -- Code folding
 keymap("n", ",", "za", opts)
-keymap("n", "zc", "zc<cmd>IndentBlanklineRefresh<cr>", opts)
-keymap("n", "zC", "zC<cmd>IndentBlanklineRefresh<cr>", opts)
-keymap("n", "zo", "zo<cmd>IndentBlanklineRefresh<cr>", opts)
-keymap("n", "zO", "zO<cmd>IndentBlanklineRefresh<cr>", opts)
-keymap("n", "za", "za<cmd>IndentBlanklineRefresh<cr>", opts)
-keymap("n", "zA", "zA<cmd>IndentBlanklineRefresh<cr>", opts)
-keymap("n", "zr", "zr<cmd>IndentBlanklineRefresh<cr>", opts)
+for _, key in
+	pairs({
+		"zo",
+		"zO",
+		"zc",
+		"zC",
+		"za",
+		"zA",
+		"zv",
+		"zx",
+		"zX",
+		"zm",
+		"zr",
+	})
+do
+	keymap("n", key, key .. "<cmd>IndentBlanklineRefresh<cr>", opts)
+end
 keymap("n", "zR", "<cmd>lua require('ufo').openAllFolds()<cr><cmd>IndentBlanklineRefresh<cr>", opts)
 keymap("n", "zM", "<cmd>lua require('ufo').closeAllFolds()<cr><cmd>IndentBlanklineRefresh<cr>", opts)
 
