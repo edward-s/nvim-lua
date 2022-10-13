@@ -1,12 +1,12 @@
-local present, indent_blankline = pcall(require, "indent_blankline")
-if not present then
-	return
-end
-
-indent_blankline.setup({
+require("indent_blankline").setup({
 	char = "▏",
 	buftype_exclude = { "terminal" },
 	filetype_exclude = { "dashboard", "NvimTree", "lspsagaoutline" },
+	show_foldtext = false,
+	context_char = "▎",
+	char_priority = 12,
 	show_current_context = true,
-	use_treesitter = true,
+	show_current_context_start = true,
+	show_current_context_start_on_current_line = false,
+	show_first_indent_level = true,
 })
