@@ -75,6 +75,7 @@ require("packer").startup(function()
 		end,
 	})
 	use("ThePrimeagen/harpoon")
+	use("CRAG666/code_runner.nvim")
 
 	-- Formatting
 	use({
