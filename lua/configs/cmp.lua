@@ -6,11 +6,6 @@ end
 
 local lspkind = require("lspkind")
 
-local has_words_before = function()
-	local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-	return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-end
-
 lspkind.init({
 	symbol_map = {
 		Text = "",
@@ -72,29 +67,6 @@ cmp.setup({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = false,
 		}),
-		["<Tab>"] = vim.schedule_wrap(function(fallback)
-			if cmp.visible() and has_words_before() then
-				cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
-			else
-				fallback()
-			end
-		end),
-		["<S-Tab>"] = vim.schedule_wrap(function(fallback)
-			if cmp.visible() then
-				cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
-			else
-				fallback()
-			end
-		end),
-		["<C-e>"] = cmp.mapping(function(fallback)
-			cmp.mapping.abort()
-			local copilot_keys = vim.fn["copilot#Accept"]()
-			if copilot_keys ~= "" then
-				vim.api.nvim_feedkeys(copilot_keys, "i", true)
-			else
-				fallback()
-			end
-		end),
 	},
 	sources = {
 		{ name = "nvim_lsp" },
