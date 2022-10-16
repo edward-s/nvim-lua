@@ -90,6 +90,7 @@ require("packer").startup(function()
 		"nvim-neotest/neotest",
 		requires = {
 			"haydenmeade/neotest-jest",
+			"nvim-neotest/neotest-go",
 		},
 	})
 

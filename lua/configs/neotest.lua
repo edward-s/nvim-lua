@@ -6,6 +6,7 @@ neotest.setup({
 	},
 	adapters = {
 		require("neotest-jest"),
+		require("neotest-go"),
 	},
 	output = {
 		open_on_run = false,
