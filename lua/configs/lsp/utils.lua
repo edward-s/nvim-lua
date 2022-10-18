@@ -71,7 +71,7 @@ function M.get_capabilities()
 		dynamicRegistration = false,
 		lineFoldingOnly = true,
 	}
-	return require("cmp_nvim_lsp").update_capabilities(capabilities)
+	return require("cmp_nvim_lsp").default_capabilities(capabilities)
 end
 
 return M
