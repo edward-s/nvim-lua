@@ -99,12 +99,13 @@ local mappings = {
 		s = { "<cmd>lua require('dap').step_over()<cr>", "Step over" },
 		i = { "<cmd>lua require('dap').step_into()<cr>", "Step into" },
 		o = { "<cmd>lua require('dap').step_out()<cr>", "Step out" },
-		u = { "<cmd>lua require('dapui').toggle()<cr>", "Toggle UI" },
 		p = { "<cmd>lua require('dap').repl.open()<cr>", "REPL" },
-		X = { "<cmd>lua require('dap').clear_breakpoints()<cr>", "Clear breakpoints" },
+		u = { "<cmd>NvimTreeClose<cr><cmd>lua require('dapui').toggle()<cr>", "Toggle UI" },
 		r = { '<cmd>lua require"telescope".extensions.dap.list_breakpoints{}<cr>', "List breakpoints" },
+		t = { "<cmd>lua require('dap').terminate()<cr>", "Terminate" },
 		v = { '<cmd>lua require"telescope".extensions.dap.variables{}<cr>', "Variables" },
 		m = { '<cmd>lua require"telescope".extensions.dap.frames{}<cr>', "Frames" },
+		x = { "<cmd>lua require('dap').clear_breakpoints()<cr>", "Clear breakpoints" },
 	},
 	g = {
 		name = "Git",
@@ -163,7 +164,19 @@ local mappings = {
 	t = {
 		name = "Test",
 		a = { "<cmd>lua require('neotest').run.attach()<cr>", "Attach" },
-		d = { "<cmd>lua require('neotest').run.run({ strategy = 'dap' })<cr>", "Debug Nearest" },
+		d = {
+			function()
+				local buf = vim.api.nvim_get_current_buf()
+				local ft = vim.api.nvim_buf_get_option(buf, "filetype")
+				if ft == "go" then
+					-- temporary fix until neotest is updated to support go
+					require("dap-go").debug_test()
+				else
+					require("neotest").run.run({ strategy = "dap" })
+				end
+			end,
+			"Debug Nearest",
+		},
 		f = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", "File" },
 		l = { "<cmd>lua require('neotest').run.run_last()<cr>", "Run Last" },
 		m = { "<cmd>lua require('neotest').summary.run_marked()<cr>", "Run Marked" },
