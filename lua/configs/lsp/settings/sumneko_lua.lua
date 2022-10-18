@@ -7,7 +7,7 @@ function M.setup()
 		settings = {
 			Lua = {
 				diagnostics = {
-					globals = { "vim", "use", "unpack" },
+					globals = { "vim", "use", "unpack", "require" },
 				},
 				workspace = {
 					library = {

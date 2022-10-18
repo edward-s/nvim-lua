@@ -104,6 +104,12 @@ require("packer").startup(function()
 			"mxsdev/nvim-dap-vscode-js",
 		},
 	})
+	use({
+		"leoluz/nvim-dap-go",
+		config = function()
+			require("dap-go").setup()
+		end,
+	})
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
