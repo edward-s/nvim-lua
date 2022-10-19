@@ -46,6 +46,9 @@ keymap("n", "zM", "<cmd>lua require('ufo').closeAllFolds()<cr><cmd>IndentBlankli
 -- Nvim tree
 keymap("n", "<C-n>", "<cmd>NvimTreeToggle<cr>", opts)
 
+-- Copilot
+keymap("i", "<C-e>", "<cmd>Copilot panel<cr>", opts)
+
 -- Telescope
 keymap("n", "<C-p>", "<cmd>lua require('configs.telescope').project_files()<cr>", opts)
 keymap("n", "<Tab>", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)

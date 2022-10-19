@@ -85,8 +85,7 @@ local mappings = {
 	},
 	c = {
 		name = "Code",
-		c = { "<cmd>RunCode<cr>", "Code" },
-		p = { "<cmd>Copilot panel<cr>", "Copilot panel" },
+		r = { "<cmd>RunCode<cr>", "Run code" },
 	},
 	d = {
 		name = "Debug",
