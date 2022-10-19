@@ -62,13 +62,13 @@ keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
 keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
 keymap(
 	"n",
-	"[e",
+	"[E",
 	"<cmd>lua require('lspsaga.diagnostic').goto_prev({ severity = vim.diagnostic.severity.ERROR })<cr>",
 	opts
 )
 keymap(
 	"n",
-	"]e",
+	"]E",
 	"<cmd>lua require('lspsaga.diagnostic').goto_next({ severity = vim.diagnostic.severity.ERROR })<cr>",
 	opts
 )
