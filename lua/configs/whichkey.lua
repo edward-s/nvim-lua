@@ -84,11 +84,9 @@ local mappings = {
 		p = { "<cmd>BufferLinePick<cr>", "Pick buffer" },
 	},
 	c = {
-		name = "Quickfix",
-		o = { "<cmd>copen<cr>", "Open quickfix" },
-		c = { "<cmd>cclose<cr>", "Close quickfix" },
-		n = { "<cmd>cnext<cr>", "Next quickfix" },
-		p = { "<cmd>cprev<cr>", "Previous quickfix" },
+		name = "Code",
+		c = { "<cmd>RunCode<cr>", "Code" },
+		p = { "<cmd>Copilot panel<cr>", "Copilot panel" },
 	},
 	d = {
 		name = "Debug",
@@ -139,14 +137,6 @@ local mappings = {
 		s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
 		t = { "<cmd>Trouble document_diagnostics<cr>", "Trouble" },
 		w = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
-	},
-	m = {
-		name = "Misc",
-		c = { "<cmd>Copilot<cr>", "Copilot" },
-	},
-	r = {
-		name = "Code",
-		c = { "<cmd>RunCode<cr>", "Code" },
 	},
 	s = {
 		name = "Search",

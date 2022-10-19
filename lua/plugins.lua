@@ -11,7 +11,15 @@ require("packer").startup(function()
 			require("trouble").setup()
 		end,
 	})
-	use("github/copilot.vim")
+	use({
+		"zbirenbaum/copilot.lua",
+		event = "VimEnter",
+		config = function()
+			vim.defer_fn(function()
+				require("configs.copilot")
+			end, 100)
+		end,
+	})
 	use("itchyny/vim-highlighturl")
 	use("kazhala/close-buffers.nvim")
 	use("folke/which-key.nvim")
