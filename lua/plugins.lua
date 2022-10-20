@@ -21,7 +21,7 @@ require("packer").startup(function()
 		end,
 	})
 	use("itchyny/vim-highlighturl")
-	use("kazhala/close-buffers.nvim")
+	use("schickling/vim-bufonly")
 	use("folke/which-key.nvim")
 	use("kyazdani42/nvim-tree.lua")
 	use("kyazdani42/nvim-web-devicons")
