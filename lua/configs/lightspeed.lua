@@ -4,5 +4,6 @@ if not present then
 end
 
 lightspeed.setup({
+	ignore_case = true,
 	jump_to_unique_chars = false,
 })
