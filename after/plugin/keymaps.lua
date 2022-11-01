@@ -2,6 +2,9 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 vim.g.mapleader = " "
 
+-- Un-tab
+keymap("i", "<S-Tab>", "<C-d>", opts)
+
 -- Split navigations
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
