@@ -48,7 +48,6 @@ keymap("n", "<C-n>", "<cmd>NvimTreeToggle<cr>", opts)
 
 -- Telescope
 keymap("n", "<C-p>", "<cmd>lua require('configs.telescope').project_files()<cr>", opts)
-keymap("n", "<Tab>", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
 
 -- Lspsaga
 keymap("n", "[t", "<cmd>lua require('neotest').jump.prev({ status = 'failed' })<cr>", opts)

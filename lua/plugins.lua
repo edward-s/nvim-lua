@@ -30,7 +30,8 @@ require("packer").startup(function()
 	use("nvim-lualine/lualine.nvim")
 	use("tpope/vim-unimpaired")
 	use({
-		"simrat39/symbols-outline.nvim",
+		"mxsdev/symbols-outline.nvim",
+		branch = "merge-jsx-tree",
 		config = function()
 			require("symbols-outline").setup()
 		end,
