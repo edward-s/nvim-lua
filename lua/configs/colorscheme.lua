@@ -4,6 +4,7 @@ function! s:gruvbox_material_custom() abort
   highlight! link DiagnosticError None
   highlight! link DiagnosticInfo None
   highlight! link DiagnosticHint None
+  highlight! link DefinitionSearch None
 endfunction
 
 augroup GruvboxMaterialCustom

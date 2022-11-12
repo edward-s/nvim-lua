@@ -69,7 +69,7 @@ local opts = {
 
 local mappings = {
 	["h"] = { "<cmd>nohlsearch<cr>", "No Highlight" },
-	["q"] = { "<cmd>q<cr>", "Quit" },
+	["q"] = { "<cmd>lua require('utils').quit()<CR>", "Quit" },
 	["Q"] = { "<cmd>qa!<cr>", "Force Quit" },
 	["w"] = { "<cmd>update<cr>", "Save" },
 	[","] = { "zA", "Toggle All Folds" },
@@ -123,10 +123,9 @@ local mappings = {
 		name = "LSP",
 		a = { "<cmd>Lspsaga code_action<cr>", "Code Action" },
 		d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "Go To Definition" },
-		D = { "<cmd>Lspsaga peek_definition<cr>", "Peek Definition" },
 		e = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics" },
 		f = { "<cmd>Lspsaga lsp_finder<cr>", "Lsp Finder" },
-		k = { "<cmd>Lspsaga hover_doc<cr>", "Hover doc" },
+		k = { "<cmd>Lspsaga peek_definition<cr>", "Peek Definition" },
 		l = { "<cmd>Lspsaga show_line_diagnostics<cr>", "Line diagnostics" },
 		o = { "<cmd>SymbolsOutline<cr>", "Outline" },
 		q = { "<cmd>lua vim.diagnostic.set_loclist()<cr>", "Quickfix" },
