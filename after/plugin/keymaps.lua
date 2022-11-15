@@ -2,7 +2,8 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 vim.g.mapleader = " "
 
--- Un-tab
+-- Tabs
+keymap("n", "<Tab>", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
 keymap("i", "<S-Tab>", "<C-d>", opts)
 
 -- Split navigations

@@ -116,8 +116,7 @@ local mappings = {
 	j = {
 		name = "Jump",
 		a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add Jump" },
-		j = { "<cmd>Telescope harpoon marks<cr>", "Jump Menu" },
-		c = { "<cmd>lua require('harpoon.cmd-ui').toggle_quick_menu()<cr>", "Command Menu" },
+		j = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Jump Menu" },
 	},
 	l = {
 		name = "LSP",
