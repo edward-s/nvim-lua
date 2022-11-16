@@ -65,6 +65,7 @@ nvimtree.setup({
 		mappings = {
 			list = {
 				{ key = "<C-t>", cb = "<cmd>ToggleTerm<cr>" },
+				{ key = "<Tab>", cb = "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>" },
 				{ key = "s", cb = "<Plug>Lightspeed_s" },
 				{ key = "S", cb = "<Plug>Lightspeed_S" },
 			},
