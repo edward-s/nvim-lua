@@ -189,9 +189,10 @@ local mappings = {
 		name = "Window",
 		o = { "<c-w>o", "Close others" },
 		q = { "<cmd>q<cr>", "Close" },
-		v = { "<cmd>vsplit<cr>", "Vertical Split" },
+		v = { "<cmd>vsplit<cr>", "Vertical split" },
 		r = { "<c-w>r", "Swap" },
-		x = { "<cmd>split<cr>", "Horizontal Split" },
+		x = { "<cmd>split<cr>", "Horizontal split" },
+		z = { "<cmd>ZenMode<cr>", "Zen mode" },
 		["="] = { "<c-w>=", "Equally size" },
 	},
 }

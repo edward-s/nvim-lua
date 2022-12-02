@@ -36,6 +36,12 @@ packer.startup(function()
 	use("nvim-lualine/lualine.nvim")
 	use("tpope/vim-unimpaired")
 	use({
+		"folke/zen-mode.nvim",
+		config = function()
+			require("zen-mode").setup()
+		end,
+	})
+	use({
 		"mxsdev/symbols-outline.nvim",
 		branch = "merge-jsx-tree",
 		config = function()
