@@ -62,14 +62,6 @@ nvimtree.setup({
 	view = {
 		width = 40,
 		hide_root_folder = true,
-		mappings = {
-			list = {
-				{ key = "<C-t>", cb = "<cmd>ToggleTerm<cr>" },
-				{ key = "<Tab>", cb = "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>" },
-				{ key = "s", cb = "<Plug>Lightspeed_s" },
-				{ key = "S", cb = "<Plug>Lightspeed_S" },
-			},
-		},
 	},
-	remove_keymaps = { "H", "M", "L" },
+	remove_keymaps = { "H", "M", "L", "<C-t>", "s", "S" },
 })

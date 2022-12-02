@@ -73,7 +73,18 @@ packer.startup(function()
 	use("wellle/targets.vim")
 	use("stevearc/dressing.nvim")
 	use("tyru/open-browser.vim")
-	use("ggandor/lightspeed.nvim")
+	use({
+		"ggandor/leap.nvim",
+		config = function()
+			require("leap").set_default_keymaps()
+		end,
+	})
+	use({
+		"ggandor/flit.nvim",
+		config = function()
+			require("flit").setup()
+		end,
+	})
 	use("lalitmee/browse.nvim")
 	use({
 		"kevinhwang91/nvim-ufo",
