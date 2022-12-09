@@ -24,7 +24,39 @@ require("nvim-dap-virtual-text").setup({
 	all_frames = true,
 	commented = true,
 })
-require("dapui").setup()
+
+local dapui = require("dapui")
+dapui.setup({
+	layouts = {
+		{
+			elements = {
+				{ id = "scopes", size = 0.25 },
+				"breakpoints",
+				"stacks",
+				"watches",
+			},
+			size = 40, -- 40 columns
+			position = "left",
+		},
+		{
+			elements = {
+				"repl",
+			},
+			size = 0.25,
+			position = "bottom",
+		},
+	},
+})
+dap.listeners.after.event_initialized["dapui_config"] = function()
+	vim.cmd("NvimTreeClose")
+	dapui.open()
+end
+dap.listeners.before.event_terminated["dapui_config"] = function()
+	dapui.close()
+end
+dap.listeners.before.event_exited["dapui_config"] = function()
+	dapui.close()
+end
 
 -- adapters
 require("configs.dap.adapters.typescript")

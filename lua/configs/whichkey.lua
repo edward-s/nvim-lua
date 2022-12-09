@@ -64,10 +64,11 @@ local opts = {
 	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
 	silent = true, -- use `silent` when creating keymaps
 	noremap = true, -- use `noremap` when creating keymaps
-	nowait = true, -- use `nowait` when creating keymaps
+	nowait = false, -- use `nowait` when creating keymaps
 }
 
 local mappings = {
+	["e"] = { "<cmd>lua require('dapui').eval()<cr>", "Dap Eval" },
 	["h"] = { "<cmd>nohlsearch<cr>", "No Highlight" },
 	["q"] = { "<cmd>lua require('utils').quit()<CR>", "Quit" },
 	["Q"] = { "<cmd>qa!<cr>", "Force Quit" },
