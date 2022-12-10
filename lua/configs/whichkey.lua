@@ -193,7 +193,7 @@ local mappings = {
 		q = { "<cmd>q<cr>", "Close" },
 		v = { "<cmd>vsplit<cr>", "Vertical split" },
 		r = { "<c-w>r", "Swap" },
-		t = { "<cmd>tabnew<cr>", "New tab" },
+		t = { "<cmd>tabnew %<cr>", "New tab" },
 		x = { "<cmd>split<cr>", "Horizontal split" },
 		z = { "<cmd>ZenMode<cr>", "Zen mode" },
 		["="] = { "<c-w>=", "Equally size" },
