@@ -52,8 +52,6 @@ keymap("n", "<C-p>", "<cmd>lua require('configs.telescope').project_files()<cr>"
 -- Lspsaga
 keymap("n", "[t", "<cmd>lua require('neotest').jump.prev({ status = 'failed' })<cr>", opts)
 keymap("n", "]t", "<cmd>lua require('neotest').jump.next({ status = 'failed' })<cr>", opts)
-
--- Lspsaga
 keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
 keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
 keymap(
@@ -68,6 +66,12 @@ keymap(
 	"<cmd>lua require('lspsaga.diagnostic').goto_next({ severity = vim.diagnostic.severity.ERROR })<cr>",
 	opts
 )
+
+--Hlslens
+keymap("n", "*", [[*<cmd>lua require('hlslens').start()<cr>]], opts)
+keymap("n", "#", [[#<cmd>lua require('hlslens').start()<cr>]], opts)
+keymap("n", "g*", [[g*<cmd>lua require('hlslens').start()<cr>]], opts)
+keymap("n", "g#", [[g#<cmd>lua require('hlslens').start()<cr>]], opts)
 
 -- Browser search
 keymap("n", "gx", "<Plug>(openbrowser-smart-search)", opts)
