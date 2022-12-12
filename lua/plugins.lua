@@ -180,6 +180,7 @@ packer.startup(function()
 	use("onsails/lspkind-nvim")
 	use("jose-elias-alvarez/typescript.nvim")
 	use("glepnir/lspsaga.nvim")
+	use("ray-x/lsp_signature.nvim")
 
 	-- Cmp
 	use({
