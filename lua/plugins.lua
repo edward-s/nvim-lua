@@ -112,6 +112,7 @@ packer.startup(function()
 			require("inc_rename").setup()
 		end,
 	})
+	use("famiu/bufdelete.nvim")
 
 	-- Formatting
 	use({

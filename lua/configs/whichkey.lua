@@ -70,9 +70,9 @@ local opts = {
 local mappings = {
 	["e"] = { "<cmd>lua require('dapui').eval()<cr>", "Dap Eval" },
 	["h"] = { "<cmd>nohlsearch<cr>", "No Highlight" },
+	["m"] = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Harpoon mark" },
 	["q"] = { "<cmd>lua require('utils').quit()<CR>", "Quit" },
-	["Q"] = { "<cmd>qa!<cr>", "Force Quit" },
-	["w"] = { "<cmd>update<cr>", "Save" },
+	["w"] = { "<cmd>w<cr>", "Save" },
 	[","] = { "zA", "Toggle All Folds" },
 	["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "File 1" },
 	["2"] = { "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", "File 2" },
@@ -81,7 +81,8 @@ local mappings = {
 		name = "Buffers",
 		a = { "<cmd>silent BufOnly<cr>", "Close other buffers" },
 		b = { "<cmd>Telescope buffers<cr>", "Buffers" },
-		d = { "<cmd>BufferLinePickClose<cr>", "Close buffer" },
+		c = { "<cmd>BufferLinePickClose<cr>", "Close buffer" },
+		d = { "<cmd>Bdelete<cr>", "Close current" },
 		p = { "<cmd>BufferLinePick<cr>", "Pick buffer" },
 	},
 	c = {
@@ -115,12 +116,11 @@ local mappings = {
 	},
 	j = {
 		name = "Jump",
-		a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add Jump" },
 		j = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Jump Menu" },
 	},
 	l = {
 		name = "LSP",
-		a = { "<cmd>Ljpsaga code_action<cr>", "Code Action" },
+		a = { "<cmd>Lspsaga code_action<cr>", "Code Action" },
 		d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "Go To Definition" },
 		D = { "<cmd>Lspsaga peek_definition<cr>", "Peek Definition" },
 		e = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics" },
@@ -177,6 +177,10 @@ local mappings = {
 			"<cmd>TypescriptFixAll<cr>",
 			"Fix all",
 		},
+		g = {
+			"<cmd>TypescriptGoToSourceDefinition<cr>",
+			"Go to source definition",
+		},
 		i = {
 			"<cmd>TypescriptAddMissingImports<cr>",
 			"Add Missing Imports",
@@ -184,6 +188,14 @@ local mappings = {
 		o = {
 			"<cmd>TypescriptOrganizeImports<cr>",
 			"Organize Imports",
+		},
+		r = {
+			"<cmd>TypescriptRenameFile<cr>",
+			"Rename File",
+		},
+		u = {
+			"<cmd>TypescriptRemoveUnused<cr>",
+			"Remove Unused",
 		},
 	},
 	z = {
