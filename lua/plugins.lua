@@ -17,15 +17,8 @@ packer.startup(function()
 			require("trouble").setup()
 		end,
 	})
-	use({
-		"zbirenbaum/copilot.lua",
-		event = "VimEnter",
-		config = function()
-			vim.defer_fn(function()
-				require("configs.copilot")
-			end, 100)
-		end,
-	})
+	use("zbirenbaum/copilot.lua")
+	use("zbirenbaum/copilot-cmp")
 	use("itchyny/vim-highlighturl")
 	use("schickling/vim-bufonly")
 	use("folke/which-key.nvim")

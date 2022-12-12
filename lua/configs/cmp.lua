@@ -8,6 +8,7 @@ local lspkind = require("lspkind")
 
 lspkind.init({
 	symbol_map = {
+		Copilot = "",
 		Text = "",
 		Method = "",
 		Function = "",
@@ -70,8 +71,9 @@ cmp.setup({
 	},
 	sources = {
 		{ name = "nvim_lsp" },
-		{ name = "path" },
+		{ name = "copilot" },
 		{ name = "vsnip" },
+		{ name = "path" },
 	},
 })
 
