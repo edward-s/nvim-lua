@@ -120,7 +120,7 @@ local mappings = {
 	},
 	l = {
 		name = "LSP",
-		a = { "<cmd>Lspsaga code_action<cr>", "Code Action" },
+		a = { "<cmd>Ljpsaga code_action<cr>", "Code Action" },
 		d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "Go To Definition" },
 		D = { "<cmd>Lspsaga peek_definition<cr>", "Peek Definition" },
 		e = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics" },
@@ -129,7 +129,7 @@ local mappings = {
 		l = { "<cmd>Lspsaga show_line_diagnostics<cr>", "Line diagnostics" },
 		o = { "<cmd>SymbolsOutline<cr>", "Outline" },
 		q = { "<cmd>lua vim.diagnostic.set_loclist()<cr>", "Quickfix" },
-		r = { "<cmd>Lspsaga rename<cr>", "Rename" },
+		r = { ":IncRename ", "Rename" },
 		s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
 		t = { "<cmd>Trouble document_diagnostics<cr>", "Trouble" },
 		w = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },

@@ -106,6 +106,12 @@ packer.startup(function()
 			require("hlslens").setup()
 		end,
 	})
+	use({
+		"smjonas/inc-rename.nvim",
+		config = function()
+			require("inc_rename").setup()
+		end,
+	})
 
 	-- Formatting
 	use({
