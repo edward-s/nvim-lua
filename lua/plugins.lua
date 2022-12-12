@@ -42,8 +42,7 @@ packer.startup(function()
 		end,
 	})
 	use({
-		"mxsdev/symbols-outline.nvim",
-		branch = "merge-jsx-tree",
+		"simrat39/symbols-outline.nvim",
 		config = function()
 			require("symbols-outline").setup()
 		end,
