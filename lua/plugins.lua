@@ -113,6 +113,7 @@ packer.startup(function()
 		end,
 	})
 	use("famiu/bufdelete.nvim")
+	use("antoinemadec/FixCursorHold.nvim")
 
 	-- Formatting
 	use({

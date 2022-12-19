@@ -101,7 +101,7 @@ local mappings = {
 		o = { "<cmd>lua require('dap').step_out()<cr>", "Step out" },
 		p = { "<cmd>lua require'dap'.pause.toggle()<cr>", "Pause" },
 		r = { "<cmd>lua require('dap').repl.toggle()<cr>", "Toggle REPL" },
-		q = { "<cmd>lua require('dap').disconnect()<cr>", "Disconnect" },
+		q = { "<cmd>lua require('dap').terminate()<cr>", "Terminate" },
 		u = { "<cmd>NvimTreeClose<cr><cmd>lua require('dapui').toggle()<cr>", "Toggle UI" },
 		x = { "<cmd>lua require('dap').clear_breakpoints()<cr>", "Clear breakpoints" },
 	},

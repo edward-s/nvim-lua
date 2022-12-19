@@ -73,7 +73,6 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "copilot" },
 		{ name = "vsnip" },
-		{ name = "path" },
 	},
 })
 
