@@ -136,7 +136,7 @@ local mappings = {
 	s = {
 		name = "Search",
 		b = { "<cmd>lua require('browse').input_search()<cr>", "Browser" },
-		c = { "<cmd>Telescope grep_string<cr>", "Text under cursor" },
+		c = { "<cmd>ChatGPT<cr>", "ChatGPT" },
 		f = { "<cmd>Telescope find_files<cr>", "Find" },
 		g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
 		h = { "<cmd>Telescope help_tags<cr>", "Man Pages" },
@@ -144,7 +144,7 @@ local mappings = {
 		o = { "<cmd>Telescope oldfiles<cr>", "Old Files" },
 		r = { "<cmd>Telescope resume<cr>", "Resume Search" },
 		s = { "<cmd>lua require('utils.term').so()<cr>", "Stack Overflow" },
-		w = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Current Buffer" },
+		w = { "<cmd>Telescope grep_string<cr>", "Text under cursor" },
 	},
 	t = {
 		name = "Test",

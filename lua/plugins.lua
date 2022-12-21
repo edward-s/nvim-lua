@@ -114,6 +114,13 @@ packer.startup(function()
 	})
 	use("famiu/bufdelete.nvim")
 	use("antoinemadec/FixCursorHold.nvim")
+	use("MunifTanjim/nui.nvim")
+	use({
+		"jackMort/ChatGPT.nvim",
+		config = function()
+			require("chatgpt").setup()
+		end,
+	})
 
 	-- Formatting
 	use({
