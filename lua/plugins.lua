@@ -64,7 +64,6 @@ packer.startup(function()
 	})
 	use("wellle/targets.vim")
 	use("stevearc/dressing.nvim")
-	use("tyru/open-browser.vim")
 	use({
 		"ggandor/leap.nvim",
 		config = function()
@@ -114,13 +113,6 @@ packer.startup(function()
 	})
 	use("famiu/bufdelete.nvim")
 	use("antoinemadec/FixCursorHold.nvim")
-	use("MunifTanjim/nui.nvim")
-	use({
-		"jackMort/ChatGPT.nvim",
-		config = function()
-			require("chatgpt").setup()
-		end,
-	})
 
 	-- Formatting
 	use({

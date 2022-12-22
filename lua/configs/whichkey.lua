@@ -135,8 +135,6 @@ local mappings = {
 	},
 	s = {
 		name = "Search",
-		b = { "<cmd>lua require('browse').input_search()<cr>", "Browser" },
-		c = { "<cmd>ChatGPT<cr>", "ChatGPT" },
 		f = { "<cmd>Telescope find_files<cr>", "Find" },
 		g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
 		h = { "<cmd>Telescope help_tags<cr>", "Man Pages" },
