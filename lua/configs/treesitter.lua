@@ -5,7 +5,7 @@ if not present then
 end
 
 ts_configs.setup({
-	ensure_installed = "all",
+	ensure_installed = { "typescript", "lua", "python", "go" },
 	indent = {
 		enable = true,
 	},
@@ -33,6 +33,8 @@ ts_configs.setup({
 			enable = true,
 			lookahead = true,
 			keymaps = {
+				["aa"] = "@parameter.outer",
+				["ia"] = "@parameter.inner",
 				["af"] = "@function.outer",
 				["if"] = "@function.inner",
 				["ac"] = "@class.outer",
