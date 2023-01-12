@@ -98,7 +98,6 @@ packer.startup(function()
 		end,
 	})
 	use("ThePrimeagen/harpoon")
-	use("CRAG666/code_runner.nvim")
 	use({
 		"kevinhwang91/nvim-hlslens",
 		config = function()
