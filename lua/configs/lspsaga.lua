@@ -1,6 +1,6 @@
-local saga = require("lspsaga")
+local lspsaga = require("lspsaga")
 
-saga.init_lsp_saga({
+lspsaga.setup({
 	border_style = "rounded",
 	finder_action_keys = {
 		open = "<Enter>",
