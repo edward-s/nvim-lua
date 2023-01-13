@@ -35,12 +35,6 @@ packer.startup(function()
 		end,
 	})
 	use({
-		"simrat39/symbols-outline.nvim",
-		config = function()
-			require("symbols-outline").setup()
-		end,
-	})
-	use({
 		"folke/todo-comments.nvim",
 		config = function()
 			require("todo-comments").setup()
@@ -105,6 +99,12 @@ packer.startup(function()
 	})
 	use("famiu/bufdelete.nvim")
 	use("antoinemadec/FixCursorHold.nvim")
+	use({
+		"stevearc/aerial.nvim",
+		config = function()
+			require("aerial").setup()
+		end,
+	})
 
 	-- Formatting
 	use({
