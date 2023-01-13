@@ -55,13 +55,6 @@ packer.startup(function()
 	use("akinsho/bufferline.nvim")
 	use("RRethy/vim-illuminate")
 	use("akinsho/toggleterm.nvim")
-	use({
-		"b0o/incline.nvim",
-		event = "BufReadPre",
-		config = function()
-			require("incline").setup()
-		end,
-	})
 	use("wellle/targets.vim")
 	use("stevearc/dressing.nvim")
 	use({
