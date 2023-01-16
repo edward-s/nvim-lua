@@ -11,6 +11,9 @@ neotest.setup({
 	output = {
 		open_on_run = false,
 	},
+	quickfix = {
+		enabled = false,
+	},
 	floating = {
 		options = {
 			wrap = true,
