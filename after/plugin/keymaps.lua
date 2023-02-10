@@ -1,5 +1,5 @@
 local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 vim.g.mapleader = " "
 
 -- Un-indent
@@ -54,18 +54,12 @@ keymap("n", "[t", "<cmd>lua require('neotest').jump.prev({ status = 'failed' })<
 keymap("n", "]t", "<cmd>lua require('neotest').jump.next({ status = 'failed' })<cr>", opts)
 keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
 keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
-keymap(
-	"n",
-	"[E",
-	"<cmd>lua require('lspsaga.diagnostic').goto_prev({ severity = vim.diagnostic.severity.ERROR })<cr>",
-	opts
-)
-keymap(
-	"n",
-	"]E",
-	"<cmd>lua require('lspsaga.diagnostic').goto_next({ severity = vim.diagnostic.severity.ERROR })<cr>",
-	opts
-)
+keymap("n", "[E", function()
+	require("lspsaga.diagnostic"):goto_prev({ severity = vim.diagnostic.severity.ERROR })
+end)
+keymap("n", "]E", function()
+	require("lspsaga.diagnostic"):goto_next({ severity = vim.diagnostic.severity.ERROR })
+end)
 
 --Hlslens
 keymap("n", "*", [[*<cmd>lua require('hlslens').start()<cr>]], opts)
