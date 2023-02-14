@@ -3,7 +3,7 @@ local mason_lspconfig = require("mason-lspconfig")
 local lspconfig = require("lspconfig")
 
 local lsputils = require("configs.lsp.utils")
-local servers = { "tsserver", "jsonls", "sumneko_lua", "gopls", "html" }
+local servers = { "tsserver", "jsonls", "lua_ls", "gopls", "html" }
 
 mason.setup({
 	ui = {
