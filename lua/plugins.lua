@@ -22,7 +22,10 @@ packer.startup(function()
 	use("itchyny/vim-highlighturl")
 	use("schickling/vim-bufonly")
 	use("folke/which-key.nvim")
-	use("kyazdani42/nvim-tree.lua")
+	use({
+		"kyazdani42/nvim-tree.lua",
+		commit = "8b8d457e07d279976a9baac6bbff5aa036afdc5f",
+	})
 	use("kyazdani42/nvim-web-devicons")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("numToStr/Comment.nvim")
