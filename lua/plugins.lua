@@ -23,10 +23,10 @@ packer.startup(function()
 	use("schickling/vim-bufonly")
 	use("folke/which-key.nvim")
 	use({
-		"kyazdani42/nvim-tree.lua",
+		"nvim-tree/nvim-tree.lua",
 		commit = "8b8d457e07d279976a9baac6bbff5aa036afdc5f",
 	})
-	use("kyazdani42/nvim-web-devicons")
+	use("nvim-tree/nvim-web-devicons")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("numToStr/Comment.nvim")
 	use("nvim-lualine/lualine.nvim")
@@ -41,12 +41,6 @@ packer.startup(function()
 		"folke/todo-comments.nvim",
 		config = function()
 			require("todo-comments").setup()
-		end,
-	})
-	use({
-		"goolord/alpha-nvim",
-		config = function()
-			require("alpha").setup(require("alpha.themes.startify").config)
 		end,
 	})
 	use("akinsho/bufferline.nvim")
