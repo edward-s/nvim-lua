@@ -7,4 +7,7 @@ lspsaga.setup({
 			normal_bg = "#1B1B1B",
 		},
 	},
+	rename = {
+		quit = "q",
+	},
 })
