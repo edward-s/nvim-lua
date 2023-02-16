@@ -57,7 +57,6 @@ packer.startup(function()
 			require("flit").setup()
 		end,
 	})
-	use("lalitmee/browse.nvim")
 	use({
 		"kevinhwang91/nvim-ufo",
 		requires = "kevinhwang91/promise-async",
