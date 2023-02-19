@@ -11,12 +11,6 @@ packer.startup(function()
 	use("sainnhe/gruvbox-material")
 
 	-- Essentials
-	use({
-		"folke/trouble.nvim",
-		config = function()
-			require("trouble").setup()
-		end,
-	})
 	use("zbirenbaum/copilot.lua")
 	use("zbirenbaum/copilot-cmp")
 	use("itchyny/vim-highlighturl")
