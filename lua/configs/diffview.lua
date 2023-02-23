@@ -28,10 +28,15 @@ end
 
 diffview.setup({
 	key_bindings = {
-		disable_defaults = false,
+		view = {
+			["q"] = "<cmd>DiffviewClose<cr>",
+		},
 		file_panel = {
 			[" "] = cb("toggle_stage_entry"),
-			["q"] = M.toggle,
+			["q"] = "<cmd>DiffviewClose<cr>",
+		},
+		file_history_panel = {
+			["q"] = "<cmd>DiffviewClose<cr>",
 		},
 	},
 })
