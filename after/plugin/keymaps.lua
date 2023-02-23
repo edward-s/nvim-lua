@@ -1,6 +1,7 @@
 local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 vim.g.mapleader = " "
+vim.g.localmapleader = " "
 
 -- Un-indent
 keymap("i", "<S-Tab>", "<C-d>", opts)

@@ -86,6 +86,7 @@ packer.startup(function()
 			require("aerial").setup()
 		end,
 	})
+	use("j-hui/fidget.nvim")
 
 	-- Formatting
 	use({
@@ -146,14 +147,17 @@ packer.startup(function()
 	})
 
 	-- LSP
-	use("neovim/nvim-lspconfig")
-	use("williamboman/mason.nvim")
-	use("williamboman/mason-lspconfig.nvim")
+	use({
+		"neovim/nvim-lspconfig",
+		requires = {
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+		},
+	})
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("onsails/lspkind-nvim")
 	use("jose-elias-alvarez/typescript.nvim")
 	use("glepnir/lspsaga.nvim")
-	use("ray-x/lsp_signature.nvim")
 
 	-- Cmp
 	use({

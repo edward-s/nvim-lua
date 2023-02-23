@@ -33,12 +33,4 @@ for _, server in pairs(servers) do
 	end
 end
 
-require("lsp_signature").setup({
-	bind = true,
-	handler_opts = {
-		border = "rounded",
-	},
-	hint_enable = false,
-})
-
 require("configs.lsp.null-ls").setup()
