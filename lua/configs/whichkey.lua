@@ -109,10 +109,9 @@ local mappings = {
 		name = "Git",
 		b = { "<cmd>GitBlameToggle<cr>", "Toggle blame" },
 		B = { "<cmd>Telescope git_branches<cr>", "Git branches" },
-		d = { '<cmd>lua require("configs.diffview").toggle()<cr>', "Diff file" },
-		f = { '<cmd>lua require("configs.diffview").toggle()<cr>', "Diff file" },
+		d = { '<cmd>lua require("configs.diffview").toggle()<cr>', "Diff working file" },
 		g = { "<cmd>lua require('utils.term').lazygit_toggle()<cr>", "LazyGit" },
-		h = { "<cmd>DiffviewFileHistory<Cr>", "File history" },
+		h = { '<cmd>lua require("configs.diffview").toggle_file_history()<cr>', "Diff file history" },
 	},
 	j = {
 		name = "Jump",
