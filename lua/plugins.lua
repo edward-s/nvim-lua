@@ -12,7 +12,6 @@ packer.startup(function()
 
 	-- Essentials
 	use("zbirenbaum/copilot.lua")
-	use("zbirenbaum/copilot-cmp")
 	use("itchyny/vim-highlighturl")
 	use("schickling/vim-bufonly")
 	use("folke/which-key.nvim")
@@ -171,6 +170,7 @@ packer.startup(function()
 			{ "f3fora/cmp-spell" },
 		},
 	})
+	use("zbirenbaum/copilot-cmp")
 
 	-- Snippets
 	use({

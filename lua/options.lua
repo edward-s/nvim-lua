@@ -2,7 +2,7 @@ local options = {
 	autoindent = true,
 	background = "dark",
 	clipboard = "unnamedplus",
-	completeopt = "menu,menuone,noselect",
+	completeopt = "menuone,noselect",
 	cmdheight = 1,
 	conceallevel = 0,
 	cursorline = true,
@@ -35,6 +35,7 @@ local options = {
 	tabstop = 2,
 	termguicolors = true,
 	title = true,
+	undofile = true,
 	updatetime = 250,
 	wrap = false,
 }
