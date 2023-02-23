@@ -9,6 +9,7 @@ packer.startup(function()
 
 	-- Colorscheme
 	use("sainnhe/gruvbox-material")
+	use("rebelot/kanagawa.nvim")
 
 	-- Essentials
 	use("zbirenbaum/copilot.lua")
@@ -37,7 +38,6 @@ packer.startup(function()
 	use("RRethy/vim-illuminate")
 	use("akinsho/toggleterm.nvim")
 	use("wellle/targets.vim")
-	use("stevearc/dressing.nvim")
 	use({
 		"ggandor/leap.nvim",
 		config = function()

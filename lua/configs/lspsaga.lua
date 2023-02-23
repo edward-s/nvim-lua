@@ -2,10 +2,8 @@ local lspsaga = require("lspsaga")
 
 lspsaga.setup({
 	ui = {
+		title = false,
 		border = "rounded",
-		colors = {
-			normal_bg = "#1B1B1B",
-		},
 	},
 	rename = {
 		quit = "q",

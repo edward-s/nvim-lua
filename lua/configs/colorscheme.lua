@@ -5,6 +5,11 @@ function! s:gruvbox_material_custom() abort
   highlight! link DiagnosticInfo None
   highlight! link DiagnosticHint None
   highlight! link DefinitionSearch None
+  highlight! link ActionPreviewNormal None
+  highlight! link CodeActionNormal None
+  highlight! link FinderNormal None
+  highlight! link HoverNormal None
+  highlight! link RenameNormal None
 endfunction
 
 augroup GruvboxMaterialCustom
