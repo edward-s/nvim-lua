@@ -67,7 +67,3 @@ keymap("n", "*", [[*<cmd>lua require('hlslens').start()<cr>]], opts)
 keymap("n", "#", [[#<cmd>lua require('hlslens').start()<cr>]], opts)
 keymap("n", "g*", [[g*<cmd>lua require('hlslens').start()<cr>]], opts)
 keymap("n", "g#", [[g#<cmd>lua require('hlslens').start()<cr>]], opts)
-
--- Browser search
-keymap("n", "gx", "<Plug>(openbrowser-smart-search)", opts)
-keymap("x", "gx", "<Plug>(openbrowser-smart-search)", opts)
