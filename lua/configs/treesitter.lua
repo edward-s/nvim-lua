@@ -5,7 +5,7 @@ if not present then
 end
 
 ts_configs.setup({
-	ensure_installed = { "javascript", "typescript", "tsx", "lua", "vim", "python", "go" },
+	ensure_installed = { "javascript", "typescript", "tsx", "html", "terraform", "lua", "vim", "python", "go" },
 	indent = {
 		enable = true,
 	},
