@@ -3,7 +3,18 @@ local mason_lspconfig = require("mason-lspconfig")
 local lspconfig = require("lspconfig")
 
 local lsputils = require("configs.lsp.utils")
-local servers = { "tsserver", "jsonls", "lua_ls", "gopls", "html", "terraformls" }
+local servers = {
+	"tsserver",
+	"jsonls",
+	"lua_ls",
+	"gopls",
+	"html",
+	"terraformls",
+	"kotlin_language_server",
+	"graphql",
+	"prismals",
+	"tailwindcss",
+}
 
 mason.setup({
 	ui = {

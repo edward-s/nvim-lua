@@ -8,9 +8,10 @@ function M.setup()
 	local codeActions = null_ls.builtins.code_actions
 	local diagnostics = null_ls.builtins.diagnostics
 	local sources = {
-		formatting.prettierd,
-		formatting.stylua,
 		formatting.gofmt,
+		formatting.prettierd,
+		formatting.swiftlint,
+		formatting.stylua,
 		codeActions.eslint_d,
 		diagnostics.golangci_lint,
 		diagnostics.eslint_d,
