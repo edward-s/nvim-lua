@@ -5,6 +5,9 @@ if not present then
 end
 
 local lspkind = require("lspkind")
+local luasnip = require("luasnip")
+
+luasnip.config.setup()
 
 lspkind.init({
 	symbol_map = {
@@ -46,16 +49,13 @@ cmp.setup({
 				buffer = "BUF",
 				nvim_lsp = "LSP",
 				path = "PATH",
-				vsnip = "SNIP",
-				calc = "CALC",
-				spell = "SPELL",
-				emoji = "EMOJI",
+				luasnip = "SNIP",
 			},
 		}),
 	},
 	snippet = {
 		expand = function(args)
-			vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+			luasnip.lsp_expand(args.body)
 		end,
 	},
 	mapping = {
@@ -66,14 +66,32 @@ cmp.setup({
 		["<C-Space>"] = cmp.mapping.complete(),
 		["<CR>"] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.Replace,
-			select = false,
+			select = true,
 		}),
+		["<Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_next_item()
+			elseif luasnip.expand_or_jumpable() then
+				luasnip.expand_or_jump()
+			else
+				fallback()
+			end
+		end, { "i", "s" }),
+		["<S-Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_prev_item()
+			elseif luasnip.jumpable(-1) then
+				luasnip.jump(-1)
+			else
+				fallback()
+			end
+		end, { "i", "s" }),
 	},
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "buffer" },
 		{ name = "copilot" },
-		{ name = "vsnip" },
+		{ name = "luasnip" },
 	},
 })
 

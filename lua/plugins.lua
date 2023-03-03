@@ -9,7 +9,6 @@ packer.startup(function()
 
 	-- Colorscheme
 	use("sainnhe/gruvbox-material")
-	use("rebelot/kanagawa.nvim")
 
 	-- Essentials
 	use("zbirenbaum/copilot.lua")
@@ -158,27 +157,19 @@ packer.startup(function()
 	use("jose-elias-alvarez/typescript.nvim")
 	use("glepnir/lspsaga.nvim")
 
+	use("L3MON4D3/LuaSnip")
+
 	-- Cmp
 	use({
 		"hrsh7th/nvim-cmp",
 		requires = {
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/cmp-buffer" },
-			{ "hrsh7th/cmp-path" },
-			{ "hrsh7th/cmp-cmdline" },
-			{ "hrsh7th/cmp-nvim-lsp-signature-help" },
-			{ "f3fora/cmp-spell" },
-		},
-	})
-	use("zbirenbaum/copilot-cmp")
-
-	-- Snippets
-	use({
-		"hrsh7th/cmp-vsnip",
-		requires = {
-			"hrsh7th/vim-vsnip",
-			"hrsh7th/vim-vsnip-integ",
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-cmdline",
+			"saadparwaiz1/cmp_luasnip",
 			"rafamadriz/friendly-snippets",
+			"zbirenbaum/copilot-cmp",
 		},
 	})
 end)
