@@ -79,7 +79,6 @@ local function normal_keymap()
 	local keymap = {
 		["e"] = { "<cmd>lua require('dapui').eval()<cr>", "Dap Eval" },
 		["h"] = { "<cmd>nohlsearch<cr>", "No Highlight Search" },
-		["m"] = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Harpoon mark" },
 		["q"] = { "<cmd>lua require('utils').quit()<CR>", "Quit" },
 		["w"] = { "<cmd>w<cr>", "Save" },
 		[","] = { "zA", "Toggle All Folds" },
@@ -125,6 +124,7 @@ local function normal_keymap()
 		},
 		j = {
 			name = "Jump",
+			a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add file" },
 			j = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Jump Menu" },
 		},
 		l = {
@@ -153,19 +153,7 @@ local function normal_keymap()
 		t = {
 			name = "Test",
 			a = { "<cmd>lua require('neotest').run.attach()<cr>", "Attach" },
-			d = {
-				function()
-					local buf = vim.api.nvim_get_current_buf()
-					local ft = vim.api.nvim_buf_get_option(buf, "filetype")
-					if ft == "go" then
-						-- temporary fix until neotest is updated to support go
-						require("dap-go").debug_test()
-					else
-						require("neotest").run.run({ strategy = "dap" })
-					end
-				end,
-				"Debug Nearest",
-			},
+			d = { "<cmd>lua require('neotest').run.run({ strategy = 'dap' })<cr>", "Debug Nearest" },
 			f = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", "File" },
 			l = { "<cmd>lua require('neotest').run.run_last()<cr>", "Run Last" },
 			m = { "<cmd>lua require('neotest').summary.run_marked()<cr>", "Run Marked" },
@@ -206,7 +194,6 @@ local function code_keymap()
 	function CodeRunner()
 		local bufnr = vim.api.nvim_get_current_buf()
 		local ft = vim.api.nvim_buf_get_option(bufnr, "filetype")
-		local fname = vim.fn.expand("%:p:t")
 		local keymap_c = {} -- normal key map
 		local keymap_c_v = {} -- visual key map
 
