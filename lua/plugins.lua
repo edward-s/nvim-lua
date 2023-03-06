@@ -71,6 +71,12 @@ packer.startup(function()
 	})
 	use("ThePrimeagen/harpoon")
 	use({
+		"ThePrimeagen/refactoring.nvim",
+		config = function()
+			require("refactoring").setup()
+		end,
+	})
+	use({
 		"kevinhwang91/nvim-hlslens",
 		config = function()
 			require("hlslens").setup()
@@ -154,10 +160,11 @@ packer.startup(function()
 	})
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("onsails/lspkind-nvim")
-	use("jose-elias-alvarez/typescript.nvim")
 	use("glepnir/lspsaga.nvim")
-
 	use("L3MON4D3/LuaSnip")
+
+	-- Typescript
+	use("jose-elias-alvarez/typescript.nvim")
 
 	-- Cmp
 	use({
