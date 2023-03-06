@@ -71,12 +71,6 @@ packer.startup(function()
 	})
 	use("ThePrimeagen/harpoon")
 	use({
-		"ThePrimeagen/refactoring.nvim",
-		config = function()
-			require("refactoring").setup()
-		end,
-	})
-	use({
 		"kevinhwang91/nvim-hlslens",
 		config = function()
 			require("hlslens").setup()

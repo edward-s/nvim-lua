@@ -42,7 +42,7 @@ telescope.setup({
 	qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
 })
 
-local extensions = { "fzf", "project", "refactoring" }
+local extensions = { "fzf", "project" }
 
 pcall(function()
 	for _, ext in ipairs(extensions) do

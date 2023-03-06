@@ -94,6 +94,11 @@ local function normal_keymap()
 			d = { "<cmd>Bdelete<cr>", "Close current" },
 			p = { "<cmd>BufferLinePick<cr>", "Pick buffer" },
 		},
+		c = {
+			name = "Code",
+			o = { "<cmd>AerialToggle<cr>", "Code Outline" },
+			t = { "<cmd>TodoTelescope<cr>", "TODO" },
+		},
 		d = {
 			name = "Debug",
 			b = { "<cmd>lua require('dap').toggle_breakpoint()<cr>", "Toggle breakpoint" },
@@ -131,7 +136,6 @@ local function normal_keymap()
 			f = { "<cmd>Lspsaga lsp_finder<cr>", "Lsp Finder" },
 			k = { "<cmd>Lspsaga hover_doc<cr>", "Hover doc" },
 			l = { "<cmd>Lspsaga show_line_diagnostics<cr>", "Line diagnostics" },
-			o = { "<cmd>AerialToggle<cr>", "Outline" },
 			r = { "<cmd>Lspsaga rename<cr>", "Rename" },
 			w = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
 		},
