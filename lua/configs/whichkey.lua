@@ -160,6 +160,7 @@ local function normal_keymap()
 		z = {
 			name = "Window",
 			c = { "<cmd>tabclose<cr>", "Close tab" },
+			d = { "<cmd>lua require('utils.term').lazydocker_toggle()<cr>", "LazyDocker" },
 			v = { "<cmd>vsplit<cr>", "Vertical split" },
 			r = { "<c-w>r", "Swap" },
 			t = { "<cmd>tabnew %<cr>", "New tab" },
@@ -182,11 +183,11 @@ local function code_keymap()
 	vim.api.nvim_create_autocmd("FileType", {
 		pattern = "*",
 		callback = function()
-			vim.schedule(CodeRunner)
+			vim.schedule(CodeKeymapFileType)
 		end,
 	})
 
-	function CodeRunner()
+	function CodeKeymapFileType()
 		local bufnr = vim.api.nvim_get_current_buf()
 		local ft = vim.api.nvim_buf_get_option(bufnr, "filetype")
 		local keymap_c = {
