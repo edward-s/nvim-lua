@@ -93,11 +93,6 @@ local function normal_keymap()
 			d = { "<cmd>Bdelete<cr>", "Close current" },
 			p = { "<cmd>BufferLinePick<cr>", "Pick buffer" },
 		},
-		c = {
-			name = "Code",
-			o = { "<cmd>AerialToggle<cr>", "Code Outline" },
-			t = { "<cmd>TodoTelescope<cr>", "TODO" },
-		},
 		d = {
 			name = "Debug",
 			b = { "<cmd>lua require('dap').toggle_breakpoint()<cr>", "Toggle breakpoint" },
@@ -194,18 +189,25 @@ local function code_keymap()
 	function CodeRunner()
 		local bufnr = vim.api.nvim_get_current_buf()
 		local ft = vim.api.nvim_buf_get_option(bufnr, "filetype")
-		local keymap_c = {} -- normal key map
-		local keymap_c_v = {} -- visual key map
+		local keymap_c = {
+			name = "Code",
+			o = { "<cmd>AerialToggle<cr>", "Code Outline" },
+			t = { "<cmd>TodoTelescope<cr>", "TODO" },
+		}
+		local keymap_c_v = {}
 
 		if ft == "typescript" or ft == "typescriptreact" or ft == "javascript" or ft == "javascriptreact" then
-			keymap_c = {
-				name = "Code",
+			local keymap = {
+				a = { "<cmd>TypescriptAddMissingImports<cr>", "Add Missing Imports" },
 				f = { "<cmd>TypescriptFixAll<cr>", "Fix all" },
-				i = { "<cmd>TypescriptAddMissingImports<cr>", "Add Missing Imports" },
-				o = { "<cmd>TypescriptOrganizeImports<cr>", "Organize Imports" },
+				i = { "<cmd>TypescriptOrganizeImports<cr>", "Organize Imports" },
 				r = { "<cmd>TypescriptRenameFile<cr>", "Rename File" },
 				u = { "<cmd>TypescriptRemoveUnused<cr>", "Remove Unused" },
 			}
+
+			for k, v in pairs(keymap) do
+				keymap_c[k] = v
+			end
 		end
 
 		if next(keymap_c) ~= nil then
