@@ -85,6 +85,7 @@ packer.startup(function()
 		end,
 	})
 	use("j-hui/fidget.nvim")
+	use("danymat/neogen")
 
 	-- Formatting
 	use({

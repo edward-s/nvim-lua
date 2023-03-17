@@ -200,6 +200,13 @@ local function code_keymap()
 			local keymap = {
 				a = { "<cmd>TypescriptAddMissingImports<cr>", "Add Missing Imports" },
 				f = { "<cmd>TypescriptFixAll<cr>", "Fix all" },
+				g = {
+					name = "Neogen",
+					c = { "<cmd>lua require('neogen').generate { type = 'class' }<cr>", "Class" },
+					d = { "<cmd>lua require('neogen').generate()<cr>", "Annotation" },
+					f = { "<cmd>lua require('neogen').generate { type = 'func' }<cr>", "Function" },
+					t = { "<cmd>lua require('neogen').generate { type = 'type' }<cr>", "Type" },
+				},
 				i = { "<cmd>TypescriptOrganizeImports<cr>", "Organize Imports" },
 				r = { "<cmd>TypescriptRenameFile<cr>", "Rename File" },
 				u = { "<cmd>TypescriptRemoveUnused<cr>", "Remove Unused" },
