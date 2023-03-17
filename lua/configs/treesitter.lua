@@ -12,7 +12,6 @@ ts_configs.setup({
 	highlight = {
 		enable = true,
 		disable = {},
-		additional_vim_regex_highlighting = true,
 	},
 	autopairs = {
 		enable = true,

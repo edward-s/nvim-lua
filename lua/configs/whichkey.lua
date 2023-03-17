@@ -84,7 +84,6 @@ local function normal_keymap()
 		[","] = { "zA", "Toggle All Folds" },
 		["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "File 1" },
 		["2"] = { "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", "File 2" },
-		["3"] = { "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", "File 3" },
 		b = {
 			name = "Buffers",
 			a = { "<cmd>silent BufOnly<cr>", "Close other buffers" },
