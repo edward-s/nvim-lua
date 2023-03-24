@@ -6,7 +6,6 @@ local lsputils = require("configs.lsp.utils")
 local servers = {
 	"tsserver",
 	"jsonls",
-	"lua_ls",
 	"gopls",
 	"html",
 	"terraformls",
