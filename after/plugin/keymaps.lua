@@ -6,6 +6,10 @@ vim.g.localmapleader = " "
 -- Un-indent
 keymap("i", "<S-Tab>", "<C-d>", opts)
 
+-- Macro
+keymap("n", "Q", "q", opts)
+keymap("n", "q", "<Nop>", opts)
+
 -- Split navigations
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
