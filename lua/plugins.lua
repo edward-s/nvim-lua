@@ -77,7 +77,6 @@ packer.startup(function()
 		end,
 	})
 	use("famiu/bufdelete.nvim")
-	use("antoinemadec/FixCursorHold.nvim")
 	use({
 		"stevearc/aerial.nvim",
 		config = function()
@@ -155,10 +154,7 @@ packer.startup(function()
 	})
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("onsails/lspkind-nvim")
-	use({
-		"glepnir/lspsaga.nvim",
-		commit = "04617d1f5b1cfbdd2a99d9765ef04fc6ae415622",
-	})
+	use("glepnir/lspsaga.nvim")
 	use("L3MON4D3/LuaSnip")
 
 	-- Typescript
