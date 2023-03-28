@@ -8,4 +8,9 @@ lspsaga.setup({
 	rename = {
 		quit = "q",
 	},
+	finder = {
+		keys = {
+			expand_or_jump = "<Enter>",
+		},
+	},
 })
