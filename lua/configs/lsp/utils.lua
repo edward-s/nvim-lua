@@ -22,10 +22,22 @@ function M.lsp_diagnostics()
 			signs = {
 				active = signs,
 			},
-			virtual_text = false,
-			underline = true,
+			virtual_text = {
+				severity = {
+					min = vim.diagnostic.severity.ERROR,
+				},
+			},
+			underline = false,
 			update_in_insert = false,
 			severity_sort = true,
+			float = {
+				focusable = true,
+				style = "minimal",
+				border = "rounded",
+				source = "always",
+				header = "",
+				prefix = "",
+			},
 		},
 	}
 
