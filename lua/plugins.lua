@@ -63,12 +63,6 @@ packer.startup(function()
 			require("marks").setup()
 		end,
 	})
-	use({
-		"karb94/neoscroll.nvim",
-		config = function()
-			require("neoscroll").setup()
-		end,
-	})
 	use("ThePrimeagen/harpoon")
 	use({
 		"kevinhwang91/nvim-hlslens",
@@ -99,7 +93,6 @@ packer.startup(function()
 		"nvim-neotest/neotest",
 		requires = {
 			"haydenmeade/neotest-jest",
-			"nvim-neotest/neotest-go",
 		},
 	})
 
@@ -112,12 +105,6 @@ packer.startup(function()
 			"nvim-telescope/telescope-dap.nvim",
 			"mxsdev/nvim-dap-vscode-js",
 		},
-	})
-	use({
-		"leoluz/nvim-dap-go",
-		config = function()
-			require("dap-go").setup()
-		end,
 	})
 
 	-- Git
@@ -154,10 +141,7 @@ packer.startup(function()
 	})
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("onsails/lspkind-nvim")
-	use({
-		"glepnir/lspsaga.nvim",
-		commit = "04617d1f5b1cfbdd2a99d9765ef04fc6ae415622",
-	})
+	use("glepnir/lspsaga.nvim")
 	use("L3MON4D3/LuaSnip")
 
 	-- Typescript

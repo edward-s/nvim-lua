@@ -1,6 +1,5 @@
 require("options")
 require("plugins")
-require("configs.autopairs")
 require("configs.bufferline")
 require("configs.colorscheme")
 require("configs.comment")
