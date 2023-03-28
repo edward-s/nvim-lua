@@ -79,6 +79,12 @@ packer.startup(function()
 	})
 	use("j-hui/fidget.nvim")
 	use("danymat/neogen")
+	use({
+		"declancm/cinnamon.nvim",
+		config = function()
+			require("cinnamon").setup()
+		end,
+	})
 
 	-- Formatting
 	use({
