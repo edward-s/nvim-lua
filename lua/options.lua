@@ -24,6 +24,7 @@ local options = {
 	showmode = false,
 	showtabline = 2,
 	sidescrolloff = 8,
+	signcolumn = "yes",
 	smartcase = true,
 	smartindent = true,
 	softtabstop = 2,

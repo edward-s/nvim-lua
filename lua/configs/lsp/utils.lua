@@ -22,11 +22,7 @@ function M.lsp_diagnostics()
 			signs = {
 				active = signs,
 			},
-			virtual_text = {
-				severity = {
-					min = vim.diagnostic.severity.ERROR,
-				},
-			},
+			virtual_text = false,
 			underline = false,
 			update_in_insert = false,
 			severity_sort = true,
