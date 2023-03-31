@@ -28,21 +28,19 @@ keymap("v", ">", ">gv", opts)
 
 -- Code folding
 keymap("n", ",", "za", opts)
-for _, key in
-	pairs({
-		"zo",
-		"zO",
-		"zc",
-		"zC",
-		"za",
-		"zA",
-		"zv",
-		"zx",
-		"zX",
-		"zm",
-		"zr",
-	})
-do
+for _, key in pairs({
+	"zo",
+	"zO",
+	"zc",
+	"zC",
+	"za",
+	"zA",
+	"zv",
+	"zx",
+	"zX",
+	"zm",
+	"zr",
+}) do
 	keymap("n", key, key .. "<cmd>IndentBlanklineRefresh<cr>", opts)
 end
 keymap("n", "zR", "<cmd>lua require('ufo').openAllFolds()<cr><cmd>IndentBlanklineRefresh<cr>", opts)
@@ -57,12 +55,12 @@ keymap("n", "<C-p>", "<cmd>lua require('configs.telescope').project_files()<cr>"
 -- Lspsaga
 keymap("n", "[t", "<cmd>lua require('neotest').jump.prev({ status = 'failed' })<cr>", opts)
 keymap("n", "]t", "<cmd>lua require('neotest').jump.next({ status = 'failed' })<cr>", opts)
-keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
-keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
-keymap("n", "[E", function()
+keymap("n", "[w", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
+keymap("n", "]w", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
+keymap("n", "[e", function()
 	require("lspsaga.diagnostic"):goto_prev({ severity = vim.diagnostic.severity.ERROR })
 end)
-keymap("n", "]E", function()
+keymap("n", "]e", function()
 	require("lspsaga.diagnostic"):goto_next({ severity = vim.diagnostic.severity.ERROR })
 end)
 
