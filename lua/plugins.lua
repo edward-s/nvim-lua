@@ -108,7 +108,6 @@ packer.startup(function()
 		requires = {
 			"theHamsta/nvim-dap-virtual-text",
 			"rcarriga/nvim-dap-ui",
-			"nvim-telescope/telescope-dap.nvim",
 			"mxsdev/nvim-dap-vscode-js",
 		},
 	})
@@ -131,8 +130,6 @@ packer.startup(function()
 	use({
 		"nvim-telescope/telescope.nvim",
 		requires = {
-			"nvim-telescope/telescope-project.nvim",
-			"nvim-telescope/telescope-dap.nvim",
 			{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
 		},
 	})
@@ -154,6 +151,7 @@ packer.startup(function()
 	use("jose-elias-alvarez/typescript.nvim")
 
 	-- Cmp
+	use("rafamadriz/friendly-snippets")
 	use({
 		"hrsh7th/nvim-cmp",
 		requires = {
@@ -162,7 +160,6 @@ packer.startup(function()
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-cmdline",
 			"saadparwaiz1/cmp_luasnip",
-			"rafamadriz/friendly-snippets",
 			"zbirenbaum/copilot-cmp",
 		},
 	})

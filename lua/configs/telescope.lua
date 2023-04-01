@@ -2,14 +2,6 @@ local telescope = require("telescope")
 local actions = require("telescope.actions")
 
 telescope.setup({
-	extensions = {
-		fzf = {
-			fuzzy = true,
-			override_generic_sorter = true,
-			override_file_sorter = true,
-			case_mode = "smart_case",
-		},
-	},
 	pickers = {
 		buffers = {
 			theme = "dropdown",
@@ -36,13 +28,9 @@ telescope.setup({
 			previewer = false,
 		},
 	},
-	file_sorter = require("telescope.sorters").get_fzy_sorter,
-	file_previewer = require("telescope.previewers").vim_buffer_cat.new,
-	grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
-	qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
 })
 
-local extensions = { "fzf", "project" }
+local extensions = { "fzf" }
 
 pcall(function()
 	for _, ext in ipairs(extensions) do
@@ -53,11 +41,12 @@ end)
 local M = {}
 
 M.project_files = function()
-	local in_git_repo = vim.fn.systemlist("git rev-parse --is-inside-work-tree")[1] == "true"
-	if in_git_repo then
-		require("telescope.builtin").git_files()
+	local opts = {}
+	vim.fn.system("git rev-parse --is-inside-work-tree")
+	if vim.v.shell_error == 0 then
+		require("telescope.builtin").git_files(opts)
 	else
-		require("telescope.builtin").find_files()
+		require("telescope.builtin").find_files(opts)
 	end
 end
 

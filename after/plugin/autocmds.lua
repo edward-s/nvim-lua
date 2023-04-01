@@ -15,15 +15,17 @@ api.nvim_create_autocmd({ "BufWinEnter" }, {
 	end,
 })
 
-local neotestConfigGroup = api.nvim_create_augroup("NeotestConfig", {})
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "neotest-output",
-	group = neotestConfigGroup,
-	callback = function(opts)
-		vim.keymap.set("n", "q", function()
-			pcall(vim.api.nvim_win_close, 0, true)
-		end, {
-			buffer = opts.buf,
-		})
-	end,
-})
+local group = api.nvim_create_augroup("NeotestConfig", {})
+for _, ft in ipairs({ "output", "attach", "summary" }) do
+	api.nvim_create_autocmd("FileType", {
+		pattern = "neotest-" .. ft,
+		group = group,
+		callback = function(opts)
+			vim.keymap.set("n", "q", function()
+				pcall(api.nvim_win_close, 0, true)
+			end, {
+				buffer = opts.buf,
+			})
+		end,
+	})
+end

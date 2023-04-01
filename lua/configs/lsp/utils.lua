@@ -43,33 +43,46 @@ function M.lsp_diagnostics()
 	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, config.float)
 end
 
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-function M.lsp_config(client, bufnr)
+function M.format()
+	local buf = vim.api.nvim_get_current_buf()
+	local ft = vim.bo[buf].filetype
+	local have_nls = #require("null-ls.sources").get_available(ft, "NULL_LS_FORMATTING") > 0
+
+	vim.lsp.buf.format({
+		bufnr = buf,
+		filter = function(client)
+			if have_nls then
+				return client.name == "null-ls"
+			end
+			return client.name ~= "null-ls"
+		end,
+	})
+end
+
+function M.lsp_format(client, buf)
 	if client.supports_method("textDocument/formatting") then
-		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 		vim.api.nvim_create_autocmd("BufWritePre", {
-			group = augroup,
-			buffer = bufnr,
+			group = vim.api.nvim_create_augroup("LspFormat." .. buf, {}),
+			buffer = buf,
 			callback = function()
-				vim.lsp.buf.format({ bufnr = bufnr })
+				M.format()
 			end,
 		})
 	end
 end
 
 function M.lsp_attach(client, bufnr)
-	M.lsp_config(client, bufnr)
+	M.lsp_format(client, bufnr)
 	M.lsp_diagnostics()
 end
 
 function M.get_capabilities()
-	local capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
-	capabilities.textDocument.completion.completionItem.snippetSupport = true
+	local capabilities = vim.lsp.protocol.make_client_capabilities()
 	capabilities.textDocument.foldingRange = {
 		dynamicRegistration = false,
 		lineFoldingOnly = true,
 	}
-	return capabilities
+	return require("cmp_nvim_lsp").default_capabilities(capabilities)
 end
 
 return M

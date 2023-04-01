@@ -91,6 +91,9 @@ local function normal_keymap()
 			c = { "<cmd>BufferLinePickClose<cr>", "Close buffer" },
 			d = { "<cmd>Bdelete<cr>", "Close current" },
 			p = { "<cmd>BufferLinePick<cr>", "Pick buffer" },
+			r = { "<c-w>r", "Swap" },
+			v = { "<cmd>vsplit<cr>", "Vertical split" },
+			x = { "<cmd>split<cr>", "Horizontal split" },
 		},
 		d = {
 			name = "Debug",
@@ -111,7 +114,6 @@ local function normal_keymap()
 		g = {
 			name = "Git",
 			b = { "<cmd>GitBlameToggle<cr>", "Toggle blame" },
-			B = { "<cmd>Telescope git_branches<cr>", "Git branches" },
 			d = { '<cmd>lua require("configs.diffview").toggle()<cr>', "Diff working file" },
 			g = { "<cmd>lua require('utils.term').lazygit_toggle()<cr>", "LazyGit" },
 			h = { '<cmd>lua require("configs.diffview").toggle_file_history()<cr>', "Diff file history" },
@@ -124,13 +126,8 @@ local function normal_keymap()
 		l = {
 			name = "LSP",
 			a = { "<cmd>Lspsaga code_action<cr>", "Code Action" },
-			d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "Go To Definition" },
-			D = { "<cmd>Lspsaga peek_definition<cr>", "Peek Definition" },
 			e = { "<cmd>Lspsaga show_buf_diagnostics<cr>", "Buffer diagnostics" },
-			f = { "<cmd>Lspsaga lsp_finder<cr>", "Lsp Finder" },
-			k = { "<cmd>Lspsaga hover_doc<cr>", "Hover doc" },
 			l = { "<cmd>Lspsaga show_line_diagnostics<cr>", "Line diagnostics" },
-			r = { "<cmd>Lspsaga rename<cr>", "Rename" },
 			w = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
 		},
 		s = {
@@ -141,7 +138,6 @@ local function normal_keymap()
 			m = { "<cmd>Telescope marks<cr>", "Marks" },
 			o = { "<cmd>Telescope oldfiles<cr>", "Old Files" },
 			r = { "<cmd>Telescope resume<cr>", "Resume Search" },
-			s = { "<cmd>lua require('utils.term').so()<cr>", "Stack Overflow" },
 			w = { "<cmd>Telescope grep_string<cr>", "Text under cursor" },
 		},
 		t = {
@@ -160,10 +156,7 @@ local function normal_keymap()
 			name = "Window",
 			c = { "<cmd>tabclose<cr>", "Close tab" },
 			d = { "<cmd>lua require('utils.term').lazydocker_toggle()<cr>", "LazyDocker" },
-			v = { "<cmd>vsplit<cr>", "Vertical split" },
-			r = { "<c-w>r", "Swap" },
 			t = { "<cmd>tabnew %<cr>", "New tab" },
-			x = { "<cmd>split<cr>", "Horizontal split" },
 			z = { "<cmd>ZenMode<cr>", "Zen mode" },
 			["="] = { "<c-w>=", "Equally size" },
 		},

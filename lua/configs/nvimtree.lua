@@ -5,7 +5,6 @@ if not present then
 end
 
 nvimtree.setup({
-	disable_netrw = true,
 	hijack_cursor = true,
 	sync_root_with_cwd = true,
 	update_focused_file = {
@@ -15,15 +14,9 @@ nvimtree.setup({
 		dotfiles = false,
 		custom = { ".git" },
 	},
-	actions = {
-		open_file = {
-			resize_window = true,
-		},
-	},
 	git = {
 		enable = true,
 		ignore = false,
-		timeout = 500,
 	},
 	renderer = {
 		indent_markers = {
