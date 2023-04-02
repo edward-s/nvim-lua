@@ -15,8 +15,10 @@ return {
 			})
 		end,
 	},
-	{ "tpope/vim-surround", event = "BufReadPre" },
-	{ "tpope/vim-unimpaired", event = "BufReadPre" },
+	{ "tpope/vim-surround" },
+	{ "tpope/vim-unimpaired" },
+	{ "wellle/targets.vim" },
+	{ "itchyny/vim-highlighturl", event = { "BufReadPost", "BufNewFile" } },
 	{
 		"numToStr/Comment.nvim",
 		dependencies = { "JoosepAlviste/nvim-ts-context-commentstring" },
