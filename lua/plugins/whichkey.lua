@@ -29,6 +29,7 @@ return {
 				["w"] = { "<cmd>w<cr>", "Save" },
 				[","] = { "zA", "Toggle All Folds" },
 				b = { name = "+Buffer" },
+				d = { name = "+Debug" },
 				g = { name = "+Git" },
 				l = { name = "+Lsp" },
 				s = { name = "+Search" },
