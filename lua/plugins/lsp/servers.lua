@@ -40,13 +40,9 @@ local function lsp_init()
 		},
 	}
 
-	-- Diagnostic configuration
 	vim.diagnostic.config(config.diagnostic)
 
-	-- Hover configuration
 	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, config.float)
-
-	-- Signature help configuration
 	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, config.float)
 end
 
@@ -56,7 +52,7 @@ function M.setup(_, opts)
 		require("plugins.lsp.keymaps").on_attach(client, buffer)
 	end)
 
-	lsp_init() -- diagnostics, handlers
+	lsp_init()
 
 	local servers = opts.servers
 	require("mason-lspconfig").setup({ ensure_installed = vim.tbl_keys(servers) })

@@ -39,4 +39,28 @@ return {
 		keys = { { "<leader>bd", "<cmd>Bdelete<cr>", desc = "Delete Buffer" } },
 		"famiu/bufdelete.nvim",
 	},
+	{
+		"RRethy/vim-illuminate",
+		event = { "BufReadPost", "BufNewFile" },
+		opts = { delay = 200 },
+		config = function(_, opts)
+			require("illuminate").configure(opts)
+		end,
+	},
+	{
+		"chentoast/marks.nvim",
+		event = { "BufReadPost", "BufNewFile" },
+		keys = { { "<leader>mm", "<cmd>MarksListAll<cr>", desc = "Show Marks" } },
+		config = true,
+	},
+	{
+		"folke/todo-comments.nvim",
+		event = { "BufReadPost", "BufNewFile" },
+		config = true,
+	},
+	{
+		"kevinhwang91/nvim-hlslens",
+		event = { "BufReadPost", "BufNewFile" },
+		config = true,
+	},
 }

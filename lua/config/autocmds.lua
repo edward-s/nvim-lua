@@ -1,5 +1,7 @@
+local api = vim.api
+
 -- windows to close
-vim.api.nvim_create_autocmd("FileType", {
+api.nvim_create_autocmd("FileType", {
 	pattern = {
 		"checkhealth",
 		"neotest-attach",
@@ -15,4 +17,4 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- don't auto comment new line
-vim.api.nvim_create_autocmd("BufEnter", { command = [[set formatoptions-=cro]] })
+api.nvim_create_autocmd("BufEnter", { command = [[set formatoptions-=cro]] })

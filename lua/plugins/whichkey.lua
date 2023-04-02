@@ -24,13 +24,11 @@ return {
 				},
 			})
 			wk.register({
-				["e"] = { "<cmd>lua require('dapui').eval()<cr>", "Dap Eval" },
 				["h"] = { "<cmd>nohlsearch<cr>", "No Highlight Search" },
 				["q"] = { "<cmd>lua require('utils').quit()<CR>", "Quit" },
 				["w"] = { "<cmd>w<cr>", "Save" },
 				[","] = { "zA", "Toggle All Folds" },
-				["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "File 1" },
-				["2"] = { "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", "File 2" },
+				b = { name = "+Buffer" },
 				g = { name = "+Git" },
 				l = { name = "+Lsp" },
 				s = { name = "+Search" },

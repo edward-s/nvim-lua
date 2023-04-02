@@ -10,6 +10,7 @@ function M.on_attach(client, buffer)
 	self:map("gK", vim.lsp.buf.signature_help, { desc = "Signature Help", has = "signatureHelp" })
 	self:map("gt", vim.lsp.buf.type_definition, { desc = "Goto Type Definition" })
 	self:map("gT", "Lspsaga peek_type_definition", { desc = "Peek Type Definition" })
+	self:map("gr", "Lspsaga rename", { desc = "Rename" })
 	self:map("[d", M.diagnostic_goto(true), { desc = "Next Diagnostic" })
 	self:map("]d", M.diagnostic_goto(false), { desc = "Prev Diagnostic" })
 	self:map("]e", M.diagnostic_goto(true, "ERROR"), { desc = "Next Error" })
@@ -20,7 +21,6 @@ function M.on_attach(client, buffer)
 	local format = require("plugins.lsp.format").format
 	self:map("<leader>cf", format, { desc = "Format Document", has = "documentFormatting" })
 	self:map("<leader>cf", format, { desc = "Format Range", mode = "v", has = "documentRangeFormatting" })
-	self:map("<leader>cr", M.rename, { expr = true, desc = "Rename", has = "rename" })
 
 	self:map("<leader>cs", require("telescope.builtin").lsp_document_symbols, { desc = "Document Symbols" })
 	self:map("<leader>cS", require("telescope.builtin").lsp_dynamic_workspace_symbols, { desc = "Workspace Symbols" })
@@ -49,14 +49,6 @@ function M:map(lhs, rhs, opts)
 		---@diagnostic disable-next-line: no-unknown
 		{ silent = true, buffer = self.buffer, expr = opts.expr, desc = opts.desc }
 	)
-end
-
-function M.rename()
-	if pcall(require, "inc_rename") then
-		return ":IncRename " .. vim.fn.expand("<cword>")
-	else
-		vim.lsp.buf.rename()
-	end
 end
 
 function M.diagnostic_goto(next, severity)
