@@ -30,7 +30,6 @@ return {
               vim.keymap.set("n", "<leader>cA", "<cmd>TypescriptFixAll<cr>", { desc = "Fix All"  })
               vim.keymap.set("n", "<leader>cR", "<cmd>TypescriptRenameFile<cr>", { desc = "Rename File"  })
               vim.keymap.set("n", "<leader>cm", "<cmd>TypescriptAddMissingImports<cr>", { desc = "Add Missing Imports"  })
-              vim.keymap.set("n", "<leader>co", "<cmd>TypescriptOrganizeImports<cr>", {  desc = "Organize Imports" })
               vim.keymap.set("n", "<leader>cu", "<cmd>TypescriptRemoveUnused<cr>", { desc = "Remove Unused"  })
 						end
 					end)
