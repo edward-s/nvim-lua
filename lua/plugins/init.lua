@@ -15,9 +15,9 @@ return {
 			})
 		end,
 	},
-	{ "tpope/vim-surround" },
-	{ "tpope/vim-unimpaired" },
-	{ "wellle/targets.vim" },
+	{ "tpope/vim-surround", event = { "BufReadPost", "BufNewFile" } },
+	{ "tpope/vim-unimpaired", event = { "BufReadPost", "BufNewFile" } },
+	{ "wellle/targets.vim", event = { "BufReadPost", "BufNewFile" } },
 	{ "itchyny/vim-highlighturl", event = { "BufReadPost", "BufNewFile" } },
 	{
 		"numToStr/Comment.nvim",

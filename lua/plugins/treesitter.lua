@@ -13,6 +13,7 @@ return {
 			ensure_installed = {
 				"bash",
 				"dockerfile",
+				"graphql",
 				"html",
 				"javascript",
 				"json",
