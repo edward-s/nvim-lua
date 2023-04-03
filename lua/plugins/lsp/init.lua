@@ -3,7 +3,16 @@ return {
 		"neovim/nvim-lspconfig",
 		event = "BufReadPre",
 		dependencies = {
-			{ "j-hui/fidget.nvim", config = true },
+			{
+				"j-hui/fidget.nvim",
+				opts = {
+					sources = {
+						["null-ls"] = {
+							ignore = true,
+						},
+					},
+				},
+			},
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"hrsh7th/cmp-nvim-lsp",
