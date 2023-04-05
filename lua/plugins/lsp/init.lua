@@ -1,28 +1,44 @@
 return {
 	{
+		"j-hui/fidget.nvim",
+		opts = {
+			sources = {
+				["null-ls"] = {
+					ignore = true,
+				},
+			},
+		},
+	},
+	{
 		"neovim/nvim-lspconfig",
 		event = "BufReadPre",
 		dependencies = {
-			{
-				"j-hui/fidget.nvim",
-				opts = {
-					sources = {
-						["null-ls"] = {
-							ignore = true,
-						},
-					},
-				},
-			},
+			"j-hui/fidget.nvim",
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-nvim-lsp-signature-help",
 			"jay-babu/mason-null-ls.nvim",
 			"jose-elias-alvarez/typescript.nvim",
+			"b0o/SchemaStore.nvim",
 		},
 		opts = {
 			servers = {
-				jsonls = {},
+				jsonls = {
+					-- lazy-load schemastore when needed
+					on_new_config = function(new_config)
+						new_config.settings.json.schemas = new_config.settings.json.schemas or {}
+						vim.list_extend(new_config.settings.json.schemas, require("schemastore").json.schemas())
+					end,
+					settings = {
+						json = {
+							format = {
+								enable = true,
+							},
+							validate = { enable = true },
+						},
+					},
+				},
 				tsserver = {
 					settings = {
 						completions = {

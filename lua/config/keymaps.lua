@@ -19,6 +19,10 @@ keymap("v", ">", ">gv")
 -- Code folding
 keymap("n", ",", "za")
 
+-- Search word under cursor
+keymap("n", "gw", "*N")
+keymap("x", "gw", "*N")
+
 -- Tabs
 keymap("n", "<leader><tab><tab>", "<cmd>tabnew<cr>")
 keymap("n", "<leader><tab>d", "<cmd>tabclose<cr>")
