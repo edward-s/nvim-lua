@@ -18,3 +18,6 @@ api.nvim_create_autocmd("FileType", {
 
 -- don't auto comment new line
 api.nvim_create_autocmd("BufEnter", { command = [[set formatoptions-=cro]] })
+
+-- auto open nvimtree on start
+api.nvim_command("autocmd VimEnter * NvimTreeToggle")

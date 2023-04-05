@@ -17,8 +17,4 @@ function M.quit()
 	end
 end
 
-function M.open_nvim_tree()
-	require("nvim-tree.api").tree.open()
-end
-
 return M

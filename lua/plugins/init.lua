@@ -15,14 +15,20 @@ return {
 			})
 		end,
 	},
-	{ "tpope/vim-surround", event = { "BufReadPost", "BufNewFile" } },
-	{ "tpope/vim-unimpaired", event = { "BufReadPost", "BufNewFile" } },
-	{ "wellle/targets.vim", event = { "BufReadPost", "BufNewFile" } },
+	{
+		"kylechui/nvim-surround",
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup()
+		end,
+	},
+	{ "tpope/vim-unimpaired", event = "VeryLazy" },
+	{ "wellle/targets.vim", event = "VeryLazy" },
 	{ "itchyny/vim-highlighturl", event = { "BufReadPost", "BufNewFile" } },
 	{
 		"numToStr/Comment.nvim",
 		dependencies = { "JoosepAlviste/nvim-ts-context-commentstring" },
-		keys = { "gb", "gc", "gcc", "gbc" },
+		event = { "BufReadPost", "BufNewFile" },
 		config = function(_, _)
 			local opts = {
 				ignore = "^$",
@@ -53,7 +59,9 @@ return {
 		"chentoast/marks.nvim",
 		event = { "BufReadPost", "BufNewFile" },
 		keys = { { "<leader>mm", "<cmd>MarksListAll<cr>", desc = "Show Marks" } },
-		config = true,
+		config = function()
+			require("marks").setup()
+		end,
 	},
 	{
 		"folke/todo-comments.nvim",
@@ -63,6 +71,8 @@ return {
 	{
 		"kevinhwang91/nvim-hlslens",
 		event = { "BufReadPost", "BufNewFile" },
-		config = true,
+		config = function()
+			require("hlslens").setup()
+		end,
 	},
 }

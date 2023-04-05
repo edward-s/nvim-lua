@@ -80,13 +80,11 @@ return {
 			local nls = require("null-ls")
 			local formatting = nls.builtins.formatting
 			local codeActions = nls.builtins.code_actions
-			local diagnostics = nls.builtins.diagnostics
 			nls.setup({
 				sources = {
 					formatting.prettierd,
 					formatting.stylua,
 					codeActions.eslint_d,
-					diagnostics.eslint_d,
 				},
 			})
 		end,

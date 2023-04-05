@@ -28,7 +28,12 @@ return {
 				["q"] = { "<cmd>lua require('utils').quit()<CR>", "Quit" },
 				["w"] = { "<cmd>w<cr>", "Save" },
 				[","] = { "zA", "Toggle All Folds" },
-				b = { name = "+Buffer" },
+				b = {
+					name = "+Buffer",
+					r = { "<c-w>r", "Swap" },
+					v = { "<cmd>vsplit<cr>", "Vertical split" },
+					x = { "<cmd>split<cr>", "Horizontal split" },
+				},
 				d = { name = "+Debug" },
 				g = { name = "+Git" },
 				l = { name = "+Lsp" },
