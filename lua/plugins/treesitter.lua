@@ -47,6 +47,15 @@ return {
 			context_commentstring = {
 				enable = true,
 			},
+			incremental_selection = {
+				enable = true,
+				keymaps = {
+					init_selection = "<C-space>",
+					node_incremental = "<C-space>",
+					scope_incremental = "<nop>",
+					node_decremental = "<bs>",
+				},
+			},
 			textobjects = {
 				select = {
 					enable = true,
