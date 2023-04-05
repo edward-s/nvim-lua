@@ -24,6 +24,12 @@ return {
 		},
 		opts = {
 			servers = {
+				eslint = {
+					settings = {
+						-- helps eslint find the eslintrc when it's placed in a subfolder instead of the cwd root
+						workingDirectory = { mode = "auto" },
+					},
+				},
 				jsonls = {
 					-- lazy-load schemastore when needed
 					on_new_config = function(new_config)
@@ -48,6 +54,15 @@ return {
 				},
 			},
 			setup = {
+				eslint = function()
+					vim.api.nvim_create_autocmd("BufWritePre", {
+						callback = function(event)
+							if require("lspconfig.util").get_active_client_by_name(event.buf, "eslint") then
+								vim.cmd("EslintFixAll")
+							end
+						end,
+					})
+				end,
 				tsserver = function(_, opts)
 					require("plugins.lsp.utils").on_attach(function(client)
             -- stylua: ignore
@@ -100,7 +115,7 @@ return {
 				sources = {
 					formatting.prettierd,
 					formatting.stylua,
-					codeActions.eslint_d,
+					codeActions.eslint,
 				},
 			})
 		end,

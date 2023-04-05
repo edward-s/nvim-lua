@@ -9,6 +9,10 @@ return {
 		},
 		build = ":TSUpdate",
 		event = { "BufReadPost", "BufNewFile" },
+		keys = {
+			{ "<c-space>", desc = "Increment selection" },
+			{ "<bs>", desc = "Decrement selection", mode = "x" },
+		},
 		opts = {
 			ensure_installed = {
 				"bash",
