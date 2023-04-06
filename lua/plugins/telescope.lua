@@ -54,6 +54,15 @@ return {
 						previewer = false,
 					},
 				},
+				defaults = {
+					mappings = {
+						n = {
+							["q"] = function(...)
+								return require("telescope.actions").close(...)
+							end,
+						},
+					},
+				},
 			}
 			telescope.setup(opts)
 			telescope.load_extension("fzf")
