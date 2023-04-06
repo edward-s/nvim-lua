@@ -26,6 +26,7 @@ return {
 	{ "tpope/vim-repeat", event = "VeryLazy" },
 	{ "wellle/targets.vim", event = "VeryLazy" },
 	{ "itchyny/vim-highlighturl", event = { "BufReadPost", "BufNewFile" } },
+	{ "tyru/open-browser.vim", event = { "BufReadPost", "BufNewFile" } },
 	{
 		"numToStr/Comment.nvim",
 		dependencies = { "JoosepAlviste/nvim-ts-context-commentstring" },
