@@ -115,7 +115,7 @@ return {
 				sources = {
 					formatting.prettierd,
 					formatting.stylua,
-					codeActions.eslint,
+					codeActions.eslint_d,
 				},
 			})
 		end,
