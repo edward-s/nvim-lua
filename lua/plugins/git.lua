@@ -2,9 +2,6 @@ return {
 	{
 		"lewis6991/gitsigns.nvim",
 		event = { "BufReadPre", "BufNewFile" },
-		keys = {
-			{ "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<cr>", desc = "Current Line Blame" },
-		},
 		opts = {
 			on_attach = function(buffer)
 				local gs = package.loaded.gitsigns
@@ -13,11 +10,17 @@ return {
 					vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
 				end
 
-				map("n", "]h", gs.next_hunk, "Next Hunk")
-				map("n", "[h", gs.prev_hunk, "Prev Hunk")
-				map("n", "<leader>gb", function()
-					gs.blame_line({ full = true })
-				end, "Blame Line")
+        -- stylua: ignore start
+        map("n", "]h", gs.next_hunk, "Next Hunk")
+        map("n", "[h", gs.prev_hunk, "Prev Hunk")
+        map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>", "Stage Hunk")
+        map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>", "Reset Hunk")
+        map("n", "<leader>gS", gs.stage_buffer, "Stage Buffer")
+        map("n", "<leader>gu", gs.undo_stage_hunk, "Undo Stage Hunk")
+        map("n", "<leader>gR", gs.reset_buffer, "Reset Buffer")
+        map("n", "<leader>gp", gs.preview_hunk, "Preview Hunk")
+        map("n", "<leader>gb", function() gs.blame_line({ full = true }) end, "Blame Line")
+        map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "GitSigns Select Hunk")
 			end,
 		},
 		config = function(_, opts)
@@ -29,7 +32,7 @@ return {
 		event = { "BufReadPost", "BufNewFile" },
 		keys = {
 			{ "<leader>gd", "<cmd>lua require('utils.diffview').toggle()<cr>", desc = "Git Diff" },
-			{ "<leader>gh", "<cmd>lua require('utils.diffview').toggle_file_history()<cr>", desc = "Git History" },
+			{ "<leader>gD", "<cmd>lua require('utils.diffview').toggle_file_history()<cr>", desc = "Git History" },
 		},
 		opts = {
 			key_bindings = {
