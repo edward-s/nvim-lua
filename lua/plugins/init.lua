@@ -73,7 +73,6 @@ return {
 	{
 		"chentoast/marks.nvim",
 		event = { "BufReadPost", "BufNewFile" },
-		keys = { { "<leader>mm", "<cmd>MarksListAll<cr>", desc = "Show Marks" } },
 		config = function()
 			require("marks").setup()
 		end,
@@ -82,6 +81,9 @@ return {
 		"folke/todo-comments.nvim",
 		event = { "BufReadPost", "BufNewFile" },
 		config = true,
+		keys = {
+			{ "<leader>st", "<cmd>TodoTelescope<cr>", desc = "Todo" },
+		},
 	},
 	{
 		"kevinhwang91/nvim-hlslens",

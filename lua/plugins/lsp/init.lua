@@ -67,10 +67,10 @@ return {
 					require("plugins.lsp.utils").on_attach(function(client)
             -- stylua: ignore
 						if client.name == "tsserver" then
-              vim.keymap.set("n", "<leader>cA", "<cmd>TypescriptFixAll<cr>", { desc = "Fix All"  })
-              vim.keymap.set("n", "<leader>cR", "<cmd>TypescriptRenameFile<cr>", { desc = "Rename File"  })
-              vim.keymap.set("n", "<leader>cm", "<cmd>TypescriptAddMissingImports<cr>", { desc = "Add Missing Imports"  })
-              vim.keymap.set("n", "<leader>cu", "<cmd>TypescriptRemoveUnused<cr>", { desc = "Remove Unused"  })
+              vim.keymap.set("n", "<leader>ctf", "<cmd>TypescriptFixAll<cr>", { desc = "Fix All"  })
+              vim.keymap.set("n", "<leader>ctr", "<cmd>TypescriptRenameFile<cr>", { desc = "Rename File"  })
+              vim.keymap.set("n", "<leader>cta", "<cmd>TypescriptAddMissingImports<cr>", { desc = "Add Missing Imports"  })
+              vim.keymap.set("n", "<leader>ctu", "<cmd>TypescriptRemoveUnused<cr>", { desc = "Remove Unused"  })
 						end
 					end)
 					require("typescript").setup({ server = opts })

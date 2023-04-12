@@ -36,7 +36,6 @@ return {
 				},
 				d = { name = "+Debug" },
 				g = { name = "+Git" },
-				l = { name = "+Lsp" },
 				s = { name = "+Search" },
 				t = { name = "+Test" },
 				z = { name = "+System" },

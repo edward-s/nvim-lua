@@ -24,7 +24,7 @@ function M.on_attach(client, buffer)
 	self:map("<leader>cS", require("telescope.builtin").lsp_dynamic_workspace_symbols, { desc = "Workspace Symbols" })
 
 	self:map("<leader>ca", "Lspsaga code_action", { desc = "Code Action", mode = { "n", "v" }, has = "codeAction" })
-	self:map("<leader>ll", "Lspsaga show_line_diagnostics", { desc = "Line Diagnostics" })
+	self:map("<leader>cl", "Lspsaga show_line_diagnostics", { desc = "Line Diagnostics" })
 end
 
 function M.new(client, buffer)

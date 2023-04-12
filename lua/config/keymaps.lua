@@ -28,5 +28,9 @@ keymap("n", "gw", "*N")
 keymap("x", "gw", "*N")
 
 -- Tabs
-keymap("n", "<leader><tab><tab>", "<cmd>tabnew<cr>")
-keymap("n", "<leader><tab>d", "<cmd>tabclose<cr>")
+keymap("n", "<leader><tab><tab>", "<cmd>tabnew<cr>", { desc = "New tab" })
+keymap("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close tab" })
+
+-- Buffers
+keymap("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
+keymap("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
