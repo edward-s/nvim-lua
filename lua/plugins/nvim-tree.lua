@@ -25,6 +25,7 @@ return {
 			indent_markers = {
 				enable = true,
 			},
+			root_folder_label = false,
 			highlight_git = true,
 			icons = {
 				show = {
@@ -55,7 +56,6 @@ return {
 		},
 		view = {
 			width = 40,
-			hide_root_folder = true,
 		},
 		remove_keymaps = { "H", "M", "L", "<C-t>", "s", "S" },
 	},
