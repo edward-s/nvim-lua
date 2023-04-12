@@ -22,7 +22,7 @@ return {
 			require("nvim-surround").setup()
 		end,
 	},
-	{ "tpope/vim-unimpaired", enabled = false, event = "VeryLazy" },
+	{ "tpope/vim-unimpaired", event = "VeryLazy" },
 	{ "tpope/vim-repeat", event = "VeryLazy" },
 	{ "wellle/targets.vim", event = "VeryLazy" },
 	{ "itchyny/vim-highlighturl", event = { "BufReadPost", "BufNewFile" } },
