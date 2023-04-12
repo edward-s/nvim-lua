@@ -1,3 +1,19 @@
+local swap_next, swap_prev = (function()
+	local swap_objects = {
+		p = "@parameter.inner",
+		f = "@function.outer",
+		c = "@class.outer",
+	}
+
+	local n, p = {}, {}
+	for key, obj in pairs(swap_objects) do
+		n[string.format("<leader>cx%s", key)] = obj
+		p[string.format("<leader>cX%s", key)] = obj
+	end
+
+	return n, p
+end)()
+
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -77,16 +93,12 @@ return {
 				},
 				swap = {
 					enable = true,
-					swap_next = {
-						["<leader>a"] = "@parameter.inner",
-					},
-					swap_previous = {
-						["<leader>A"] = "@parameter.inner",
-					},
+					swap_next = swap_next,
+					swap_previous = swap_prev,
 				},
 				move = {
 					enable = true,
-					set_jumps = true, -- whether to set jumps in the jumplist
+					set_jumps = true,
 					goto_next_start = {
 						["]m"] = "@function.outer",
 						["]]"] = "@class.outer",
