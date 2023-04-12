@@ -2,8 +2,9 @@ return {
 	"james1236/backseat.nvim",
 	cmd = "Backseat",
 	keys = {
-		{ "<leader>zc", "<cmd>Backseat<cr>", desc = "AI Code Suggestions" },
-		{ "<leader>zC", "<cmd>BackseatClear<cr>", desc = "Clear AI Code Suggestions" },
+		{ "<leader>za", "<cmd>Backseat<cr>", desc = "AI Code Suggestions" },
+		{ "\\", "<cmd>BackseatClearLine<cr>", desc = "Clear AI Code Suggestion(Line)" },
+		{ "<leader>zc", "<cmd>BackseatClear<cr>", desc = "Clear AI Code Suggestion(Buffer)" },
 	},
 	config = function()
 		require("backseat").setup({
