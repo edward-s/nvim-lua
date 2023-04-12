@@ -31,8 +31,7 @@ return {
 		"sindrets/diffview.nvim",
 		event = { "BufReadPost", "BufNewFile" },
 		keys = {
-			{ "<leader>gd", "<cmd>lua require('utils.diffview').toggle()<cr>", desc = "Git Diff" },
-			{ "<leader>gD", "<cmd>lua require('utils.diffview').toggle_file_history()<cr>", desc = "Git History" },
+			{ "<leader>gd", "<cmd>lua require('utils.diffview').toggle_file_history()<cr>", desc = "Git History" },
 		},
 		opts = {
 			key_bindings = {
