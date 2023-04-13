@@ -38,7 +38,10 @@ return {
 			dapui.setup()
 
 			dap.listeners.after.event_initialized["dapui_config"] = function()
-				dapui.open()
+				vim.cmd("NvimTreeClose")
+				vim.defer_fn(function()
+					dapui.open()
+				end, 200)
 			end
 			dap.listeners.before.event_terminated["dapui_config"] = function()
 				dapui.close()
