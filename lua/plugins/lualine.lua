@@ -7,6 +7,7 @@ return {
 				globalstatus = true,
 				icons_enabled = true,
 				always_divide_middle = true,
+				theme = "gruvbox-material",
 			},
 		},
 	},
