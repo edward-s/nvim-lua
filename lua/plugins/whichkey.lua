@@ -32,6 +32,7 @@ return {
 					r = { "<c-w>r", "Swap" },
 					v = { "<cmd>vsplit<cr>", "Vertical split" },
 					x = { "<cmd>split<cr>", "Horizontal split" },
+					["="] = { "<c-w>=", "Equally size" },
 				},
 				c = { name = "+Code" },
 				d = { name = "+Debug" },
