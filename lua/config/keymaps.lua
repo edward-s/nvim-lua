@@ -19,10 +19,6 @@ keymap("v", ">", ">gv")
 -- Code folding
 keymap("n", ",", "za")
 
--- Browser
-keymap("n", "gx", "<Plug>(openbrowser-smart-search)")
-keymap("x", "gx", "<Plug>(openbrowser-smart-search)")
-
 -- Search word under cursor
 keymap("n", "gw", "*N")
 keymap("x", "gw", "*N")

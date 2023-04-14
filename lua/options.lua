@@ -35,6 +35,7 @@ local options = {
 	termguicolors = true,
 	title = true,
 	undofile = true,
+	updatetime = 300,
 	wrap = false,
 }
 
