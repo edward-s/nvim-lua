@@ -83,12 +83,12 @@ return {
 					enable = true,
 					lookahead = true,
 					keymaps = {
-						["aa"] = "@parameter.outer",
-						["ia"] = "@parameter.inner",
+						["aa"] = "@assignment.outer",
+						["ia"] = "@assignment.inner",
 						["af"] = "@function.outer",
 						["if"] = "@function.inner",
-						["ac"] = "@class.outer",
-						["ic"] = "@class.inner",
+						["ac"] = "@comment.outer",
+						["ic"] = "@comment.inner",
 					},
 				},
 				swap = {
@@ -98,7 +98,7 @@ return {
 				},
 				move = {
 					enable = true,
-					set_jumps = true, -- whether to set jumps in the jumplist
+					set_jumps = true,
 					goto_next_start = {
 						["]m"] = "@function.outer",
 						["]]"] = "@class.outer",
