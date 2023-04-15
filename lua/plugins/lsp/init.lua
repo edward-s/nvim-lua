@@ -134,7 +134,7 @@ return {
 		},
 	},
 	{
-		"glepnir/lspsaga.nvim",
+		"nvimdev/lspsaga.nvim",
 		event = { "BufReadPost", "BufNewFile" },
 		opts = {
 			ui = {
