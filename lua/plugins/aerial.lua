@@ -1,7 +1,7 @@
 return {
 	{
 		"stevearc/aerial.nvim",
-		event = { "BufReadPost", "BufNewFile" },
+		cmd = { "AerialToggle" },
 		keys = {
 			{ "<leader>co", "<cmd>AerialToggle<cr>", desc = "Code outline" },
 		},

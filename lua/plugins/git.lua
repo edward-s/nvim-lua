@@ -29,7 +29,7 @@ return {
 	},
 	{
 		"sindrets/diffview.nvim",
-		event = { "BufReadPost", "BufNewFile" },
+		cmd = { "DiffviewOpen", "DiffviewFileHistory" },
 		keys = {
 			{ "<leader>gd", "<cmd>lua require('utils.diffview').toggle_file_history()<cr>", desc = "Git History" },
 		},
