@@ -55,6 +55,7 @@
   "nvim-ts-rainbow2": { "branch": "master", "commit": "2c82e0965be2baf67fa2d3d48f3747437fde7204" },
   "nvim-ufo": { "branch": "main", "commit": "9e829d5cfa3de6a2ff561d86399772b0339ae49d" },
   "nvim-web-devicons": { "branch": "master", "commit": "4ec26d67d419c12a4abaea02f1b6c57b40c08d7e" },
+  "persistence.nvim": { "branch": "main", "commit": "c814fae5c37aa0aba9cd9da05df6e52b88d612c3" },
   "plenary.nvim": { "branch": "master", "commit": "9ac3e9541bbabd9d73663d757e4fe48a675bb054" },
   "promise-async": { "branch": "main", "commit": "e94f35161b8c5d4a4ca3b6ff93dd073eb9214c0e" },
   "targets.vim": { "branch": "master", "commit": "642d3a4ce306264b05ea3219920b13ea80931767" },
