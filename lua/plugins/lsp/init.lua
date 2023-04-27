@@ -52,6 +52,10 @@ return {
 						},
 					},
 				},
+				graphql = {},
+				html = {},
+				prismals = {},
+				bashls = {},
 			},
 			setup = {
 				eslint = function()
