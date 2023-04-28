@@ -57,6 +57,6 @@ return {
 		view = {
 			width = 40,
 		},
-		remove_keymaps = { "H", "M", "L", "<C-t>", "s", "S" },
+		on_attach = require("utils.nvim-tree").on_attach,
 	},
 }
