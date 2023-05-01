@@ -21,6 +21,7 @@ local function lsp_init()
 			border = "rounded",
 		},
 		diagnostic = {
+			virtual_text = false,
 			signs = {
 				active = signs,
 			},
