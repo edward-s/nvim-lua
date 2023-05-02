@@ -24,7 +24,7 @@ return {
 			{ "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Man Pages" },
 			{ "<leader>sm", "<cmd>Telescope marks<cr>", desc = "Marks" },
 			{ "<leader>so", "<cmd>Telescope oldfiles<cr>", desc = "Old files" },
-			{ "<leader>sR", "<cmd>Telescope resume<cr>", desc = "Resume" },
+			{ "<leader>sr", "<cmd>Telescope resume<cr>", desc = "Resume" },
 			{ "<leader>sw", "<cmd>Telescope grep_string<cr>", desc = "Text Under Cursor" },
 			{ "<C-p>", find_files, desc = "Find files" },
 		},

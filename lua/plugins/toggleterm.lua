@@ -22,10 +22,8 @@ return {
 			float_opts = {
 				border = "curved",
 				winblend = 0,
-				highlights = {
-					border = "Normal",
-					background = "Normal",
-				},
+				width = math.floor(0.95 * vim.fn.winwidth(0)),
+				height = math.floor(0.9 * vim.fn.winheight(0)),
 			},
 		},
 	},

@@ -20,7 +20,7 @@ return {
 		event = "VeryLazy",
 		opts = {
 			keymaps = {
-				visual = "F",
+				visual = "Z",
 			},
 		},
 	},
@@ -98,7 +98,7 @@ return {
 		"windwp/nvim-spectre",
       -- stylua: ignore
       keys = {
-        { "<leader>sr", function() require("spectre").open() end, desc = "Replace in files (Spectre)" },
+        { "<leader>sR", function() require("spectre").open() end, desc = "Replace in files (Spectre)" },
       },
 	},
 }
