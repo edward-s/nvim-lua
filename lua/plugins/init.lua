@@ -18,9 +18,11 @@ return {
 	{
 		"kylechui/nvim-surround",
 		event = "VeryLazy",
-		config = function()
-			require("nvim-surround").setup()
-		end,
+		opts = {
+			keymaps = {
+				visual = "F",
+			},
+		},
 	},
 	{ "tpope/vim-unimpaired", event = "VeryLazy" },
 	{ "tpope/vim-repeat", event = "VeryLazy" },
@@ -31,7 +33,7 @@ return {
 		"numToStr/Comment.nvim",
 		dependencies = { "JoosepAlviste/nvim-ts-context-commentstring" },
 		event = { "BufReadPost", "BufNewFile" },
-		config = function(_, _)
+		config = function()
 			local opts = {
 				ignore = "^$",
 				pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
