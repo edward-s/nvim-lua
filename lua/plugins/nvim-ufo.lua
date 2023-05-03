@@ -4,11 +4,14 @@ return {
 		"kevinhwang91/promise-async",
 	},
 	event = "BufRead",
+  --stylua: ignore
+	keys = {
+		{ "zR", function() require("ufo").openAllFolds() end, desc = "Open All Folds" },
+		{ "zM", function() require("ufo").closeAllFolds() end, desc = "Close All Folds" },
+		{ "zr", function() require("ufo").openFoldsExceptKinds() end, desc = "Open Fold" },
+		{ "zm", function() require("ufo").closeFoldsWith() end, desc = "Close Fold" },
+	},
 	config = function()
-		vim.keymap.set("n", "zR", require("ufo").openAllFolds, { desc = "Open all folds" })
-		vim.keymap.set("n", "zM", require("ufo").closeAllFolds, { desc = "Open all folds" })
-		vim.keymap.set("n", "zr", require("ufo").openFoldsExceptKinds, { desc = "Open fold" })
-		vim.keymap.set("n", "zm", require("ufo").closeFoldsWith, { desc = "Close fold" })
 		local fold_text_handler = function(virtText, lnum, endLnum, width, truncate)
 			local newVirtText = {}
 			local suffix = ("  %d "):format(endLnum - lnum)
