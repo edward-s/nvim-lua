@@ -30,3 +30,6 @@ keymap("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close tab" })
 -- Buffers
 keymap("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 keymap("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
+
+-- Quickfix
+keymap("n", "<leader>xq", "<cmd>copen<cr>", { desc = "Quickfix List" })

@@ -46,6 +46,7 @@ return {
 				p = { name = "+Persistence" },
 				s = { name = "+Search" },
 				t = { name = "+Test" },
+				x = { name = "+Quickfix" },
 				z = {
 					name = "+System",
 					d = { "<cmd>lua require('utils.term').lazydocker_toggle()<cr>", "LazyDocker" },
