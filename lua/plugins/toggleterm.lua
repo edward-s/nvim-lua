@@ -5,6 +5,7 @@ return {
 		keys = {
 			{ [[<C-t>]] },
 			{ "<leader>gg", function() require("utils.term").lazygit_toggle() end, desc = "Lazygit", },
+			{ "<leader>zd", function() require("utils.term").lazydocker_toggle() end, desc = "Lazydocker", },
 		},
 		opts = {
 			size = 20,

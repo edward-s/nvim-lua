@@ -17,7 +17,22 @@ keymap("v", "<", "<gv")
 keymap("v", ">", ">gv")
 
 -- Code folding
-keymap("n", ",", "za")
+for _, key in pairs({
+	"zo",
+	"zO",
+	"zc",
+	"zC",
+	"za",
+	"zA",
+	"zv",
+	"zx",
+	"zX",
+	"zm",
+	"zr",
+}) do
+	keymap("n", key, key .. "<cmd>IndentBlanklineRefresh<cr>")
+end
+keymap("n", ",", "za<cmd>IndentBlanklineRefresh<cr>")
 
 -- Search word under cursor
 keymap("n", "gw", "*N")
@@ -25,7 +40,7 @@ keymap("x", "gw", "*N")
 
 -- Tabs
 keymap("n", "<leader><tab><tab>", "<cmd>tabnew<cr>", { desc = "New tab" })
-keymap("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close tab" })
+keymap("n", "<leader><tab>q", "<cmd>tabclose<cr>", { desc = "Close tab" })
 
 -- Buffers
 keymap("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })

@@ -47,10 +47,7 @@ return {
 				s = { name = "+Search" },
 				t = { name = "+Test" },
 				x = { name = "+Quickfix" },
-				z = {
-					name = "+System",
-					d = { "<cmd>lua require('utils.term').lazydocker_toggle()<cr>", "LazyDocker" },
-				},
+				z = { name = "+System" },
 				["<Tab>"] = { name = "+Tab" },
 			}, { prefix = "<leader>", mode = { "n" } })
 		end,
