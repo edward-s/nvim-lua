@@ -43,6 +43,7 @@ return {
 				},
 				d = { name = "+Debug" },
 				g = { name = "+Git" },
+				j = { name = "+Jump" },
 				p = { name = "+Persistence" },
 				s = { name = "+Search" },
 				t = { name = "+Test" },
