@@ -84,6 +84,8 @@ M.on_attach = function(bufnr)
 	vim.keymap.del("n", "s", { buffer = bufnr })
 	vim.keymap.set("n", "S", "", { buffer = bufnr })
 	vim.keymap.del("n", "S", { buffer = bufnr })
+	vim.keymap.set("n", "<C-e>", "", { buffer = bufnr })
+	vim.keymap.del("n", "<C-e>", { buffer = bufnr })
 end
 
 return M
