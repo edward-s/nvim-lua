@@ -18,11 +18,9 @@ return {
 			},
 		},
 		on_open = function()
-			vim.opt.signcolumn = "no"
 			require("gitsigns.actions").refresh()
 		end,
 		on_close = function()
-			vim.opt.signcolumn = "yes"
 			require("gitsigns.actions").refresh()
 		end,
 	},
