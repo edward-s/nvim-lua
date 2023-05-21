@@ -13,6 +13,9 @@ return {
 		update_focused_file = {
 			enable = true,
 		},
+		view = {
+			width = 40,
+		},
 		filters = {
 			dotfiles = false,
 			custom = { ".git" },
@@ -26,12 +29,7 @@ return {
 				enable = true,
 			},
 			root_folder_label = false,
-			highlight_git = true,
 			icons = {
-				show = {
-					folder = true,
-					file = true,
-				},
 				glyphs = {
 					default = "",
 					symlink = "",
@@ -53,9 +51,6 @@ return {
 					},
 				},
 			},
-		},
-		view = {
-			width = 40,
 		},
 		on_attach = require("utils.nvim-tree").on_attach,
 	},
