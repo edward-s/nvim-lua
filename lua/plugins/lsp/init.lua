@@ -1,26 +1,13 @@
 return {
 	{
-		"j-hui/fidget.nvim",
-		opts = {
-			sources = {
-				["null-ls"] = {
-					ignore = true,
-				},
-			},
-		},
-	},
-	{
 		"neovim/nvim-lspconfig",
 		event = "BufReadPre",
 		dependencies = {
-			"j-hui/fidget.nvim",
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-nvim-lsp-signature-help",
-			"jay-babu/mason-null-ls.nvim",
 			"jose-elias-alvarez/typescript.nvim",
-			"b0o/SchemaStore.nvim",
 		},
 		opts = {
 			servers = {
@@ -110,7 +97,12 @@ return {
 	{
 		"jose-elias-alvarez/null-ls.nvim",
 		event = "BufReadPre",
-		dependencies = { "mason.nvim" },
+		dependencies = {
+			{
+				"jay-babu/mason-null-ls.nvim",
+				opts = { ensure_installed = nil, automatic_installation = true, automatic_setup = false },
+			},
+		},
 		config = function()
 			local nls = require("null-ls")
 			local formatting = nls.builtins.formatting
@@ -123,10 +115,6 @@ return {
 				},
 			})
 		end,
-	},
-	{
-		"jay-babu/mason-null-ls.nvim",
-		opts = { ensure_installed = nil, automatic_installation = true, automatic_setup = false },
 	},
 	{
 		"folke/trouble.nvim",

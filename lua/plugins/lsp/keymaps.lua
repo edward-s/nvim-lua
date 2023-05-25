@@ -16,10 +16,6 @@ function M.on_attach(client, buffer)
 	self:map("]e", M.diagnostic_goto(true, "ERROR"), { desc = "Next Error" })
 	self:map("[e", M.diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
 
-	local format = require("plugins.lsp.format").format
-	self:map("<leader>cf", format, { desc = "Format Document", has = "documentFormatting" })
-	self:map("<leader>cf", format, { desc = "Format Range", mode = "v", has = "documentRangeFormatting" })
-
 	self:map("<leader>cs", require("telescope.builtin").lsp_document_symbols, { desc = "Document Symbols" })
 	self:map("<leader>cS", require("telescope.builtin").lsp_dynamic_workspace_symbols, { desc = "Workspace Symbols" })
 
