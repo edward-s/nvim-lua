@@ -39,11 +39,6 @@ return {
 		"schickling/vim-bufonly",
 	},
 	{
-    --stylua: ignore
-		keys = { { "<leader>bd", "<cmd>Bdelete<cr>", desc = "Delete Buffer" } },
-		"famiu/bufdelete.nvim",
-	},
-	{
 		"monaqa/dial.nvim",
 		keys = { "<C-a>", "<C-x>", { "<C-a>", "v" }, { "<C-x>", "v" }, { "g<C-a>", "v" }, { "g<C-x>", "v" } },
      -- stylua: ignore

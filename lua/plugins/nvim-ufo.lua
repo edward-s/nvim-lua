@@ -4,6 +4,5 @@ return {
 		"kevinhwang91/promise-async",
 	},
 	event = "BufRead",
-  --stylua: ignore
   config = true
 }
