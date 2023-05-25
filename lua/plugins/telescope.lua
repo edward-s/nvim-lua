@@ -30,7 +30,6 @@ return {
 		},
 		config = function(_, _)
 			local telescope = require("telescope")
-			local actions = require("telescope.actions")
 
 			local opts = {
 				pickers = {
@@ -40,10 +39,10 @@ return {
 						previewer = false,
 						mappings = {
 							n = {
-								["<C-d>"] = actions.delete_buffer,
+								["<C-d>"] = "delete_buffer",
 							},
 							i = {
-								["<C-d>"] = actions.delete_buffer,
+								["<C-d>"] = "delete_buffer",
 							},
 						},
 						sort_mru = true,

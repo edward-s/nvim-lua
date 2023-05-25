@@ -21,7 +21,6 @@ return {
 			"nvim-treesitter/nvim-treesitter-textobjects",
 			"JoosepAlviste/nvim-ts-context-commentstring",
 			"windwp/nvim-ts-autotag",
-			"HiPhish/nvim-ts-rainbow2",
 		},
 		build = ":TSUpdate",
 		event = { "BufReadPost", "BufNewFile" },
@@ -61,9 +60,6 @@ return {
 				enable = true,
 			},
 			autotag = {
-				enable = true,
-			},
-			rainbow = {
 				enable = true,
 			},
 			context_commentstring = {

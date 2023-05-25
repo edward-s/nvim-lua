@@ -18,17 +18,19 @@ keymap("v", ">", ">gv")
 
 -- Code folding
 for _, key in pairs({
-	"zo",
-	"zO",
-	"zc",
-	"zC",
-	"za",
 	"zA",
+	"zC",
+	"zM",
+	"zO",
+	"zR",
+	"zX",
+	"za",
+	"zc",
+	"zm",
+	"zo",
+	"zr",
 	"zv",
 	"zx",
-	"zX",
-	"zm",
-	"zr",
 }) do
 	keymap("n", key, key .. "<cmd>IndentBlanklineRefresh<cr>")
 end
