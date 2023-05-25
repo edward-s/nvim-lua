@@ -23,6 +23,9 @@ return {
 			adapters = {
 				require("neotest-jest"),
 			},
+			diagnostic = {
+				enabled = false,
+			},
 			output = {
 				open_on_run = false,
 			},
