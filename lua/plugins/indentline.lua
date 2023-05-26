@@ -4,7 +4,7 @@ return {
 	opts = {
 		char = "▏",
 		buftype_exclude = { "terminal" },
-		filetype_exclude = { "dashboard", "NvimTree", "Trouble", "lazy" },
+		filetype_exclude = { "NvimTree", "Trouble", "lazy", "" },
 		context_char = "▎",
 		char_priority = 50,
 	},
