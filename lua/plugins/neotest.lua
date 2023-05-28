@@ -11,6 +11,8 @@ return {
 		{ "<leader>ts", "<cmd>lua require('neotest').summary.toggle()<cr>", desc = "Summary" },
 		{ "<leader>tS", "<cmd>lua require('neotest').run.stop()<cr>", desc = "Stop" },
 		{ "<leader>tt", "<cmd>lua require('neotest').run.run()<cr>", desc = "Nearest" },
+		{ "[t", "<cmd>lua require('neotest').jump.prev({ status = 'failed' })<cr>", desc = "Prev Failed" },
+		{ "]t", "<cmd>lua require('neotest').jump.next({ status = 'failed' })<cr>", desc = "Next Failed" },
 	},
 	dependencies = {
 		"haydenmeade/neotest-jest",

@@ -4,9 +4,9 @@ return {
 		event = "VeryLazy",
 		opts = {
 			options = {
+				always_divide_middle = true,
 				globalstatus = true,
 				icons_enabled = true,
-				always_divide_middle = true,
 				theme = "gruvbox-material",
 			},
 		},

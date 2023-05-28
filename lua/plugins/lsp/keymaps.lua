@@ -15,16 +15,12 @@ function M.on_attach(client, buffer)
 	self:map("]e", M.diagnostic_goto(true, "ERROR"), { desc = "Next Error" })
 	self:map("[e", M.diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
 
-	self:map("<leader>cr", M.rename, { expr = true, desc = "Rename", has = "rename" })
+	self:map("<leader>cr", "Lspsaga rename", { desc = "Rename" })
 	self:map("<leader>cs", require("telescope.builtin").lsp_document_symbols, { desc = "Document Symbols" })
 	self:map("<leader>cS", require("telescope.builtin").lsp_dynamic_workspace_symbols, { desc = "Workspace Symbols" })
 
 	self:map("<leader>ca", "Lspsaga code_action", { desc = "Code Action", mode = { "n", "v" }, has = "codeAction" })
 	self:map("<leader>cl", "Lspsaga show_line_diagnostics", { desc = "Line Diagnostics" })
-end
-
-function M.rename()
-	return ":IncRename " .. vim.fn.expand("<cword>")
 end
 
 function M.new(client, buffer)
