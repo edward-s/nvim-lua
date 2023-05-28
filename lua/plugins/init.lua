@@ -62,9 +62,7 @@ return {
 	{
 		"chentoast/marks.nvim",
 		event = { "BufReadPost", "BufNewFile" },
-		config = function()
-			require("marks").setup()
-		end,
+		config = true,
 	},
 	{
 		"folke/todo-comments.nvim",
@@ -77,9 +75,7 @@ return {
 	{
 		"kevinhwang91/nvim-hlslens",
 		event = { "BufReadPost", "BufNewFile" },
-		config = function()
-			require("hlslens").setup()
-		end,
+		config = true,
 	},
 	{
 		"windwp/nvim-spectre",
