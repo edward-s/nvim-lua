@@ -144,6 +144,9 @@ return {
 				title = false,
 				border = "rounded",
 			},
+			lightbulb = {
+				enable = false,
+			},
 			finder = {
 				keys = {
 					expand_or_jump = "<Enter>",
