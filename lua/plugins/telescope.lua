@@ -17,9 +17,9 @@ return {
 		cmd = "Telescope",
 		keys = {
 			{ "<leader>,", "<cmd>Telescope buffers<cr>", desc = "Show Buffers" },
+			{ "<leader>/", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
 			{ "<leader>sc", "<cmd>Telescope commands<cr>", desc = "Commands" },
 			{ "<leader>sf", "<cmd>Telescope find_files<cr>", desc = "Find files" },
-			{ "<leader>/", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
 			{ "<leader>sg", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
 			{ "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Man Pages" },
 			{ "<leader>sm", "<cmd>Telescope marks<cr>", desc = "Marks" },

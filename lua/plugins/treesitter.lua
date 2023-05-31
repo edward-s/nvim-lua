@@ -1,8 +1,8 @@
 local swap_next, swap_prev = (function()
 	local swap_objects = {
-		p = "@parameter.inner",
-		f = "@function.outer",
 		c = "@class.outer",
+		f = "@function.outer",
+		p = "@parameter.inner",
 	}
 
 	local n, p = {}, {}

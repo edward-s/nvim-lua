@@ -17,12 +17,6 @@ return {
 				showcmd = false,
 			},
 		},
-		on_open = function()
-			require("gitsigns.actions").refresh()
-		end,
-		on_close = function()
-			require("gitsigns.actions").refresh()
-		end,
 	},
 	config = true,
 }
