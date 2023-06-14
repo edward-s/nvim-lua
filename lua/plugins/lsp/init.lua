@@ -1,15 +1,5 @@
 return {
 	{
-		"j-hui/fidget.nvim",
-		opts = {
-			sources = {
-				["null-ls"] = {
-					ignore = true,
-				},
-			},
-		},
-	},
-	{
 		"neovim/nvim-lspconfig",
 		event = "BufReadPre",
 		dependencies = {
