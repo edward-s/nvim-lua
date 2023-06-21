@@ -20,10 +20,6 @@ return {
 			dotfiles = false,
 			custom = { ".git" },
 		},
-		git = {
-			enable = true,
-			ignore = false,
-		},
 		renderer = {
 			indent_markers = {
 				enable = true,
