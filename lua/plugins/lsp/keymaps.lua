@@ -5,7 +5,7 @@ function M.on_attach(client, buffer)
 
 	self:map("gd", vim.lsp.buf.definition, { desc = "Goto Definition" })
 	self:map("gD", "Lspsaga peek_definition", { desc = "Peek Definition" })
-	self:map("gf", "Lspsaga lsp_finder", { desc = "Lsp finder" })
+	self:map("gf", "Lspsaga finder", { desc = "Lsp finder" })
 	self:map("K", "Lspsaga hover_doc", { desc = "Hover" })
 	self:map("gK", vim.lsp.buf.signature_help, { desc = "Signature Help", has = "signatureHelp" })
 	self:map("gy", vim.lsp.buf.type_definition, { desc = "Goto Type Definition" })

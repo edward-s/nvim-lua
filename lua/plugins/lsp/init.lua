@@ -139,7 +139,7 @@ return {
 			},
 			finder = {
 				keys = {
-					expand_or_jump = "<Enter>",
+					toggle_or_open = "<Enter>",
 				},
 			},
 		},
