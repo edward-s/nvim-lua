@@ -59,9 +59,9 @@ return {
 					}),
 				}),
 				sources = cmp.config.sources({
+					{ name = "luasnip", keyword_length = 2 },
 					{ name = "nvim_lsp" },
 					{ name = "path" },
-					{ name = "luasnip", keyword_length = 2 },
 					{ name = "buffer", keyword_length = 3 },
 				}),
 				formatting = {
