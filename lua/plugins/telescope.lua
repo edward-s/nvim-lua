@@ -1,12 +1,4 @@
-local function find_files()
-	local opts = {}
-	local telescope = require("telescope.builtin")
-
-	local ok = pcall(telescope.git_files, opts)
-	if not ok then
-		telescope.find_files(opts)
-	end
-end
+local Utils = require("utils")
 
 return {
 	{
@@ -16,17 +8,21 @@ return {
 		},
 		cmd = "Telescope",
 		keys = {
+			{ "<C-p>", Utils.telescope("files"), desc = "Find files (root dir)" },
 			{ "<leader>,", "<cmd>Telescope buffers<cr>", desc = "Show Buffers" },
-			{ "<leader>/", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
+			{ "<leader>/", "<cmd>Telescope live_grep<cr>", desc = "Grep (root dir)" },
 			{ "<leader>sc", "<cmd>Telescope commands<cr>", desc = "Commands" },
-			{ "<leader>sf", "<cmd>Telescope find_files<cr>", desc = "Find files" },
-			{ "<leader>sg", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
+			{ "<leader>sf", Utils.telescope("files"), desc = "Find Files (root dir)" },
+			{ "<leader>sF", Utils.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
+			{ "<leader>sg", Utils.telescope("live_grep"), desc = "Grep (root dir)" },
+			{ "<leader>sG", Utils.telescope("live_grep", { cwd = false }), desc = "Grep (cwd)" },
 			{ "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Man Pages" },
 			{ "<leader>sm", "<cmd>Telescope marks<cr>", desc = "Marks" },
-			{ "<leader>so", "<cmd>Telescope oldfiles<cr>", desc = "Old files" },
+			{ "<leader>so", "<cmd>Telescope oldfiles<cr>", desc = "Old files (root dir)" },
+			{ "<leader>sO", Utils.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Old Files (cwd)" },
 			{ "<leader>sr", "<cmd>Telescope resume<cr>", desc = "Resume" },
-			{ "<leader>sw", "<cmd>Telescope grep_string<cr>", desc = "Text Under Cursor" },
-			{ "<C-p>", find_files, desc = "Find files" },
+			{ "<leader>sw", Utils.telescope("grep_string"), desc = "Word (root dir)" },
+			{ "<leader>sW", Utils.telescope("grep_string", { cwd = false }), desc = "Word (cwd)" },
 		},
 		config = function(_, _)
 			local telescope = require("telescope")
