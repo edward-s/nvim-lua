@@ -16,8 +16,6 @@ return {
 			},
 		},
 	},
-	{ "tpope/vim-unimpaired", event = "VeryLazy" },
-	{ "tpope/vim-repeat", event = "VeryLazy" },
 	{ "wellle/targets.vim", event = "VeryLazy" },
 	{ "itchyny/vim-highlighturl", event = { "BufReadPost", "BufNewFile" } },
 	{ "felipec/vim-sanegx", event = "BufRead" },
