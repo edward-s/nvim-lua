@@ -27,6 +27,7 @@ local options = {
 	softtabstop = 2,
 	splitbelow = true,
 	splitright = true,
+	splitkeep = "screen",
 	swapfile = false,
 	tabstop = 2,
 	termguicolors = true,

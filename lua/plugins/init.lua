@@ -19,6 +19,7 @@ return {
 	{ "wellle/targets.vim", event = "VeryLazy" },
 	{ "itchyny/vim-highlighturl", event = { "BufReadPost", "BufNewFile" } },
 	{ "felipec/vim-sanegx", event = "BufRead" },
+	{ "kevinhwang91/nvim-bqf", event = "VeryLazy" },
 	{
 		"numToStr/Comment.nvim",
 		dependencies = { "JoosepAlviste/nvim-ts-context-commentstring" },
