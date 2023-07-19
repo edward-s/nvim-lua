@@ -1,5 +1,6 @@
 return {
 	"lukas-reineke/indent-blankline.nvim",
+	event = { "VimEnter" },
 	opts = {
 		char = "▏",
 		buftype_exclude = { "terminal" },
