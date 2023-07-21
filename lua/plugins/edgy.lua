@@ -1,6 +1,22 @@
 return {
 	"folke/edgy.nvim",
 	event = "VeryLazy",
+	keys = {
+		{
+			"<leader>ue",
+			function()
+				require("edgy").toggle()
+			end,
+			desc = "Edgy Toggle",
+		},
+		{
+			"<leader>uE",
+			function()
+				require("edgy").select()
+			end,
+			desc = "Edgy Select Window",
+		},
+	},
 	opts = {
 		wo = {
 			winhighlight = "",

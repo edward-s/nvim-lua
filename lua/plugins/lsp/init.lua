@@ -130,7 +130,6 @@ return {
 	},
 	{
 		"nvimdev/lspsaga.nvim",
-		commit = "8008c9428925a286a467d5faf0938acdca785c64",
 		event = { "BufReadPost", "BufNewFile" },
 		opts = {
 			ui = {
