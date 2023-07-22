@@ -50,3 +50,7 @@ keymap("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 
 -- Quickfix
 keymap("n", "<leader>xq", "<cmd>bot copen<cr>", { desc = "Quickfix List" })
+
+-- Bufferline
+keymap("n", "[b", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev Buffer" })
+keymap("n", "]b", "<cmd>BufferLineCycleNext<cr>", { desc = "Next Buffer" })
