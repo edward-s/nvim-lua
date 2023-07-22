@@ -33,8 +33,8 @@ return {
 			output = {
 				open_on_run = true,
 			},
-			quickfix = {
-				enabled = false,
+			status = {
+				virtual_text = true,
 			},
 			floating = {
 				options = {
@@ -46,6 +46,11 @@ return {
 					expand = "<Space>",
 					jumpto = "<CR>",
 				},
+			},
+			quickfix = {
+				open = function()
+					vim.cmd("copen")
+				end,
 			},
 		}
 		require("neotest").setup(opts)

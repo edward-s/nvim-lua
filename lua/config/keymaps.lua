@@ -51,6 +51,8 @@ keymap("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 
 -- Quickfix
 keymap("n", "<leader>xq", "<cmd>bot copen<cr>", { desc = "Quickfix List" })
+keymap("n", "[q", "<cmd>silent! cprev<cr>", { desc = "Previous quickfix" })
+keymap("n", "]q", "<cmd>silent! cnext<cr>", { desc = "Next quickfix" })
 
 -- Bufferline
 keymap("n", "[b", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev Buffer" })
