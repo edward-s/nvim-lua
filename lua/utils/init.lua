@@ -18,6 +18,16 @@ function M.quit()
 	end
 end
 
+function M.toggle_line_numbers()
+	if vim.opt_local.relativenumber:get() then
+		vim.opt_local.relativenumber = false
+		vim.notify("Enabled line numbers")
+	else
+		vim.opt_local.relativenumber = true
+		vim.notify("Disabled line numbers")
+	end
+end
+
 -- returns the root directory based on:
 -- * lsp workspace folders
 -- * lsp root_dir
