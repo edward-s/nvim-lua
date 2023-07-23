@@ -3,9 +3,8 @@ return {
 	event = { "VimEnter" },
 	opts = {
 		char = "▏",
-		buftype_exclude = { "terminal" },
-		filetype_exclude = { "NvimTree", "Trouble", "lazy" },
-		context_char = "▎",
-		char_priority = 50,
+		filetype_exclude = { "NvimTree", "Trouble", "lazy", "mason", "help" },
+		show_trailing_blankline_indent = false,
+		show_current_context = false,
 	},
 }
