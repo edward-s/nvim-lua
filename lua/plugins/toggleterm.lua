@@ -6,6 +6,7 @@ return {
 			{ [[<C-t>]] },
 			{ "<leader>gg", function() require("utils.term").lazygit_toggle() end, desc = "Lazygit", },
 			{ "<leader>zd", function() require("utils.term").lazydocker_toggle() end, desc = "Lazydocker", },
+			{ "<leader>zn", function() require("utils.term").lazynpm_toggle() end, desc = "Lazynpm", },
 		},
 		opts = {
 			size = 20,
