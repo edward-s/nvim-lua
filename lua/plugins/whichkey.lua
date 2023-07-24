@@ -42,6 +42,7 @@ return {
 					X = { name = "+Swap Prev" },
 				},
 				d = { name = "+Debug" },
+				D = { name = "+Database" },
 				g = { name = "+Git" },
 				j = { name = "+Jump" },
 				s = { name = "+Search" },
