@@ -25,15 +25,4 @@ function M.lazydocker_toggle()
 	lazydocker:toggle()
 end
 
-local lazynpm = Terminal:new({
-	cmd = "lazynpm",
-	hidden = true,
-	direction = "float",
-	count = 100,
-})
-
-function M.lazynpm_toggle()
-	lazynpm:toggle()
-end
-
 return M
