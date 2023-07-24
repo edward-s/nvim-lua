@@ -32,10 +32,7 @@ return {
 			})
 		end,
 		keys = {
-			{ "<leader>Dt", "<cmd>NvimTreeClose<cr><cmd>DBUIToggle<cr>", desc = "Toggle UI" },
-			{ "<leader>Df", "<cmd>DBUIFindBuffer<cr>", desc = "Find Buffer" },
-			{ "<leader>Dr", "<cmd>DBUIRenameBuffer<cr>", desc = "Rename Buffer" },
-			{ "<leader>Dq", "<cmd>DBUILastQueryInfo<cr>", desc = "Last Query Info" },
+			{ "<leader>dt", "<cmd>NvimTreeClose<cr><cmd>DBUIToggle<cr>", desc = "Toggle UI" },
 		},
 	},
 }
