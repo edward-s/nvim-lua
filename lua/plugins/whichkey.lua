@@ -44,10 +44,9 @@ return {
 				d = { name = "+Debug" },
 				g = { name = "+Git" },
 				j = { name = "+Jump" },
-				p = { name = "+Persistence" },
 				s = { name = "+Search" },
 				t = { name = "+Test" },
-				x = { name = "+Quickfix" },
+				x = { name = "+Diagnostics/Quickfix" },
 				z = { name = "+System" },
 				["<Tab>"] = { name = "+Tab" },
 			}, { prefix = "<leader>", mode = { "n" } })
