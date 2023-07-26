@@ -31,7 +31,7 @@ return {
 				enabled = false,
 			},
 			output = {
-				open_on_run = true,
+				open_on_run = false,
 			},
 			status = {
 				virtual_text = true,
@@ -48,9 +48,7 @@ return {
 				},
 			},
 			quickfix = {
-				open = function()
-					vim.cmd("copen")
-				end,
+				enabled = false,
 			},
 		}
 		require("neotest").setup(opts)
