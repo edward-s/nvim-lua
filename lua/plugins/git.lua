@@ -15,7 +15,6 @@ return {
         map("n", "[h", gs.prev_hunk, "Prev Hunk")
         map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<cr>", "Stage Hunk")
         map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<cr>", "Reset Hunk")
-        map("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", "Git Commits")
         map("n", "<leader>gS", gs.stage_buffer, "Stage Buffer")
         map("n", "<leader>gu", gs.undo_stage_hunk, "Undo Stage Hunk")
         map("n", "<leader>gR", gs.reset_buffer, "Reset Buffer")
