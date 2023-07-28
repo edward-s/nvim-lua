@@ -21,8 +21,8 @@ function M.setup()
 				type = "pwa-node",
 				request = "attach",
 				name = "Attach",
-				processId = require("dap.utils").pick_process,
-				cwd = "${workspaceFolder}",
+				sourceMaps = true,
+				cwd = vim.fn.getcwd(),
 			},
 			{
 				type = "pwa-node",
