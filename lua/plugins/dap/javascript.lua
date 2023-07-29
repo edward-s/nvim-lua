@@ -15,7 +15,7 @@ function M.setup()
 				request = "launch",
 				name = "Launch file",
 				program = "${file}",
-				cwd = "${workspaceFolder}",
+				cwd = vim.fn.getcwd(),
 			},
 			{
 				type = "pwa-node",
@@ -34,7 +34,7 @@ function M.setup()
 					"--runInBand",
 				},
 				rootPath = "${workspaceFolder}",
-				cwd = "${workspaceFolder}",
+				cwd = vim.fn.getcwd(),
 				console = "integratedTerminal",
 				internalConsoleOptions = "neverOpen",
 			},

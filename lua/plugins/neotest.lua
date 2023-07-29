@@ -18,6 +18,7 @@ return {
 	},
 	dependencies = {
 		"haydenmeade/neotest-jest",
+		"mfussenegger/nvim-dap",
 	},
 	config = function()
 		local opts = {
