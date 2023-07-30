@@ -73,3 +73,4 @@ keymap("n", "]b", "<cmd>BufferLineCycleNext<cr>", { desc = "Next Buffer" })
 keymap("n", "<leader>uf", require("plugins.lsp.format").toggle, { desc = "Toggle format on Save" })
 -- stylua: ignore
 keymap("n", "<leader>ul", function() Utils.toggle_line_numbers() end, { desc = "Toggle Line Numbers" })
+keymap("n", "<leader>ud", Utils.toggle_diagnostics, { desc = "Toggle Diagnostics" })

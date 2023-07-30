@@ -28,6 +28,18 @@ function M.toggle_line_numbers()
 	end
 end
 
+local diagnostics_enabled = true
+function M.toggle_diagnostics()
+	diagnostics_enabled = not diagnostics_enabled
+	if diagnostics_enabled then
+		vim.diagnostic.enable()
+		vim.notify("Enabled diagnostics")
+	else
+		vim.diagnostic.disable()
+		vim.notify("Disabled diagnostics")
+	end
+end
+
 -- returns the root directory based on:
 -- * lsp workspace folders
 -- * lsp root_dir
