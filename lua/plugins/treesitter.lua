@@ -7,8 +7,8 @@ local swap_next, swap_prev = (function()
 
 	local n, p = {}, {}
 	for key, obj in pairs(swap_objects) do
-		n[string.format("<leader>cx%s", key)] = obj
-		p[string.format("<leader>cX%s", key)] = obj
+		n[string.format("<leader>cs%s", key)] = obj
+		p[string.format("<leader>cS%s", key)] = obj
 	end
 
 	return n, p
@@ -120,13 +120,13 @@ return {
 
 			local wk = require("which-key")
 			wk.register({
-				["<leader>cx"] = {
+				["<leader>cs"] = {
 					name = "+Swap Next",
 					c = { "@class.outer", "Class" },
 					f = { "@function.outer", "Function" },
 					p = { "@parameter.inner", "Parameter" },
 				},
-				["<leader>cX"] = {
+				["<leader>cS"] = {
 					name = "+Swap Previous",
 					c = { "@class.outer", "Class" },
 					f = { "@function.outer", "Function" },
