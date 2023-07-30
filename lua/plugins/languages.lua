@@ -26,8 +26,11 @@ return {
 				wk.register({
 					["<leader>ct"] = {
 						name = "Typescript",
-						f = { "<Cmd>TSToolsFixAll<CR>", "Fix All" },
 						a = { "<Cmd>TSToolsAddMissingImports<CR>", "Add Missing Imports" },
+						d = { "<Cmd>TSToolsGoToSourceDefinition<CR>", "Source Definition" },
+						f = { "<Cmd>TSToolsFixAll<CR>", "Fix All" },
+						o = { "<Cmd>TSToolsOrganizeImports<CR>", "Organize Imports" },
+						s = { "<Cmd>TSToolsSortImports<CR>", "Sort Imports" },
 						u = { "<Cmd>TSToolsRemoveUnused<CR>", "Remove Unused" },
 					},
 				}, { buffer = bufNumber })

@@ -42,11 +42,11 @@ keymap("n", "gw", "*N")
 keymap("x", "gw", "*N")
 
 -- No highlight
-keymap("n", "<leader>h", "<cmd>nohlsearch<cr>")
+keymap("n", "<leader>h", "<cmd>nohlsearch<cr>", { desc = "No Highlight Search" })
 
 -- Save/quit
-keymap("n", "<leader>q", "<cmd>lua require('utils').quit()<cr>")
-keymap("n", "<leader>w", "<cmd>w<cr>")
+keymap("n", "<leader>q", "<cmd>lua require('utils').quit()<cr>", { desc = "Quit" })
+keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save" })
 
 -- Tabs
 keymap("n", "<leader><tab><tab>", "<cmd>tabnew<cr>", { desc = "New tab" })
@@ -70,7 +70,7 @@ keymap("n", "[b", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev Buffer" })
 keymap("n", "]b", "<cmd>BufferLineCycleNext<cr>", { desc = "Next Buffer" })
 
 -- Toggle options
-keymap("n", "<leader>uf", require("plugins.lsp.format").toggle, { desc = "Toggle format on Save" })
+keymap("n", "<leader>uf", require("plugins.lsp.format").toggle, { desc = "Toggle Format On Save" })
 -- stylua: ignore
 keymap("n", "<leader>ul", function() Utils.toggle_line_numbers() end, { desc = "Toggle Line Numbers" })
 keymap("n", "<leader>ud", Utils.toggle_diagnostics, { desc = "Toggle Diagnostics" })

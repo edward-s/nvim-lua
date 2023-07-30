@@ -32,6 +32,7 @@ return {
 				j = { name = "+Jump" },
 				s = { name = "+Search" },
 				t = { name = "+Test" },
+				u = { name = "+UI" },
 				x = { name = "+Diagnostics/Quickfix" },
 				z = { name = "+System" },
 				["<Tab>"] = { name = "+Tab" },
