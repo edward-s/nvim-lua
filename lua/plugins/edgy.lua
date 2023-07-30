@@ -1,21 +1,10 @@
 return {
 	"folke/edgy.nvim",
 	event = "VeryLazy",
+  -- stylua: ignore
 	keys = {
-		{
-			"<leader>ue",
-			function()
-				require("edgy").toggle()
-			end,
-			desc = "Edgy Toggle",
-		},
-		{
-			"<leader>uE",
-			function()
-				require("edgy").select()
-			end,
-			desc = "Edgy Select Window",
-		},
+		{ "<leader>ue", function() require("edgy").toggle() end, desc = "Edgy Toggle" },
+		{ "<leader>uE", function() require("edgy").select() end, desc = "Edgy Select Window" },
 	},
 	opts = {
 		wo = {
@@ -34,6 +23,13 @@ return {
 				end,
 			},
 			{ title = "Neotest Output", ft = "neotest-output-panel", size = { height = 15 } },
+			{
+				ft = "toggleterm",
+				-- exclude floating window
+				filter = function(_, win)
+					return vim.api.nvim_win_get_config(win).relative == ""
+				end,
+			},
 		},
 		right = {
 			{ ft = "neotest-summary", title = "Neotest Summary", size = { width = 0.15 } },

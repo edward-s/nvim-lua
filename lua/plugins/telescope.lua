@@ -11,7 +11,6 @@ return {
 			{ "<C-p>", Utils.telescope("files"), desc = "Find files (root dir)" },
 			{ "<leader>,", "<cmd>Telescope buffers<cr>", desc = "Show Buffers" },
 			{ "<leader>/", "<cmd>Telescope live_grep<cr>", desc = "Grep (root dir)" },
-			{ "<leader>sc", "<cmd>Telescope commands<cr>", desc = "Commands" },
 			{ "<leader>sf", Utils.telescope("files"), desc = "Find Files (root dir)" },
 			{ "<leader>sF", Utils.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
 			{ "<leader>sg", Utils.telescope("live_grep"), desc = "Grep (root dir)" },
@@ -66,6 +65,7 @@ return {
 			}
 			telescope.setup(opts)
 			telescope.load_extension("fzf")
+			telescope.load_extension("toggletasks")
 		end,
 	},
 }
