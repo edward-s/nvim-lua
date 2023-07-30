@@ -32,7 +32,7 @@ return {
 			})
 		end,
 		keys = {
-			{ "<leader>dt", "<cmd>NvimTreeClose<cr><cmd>DBUIToggle<cr>", desc = "Toggle UI" },
+			{ "<leader>Du", "<cmd>NvimTreeClose<cr><cmd>DBUIToggle<cr>", desc = "DB UI" },
 		},
 	},
 }
