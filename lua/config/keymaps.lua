@@ -41,12 +41,23 @@ keymap("n", ",", "za<cmd>IndentBlanklineRefresh<cr>")
 keymap("n", "gw", "*N")
 keymap("x", "gw", "*N")
 
+-- No highlight
+keymap("n", "<leader>h", "<cmd>nohlsearch<cr>")
+
+-- Save/quit
+keymap("n", "<leader>q", "<cmd>lua require('utils').quit()<cr>")
+keymap("n", "<leader>w", "<cmd>w<cr>")
+
 -- Tabs
 keymap("n", "<leader><tab><tab>", "<cmd>tabnew<cr>", { desc = "New tab" })
 keymap("n", "<leader><tab>q", "<cmd>tabclose<cr>", { desc = "Close tab" })
 
 -- Buffers
 keymap("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
+keymap("n", "<leader>br", "<cmd>NvimTreeClose<cr><C-w>r", { desc = "Swap" })
+keymap("n", "<leader>bh", "<cmd>hsplit<cr>", { desc = "Horizontal Split" })
+keymap("n", "<leader>bv", "<cmd>vsplit<cr>", { desc = "Vertical Split" })
+keymap("n", "<leader>b=", "<C-w>=", { desc = "Equally Size" })
 keymap("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 
 -- Quickfix

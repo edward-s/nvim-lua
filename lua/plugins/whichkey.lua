@@ -24,16 +24,7 @@ return {
 				},
 			})
 			wk.register({
-				["h"] = { "<cmd>nohlsearch<cr>", "No Highlight Search" },
-				["q"] = { "<cmd>lua require('utils').quit()<CR>", "Quit" },
-				["w"] = { "<cmd>w<cr>", "Save" },
-				b = {
-					name = "+Buffer",
-					r = { "<c-w>r", "Swap" },
-					v = { "<cmd>vsplit<cr>", "Vertical split" },
-					x = { "<cmd>split<cr>", "Horizontal split" },
-					["="] = { "<c-w>=", "Equally size" },
-				},
+				b = { name = "+Buffer" },
 				c = {
 					name = "+Code",
 					g = { name = "+Neogen" },
