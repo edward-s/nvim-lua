@@ -21,6 +21,7 @@ return {
 			"nvim-treesitter/nvim-treesitter-textobjects",
 			"JoosepAlviste/nvim-ts-context-commentstring",
 			"windwp/nvim-ts-autotag",
+			"folke/which-key.nvim",
 		},
 		build = ":TSUpdate",
 		event = { "BufReadPost", "BufNewFile" },
@@ -116,16 +117,29 @@ return {
 		},
 		config = function(_, opts)
 			require("nvim-treesitter.configs").setup(opts)
+
+			local wk = require("which-key")
+			wk.register({
+				["<leader>cx"] = {
+					name = "+Swap Next",
+					c = { "@class.outer", "Class" },
+					f = { "@function.outer", "Function" },
+					p = { "@parameter.inner", "Parameter" },
+				},
+				["<leader>cX"] = {
+					name = "+Swap Previous",
+					c = { "@class.outer", "Class" },
+					f = { "@function.outer", "Function" },
+					p = { "@parameter.inner", "Parameter" },
+				},
+			})
 		end,
 	},
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
 		config = function()
-			local npairs = require("nvim-autopairs")
-			npairs.setup({
-				check_ts = true,
-			})
+			require("nvim-autopairs").setup({ check_ts = true })
 		end,
 	},
 }

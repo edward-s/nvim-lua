@@ -25,13 +25,7 @@ return {
 			})
 			wk.register({
 				b = { name = "+Buffer" },
-				c = {
-					name = "+Code",
-					g = { name = "+Neogen" },
-					t = { name = "+Typescript" },
-					x = { name = "+Swap Next" },
-					X = { name = "+Swap Prev" },
-				},
+				c = { name = "+Code" },
 				d = { name = "+Debug" },
 				D = { name = "+Database" },
 				g = { name = "+Git" },
