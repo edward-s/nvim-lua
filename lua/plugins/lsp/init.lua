@@ -8,7 +8,6 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-nvim-lsp-signature-help",
-			"jose-elias-alvarez/typescript.nvim",
 		},
 		opts = {
 			servers = {
@@ -30,13 +29,6 @@ return {
 								enable = true,
 							},
 							validate = { enable = true },
-						},
-					},
-				},
-				tsserver = {
-					settings = {
-						completions = {
-							completeFunctionCalls = true,
 						},
 					},
 				},
@@ -68,7 +60,6 @@ return {
 		opts = {
 			ensure_installed = {
 				"stylua",
-				"typescript-language-server",
 			},
 		},
 		config = function(_, opts)
