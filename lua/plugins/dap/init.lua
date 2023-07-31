@@ -47,56 +47,16 @@ return {
 		dependencies = {
 			"mfussenegger/nvim-dap",
 		},
-		opts = {
-			layouts = {
-				{
-					elements = {
-						{
-							id = "scopes",
-							size = 0.25,
-						},
-						{
-							id = "breakpoints",
-							size = 0.25,
-						},
-						{
-							id = "stacks",
-							size = 0.25,
-						},
-						{
-							id = "watches",
-							size = 0.25,
-						},
-					},
-					position = "left",
-					size = 40,
-				},
-				{
-					elements = {
-						{
-							id = "repl",
-							size = 0.2,
-						},
-						{
-							id = "console",
-							size = 0.2,
-						},
-					},
-					position = "bottom",
-					size = 10,
-				},
-			},
-		},
-
-		config = function()
+		opts = {},
+		config = function(_, opts)
 			local dap = require("dap")
 			local dapui = require("dapui")
-			dapui.setup()
+			dapui.setup(opts)
 
 			dap.listeners.after.event_initialized["dapui_config"] = function()
 				vim.cmd("NvimTreeClose")
 				vim.defer_fn(function()
-					dapui.open()
+					dapui.open({ reset = true })
 				end, 200)
 			end
 			dap.listeners.before.event_terminated["dapui_config"] = function()
