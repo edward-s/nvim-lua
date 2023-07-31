@@ -14,7 +14,11 @@ return {
 			"javascriptreact",
 			"javascript.jsx",
 		},
-		opts = {},
+		opts = {
+			settings = {
+				complete_function_calls = true,
+			},
+		},
 		keys = {
 			{ "<leader>lta", "<cmd>TSToolsAddMissingImports<cr>", desc = "Add Missing Imports" },
 			{ "<leader>ltd", "<cmd>TSToolsGoToSourceDefinition<cr>", desc = "Go to Source Definition" },
