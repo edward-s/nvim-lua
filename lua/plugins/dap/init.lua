@@ -1,33 +1,8 @@
 return {
+
 	{
 		"mfussenegger/nvim-dap",
 		dependencies = {
-			{
-				"rcarriga/nvim-dap-ui",
-        -- stylua: ignore
-        keys = {
-          { "<leader>e", function() require("dapui").eval() end, desc = "Dap Eval" },
-          { "<leader>du", function() require("dapui").toggle() end, desc = "Dap UI" },
-        },
-				config = function()
-					local dap = require("dap")
-					local dapui = require("dapui")
-					dapui.setup()
-
-					dap.listeners.after.event_initialized["dapui_config"] = function()
-						vim.cmd("NvimTreeClose")
-						vim.defer_fn(function()
-							dapui.open()
-						end, 200)
-					end
-					dap.listeners.before.event_terminated["dapui_config"] = function()
-						dapui.close()
-					end
-					dap.listeners.before.event_exited["dapui_config"] = function()
-						dapui.close()
-					end
-				end,
-			},
 			{
 				"theHamsta/nvim-dap-virtual-text",
 				opts = {
@@ -59,6 +34,76 @@ return {
 
 			for k, _ in pairs(opts.setup) do
 				opts.setup[k](plugin, opts)
+			end
+		end,
+	},
+	{
+		"rcarriga/nvim-dap-ui",
+    -- stylua: ignore
+    keys = {
+      { "<leader>e", function() require("dapui").eval() end, desc = "Dap Eval" },
+      { "<leader>du", function() require("dapui").toggle() end, desc = "Dap UI" },
+    },
+		dependencies = {
+			"mfussenegger/nvim-dap",
+		},
+		opts = {
+			layouts = {
+				{
+					elements = {
+						{
+							id = "scopes",
+							size = 0.25,
+						},
+						{
+							id = "breakpoints",
+							size = 0.25,
+						},
+						{
+							id = "stacks",
+							size = 0.25,
+						},
+						{
+							id = "watches",
+							size = 0.25,
+						},
+					},
+					position = "left",
+					size = 40,
+				},
+				{
+					elements = {
+						{
+							id = "repl",
+							size = 0.2,
+						},
+						{
+							id = "console",
+							size = 0.2,
+						},
+					},
+					position = "bottom",
+					size = 10,
+				},
+			},
+		},
+
+		config = function()
+			local dap = require("dap")
+			local dapui = require("dapui")
+			dapui.setup()
+
+			dap.listeners.after.event_initialized["dapui_config"] = function()
+				vim.cmd("NvimTreeClose")
+				vim.defer_fn(function()
+					dapui.open()
+				end, 200)
+			end
+			dap.listeners.before.event_terminated["dapui_config"] = function()
+				dapui.close()
+			end
+			dap.listeners.before.event_exited["dapui_config"] = function()
+				dapui.close()
 			end
 		end,
 	},

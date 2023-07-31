@@ -16,7 +16,7 @@ function M.on_attach(client, buffer)
 	self:map("[e", M.diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
 
 	self:map("<leader>ca", "Lspsaga code_action", { desc = "Code Action", mode = { "n", "v" }, has = "codeAction" })
-	self:map("<leader>cl", "Lspsaga show_line_diagnostics", { desc = "Line Diagnostics" })
+	self:map("<leader>cl", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
 	self:map("<leader>cr", "Lspsaga rename", { desc = "Rename" })
 end
 
