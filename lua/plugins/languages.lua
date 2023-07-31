@@ -15,26 +15,13 @@ return {
 			"javascript.jsx",
 		},
 		opts = {},
-		config = function(_, opts)
-			require("typescript-tools").setup(opts)
-
-			local wk = require("which-key")
-			local bufNumber = vim.api.nvim_get_current_buf()
-
-			vim.cmd("autocmd FileType typescript lua WhichKeyTypescript()")
-			function WhichKeyTypescript()
-				wk.register({
-					["<leader>ct"] = {
-						name = "Typescript",
-						a = { "<cmd>TSToolsAddMissingImports<cr>", "Add Missing Imports" },
-						d = { "<cmd>TSToolsGoToSourceDefinition<cr>", "Source Definition" },
-						f = { "<cmd>TSToolsFixAll<cr>", "Fix All" },
-						o = { "<cmd>TSToolsOrganizeImports<cr>", "Organize Imports" },
-						s = { "<cmd>TSToolsSortImports<cr>", "Sort Imports" },
-						u = { "<cmd>TSToolsRemoveUnused<cr>", "Remove Unused" },
-					},
-				}, { buffer = bufNumber })
-			end
-		end,
+		keys = {
+			{ "<leader>lta", "<cmd>TSToolsAddMissingImports<cr>", desc = "Add Missing Imports" },
+			{ "<leader>ltd", "<cmd>TSToolsGoToSourceDefinition<cr>", desc = "Go to Source Definition" },
+			{ "<leader>ltf", "<cmd>TSTSToolsFixAll<cr>", desc = "Fix All" },
+			{ "<leader>lto", "<cmd>TSToolsOrganizeImports<cr>", desc = "Organize Imports" },
+			{ "<leader>lts", "<cmd>TSToolsSortImports<cr>", desc = "Sort Imports" },
+			{ "<leader>ltu", "<cmd>TSToolsRemoveUnused<cr>", desc = "Remove Unused" },
+		},
 	},
 }
