@@ -17,7 +17,7 @@ return {
 		},
     --stylua: ignore
 		keys = {
-			{ "<leader>sc", function() require("telescope").extensions.toggletasks.spawn() end, desc = "Commands" },
+			{ "<C-c>", function() require("telescope").extensions.toggletasks.spawn() end, desc = "Commands" },
 		},
 	},
 }
