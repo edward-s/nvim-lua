@@ -19,13 +19,20 @@ return {
 				complete_function_calls = true,
 			},
 		},
-		keys = {
-			{ "<leader>lta", "<cmd>TSToolsAddMissingImports<cr>", desc = "Add Missing Imports" },
-			{ "<leader>ltd", "<cmd>TSToolsGoToSourceDefinition<cr>", desc = "Go to Source Definition" },
-			{ "<leader>ltf", "<cmd>TSTSToolsFixAll<cr>", desc = "Fix All" },
-			{ "<leader>lto", "<cmd>TSToolsOrganizeImports<cr>", desc = "Organize Imports" },
-			{ "<leader>lts", "<cmd>TSToolsSortImports<cr>", desc = "Sort Imports" },
-			{ "<leader>ltu", "<cmd>TSToolsRemoveUnused<cr>", desc = "Remove Unused" },
-		},
+		config = function(_, opts)
+      --stylua: ignore
+      require("plugins.lsp.utils").on_attach(function(client, bufnr)
+        if client.name == "typescript-tools" then
+          vim.keymap.set("n", "<leader>lo", "<cmd>TSToolsOrganizeImports<cr>", { buffer = bufnr, desc = "Organize Imports" })
+          vim.keymap.set("n", "<leader>lO", "<cmd>TSToolsSortImports<cr>", { buffer = bufnr, desc = "Sort Imports" })
+          vim.keymap.set("n", "<leader>lu", "<cmd>TSToolsRemoveUnused<cr>", { buffer = bufnr, desc = "Removed Unused" })
+          vim.keymap.set("n", "<leader>lz", "<cmd>TSToolsGoToSourceDefinition<cr>", { buffer = bufnr, desc = "Go To Source Definition" })
+          vim.keymap.set("n", "<leader>lr", "<cmd>TSToolsRemoveUnusedImports<cr>", { buffer = bufnr, desc = "Removed Unused Imports" })
+          vim.keymap.set("n", "<leader>lf", "<cmd>TSToolsFixAll<cr>", { buffer = bufnr, desc = "Fix All" })
+          vim.keymap.set("n", "<leader>la", "<cmd>TSToolsAddMissingImports<cr>", { buffer = bufnr, desc = "Add Missing Imports" })
+        end
+      end)
+			require("typescript-tools").setup(opts)
+		end,
 	},
 }

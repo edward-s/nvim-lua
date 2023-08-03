@@ -30,10 +30,7 @@ return {
 				D = { name = "+Database" },
 				g = { name = "+Git" },
 				j = { name = "+Jump" },
-				l = {
-					name = "+Language",
-					t = { name = "+Typescript" },
-				},
+				l = { name = "+Language" },
 				s = { name = "+Search" },
 				t = { name = "+Test" },
 				u = { name = "+UI" },
