@@ -33,6 +33,7 @@ return {
 				l = { name = "+Language" },
 				s = { name = "+Search" },
 				t = { name = "+Test" },
+				o = { name = "+Overseer" },
 				u = { name = "+UI" },
 				x = { name = "+Diagnostics/Quickfix" },
 				z = { name = "+System" },
