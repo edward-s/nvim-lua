@@ -20,6 +20,7 @@ return {
 	{ "itchyny/vim-highlighturl", event = { "BufReadPost", "BufNewFile" } },
 	{ "felipec/vim-sanegx", event = "BufRead" },
 	{ "tpope/vim-repeat", event = "VeryLazy" },
+	{ "stevearc/dressing.nvim", event = { "VeryLazy" } },
 	{ "kevinhwang91/nvim-bqf", event = "VeryLazy" },
 	{
 		"numToStr/Comment.nvim",

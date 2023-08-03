@@ -8,7 +8,7 @@ return {
 		},
 		cmd = "Telescope",
 		keys = {
-			{ "<C-p>", Utils.telescope("files"), desc = "Find files (root dir)" },
+			{ "<C-p>", Utils.telescope("files", { cwd = false }), desc = "Find files (root dir)" },
 			{ "<leader>,", "<cmd>Telescope buffers<cr>", desc = "Show Buffers" },
 			{ "<leader>/", "<cmd>Telescope live_grep<cr>", desc = "Grep (root dir)" },
 			{ "<leader>sf", Utils.telescope("files"), desc = "Find Files (root dir)" },
