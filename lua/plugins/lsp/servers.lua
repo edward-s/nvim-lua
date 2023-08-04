@@ -15,6 +15,11 @@ local function lsp_init()
 
 	-- LSP handlers configuration
 	local config = {
+		float = {
+			focusable = true,
+			style = "minimal",
+			border = "rounded",
+		},
 		diagnostic = {
 			virtual_text = false,
 			signs = {
