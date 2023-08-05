@@ -7,6 +7,7 @@ local options = {
 	conceallevel = 0,
 	cursorline = true,
 	expandtab = true,
+	exrc = true,
 	foldenable = true,
 	foldexpr = "nvim_treesitter#foldexpr()",
 	foldlevel = 99,
