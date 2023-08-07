@@ -59,10 +59,10 @@ return {
 					}),
 				}),
 				sources = cmp.config.sources({
-					{ name = "luasnip", keyword_length = 2 },
+					{ name = "luasnip" },
 					{ name = "nvim_lsp" },
 					{ name = "path" },
-					{ name = "buffer", keyword_length = 3 },
+					{ name = "buffer" },
 				}),
 				formatting = {
 					format = lspkind.cmp_format({
