@@ -36,7 +36,7 @@ local options = {
 	termguicolors = true,
 	title = true,
 	undofile = true,
-	wrap = true,
+	wrap = false,
 }
 
 vim.opt.shortmess:append("c")
