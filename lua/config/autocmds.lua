@@ -1,7 +1,7 @@
 local api = vim.api
 
 local function augroup(name)
-	return vim.api.nvim_create_augroup("vim_" .. name, { clear = true })
+	return api.nvim_create_augroup("vim_" .. name, { clear = true })
 end
 
 -- windows to close
@@ -22,14 +22,19 @@ api.nvim_create_autocmd("FileType", {
 	end,
 })
 
--- don't auto comment new line
-api.nvim_create_autocmd("BufEnter", { command = [[set formatoptions-=cro]] })
+-- do not autocomment new line
+api.nvim_create_autocmd({ "BufWinEnter" }, {
+	group = augroup("auto_format_options"),
+	callback = function()
+		vim.cmd("set formatoptions-=cro")
+	end,
+})
 
 -- auto open nvimtree on start
 api.nvim_command("autocmd VimEnter * NvimTreeToggle")
 
 -- wrap in text filetypes
-vim.api.nvim_create_autocmd("FileType", {
+api.nvim_create_autocmd("FileType", {
 	group = augroup("wrap"),
 	pattern = { "gitcommit", "markdown" },
 	callback = function()
