@@ -60,6 +60,8 @@ return {
 		opts = {
 			ensure_installed = {
 				"stylua",
+				"eslintd",
+				"prettierd",
 			},
 		},
 		config = function(_, opts)
