@@ -69,13 +69,13 @@ return {
 	{
 		"jose-elias-alvarez/null-ls.nvim",
 		opts = function(_, opts)
-			local nls = require("null-ls")
-			local formatting = nls.builtins.formatting
-			local codeActions = nls.builtins.code_actions
-			table.insert(opts.sources, {
-				formatting.prettierd,
-				codeActions.eslint_d,
-			})
+			if type(opts.sources) == "table" then
+				local null_ls = require("null-ls")
+				table.insert(opts.sources, {
+					null_ls.builtins.formatting.prettierd,
+					null_ls.builtins.code_actions.eslint_d,
+				})
+			end
 		end,
 	},
 	{
