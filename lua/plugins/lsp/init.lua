@@ -3,7 +3,6 @@ return {
 		"neovim/nvim-lspconfig",
 		event = "BufReadPre",
 		dependencies = {
-			"j-hui/fidget.nvim",
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"hrsh7th/cmp-nvim-lsp",
@@ -11,12 +10,6 @@ return {
 		},
 		opts = {
 			servers = {
-				eslint = {
-					settings = {
-						-- helps eslint find the eslintrc when it's placed in a subfolder instead of the cwd root
-						workingDirectory = { mode = "auto" },
-					},
-				},
 				jsonls = {
 					-- lazy-load schemastore when needed
 					on_new_config = function(new_config)
@@ -36,17 +29,6 @@ return {
 				html = {},
 				prismals = {},
 				bashls = {},
-			},
-			setup = {
-				eslint = function()
-					vim.api.nvim_create_autocmd("BufWritePre", {
-						callback = function(event)
-							if require("lspconfig.util").get_active_client_by_name(event.buf, "eslint") then
-								vim.cmd("EslintFixAll")
-							end
-						end,
-					})
-				end,
 			},
 		},
 		config = function(plugin, opts)
@@ -85,12 +67,9 @@ return {
 		config = function()
 			local nls = require("null-ls")
 			local formatting = nls.builtins.formatting
-			local codeActions = nls.builtins.code_actions
 			nls.setup({
 				sources = {
-					formatting.prettierd,
 					formatting.stylua,
-					codeActions.eslint_d,
 				},
 			})
 		end,
