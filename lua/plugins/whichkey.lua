@@ -40,6 +40,11 @@ return {
 				z = { name = "+System" },
 				["<Tab>"] = { name = "+Tab" },
 			}, { prefix = "<leader>", mode = { "n" } })
+			wk.register({
+				a = { name = "+AI" },
+				c = { name = "+Code" },
+				g = { name = "+Git" },
+			}, { prefix = "<leader>", mode = { "v" } })
 		end,
 	},
 }

@@ -25,6 +25,7 @@ return {
 	},
 	{
 		"hrsh7th/nvim-cmp",
+		event = "VeryLazy",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"saadparwaiz1/cmp_luasnip",
@@ -39,7 +40,7 @@ return {
 
 			cmp.setup({
 				completion = {
-					completeopt = "menu,menuone,noinsert",
+					completeopt = "menu,menuone,noselect",
 				},
 				snippet = {
 					expand = function(args)
@@ -52,16 +53,6 @@ return {
 					["<C-b>"] = cmp.mapping.scroll_docs(-4),
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
 					["<C-Space>"] = cmp.mapping.complete(),
-					["<C-r>"] = cmp.mapping({
-						i = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false }),
-						c = function(fallback)
-							if cmp.visible() then
-								cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
-							else
-								fallback()
-							end
-						end,
-					}),
 					["<CR>"] = cmp.mapping.confirm({
 						behavior = cmp.ConfirmBehavior.Replace,
 						select = true,
