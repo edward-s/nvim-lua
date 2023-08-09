@@ -47,7 +47,9 @@ return {
 				},
 			},
 			quickfix = {
-				enabled = false,
+				open = function()
+					vim.cmd("Trouble quickfix")
+				end,
 			},
 		}
 		require("neotest").setup(opts)
