@@ -24,6 +24,7 @@ return {
 				},
 			})
 			wk.register({
+				a = { name = "+AI" },
 				b = { name = "+Buffer" },
 				c = { name = "+Code" },
 				d = { name = "+Debug" },
