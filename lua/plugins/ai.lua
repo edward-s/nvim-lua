@@ -2,6 +2,7 @@ return {
 	{
 		"jackMort/ChatGPT.nvim",
 		event = "VeryLazy",
+		commit = "24bcca7", -- temp fix
     -- stylua: ignore
     keys = {
       { "<leader>ac", "<cmd>ChatGPT<cr>", desc = "ChatGPT" },
@@ -18,7 +19,7 @@ return {
 				},
 			},
 			openai_params = {
-				model = "gpt-3.5-turbo",
+				model = "gpt-4",
 				frequency_penalty = 0,
 				presence_penalty = 0,
 				max_tokens = 3000,
