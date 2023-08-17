@@ -8,6 +8,33 @@ return {
 					commented = true,
 				},
 			},
+			{
+				"rcarriga/nvim-dap-ui",
+          -- stylua: ignore
+          keys = {
+            { "<leader>e", function() require("dapui").eval() end, desc = "Dap Eval" },
+            { "<leader>du", function() require("dapui").toggle() end, desc = "Dap UI" },
+          },
+				opts = {},
+				config = function(_, opts)
+					local dap = require("dap")
+					local dapui = require("dapui")
+					dapui.setup(opts)
+
+					dap.listeners.after.event_initialized["dapui_config"] = function()
+						vim.cmd("NvimTreeClose")
+						vim.defer_fn(function()
+							dapui.open({ reset = true })
+						end, 200)
+					end
+					dap.listeners.before.event_terminated["dapui_config"] = function()
+						dapui.close()
+					end
+					dap.listeners.before.event_exited["dapui_config"] = function()
+						dapui.close()
+					end
+				end,
+			},
 		},
     -- stylua: ignore
     keys = {
@@ -26,33 +53,13 @@ return {
 		end,
 	},
 	{
-		"rcarriga/nvim-dap-ui",
-    -- stylua: ignore
-    keys = {
-      { "<leader>e", function() require("dapui").eval() end, desc = "Dap Eval" },
-      { "<leader>du", function() require("dapui").toggle() end, desc = "Dap UI" },
-    },
+		"Joakker/lua-json5",
+		build = "./install.sh && cp lua/json5.{dylib,so}",
 		dependencies = {
 			"mfussenegger/nvim-dap",
 		},
-		opts = {},
-		config = function(_, opts)
-			local dap = require("dap")
-			local dapui = require("dapui")
-			dapui.setup(opts)
-
-			dap.listeners.after.event_initialized["dapui_config"] = function()
-				vim.cmd("NvimTreeClose")
-				vim.defer_fn(function()
-					dapui.open({ reset = true })
-				end, 200)
-			end
-			dap.listeners.before.event_terminated["dapui_config"] = function()
-				dapui.close()
-			end
-			dap.listeners.before.event_exited["dapui_config"] = function()
-				dapui.close()
-			end
+		config = function()
+			require("dap.ext.vscode").json_decode = require("json5").parse
 		end,
 	},
 }

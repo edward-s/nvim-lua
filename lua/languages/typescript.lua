@@ -98,14 +98,13 @@ return {
 						request = "launch",
 						name = "Launch file",
 						program = "${file}",
-						cwd = vim.fn.getcwd(),
+						cwd = "${workspaceFolder}",
 					},
 					{
 						type = "pwa-node",
 						request = "attach",
 						name = "Attach",
-						sourceMaps = true,
-						cwd = vim.fn.getcwd(),
+						cwd = "${workspaceFolder}",
 					},
 					{
 						type = "pwa-node",
@@ -117,7 +116,7 @@ return {
 							"--runInBand",
 						},
 						rootPath = "${workspaceFolder}",
-						cwd = vim.fn.getcwd(),
+						cwd = "${workspaceFolder}",
 						console = "integratedTerminal",
 						internalConsoleOptions = "neverOpen",
 					},
@@ -131,8 +130,7 @@ return {
 						name = "Attach - Remote Debugging",
 						request = "attach",
 						program = "${file}",
-						cwd = vim.fn.getcwd(),
-						sourceMaps = true,
+						cwd = "${workspaceFolder}",
 						protocol = "inspector",
 						port = 9222,
 						webRoot = "${workspaceFolder}",
@@ -145,6 +143,11 @@ return {
 					},
 				}
 			end
+
+			require("dap.ext.vscode").load_launchjs(nil, {
+				["pwa-node"] = { "typescript", "javascript", "javascriptreact", "typescriptreact" },
+				["pwa-chrome"] = { "typescript", "javascript", "javascriptreact", "typescriptreact" },
+			})
 		end,
 	},
 }
