@@ -2,7 +2,6 @@ return {
 	{
 		"jackMort/ChatGPT.nvim",
 		event = "VeryLazy",
-		commit = "24bcca7", -- temp fix
     -- stylua: ignore
     keys = {
       { "<leader>ac", "<cmd>ChatGPT<cr>", desc = "ChatGPT" },
@@ -12,20 +11,19 @@ return {
 		opts = {
 			edit_with_instructions = {
 				diff = true,
+				keymaps = {
+					close = "q",
+					use_output_as_input = "<C-e>",
+				},
 			},
 			chat = {
 				keymaps = {
 					close = "q",
 				},
 			},
-			openai_params = {
-				model = "gpt-4",
-				frequency_penalty = 0,
-				presence_penalty = 0,
-				max_tokens = 3000,
-				temperature = 0,
-				top_p = 1,
-				n = 1,
+			popup_input = {
+				submit = "<Enter>",
+				submit_n = "<Enter>",
 			},
 		},
 		config = function(_, opts)
