@@ -39,6 +39,7 @@ return {
     -- stylua: ignore
     keys = {
       { "<leader>db", function() require("dap").toggle_breakpoint() end, desc = "Toggle Breakpoint" },
+      { "<leader>dB", function() require("dap").set_breakpoint(vim.fn.input('Breakpoint condition: ')) end, desc = "Breakpoint Condition" },
       { "<leader>dx", function() require("dap").clear_breakpoints() end, desc = "Clear breakpoints" },
       { "<leader>dc", function() require("dap").continue() end, desc = "Continue" },
       { "<leader>dd", function() require("dap").run_to_cursor() end, desc = "Run to Cursor" },
