@@ -5,8 +5,6 @@ return {
 		priority = 1000,
 	},
 	"nvim-lua/plenary.nvim",
-	"MunifTanjim/nui.nvim",
-	"nvim-tree/nvim-web-devicons",
 	{
 		"kylechui/nvim-surround",
 		event = "VeryLazy",
@@ -20,7 +18,6 @@ return {
 	{ "itchyny/vim-highlighturl", event = { "BufReadPost", "BufNewFile" } },
 	{ "felipec/vim-sanegx", event = "BufRead" },
 	{ "tpope/vim-repeat", event = "VeryLazy" },
-	{ "kevinhwang91/nvim-bqf", event = "VeryLazy" },
 	{
 		"numToStr/Comment.nvim",
 		dependencies = { "JoosepAlviste/nvim-ts-context-commentstring" },

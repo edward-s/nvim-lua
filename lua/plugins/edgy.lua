@@ -12,7 +12,7 @@ return {
 		},
 		bottom = {
 			"Trouble",
-			{ ft = "qf", title = "Quickfix" },
+			{ ft = "qf", title = "Quickfix", size = { height = 0.2 } },
 			{ ft = "spectre_panel", size = { height = 0.4 } },
 			{
 				ft = "help",

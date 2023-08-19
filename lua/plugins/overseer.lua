@@ -1,19 +1,7 @@
 return {
 	"stevearc/overseer.nvim",
 	opts = {
-		templates = { "shell", "vscode" },
-		strategy = {
-			"toggleterm",
-			direction = "horizontal",
-			auto_scroll = nil,
-			close_on_exit = false,
-			quit_on_exit = "never",
-			open_on_start = true,
-			hidden = true,
-			on_create = function()
-				vim.cmd("stopinsert!")
-			end,
-		},
+		templates = { "vscode" },
 	},
 	event = { "VeryLazy" },
 	config = function(_, opts)
