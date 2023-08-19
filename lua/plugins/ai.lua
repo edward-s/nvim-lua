@@ -6,7 +6,7 @@ return {
     keys = {
       { "<leader>ac", "<cmd>ChatGPT<cr>", desc = "ChatGPT" },
       { "<leader>ac", ":ChatGPTRun", mode = "v", desc = "ChatGPT Run" },
-      { "<leader>ae", function() require('chatgpt').edit_with_instructions() end, mode = "v", desc = "ChatGPT With Instructions" },
+      { "<leader>ai", function() require('chatgpt').edit_with_instructions() end, mode = "v", desc = "ChatGPT With Instructions" },
     },
 		opts = {
 			edit_with_instructions = {
