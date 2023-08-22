@@ -31,7 +31,10 @@ api.nvim_create_autocmd({ "BufWinEnter" }, {
 })
 
 -- auto open nvimtree on start
-api.nvim_command("autocmd VimEnter * NvimTreeToggle")
+local function open_nvim_tree()
+	require("nvim-tree.api").tree.open()
+end
+api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
 -- wrap in text filetypes
 api.nvim_create_autocmd("FileType", {

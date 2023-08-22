@@ -6,7 +6,7 @@ return {
 			"<C-n>", "<cmd>NvimTreeToggle<cr>", desc = "Toggle File Explorer",
 		},
 	},
-	cmd = "NvimTreeToggle",
+	lazy = false,
 	opts = {
 		hijack_cursor = true,
 		sync_root_with_cwd = true,
