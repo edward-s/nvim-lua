@@ -55,7 +55,7 @@ keymap("n", "<leader><tab>q", "<cmd>tabclose<cr>", { desc = "Close tab" })
 -- Buffers
 keymap("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 keymap("n", "<leader>br", "<cmd>NvimTreeClose<cr><C-w>r", { desc = "Swap" })
-keymap("n", "<leader>bh", "<cmd>hsplit<cr>", { desc = "Horizontal Split" })
+keymap("n", "<leader>bx", "<cmd>split<cr>", { desc = "Horizontal Split" })
 keymap("n", "<leader>bv", "<cmd>vsplit<cr>", { desc = "Vertical Split" })
 keymap("n", "<leader>b=", "<C-w>=", { desc = "Equally Size" })
 keymap("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
