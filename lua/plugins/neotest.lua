@@ -46,11 +46,6 @@ return {
 					jumpto = "<CR>",
 				},
 			},
-			quickfix = {
-				open = function()
-					vim.cmd("Trouble quickfix")
-				end,
-			},
 		}
 		require("neotest").setup(opts)
 	end,
