@@ -32,7 +32,6 @@ return {
 		cmd = { "DiffviewOpen", "DiffviewFileHistory" },
 		keys = {
 			{ "<leader>gd", "<cmd>lua require('utils.diffview').toggle_file_history()<cr>", desc = "Diffview (File)" },
-			{ "<leader>gD", "<cmd>DiffviewOpen<cr>", desc = "Diffview (Project)" },
 		},
 		opts = {
 			key_bindings = {
