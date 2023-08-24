@@ -22,7 +22,6 @@ return {
 		},
 		git = {
 			enable = true,
-			ignore = false,
 		},
 		renderer = {
 			indent_markers = {
