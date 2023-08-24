@@ -30,7 +30,7 @@ return {
 			},
 			root_folder_label = false,
 			icons = {
-				webdev_colors = false,
+				webdev_colors = true,
 				glyphs = {
 					default = "",
 					symlink = "",
