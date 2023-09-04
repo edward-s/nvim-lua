@@ -37,10 +37,6 @@ for _, key in pairs({
 end
 keymap("n", ",", "za<cmd>IndentBlanklineRefresh<cr>")
 
--- Search word under cursor
-keymap("n", "gw", "*N")
-keymap("x", "gw", "*N")
-
 -- No highlight
 keymap("n", "<leader>h", "<cmd>nohlsearch<cr>", { desc = "No Highlight Search" })
 
