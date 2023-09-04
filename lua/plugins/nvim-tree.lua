@@ -43,6 +43,29 @@ local function on_attach(bufnr)
 	vim.keymap.set("n", "g?", api.tree.toggle_help, opts("Help"))
 	vim.keymap.set("n", "W", api.tree.collapse_all, opts("Collapse"))
 	vim.keymap.set("n", "S", api.tree.search_node, opts("Search"))
+
+	-- Mappings removed via:
+	--   remove_keymaps
+	--   OR
+	--   view.mappings.list..action = ""
+	--
+	-- The dummy set before del is done for safety, in case a default mapping does not exist.
+	--
+	-- You might tidy things by removing these along with their default mapping.
+	vim.keymap.set("n", "H", "", { buffer = bufnr })
+	vim.keymap.del("n", "H", { buffer = bufnr })
+	vim.keymap.set("n", "M", "", { buffer = bufnr })
+	vim.keymap.del("n", "M", { buffer = bufnr })
+	vim.keymap.set("n", "L", "", { buffer = bufnr })
+	vim.keymap.del("n", "L", { buffer = bufnr })
+	vim.keymap.set("n", "<C-t>", "", { buffer = bufnr })
+	vim.keymap.del("n", "<C-t>", { buffer = bufnr })
+	vim.keymap.set("n", "s", "", { buffer = bufnr })
+	vim.keymap.del("n", "s", { buffer = bufnr })
+	vim.keymap.set("n", "S", "", { buffer = bufnr })
+	vim.keymap.del("n", "S", { buffer = bufnr })
+	vim.keymap.set("n", "<C-e>", "", { buffer = bufnr })
+	vim.keymap.del("n", "<C-e>", { buffer = bufnr })
 end
 
 return {
