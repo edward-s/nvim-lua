@@ -5,11 +5,6 @@ return {
 			"kristijanhusak/vim-dadbod-ui",
 			"kristijanhusak/vim-dadbod-completion",
 		},
-		opts = {
-			db_competion = function()
-				require("cmp").setup.buffer({ sources = { { name = "vim-dadbod-completion" } } })
-			end,
-		},
 		config = function(_, opts)
 			vim.g.db_ui_save_location = vim.fn.stdpath("config") .. require("plenary.path").path.sep .. "db_ui"
 
