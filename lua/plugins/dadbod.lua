@@ -34,7 +34,7 @@ return {
 		end,
 		cmd = { "DBUIToggle", "DBUI", "DBUIAddConnection", "DBUIFindBuffer", "DBUIRenameBuffer", "DBUILastQueryInfo" },
 		keys = {
-			{ "<leader>zb", "<cmd>tabnew<cr><cmd>DBUIToggle<cr>", desc = "Toggle DB in new tab" },
+			{ "<leader>zb", "<cmd>DBUIToggle<cr>", desc = "Toggle DB UI" },
 		},
 	},
 }
