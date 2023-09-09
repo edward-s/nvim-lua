@@ -50,4 +50,15 @@ return {
 			require("diffview").setup(opts)
 		end,
 	},
+	{
+		"ThePrimeagen/git-worktree.nvim",
+		config = function(_, opts)
+			require("git-worktree").setup(opts)
+			require("telescope").load_extension("git_worktree")
+		end,
+    --stylua: ignore
+    keys = {
+      { "<leader>gw", "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<cr>", desc = "Worktree" },
+    },
+	},
 }
