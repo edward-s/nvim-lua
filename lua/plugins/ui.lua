@@ -49,4 +49,9 @@ return {
 			}
 		end,
 	},
+	{
+		"declancm/cinnamon.nvim",
+		event = "VeryLazy",
+		config = true,
+	},
 }
