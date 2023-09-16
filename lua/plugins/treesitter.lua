@@ -21,9 +21,9 @@ return {
 			"nvim-treesitter/nvim-treesitter-textobjects",
 			"JoosepAlviste/nvim-ts-context-commentstring",
 			"windwp/nvim-ts-autotag",
-			"folke/which-key.nvim",
 		},
 		build = ":TSUpdate",
+		cmd = { "TSUpdateSync" },
 		event = { "BufReadPost", "BufNewFile" },
 		keys = {
 			{ "<c-space>", desc = "Increment selection" },
@@ -34,6 +34,7 @@ return {
 				"bash",
 				"graphql",
 				"html",
+				"javascript",
 				"lua",
 				"luadoc",
 				"markdown",
@@ -42,6 +43,7 @@ return {
 				"regex",
 				"vim",
 				"yaml",
+				"jsdoc",
 			},
 			indent = {
 				enable = true,

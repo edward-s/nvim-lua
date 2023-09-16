@@ -3,7 +3,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		opts = function(_, opts)
 			if type(opts.ensure_installed) == "table" then
-				vim.list_extend(opts.ensure_installed, { "javascript", "typescript", "tsx" })
+				vim.list_extend(opts.ensure_installed, { "typescript", "tsx" })
 			end
 		end,
 	},
@@ -41,11 +41,9 @@ return {
 			"typescript",
 			"typescriptreact",
 			"typescript.tsx",
-			"javascript",
-			"javascriptreact",
-			"javascript.jsx",
 		},
 		opts = {
+			filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
 			settings = {
 				complete_function_calls = true,
 			},

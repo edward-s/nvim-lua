@@ -1,6 +1,7 @@
 local M = {}
 
 local lsp_utils = require("plugins.lsp.utils")
+local lspconfig = require("lspconfig")
 
 local function lsp_init()
 	local signs = {
@@ -59,16 +60,13 @@ function M.setup(_, opts)
 		function(server)
 			local server_opts = servers[server] or {}
 			server_opts.capabilities = lsp_utils.capabilities()
-			if opts.setup[server] then
-				if opts.setup[server](server, server_opts) then
-					return
-				end
-			elseif opts.setup["*"] then
-				if opts.setup["*"](server, server_opts) then
-					return
-				end
-			end
-			require("lspconfig")[server].setup(server_opts)
+			lspconfig[server].setup(server_opts)
+		end,
+		["tsserver"] = function()
+			lspconfig.tsserver.setup({
+				-- typescript is handled by typescript-tools.nvim
+				filetypes = { "javascript", "javascriptreact", "javascript.jsx" },
+			})
 		end,
 	})
 end
