@@ -1,7 +1,7 @@
 return {
 	{
 		"akinsho/nvim-bufferline.lua",
-		event = "VeryLazy",
+		lazy = false,
 		keys = {
 			{ "<leader>bp", "<cmd>BufferLinePick<cr>", desc = "Pick Buffer" },
 		},
