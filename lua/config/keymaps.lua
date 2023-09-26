@@ -18,24 +18,7 @@ keymap("v", "<", "<gv")
 keymap("v", ">", ">gv")
 
 -- Code folding
-for _, key in pairs({
-	"zA",
-	"zC",
-	"zM",
-	"zO",
-	"zR",
-	"zX",
-	"za",
-	"zc",
-	"zm",
-	"zo",
-	"zr",
-	"zv",
-	"zx",
-}) do
-	keymap("n", key, key .. "<cmd>IndentBlanklineRefresh<cr>")
-end
-keymap("n", ",", "za<cmd>IndentBlanklineRefresh<cr>")
+keymap("n", ",", "za")
 
 -- No highlight
 keymap("n", "<leader>h", "<cmd>nohlsearch<cr>", { desc = "No Highlight Search" })

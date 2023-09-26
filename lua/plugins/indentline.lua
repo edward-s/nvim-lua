@@ -1,10 +1,17 @@
 return {
 	"lukas-reineke/indent-blankline.nvim",
-	event = { "VimEnter" },
+	branch = "v3",
+	event = { "BufReadPost", "BufNewFile" },
 	opts = {
-		char = "▏",
-		filetype_exclude = { "NvimTree", "Trouble", "lazy", "mason", "help" },
-		show_trailing_blankline_indent = false,
-		show_current_context = false,
+		indent = {
+			char = "▏",
+		},
+		scope = {
+			show_start = false,
+			exclude = { "NvimTree", "Trouble", "lazy" },
+		},
 	},
+	config = function(_, opts)
+		require("ibl").setup(opts)
+	end,
 }

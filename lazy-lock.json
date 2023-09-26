@@ -23,7 +23,7 @@
   "gitsigns.nvim": { "branch": "main", "commit": "bdeba1cec3faddd89146690c10b9a87949c0ee66" },
   "gruvbox-material": { "branch": "master", "commit": "b5f8c6a6c1cda630c53b061b765068a0898d47a3" },
   "harpoon": { "branch": "master", "commit": "21f4c47c6803d64ddb934a5b314dcb1b8e7365dc" },
-  "indent-blankline.nvim": { "branch": "master", "commit": "9637670896b68805430e2f72cf5d16be5b97a22a" },
+  "indent-blankline.nvim": { "branch": "v3", "commit": "b9b0e7c3fcfdad9860d43321eddc9b4f06d7fdd7" },
   "lazy.nvim": { "branch": "main", "commit": "2a9354c7d2368d78cbd5575a51a2af5bd8a6ad01" },
   "leap.nvim": { "branch": "main", "commit": "5efe985cf68fac3b6a6dfe7a75fbfaca8db2af9c" },
   "lspkind.nvim": { "branch": "master", "commit": "57610d5ab560c073c465d6faf0c19f200cb67e6e" },
