@@ -40,6 +40,11 @@ return {
 			local lspkind = require("lspkind")
 
 			cmp.setup({
+				enabled = function()
+					local disabled_filetypes = { "sagarename" }
+
+					return not vim.tbl_contains(disabled_filetypes, vim.bo.filetype)
+				end,
 				completion = {
 					completeopt = "menu,menuone,noselect",
 				},

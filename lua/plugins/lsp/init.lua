@@ -85,6 +85,11 @@ return {
 					toggle_or_open = "<Enter>",
 				},
 			},
+			rename = {
+				keys = {
+					quit = "q",
+				},
+			},
 		},
 	},
 }
