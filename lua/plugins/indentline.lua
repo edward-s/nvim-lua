@@ -8,7 +8,6 @@ return {
 		},
 		scope = {
 			show_start = false,
-			exclude = { "NvimTree", "Trouble", "lazy" },
 		},
 	},
 	config = function(_, opts)
