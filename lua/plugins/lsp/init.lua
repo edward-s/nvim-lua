@@ -41,14 +41,8 @@ return {
 		end,
 	},
 	{
-		"jose-elias-alvarez/null-ls.nvim",
+		"nvimtools/none-ls.nvim",
 		event = "BufReadPre",
-		dependencies = {
-			{
-				"jay-babu/mason-null-ls.nvim",
-				opts = { ensure_installed = nil, automatic_installation = true, automatic_setup = false },
-			},
-		},
 		config = function()
 			local nls = require("null-ls")
 			local formatting = nls.builtins.formatting

@@ -33,19 +33,18 @@ end
 function M.get_formatters(bufnr)
 	local ft = vim.bo[bufnr].filetype
 	-- check if we have any null-ls formatters for the current filetype
-	local null_ls = package.loaded["null-ls"] and require("null-ls.sources").get_available(ft, "NULL_LS_FORMATTING")
-		or {}
+	local nls = package.loaded["null-ls"] and require("null-ls.sources").get_available(ft, "NULL_LS_FORMATTING") or {}
 
 	local ret = {
 		active = {},
 		available = {},
-		null_ls = null_ls,
+		null_ls = nls,
 	}
 
 	local clients = vim.lsp.get_active_clients({ bufnr = bufnr })
 	for _, client in ipairs(clients) do
 		if M.supports_format(client) then
-			if (#null_ls > 0 and client.name == "null-ls") or #null_ls == 0 then
+			if (#nls > 0 and client.name == "null-ls") or #nls == 0 then
 				table.insert(ret.active, client)
 			else
 				table.insert(ret.available, client)
