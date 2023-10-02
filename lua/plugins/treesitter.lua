@@ -74,12 +74,13 @@ return {
 					enable = true,
 					lookahead = true,
 					keymaps = {
-						["aa"] = "@assignment.outer",
 						["ia"] = "@assignment.inner",
-						["af"] = "@function.outer",
-						["if"] = "@function.inner",
+						["aa"] = "@assignment.outer",
 						["ac"] = "@comment.outer",
-						["ic"] = "@comment.inner",
+						["ii"] = "@conditional.inner",
+						["ai"] = "@conditional.outer",
+						["if"] = "@function.inner",
+						["af"] = "@function.outer",
 					},
 				},
 				swap = {

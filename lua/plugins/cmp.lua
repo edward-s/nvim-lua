@@ -41,7 +41,7 @@ return {
 
 			cmp.setup({
 				enabled = function()
-					local disabled_filetypes = { "sagarename" }
+					local disabled_filetypes = { "sagarename", "TelescopePrompt" }
 
 					return not vim.tbl_contains(disabled_filetypes, vim.bo.filetype)
 				end,
