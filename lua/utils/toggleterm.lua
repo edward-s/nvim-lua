@@ -11,6 +11,7 @@ local lazygit = Terminal:new({
 })
 
 function M.lazygit_toggle()
+	lazygit.dir = vim.fn.expand("%:p:h")
 	lazygit:toggle()
 end
 
