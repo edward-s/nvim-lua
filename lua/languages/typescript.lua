@@ -83,7 +83,6 @@ return {
 		},
 		opts = function()
 			local dap = require("dap")
-			local dap_utils = require("dap.utils")
 
 			require("dap-vscode-js").setup({
 				debugger_path = os.getenv("HOME") .. "/.local/share/nvim/vscode-js-debug",
@@ -104,42 +103,15 @@ return {
 					{
 						type = "pwa-node",
 						request = "attach",
-						name = "Attach Program (pwa-node, select pid)",
+						name = "Attach Program (pwa-node)",
 						cwd = vim.fn.getcwd(),
-						processId = dap_utils.pick_process,
 						skipFiles = { "<node_internals>/**" },
 					},
 					{
-						type = "pwa-node",
-						request = "launch",
-						name = "Launch Test Current File (pwa-node with jest)",
-						cwd = vim.fn.getcwd(),
-						runtimeArgs = { "${workspaceFolder}/node_modules/.bin/jest" },
-						runtimeExecutable = "node",
-						args = { "${file}", "--coverage", "false" },
-						rootPath = "${workspaceFolder}",
-						sourceMaps = true,
-						console = "integratedTerminal",
-						internalConsoleOptions = "neverOpen",
-						skipFiles = { "<node_internals>/**", "node_modules/**" },
-					},
-					{
 						type = "pwa-chrome",
 						request = "launch",
-						name = 'Launch Chrome with "localhost"',
+						name = "Launch Chrome",
 						url = "http://localhost:3000",
-						webRoot = "${workspaceFolder}",
-					},
-					{
-						type = "pwa-chrome",
-						request = "attach",
-						name = "Attach Program (pwa-chrome, select port)",
-						program = "${file}",
-						cwd = vim.fn.getcwd(),
-						sourceMaps = true,
-						port = function()
-							return vim.fn.input("Select port: ", 9222)
-						end,
 						webRoot = "${workspaceFolder}",
 					},
 				}
