@@ -83,61 +83,64 @@ return {
 		},
 		opts = function()
 			local dap = require("dap")
+			local dap_utils = require("dap.utils")
 
 			require("dap-vscode-js").setup({
 				debugger_path = os.getenv("HOME") .. "/.local/share/nvim/vscode-js-debug",
 				adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost" },
 			})
 
-			for _, language in ipairs({ "javascript", "typescript" }) do
+			for _, language in ipairs({ "javascript", "typescript", "javascriptreact", "typescriptreact" }) do
 				dap.configurations[language] = {
 					{
 						type = "pwa-node",
 						request = "launch",
-						name = "Launch file",
-						program = "${file}",
-						cwd = "${workspaceFolder}",
+						name = "Launch Current File (pwa-node)",
+						cwd = vim.fn.getcwd(),
+						args = { "${file}" },
+						sourceMaps = true,
+						protocol = "inspector",
 					},
 					{
 						type = "pwa-node",
 						request = "attach",
-						name = "Attach",
-						cwd = "${workspaceFolder}",
+						name = "Attach Program (pwa-node, select pid)",
+						cwd = vim.fn.getcwd(),
+						processId = dap_utils.pick_process,
+						skipFiles = { "<node_internals>/**" },
 					},
 					{
 						type = "pwa-node",
 						request = "launch",
-						name = "Debug Jest Tests",
+						name = "Launch Test Current File (pwa-node with jest)",
+						cwd = vim.fn.getcwd(),
+						runtimeArgs = { "${workspaceFolder}/node_modules/.bin/jest" },
 						runtimeExecutable = "node",
-						runtimeArgs = {
-							"./node_modules/jest/bin/jest.js",
-							"--runInBand",
-						},
+						args = { "${file}", "--coverage", "false" },
 						rootPath = "${workspaceFolder}",
-						cwd = "${workspaceFolder}",
+						sourceMaps = true,
 						console = "integratedTerminal",
 						internalConsoleOptions = "neverOpen",
+						skipFiles = { "<node_internals>/**", "node_modules/**" },
 					},
-				}
-			end
-
-			for _, language in ipairs({ "typescriptreact", "javascriptreact" }) do
-				require("dap").configurations[language] = {
 					{
 						type = "pwa-chrome",
-						name = "Attach - Remote Debugging",
-						request = "attach",
-						program = "${file}",
-						cwd = "${workspaceFolder}",
-						protocol = "inspector",
-						port = 9222,
+						request = "launch",
+						name = 'Launch Chrome with "localhost"',
+						url = "http://localhost:3000",
 						webRoot = "${workspaceFolder}",
 					},
 					{
 						type = "pwa-chrome",
-						name = "Launch Chrome",
-						request = "launch",
-						url = "http://localhost:3000",
+						request = "attach",
+						name = "Attach Program (pwa-chrome, select port)",
+						program = "${file}",
+						cwd = vim.fn.getcwd(),
+						sourceMaps = true,
+						port = function()
+							return vim.fn.input("Select port: ", 9222)
+						end,
+						webRoot = "${workspaceFolder}",
 					},
 				}
 			end
