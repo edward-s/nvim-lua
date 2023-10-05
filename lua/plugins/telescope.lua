@@ -17,7 +17,7 @@ return {
 			{ "<leader>sG", Utils.telescope("live_grep", { cwd = false }), desc = "Grep (cwd)" },
 			{ "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Man Pages" },
 			{ "<leader>sm", "<cmd>Telescope marks<cr>", desc = "Marks" },
-			{ "<leader>so", Utils.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Old Files (cwd)" },
+			{ "<leader>so", Utils.telescope("oldfiles"), desc = "Old Files (cwd)" },
 			{ "<leader>sr", "<cmd>Telescope resume<cr>", desc = "Resume" },
 			{ "<leader>sw", Utils.telescope("grep_string"), desc = "Word (root dir)" },
 			{ "<leader>sW", Utils.telescope("grep_string", { cwd = false }), desc = "Word (cwd)" },
