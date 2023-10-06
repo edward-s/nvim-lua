@@ -90,9 +90,6 @@ return {
 			dotfiles = false,
 			custom = { "\\.git" },
 		},
-		git = {
-			enable = true,
-		},
 		renderer = {
 			indent_markers = {
 				enable = true,

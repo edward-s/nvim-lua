@@ -114,6 +114,13 @@ return {
 						url = "http://localhost:3000",
 						webRoot = "${workspaceFolder}",
 					},
+					{
+						type = "pwa-chrome",
+						request = "launch",
+						name = "React Native (Chrome Debugger)",
+						url = "http://localhost:8081/debugger-ui",
+						webRoot = "${workspaceFolder}",
+					},
 				}
 			end
 
