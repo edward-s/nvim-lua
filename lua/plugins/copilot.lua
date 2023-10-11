@@ -15,6 +15,14 @@ return {
 					prev = "<C-k>",
 				},
 			},
+			filetypes = {
+				javascript = true,
+				typescript = true,
+				lua = true,
+				go = true,
+				python = true,
+				["."] = false,
+			},
 		},
 	},
 }
