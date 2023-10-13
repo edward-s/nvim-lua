@@ -37,11 +37,6 @@ return {
 			output = {
 				open_on_run = false,
 			},
-			quickfix = {
-				open = function()
-					vim.cmd("Trouble quickfix")
-				end,
-			},
 			status = {
 				virtual_text = true,
 			},
