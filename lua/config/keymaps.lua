@@ -18,7 +18,7 @@ keymap("v", "<", "<gv")
 keymap("v", ">", ">gv")
 
 -- Code folding
-keymap("n", ",", "za")
+keymap("n", "<Tab>", "za")
 keymap("n", "<", "zm")
 keymap("n", ">", "zr")
 
