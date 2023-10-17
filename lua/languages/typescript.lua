@@ -78,16 +78,18 @@ return {
 	},
 	{
 		"mfussenegger/nvim-dap",
-		dependencies = {
-			"mxsdev/nvim-dap-vscode-js",
-		},
 		opts = function()
 			local dap = require("dap")
 
-			require("dap-vscode-js").setup({
-				debugger_path = os.getenv("HOME") .. "/.local/share/nvim/vscode-js-debug",
-				adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost" },
-			})
+			dap.adapters["pwa-node"] = {
+				type = "server",
+				host = "127.0.0.1",
+				port = "${port}",
+				executable = {
+					command = "js-debug-adapter",
+					args = { "${port}" },
+				},
+			}
 
 			for _, language in ipairs({ "javascript", "typescript", "javascriptreact", "typescriptreact" }) do
 				dap.configurations[language] = {
@@ -120,6 +122,20 @@ return {
 						name = "React Native (Chrome Debugger)",
 						url = "http://localhost:8081/debugger-ui",
 						webRoot = "${workspaceFolder}",
+					},
+					{
+						type = "pwa-node",
+						request = "launch",
+						name = "Launch Test Current File (pwa-node with jest)",
+						cwd = vim.fn.getcwd(),
+						runtimeArgs = { "${workspaceFolder}/node_modules/.bin/jest" },
+						runtimeExecutable = "node",
+						args = { "${file}", "--coverage", "false" },
+						rootPath = "${workspaceFolder}",
+						sourceMaps = true,
+						console = "integratedTerminal",
+						internalConsoleOptions = "neverOpen",
+						skipFiles = { "<node_internals>/**", "node_modules/**" },
 					},
 				}
 			end

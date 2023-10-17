@@ -49,12 +49,6 @@ return {
 		}
 	end,
 	config = function(_, opts)
-		vim.api.nvim_create_autocmd("FileType", {
-			pattern = "neotest-output-panel",
-			callback = function()
-				vim.cmd("norm G")
-			end,
-		})
 		require("neotest").setup(opts)
 	end,
 }

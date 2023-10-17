@@ -22,6 +22,9 @@ return {
 	},
 	{
 		"williamboman/mason.nvim",
+		dependencies = {
+			"jay-babu/mason-nvim-dap.nvim",
+		},
 		cmd = "Mason",
 		keys = { { "<leader>zm", "<cmd>Mason<cr>", desc = "Mason" } },
 		opts = {
@@ -38,6 +41,7 @@ return {
 					p:install()
 				end
 			end
+			require("mason-nvim-dap").setup()
 		end,
 	},
 	{
