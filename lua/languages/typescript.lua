@@ -81,15 +81,17 @@ return {
 		opts = function()
 			local dap = require("dap")
 
-			dap.adapters["pwa-node"] = {
-				type = "server",
-				host = "127.0.0.1",
-				port = "${port}",
-				executable = {
-					command = "js-debug-adapter",
-					args = { "${port}" },
-				},
-			}
+			for _, adapter in ipairs({ "pwa-node", "pwa-chrome" }) do
+				dap.adapters[adapter] = {
+					type = "server",
+					host = "127.0.0.1",
+					port = "${port}",
+					executable = {
+						command = "js-debug-adapter",
+						args = { "${port}" },
+					},
+				}
+			end
 
 			for _, language in ipairs({ "javascript", "typescript", "javascriptreact", "typescriptreact" }) do
 				dap.configurations[language] = {
@@ -110,20 +112,6 @@ return {
 						skipFiles = { "<node_internals>/**" },
 					},
 					{
-						type = "pwa-chrome",
-						request = "launch",
-						name = "Launch Chrome",
-						url = "http://localhost:3000",
-						webRoot = "${workspaceFolder}",
-					},
-					{
-						type = "pwa-chrome",
-						request = "launch",
-						name = "React Native (Chrome Debugger)",
-						url = "http://localhost:8081/debugger-ui",
-						webRoot = "${workspaceFolder}",
-					},
-					{
 						type = "pwa-node",
 						request = "launch",
 						name = "Launch Test Current File (pwa-node with jest)",
@@ -136,6 +124,20 @@ return {
 						console = "integratedTerminal",
 						internalConsoleOptions = "neverOpen",
 						skipFiles = { "<node_internals>/**", "node_modules/**" },
+					},
+					{
+						type = "pwa-chrome",
+						request = "launch",
+						name = "Launch Chrome",
+						url = "http://localhost:3000",
+						webRoot = "${workspaceFolder}",
+					},
+					{
+						type = "pwa-chrome",
+						request = "launch",
+						name = "React Native (Chrome Debugger)",
+						url = "http://localhost:8081/debugger-ui",
+						webRoot = "${workspaceFolder}",
 					},
 				}
 			end
