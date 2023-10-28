@@ -9,6 +9,7 @@ return {
 			{ "<leader>zd", function() require("utils.toggleterm").lazydocker_toggle() end, desc = "Lazydocker", },
 		},
 		opts = {
+			autochdir = true,
 			size = 20,
 			open_mapping = [[<C-t>]],
 			close_on_exit = true,

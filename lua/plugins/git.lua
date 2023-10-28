@@ -59,7 +59,7 @@ return {
 
 			git_worktree.on_tree_change(function(op)
 				if op == git_worktree.Operations.Switch then
-					-- close all open terminals
+					-- close all open terminals, this is needed in case terminal is in normal mode
 					vim.api.nvim_command("TermExec cmd='' open=0")
 					vim.api.nvim_command("TermExec cmd='exit' open=0")
 				end
