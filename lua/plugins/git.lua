@@ -56,14 +56,6 @@ return {
 			local git_worktree = require("git-worktree")
 			git_worktree.setup(opts)
 			require("telescope").load_extension("git_worktree")
-
-			git_worktree.on_tree_change(function(op)
-				if op == git_worktree.Operations.Switch then
-					-- close all open terminals, this is needed in case terminal is in normal mode
-					vim.api.nvim_command("TermExec cmd='' open=0")
-					vim.api.nvim_command("TermExec cmd='exit' open=0")
-				end
-			end)
 		end,
     --stylua: ignore
     keys = {
