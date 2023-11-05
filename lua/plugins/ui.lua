@@ -47,7 +47,7 @@ return {
 		event = { "VeryLazy" },
 	},
 	{
-		"declancm/cinnamon.nvim",
+		"karb94/neoscroll.nvim",
 		event = "VeryLazy",
 		config = true,
 	},

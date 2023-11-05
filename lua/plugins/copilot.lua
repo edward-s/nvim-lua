@@ -2,6 +2,7 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		build = ":Copilot auth",
+		commit = "1a8032a",
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			panel = {
