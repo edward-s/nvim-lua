@@ -15,6 +15,7 @@ return {
 		{ "<leader>tt", "<cmd>lua require('neotest').run.run()<cr>", desc = "Nearest" },
 	},
 	dependencies = {
+		"nvim-treesitter/nvim-treesitter",
 		"haydenmeade/neotest-jest",
 		"mfussenegger/nvim-dap",
 	},

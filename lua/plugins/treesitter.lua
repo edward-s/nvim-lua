@@ -20,11 +20,19 @@ return {
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-textobjects",
 			"JoosepAlviste/nvim-ts-context-commentstring",
-			"windwp/nvim-ts-autotag",
 		},
 		build = ":TSUpdate",
-		cmd = { "TSUpdateSync" },
 		event = { "BufReadPost", "BufNewFile" },
+		cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
+		init = function(plugin)
+			-- PERF: add nvim-treesitter queries to the rtp and it's custom query predicates early
+			-- This is needed because a bunch of plugins no longer `require("nvim-treesitter")`, which
+			-- no longer trigger the **nvim-treeitter** module to be loaded in time.
+			-- Luckily, the only thins that those plugins need are the custom queries, which we make available
+			-- during startup.
+			require("lazy.core.loader").add_to_rtp(plugin)
+			require("nvim-treesitter.query_predicates")
+		end,
 		keys = {
 			{ "<c-space>", desc = "Increment selection" },
 			{ "<bs>", desc = "Decrement selection", mode = "x" },
@@ -139,9 +147,14 @@ return {
 	},
 	{
 		"windwp/nvim-autopairs",
-		event = "InsertEnter",
+		event = { "BufReadPost", "BufNewFile" },
 		config = function()
 			require("nvim-autopairs").setup({ check_ts = true })
 		end,
+	},
+	{
+		"windwp/nvim-ts-autotag",
+		event = { "BufReadPost", "BufNewFile" },
+		opts = {},
 	},
 }
