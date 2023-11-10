@@ -1,7 +1,7 @@
 return {
 	"stevearc/overseer.nvim",
 	opts = {
-		templates = { "vscode" },
+		templates = { "shell", "pg" },
 	},
 	event = { "VeryLazy" },
 	config = function(_, opts)
