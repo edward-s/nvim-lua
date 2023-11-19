@@ -84,7 +84,7 @@ return {
 			for _, adapter in ipairs({ "pwa-node", "pwa-chrome" }) do
 				dap.adapters[adapter] = {
 					type = "server",
-					host = "localhost",
+					host = "127.0.0.1",
 					port = "${port}",
 					executable = {
 						command = "js-debug-adapter",
