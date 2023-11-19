@@ -38,6 +38,7 @@ local options = {
 	title = true,
 	timeoutlen = 300,
 	undofile = true,
+	updatetime = 100,
 	wrap = false,
 }
 
