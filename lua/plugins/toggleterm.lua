@@ -6,6 +6,7 @@ return {
 		keys = {
 			{ [[<C-t>]] },
 			{ "<leader>gg", function() require("utils.toggleterm").lazygit_toggle() end, desc = "Lazygit", },
+			{ "<leader>st", "<cmd>TermSelect<cr>", desc = "Select Terminals" },
 			{ "<leader>zd", function() require("utils.toggleterm").lazydocker_toggle() end, desc = "Lazydocker", },
 		},
 		opts = {
