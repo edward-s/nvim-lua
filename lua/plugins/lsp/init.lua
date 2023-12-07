@@ -18,6 +18,7 @@ return {
 		},
 		config = function(plugin, opts)
 			require("plugins.lsp.servers").setup(plugin, opts)
+			require("plugins.lsp.format").setup()
 		end,
 	},
 	{
@@ -44,19 +45,6 @@ return {
 				end
 			end
 			require("mason-nvim-dap").setup()
-		end,
-	},
-	{
-		"nvimtools/none-ls.nvim",
-		event = "BufReadPre",
-		config = function()
-			local nls = require("null-ls")
-			local formatting = nls.builtins.formatting
-			nls.setup({
-				sources = {
-					formatting.stylua,
-				},
-			})
 		end,
 	},
 	{

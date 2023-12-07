@@ -65,18 +65,6 @@ return {
 		end,
 	},
 	{
-		"nvimtools/none-ls.nvim",
-		opts = function(_, opts)
-			if type(opts.sources) == "table" then
-				local nls = require("null-ls")
-				table.insert(opts.sources, {
-					nls.builtins.formatting.prettierd,
-					nls.builtins.code_actions.eslint_d,
-				})
-			end
-		end,
-	},
-	{
 		"mfussenegger/nvim-dap",
 		opts = function()
 			local dap = require("dap")
