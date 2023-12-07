@@ -2,7 +2,6 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		build = ":Copilot auth",
-		commit = "1a8032a",
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			panel = {
@@ -15,14 +14,6 @@ return {
 					next = "<C-j>",
 					prev = "<C-k>",
 				},
-			},
-			filetypes = {
-				javascript = true,
-				typescript = true,
-				lua = true,
-				go = true,
-				python = true,
-				["."] = false,
 			},
 		},
 	},
