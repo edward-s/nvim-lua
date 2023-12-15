@@ -3,6 +3,8 @@ return {
 		"zbirenbaum/copilot.lua",
 		build = ":Copilot auth",
 		event = { "BufReadPre", "BufNewFile" },
+    -- stylua: ignore
+		keys = { { "<leader>ap", function() require("copilot.panel").open() end, desc = "Copilot panel" } },
 		opts = {
 			panel = {
 				auto_refresh = true,

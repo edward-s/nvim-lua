@@ -46,9 +46,4 @@ return {
 		},
 		event = { "VeryLazy" },
 	},
-	{
-		"karb94/neoscroll.nvim",
-		event = "VeryLazy",
-		config = true,
-	},
 }
