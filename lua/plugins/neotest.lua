@@ -13,6 +13,8 @@ return {
 		{ "<leader>tq", "<cmd>lua require('neotest').run.stop()<cr>", desc = "Stop" },
 		{ "<leader>ts", "<cmd>lua require('neotest').summary.toggle()<cr>", desc = "Summary" },
 		{ "<leader>tt", "<cmd>lua require('neotest').run.run()<cr>", desc = "Nearest" },
+    { "]t", function() require("neotest").jump.next({ status = "failed" }) end, desc = "Next failed test", },
+    { "[t", function() require("neotest").jump.prev({ status = "failed" }) end, desc = "Previous failed test", },
 	},
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
