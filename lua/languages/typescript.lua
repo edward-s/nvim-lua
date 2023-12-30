@@ -32,37 +32,65 @@ return {
 		},
 	},
 	{
-		"pmizio/typescript-tools.nvim",
-		dependencies = {
-			"neovim/nvim-lspconfig",
-			"nvim-lua/plenary.nvim",
-		},
-		ft = {
-			"typescript",
-			"typescriptreact",
-			"typescript.tsx",
-		},
+		"neovim/nvim-lspconfig",
 		opts = {
-			filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-			settings = {
-				complete_function_calls = true,
+			servers = {
+				tsserver = {
+					settings = {
+						typescript = {
+							format = {
+								indentSize = vim.o.shiftwidth,
+								convertTabsToSpaces = vim.o.expandtab,
+								tabSize = vim.o.tabstop,
+							},
+						},
+						javascript = {
+							format = {
+								indentSize = vim.o.shiftwidth,
+								convertTabsToSpaces = vim.o.expandtab,
+								tabSize = vim.o.tabstop,
+							},
+						},
+						completions = {
+							completeFunctionCalls = true,
+						},
+					},
+				},
+			},
+			setup = {
+				tsserver = function()
+					local lsp_utils = require("plugins.lsp.utils")
+					lsp_utils.on_attach(function(client, buffer)
+						if client.name == "tsserver" then
+							vim.keymap.set("n", "<leader>lo", function()
+								vim.lsp.buf.code_action({
+									apply = true,
+									context = {
+										only = { "source.organizeImports.ts" },
+										diagnostics = {},
+									},
+								})
+							end, { buffer = buffer, desc = "Organize Imports" })
+							vim.keymap.set(
+								"n",
+								"<leader>lz",
+								"<cmd>TSToolsGoToSourceDefinition<cr>",
+								{ buffer = buffer, desc = "Go To Source Definition" }
+							)
+							vim.keymap.set("n", "<leader>lr", function()
+								vim.lsp.buf.code_action({
+									apply = true,
+									context = {
+										only = { "source.removeUnused.ts" },
+										diagnostics = {},
+									},
+								})
+							end, { buffer = buffer, desc = "Removed Unused Imports" })
+						end
+					end)
+				end,
 			},
 		},
-		config = function(_, opts)
-      --stylua: ignore
-      require("plugins.lsp.utils").on_attach(function(client, bufnr)
-        if client.name == "typescript-tools" then
-          vim.keymap.set("n", "<leader>lo", "<cmd>TSToolsOrganizeImports<cr>", { buffer = bufnr, desc = "Organize Imports" })
-          vim.keymap.set("n", "<leader>lO", "<cmd>TSToolsSortImports<cr>", { buffer = bufnr, desc = "Sort Imports" })
-          vim.keymap.set("n", "<leader>lu", "<cmd>TSToolsRemoveUnused<cr>", { buffer = bufnr, desc = "Removed Unused" })
-          vim.keymap.set("n", "<leader>lz", "<cmd>TSToolsGoToSourceDefinition<cr>", { buffer = bufnr, desc = "Go To Source Definition" })
-          vim.keymap.set("n", "<leader>lr", "<cmd>TSToolsRemoveUnusedImports<cr>", { buffer = bufnr, desc = "Removed Unused Imports" })
-          vim.keymap.set("n", "<leader>lf", "<cmd>TSToolsFixAll<cr>", { buffer = bufnr, desc = "Fix All" })
-          vim.keymap.set("n", "<leader>la", "<cmd>TSToolsAddMissingImports<cr>", { buffer = bufnr, desc = "Add Missing Imports" })
-        end
-      end)
-			require("typescript-tools").setup(opts)
-		end,
 	},
 	{
 		"mfussenegger/nvim-dap",
