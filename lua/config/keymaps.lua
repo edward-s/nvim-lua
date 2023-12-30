@@ -19,8 +19,6 @@ keymap("v", ">", ">gv")
 
 -- Code folding
 keymap("n", ",", "za")
-keymap("n", "<", "zm")
-keymap("n", ">", "zr")
 
 -- No highlight
 keymap("n", "<leader>h", "<cmd>nohlsearch<cr>", { desc = "No Highlight Search" })

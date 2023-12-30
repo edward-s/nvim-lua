@@ -27,7 +27,7 @@ return {
 			"jay-babu/mason-nvim-dap.nvim",
 		},
 		cmd = "Mason",
-		keys = { { "<leader>zm", "<cmd>Mason<cr>", desc = "Mason" } },
+		keys = { { "<leader>lm", "<cmd>Mason<cr>", desc = "Mason" } },
 		opts = {
 			ensure_installed = {
 				"stylua",

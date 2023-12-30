@@ -3,8 +3,14 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		opts = function(_, opts)
 			if type(opts.ensure_installed) == "table" then
-				vim.list_extend(opts.ensure_installed, { "typescript", "tsx" })
+				vim.list_extend(opts.ensure_installed, { "javascript", "typescript", "tsx" })
 			end
+		end,
+	},
+	{
+		"williamboman/mason.nvim",
+		opts = function(_, opts)
+			vim.list_extend(opts.ensure_installed, { "typescript-language-server", "js-debug-adapter" })
 		end,
 	},
 	{
@@ -62,6 +68,15 @@ return {
 					local lsp_utils = require("plugins.lsp.utils")
 					lsp_utils.on_attach(function(client, buffer)
 						if client.name == "tsserver" then
+							vim.keymap.set("n", "<leader>la", function()
+								vim.lsp.buf.code_action({
+									apply = true,
+									context = {
+										only = { "source.addMissingImports.ts" },
+										diagnostics = {},
+									},
+								})
+							end, { buffer = buffer, desc = "Add missing imports" })
 							vim.keymap.set("n", "<leader>lo", function()
 								vim.lsp.buf.code_action({
 									apply = true,
@@ -70,13 +85,16 @@ return {
 										diagnostics = {},
 									},
 								})
-							end, { buffer = buffer, desc = "Organize Imports" })
-							vim.keymap.set(
-								"n",
-								"<leader>lz",
-								"<cmd>TSToolsGoToSourceDefinition<cr>",
-								{ buffer = buffer, desc = "Go To Source Definition" }
-							)
+							end, { buffer = buffer, desc = "Organize imports" })
+							vim.keymap.set("n", "<leader>lf", function()
+								vim.lsp.buf.code_action({
+									apply = true,
+									context = {
+										only = { "source.fixAll.ts" },
+										diagnostics = {},
+									},
+								})
+							end, { buffer = buffer, desc = "Fix all" })
 							vim.keymap.set("n", "<leader>lr", function()
 								vim.lsp.buf.code_action({
 									apply = true,
@@ -85,7 +103,7 @@ return {
 										diagnostics = {},
 									},
 								})
-							end, { buffer = buffer, desc = "Removed Unused Imports" })
+							end, { buffer = buffer, desc = "Removed unused imports" })
 						end
 					end)
 				end,
