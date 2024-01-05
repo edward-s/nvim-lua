@@ -24,7 +24,12 @@ return {
 	opts = function()
 		return {
 			adapters = {
-				require("neotest-jest"),
+				require("neotest-jest")({
+					jest_test_discovery = false,
+					discovery = {
+						enabled = false,
+					},
+				}),
 			},
 			diagnostic = {
 				enabled = false,
