@@ -135,6 +135,9 @@ return {
 				},
 			},
 		},
+		git = {
+			enable = true,
+		},
 		on_attach = on_attach,
 	},
 }
