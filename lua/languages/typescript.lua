@@ -95,7 +95,7 @@ return {
 									},
 								})
 							end, { buffer = buffer, desc = "Fix all" })
-							vim.keymap.set("n", "<leader>lr", function()
+							vim.keymap.set("n", "<leader>lu", function()
 								vim.lsp.buf.code_action({
 									apply = true,
 									context = {

@@ -21,6 +21,7 @@ function M.on_attach(client, buffer)
 	self:map("<leader>ca", "Lspsaga code_action", { desc = "Code Action", mode = { "n", "v" }, has = "codeAction" })
 	self:map("<leader>cl", "Lspsaga show_line_diagnostics", { desc = "Line Diagnostics" })
 	self:map("<leader>cr", "Lspsaga rename", { desc = "Rename" })
+	self:map("<leader>lr", "LspRestart", { desc = "LSP Restart" })
 end
 
 function M.new(client, buffer)
