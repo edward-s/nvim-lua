@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   --stylua: ignore
   command = "hi NvimTreeNormal            guibg=#282828 |"
          .. "hi NvimTreeEndOfBuffer       guibg=#282828 |"
-         .. "hi FloatBorder               None |",
+         .. "hi NvimTreeWinSeparator      guifg=#47423e |",
 })
 
 vim.cmd("colorscheme gruvbox-material")
