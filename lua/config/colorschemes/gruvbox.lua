@@ -8,9 +8,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 	group = grpid,
 	pattern = "gruvbox-material",
   --stylua: ignore
-  command = "hi NvimTreeNormal            guibg=#282828 |"
-         .. "hi NvimTreeEndOfBuffer       guibg=#282828 |"
-         .. "hi NvimTreeWinSeparator      guifg=#47423e |",
+  command = "hi NvimTreeNormal            guibg=bg1     |"
+         .. "hi NvimTreeEndOfBuffer       guibg=bg1     |"
+         .. "hi NvimTreeWinSeparator      guifg=#4f4943 |",
 })
 
 vim.cmd("colorscheme gruvbox-material")
