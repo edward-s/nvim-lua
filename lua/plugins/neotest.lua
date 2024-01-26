@@ -26,10 +26,10 @@ return {
 			adapters = {
 				require("neotest-jest")({
 					jest_test_discovery = false,
-					discovery = {
-						enabled = false,
-					},
 				}),
+			},
+			discovery = {
+				enabled = false,
 			},
 			diagnostic = {
 				enabled = false,
