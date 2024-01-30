@@ -9,8 +9,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 	pattern = "gruvbox-material",
   --stylua: ignore
   command = "hi NvimTreeNormal            guibg=bg1     |"
-         .. "hi NvimTreeEndOfBuffer       guibg=bg1     |"
-         .. "hi NvimTreeWinSeparator      guifg=#4f4943 |",
+         .. "hi NvimTreeEndOfBuffer       guibg=bg1     |",
 })
 
 vim.cmd("colorscheme gruvbox-material")
