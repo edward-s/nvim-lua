@@ -20,8 +20,10 @@ return {
 			{ "<leader>sm", "<cmd>Telescope marks<cr>", desc = "Marks" },
 			{ "<leader>so", Utils.telescope("oldfiles"), desc = "Old Files (cwd)" },
 			{ "<leader>sr", "<cmd>Telescope resume<cr>", desc = "Resume" },
-			{ "<leader>sw", Utils.telescope("grep_string"), desc = "Word (root dir)" },
-			{ "<leader>sW", Utils.telescope("grep_string", { cwd = false }), desc = "Word (cwd)" },
+			{ "<leader>sw", Utils.telescope("grep_string", { word_match = "-w" }), desc = "Word (root dir)" },
+			{ "<leader>sW", Utils.telescope("grep_string", { cwd = false, word_match = "-w" }), desc = "Word (cwd)" },
+			{ "<leader>sw", Utils.telescope("grep_string"), mode = "v", desc = "Selection (root dir)" },
+			{ "<leader>sW", Utils.telescope("grep_string", { cwd = false }), mode = "v", desc = "Selection (cwd)" },
 		},
 		config = function(_, _)
 			local telescope = require("telescope")
