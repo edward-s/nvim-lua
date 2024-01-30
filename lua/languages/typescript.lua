@@ -133,47 +133,52 @@ return {
 				dap.configurations[language] = {
 					{
 						type = "pwa-node",
+						request = "attach",
+						name = "Attach",
+						processId = require("dap.utils").pick_process,
+						cwd = vim.fn.getcwd(),
+						skipFiles = { "<node_internals>/**" },
+						sourceMaps = true,
+					},
+					{
+						type = "pwa-node",
 						request = "launch",
-						name = "Launch Current File (pwa-node)",
+						name = "Launch File",
 						cwd = vim.fn.getcwd(),
 						args = { "${file}" },
 						sourceMaps = true,
-						protocol = "inspector",
-					},
-					{
-						type = "pwa-node",
-						request = "attach",
-						name = "Attach Program (pwa-node)",
-						cwd = vim.fn.getcwd(),
-						skipFiles = { "<node_internals>/**" },
-					},
-					{
-						type = "pwa-node",
-						request = "launch",
-						name = "Launch Test Current File (pwa-node with jest)",
-						cwd = vim.fn.getcwd(),
-						runtimeArgs = { "${workspaceFolder}/node_modules/.bin/jest" },
-						runtimeExecutable = "node",
-						args = { "${file}", "--coverage", "false" },
-						rootPath = "${workspaceFolder}",
-						sourceMaps = true,
-						console = "integratedTerminal",
-						internalConsoleOptions = "neverOpen",
-						skipFiles = { "<node_internals>/**", "node_modules/**" },
 					},
 					{
 						type = "pwa-chrome",
 						request = "launch",
-						name = "Launch Chrome",
-						url = "http://localhost:3000",
-						webRoot = "${workspaceFolder}",
+						name = "Launch & Debug Chrome",
+						url = function()
+							local co = coroutine.running()
+							return coroutine.create(function()
+								vim.ui.input({
+									prompt = "Enter URL: ",
+									default = "http://localhost:8082",
+								}, function(url)
+									if url == nil or url == "" then
+										return
+									else
+										coroutine.resume(co, url)
+									end
+								end)
+							end)
+						end,
+						webRoot = vim.fn.getcwd(),
+						protocol = "inspector",
+						sourceMaps = true,
 					},
 					{
 						type = "pwa-chrome",
 						request = "launch",
 						name = "React Native (Chrome Debugger)",
 						url = "http://localhost:8081/debugger-ui",
-						webRoot = "${workspaceFolder}",
+						webRoot = vim.fn.getcwd(),
+						protocol = "inspector",
+						sourceMaps = true,
 					},
 				}
 			end
