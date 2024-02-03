@@ -21,7 +21,7 @@ return {
 			end,
 		},
 		config = function()
-			local banned_messages = { "No information available" }
+			local banned_messages = { "No information available", "Done!" }
 			vim.notify = function(msg, ...)
 				for _, banned in ipairs(banned_messages) do
 					if msg == banned then
