@@ -33,7 +33,7 @@ return {
 		"jellydn/CopilotChat.nvim",
 		dependencies = { "zbirenbaum/copilot.lua" },
 		opts = {
-			show_help = "yes",
+			show_help = "no",
 			debug = false,
 			prompts = {
 				Explain = "Explain how it works.",
@@ -54,6 +54,16 @@ return {
       { "<leader>ccR", "<cmd>CopilotChatRefactor<cr>", desc = "CopilotChat - Refactor code" },
 			{ "<leader>ccv", ":CopilotChatVisual", mode = "x", desc = "CopilotChat - Open in vertical split" },
 			{ "<leader>ccx", ":CopilotChatInPlace<cr>", mode = "x", desc = "CopilotChat - Run in-place code" },
+      {
+         "<leader>cci",
+         function()
+           local input = vim.fn.input("Ask Copilot: ")
+           if input ~= "" then
+             vim.cmd("CopilotChat " .. input)
+           end
+         end,
+         desc = "CopilotChat - Ask input",
+       },
 		},
 	},
 }
