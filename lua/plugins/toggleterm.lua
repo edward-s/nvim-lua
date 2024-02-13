@@ -13,6 +13,7 @@ return {
 			size = 20,
 			open_mapping = [[<C-t>]],
 			direction = "float",
+			insert_mappings = false,
 			on_open = function(term)
 				if term.cmd ~= "lazygit" then
 					local opts = { noremap = true }
