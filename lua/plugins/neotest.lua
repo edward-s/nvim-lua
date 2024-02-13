@@ -18,7 +18,7 @@ return {
 	},
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
-		"haydenmeade/neotest-jest",
+		"nvim-neotest/neotest-jest",
 		"mfussenegger/nvim-dap",
 	},
 	opts = function()
