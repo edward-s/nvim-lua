@@ -8,10 +8,10 @@ keymap("n", "<C-k>", "<C-w>k")
 keymap("n", "<C-l>", "<C-w>l")
 
 -- Resize windows
-keymap("n", "<A-j>", ":resize -2<cr>")
-keymap("n", "<A-k>", ":resize +2<cr>")
-keymap("n", "<A-h>", ":vertical resize -2<cr>")
-keymap("n", "<A-l>", ":vertical resize +2<cr>")
+keymap("n", "<A-j>", "<cmd>resize -2<cr>")
+keymap("n", "<A-k>", "<cmd>resize +2<cr>")
+keymap("n", "<A-h>", "<cmd>vertical resize -2<cr>")
+keymap("n", "<A-l>", "<cmd>vertical resize +2<cr>")
 
 -- Better indent
 keymap("v", "<", "<gv")
