@@ -22,7 +22,6 @@ return {
 			"JoosepAlviste/nvim-ts-context-commentstring",
 		},
 		build = ":TSUpdate",
-		version = "0.9.1",
 		event = { "BufReadPost", "BufNewFile" },
 		cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
 		init = function(plugin)
